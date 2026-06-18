@@ -373,8 +373,10 @@
   <script>
     lucide.createIcons();
 
-    // TODO: troque pela URL real do seu webhook/CRM (Make / n8n / Zapier / RD Station etc.)
-    const WEBHOOK_URL = '';
+    // Webhook Make.com — recebe os dados de captura do lead.
+    // Envia os MESMOS nomes de campo da LP Framer (Nome, Telefone, Email, Formação,
+    // Região, utm_*), pra reaproveitar o módulo HTTP → Eduq que já funciona.
+    const WEBHOOK_URL = 'https://hook.us1.make.com/v680rcj309rwb4c4hfeldubxdrc4qctk';
 
     // Discurso personalizado por objetivo — argumentos reais da página da Pós ITH.
     const OBJETIVOS = {
@@ -636,17 +638,22 @@
     }
 
     async function sendLead() {
-      const now = new Date();
+      // Telefone só com dígitos + DDI (ex.: 5531999998888)
+      const telefone = phoneDigits(data.whatsapp);
+      // UTMs vêm da URL da página (?utm_source=...). Sem isso, marca a origem como LP Chat.
+      const params = new URLSearchParams(location.search);
+      const utm = (k) => (params.get(k) || '').trim();
+
       const payload = {
-        nome: data.nome,
-        whatsapp: data.whatsapp,
-        email: data.email,
-        perfil: data.perfil,
-        objetivo: data.objetivo_label,
-        curso: 'Pós-Graduação em Enfermagem Obstétrica',
-        origem: 'Chat captura ITH - Pós Enfermagem Obstétrica',
-        data_contato: now.toISOString(),
-        data_contato_br: now.toLocaleDateString('pt-BR') + ' ' + now.toLocaleTimeString('pt-BR')
+        'Nome': data.nome,
+        'Telefone': telefone,
+        'Email': data.email,
+        'Formação': data.perfil + ' · Objetivo: ' + data.objetivo_label,
+        'Região': '',
+        'utm_source': utm('utm_source') || 'lp-chat',
+        'utm_medium': utm('utm_medium') || 'chat',
+        'utm_campaign': utm('utm_campaign'),
+        'utm_content': utm('utm_content')
       };
       try {
         if (WEBHOOK_URL) {
