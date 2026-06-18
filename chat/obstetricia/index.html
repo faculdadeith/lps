@@ -452,6 +452,7 @@
     }
 
     let activeHandler = null;
+    let phoneMode = false;
     function showInput({ type = 'text', placeholder = 'Digite aqui…', phone = false, onSubmit }) {
       hideInputs();
       inputBar.classList.remove('hidden');
@@ -460,6 +461,7 @@
       field.value = '';
       field.inputMode = (type === 'tel') ? 'numeric' : (type === 'email' ? 'email' : 'text');
       country.classList.toggle('hidden', !phone);
+      phoneMode = phone;
       activeHandler = onSubmit;
       setTimeout(() => field.focus(), 60);
       scrollDown();
@@ -468,6 +470,31 @@
     inputBar.addEventListener('submit', (e) => {
       e.preventDefault();
       if (activeHandler) activeHandler(field.value.trim());
+    });
+
+    /* ─── máscara de telefone (BR) — (DD) 9 XXXX-XXXX ─── */
+    function maskPhoneBR(v) {
+      const d = v.replace(/\D/g, '').slice(0, 11);
+      if (d.length <= 2) return d ? '(' + d : '';
+      const ddd = d.slice(0, 2);
+      const rest = d.slice(2);
+      if (rest.length <= 8) {
+        return rest.length <= 4
+          ? `(${ddd}) ${rest}`
+          : `(${ddd}) ${rest.slice(0, 4)}-${rest.slice(4)}`;
+      }
+      // 9 dígitos → celular
+      return `(${ddd}) ${rest.slice(0, 1)} ${rest.slice(1, 5)}-${rest.slice(5)}`;
+    }
+    field.addEventListener('input', () => {
+      if (!phoneMode) return;
+      // aplica máscara só pro Brasil; outros países seguem livres (só dígitos/sinais)
+      field.value = (country.value === '55')
+        ? maskPhoneBR(field.value)
+        : field.value.replace(/[^\d\s()+-]/g, '');
+    });
+    country.addEventListener('change', () => {
+      if (phoneMode) field.dispatchEvent(new Event('input'));
     });
 
     /* ─── validators ─── */
@@ -615,24 +642,6 @@
       scrollDown();
 
       await botSay(`Nosso time já vai te chamar no WhatsApp com os detalhes da <strong>Pós em Enfermagem Obstétrica</strong>, os <strong>bônus de pré-abertura</strong> e as condições de matrícula. Fica de olho! 💜`, 1300);
-
-      await botSay('Enquanto isso, dá o play e conheça um pouco mais da <strong>Faculdade ITH</strong>: 👇', 1100);
-
-      const v = document.createElement('div');
-      v.className = 'msg video';
-      v.innerHTML = `
-        <div class="video-card">
-          <div class="video-head"><i data-lucide="play-circle"></i><b>Conheça a Faculdade ITH</b></div>
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/MNvDbiS2X9A?rel=0"
-              title="Vídeo institucional Faculdade ITH"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </div>`;
-      log.appendChild(v);
-      lucide.createIcons();
-      scrollDown();
 
       await sendLead();
     }
