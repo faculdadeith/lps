@@ -4,6 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fale com a Faculdade ITH · Pós em Enfermagem Obstétrica</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '735147367298275');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=735147367298275&ev=PageView&noscript=1" alt="" /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <link rel="icon" href="https://pages.greatpages.com.br/faculdadeith.ithpos.com.br-pos-graduacao-enfermagem-obstetrica-01/1780283432/imagens/desktop/451211-5da5f1f85923920816f1394786670d22.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -642,6 +660,14 @@
       scrollDown();
 
       await botSay(`Nosso time já vai te chamar no WhatsApp com os detalhes da <strong>Pós em Enfermagem Obstétrica</strong>, os <strong>bônus de pré-abertura</strong> e as condições de matrícula. Fica de olho! 💜`, 1300);
+
+      // Meta Pixel — evento de Lead (usuário concluiu o preenchimento)
+      if (window.fbq) {
+        fbq('track', 'Lead', {
+          content_name: 'Pós-Graduação em Enfermagem Obstétrica',
+          content_category: data.perfil
+        });
+      }
 
       await sendLead();
     }
