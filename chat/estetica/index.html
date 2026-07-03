@@ -15,6 +15,10 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    // Desliga o rastreamento automatico de eventos (autoConfig).
+    // Sem isto, o pixel detecta cliques sozinho e cria SubscribedButtonClick
+    // a cada interacao no chat. So queremos os eventos disparados de proposito.
+    fbq('set', 'autoConfig', false, '735147367298275');
     fbq('init', '735147367298275');
     fbq('track', 'PageView');
   </script>
@@ -383,6 +387,10 @@
 
     const data = { perfil: '', objetivo: '', objetivo_label: '', regiao: '', nome: '', whatsapp: '', email: '' };
 
+    // Trava de idempotencia: garante que finish()/Lead rode uma unica vez,
+    // mesmo em double-tap no botao ou dois Enter rapidos.
+    let leadSent = false;
+
     const sleep = (ms) => new Promise(r => setTimeout(r, ms));
     const scrollDown = () => { log.scrollTop = log.scrollHeight; };
 
@@ -631,6 +639,10 @@
     }
 
     async function finish() {
+      // Idempotencia: se ja rodou (ex.: double-tap), nao repete nada.
+      if (leadSent) return;
+      leadSent = true;
+
       await botSay('Prontinho! 🎉 É só conferir se está tudo certo:', 950);
 
       const m = document.createElement('div');
