@@ -2,6 +2,22 @@
 <html lang="pt-BR" dir="ltr">
 <head>
 <meta charset="utf-8">
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '735147367298275');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=735147367298275&ev=PageView&noscript=1" alt="" /></noscript>
+<!-- End Meta Pixel Code -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Faculdade ITH: Estética Avançada</title>
 <meta name="description" content="Conheça a Faculdade ITH: especializações na área da saúde com certificação reconhecida, corpo docente qualificado e formação prática para impulsionar sua carreira.">
@@ -1015,7 +1031,7 @@
 
   // ===== Lead capture modal =====
   // Cole a URL do seu webhook (Make/Kommo/CRM) para receber os leads automaticamente:
-  const LEAD_ENDPOINT = '';
+  const LEAD_ENDPOINT = 'https://hook.us1.make.com/6l5r8o43h6w4a33ye7ulxaglbvpfrceo';
   const leadModal = document.querySelector('#leadModal');
   const leadForm  = document.querySelector('#leadForm');
   if(leadModal && leadForm){
@@ -1056,13 +1072,17 @@
       });
       if(!ok){ leadForm.querySelector('.invalid')?.focus(); return; }
 
-      const data = { nome:leadForm.nome.value.trim(), telefone:leadForm.telefone.value.trim(),
+      const utm = new URLSearchParams(location.search);
+      const data = { nome:leadForm.nome.value.trim(), celular:leadForm.telefone.value.trim(),
         email:leadForm.email.value.trim(), formacao:leadForm.formacao.value, regiao:leadForm.regiao.value,
+        utm_source: utm.get('utm_source')||'', utm_medium: utm.get('utm_medium')||'',
+        utm_campaign: utm.get('utm_campaign')||'', utm_content: utm.get('utm_content')||'',
         origem: location.href };
       const btn = leadForm.querySelector('.lead-submit'); btn.disabled = true; btn.textContent = 'Enviando...';
       try{ if(LEAD_ENDPOINT){ await fetch(LEAD_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)}); } }catch(err){}
       try{ const arr = JSON.parse(localStorage.getItem('ith_leads')||'[]'); arr.push({...data, ts:Date.now()}); localStorage.setItem('ith_leads', JSON.stringify(arr)); }catch(err){}
       if(window.dataLayer) window.dataLayer.push({event:'lead_submit'});
+      if(window.fbq) fbq('track', 'Lead', { content_name:'Pós-Graduação em Estética Avançada', content_category:data.formacao });
       leadForm.hidden = true; document.querySelector('#leadSuccess').hidden = false;
     });
   }
