@@ -1067,18 +1067,15 @@
     });
   }
 
-  // Navbar shrink on scroll (passive + rAF to avoid forced reflow)
+  // Navbar solid background via sentinel (IntersectionObserver — sem leitura de scroll/geometria, evita reflow forçado)
   const nav = document.querySelector('.nav-inner');
-  let navTick = false, navSolid = null;
-  addEventListener('scroll',()=>{
-    if(navTick) return; navTick = true;
-    requestAnimationFrame(()=>{
-      const solid = scrollY > 30;
-      if(solid !== navSolid){ navSolid = solid;
-        nav.style.background = solid ? 'rgba(6,20,58,.92)' : 'rgba(6,20,58,.72)'; }
-      navTick = false;
-    });
-  }, {passive:true});
+  const navSentinel = document.createElement('div');
+  navSentinel.setAttribute('aria-hidden','true');
+  navSentinel.style.cssText = 'position:absolute;top:40px;left:0;width:1px;height:1px;pointer-events:none';
+  document.body.appendChild(navSentinel);
+  new IntersectionObserver(([e])=>{
+    nav.style.background = e.isIntersecting ? 'rgba(6,20,58,.72)' : 'rgba(6,20,58,.92)';
+  }, {threshold:0}).observe(navSentinel);
 </script>
 </body>
 </html>
