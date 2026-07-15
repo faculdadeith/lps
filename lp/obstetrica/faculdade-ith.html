@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faculdade ITH: Pós em Enfermagem Obstétrica</title>
+<meta name="description" content="Pós-graduação em Enfermagem Obstétrica da Faculdade ITH: estágios supervisionados, autonomia obstétrica, respaldo COFEN e reconhecimento MEC para conduzir partos com segurança.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fontes carregadas de forma não bloqueante (evita atraso de LCP/FCP) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<style>
+  :root{
+    --navy-900:#010920;
+    --navy-800:#011140;
+    --navy-700:#061d56;
+    --navy-600:#173087;
+    --blue:#4C73CF;
+    --blue-2:#2b65d9;
+    --green:#266733;
+    --pink:#b781b3;
+    --pink-2:#d9a6d5;
+    --ink:#212121;
+    --muted:#99a1ae;
+    --line:rgba(255,255,255,.10);
+    --card:rgba(255,255,255,.05);
+    --radius:22px;
+    --shadow:0 30px 80px -30px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:#eef1fb;
+    background:var(--navy-800);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.12;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+  .eyebrow{
+    display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--pink-2);padding:7px 16px;border:1px solid var(--line);border-radius:999px;
+    background:var(--card);backdrop-filter:blur(6px);margin-bottom:22px;
+  }
+  .muted{color:var(--muted)}
+  .center{text-align:center}
+  section{position:relative}
+  .sec-pad{padding:110px 0}
+
+  /* Icons (Lucide-style) */
+  svg{flex:none}
+  .ic svg{width:24px;height:24px;stroke:#fff;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .pill svg{width:16px;height:16px;stroke:var(--pink-2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .pin svg{width:16px;height:16px;stroke:var(--pink-2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px}
+  .shield svg{width:54px;height:54px;stroke:var(--pink-2);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .chk svg{width:15px;height:15px;stroke:#fff;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .h-ic{width:22px;height:22px;stroke:var(--pink-2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:-4px;margin-right:8px;display:inline-block}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;
+    padding:15px 30px;border-radius:999px;cursor:pointer;border:0;transition:.25s;white-space:nowrap;
+  }
+  .btn-pink{
+    position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#f0c3ec,#b781b3);color:#3a1436;
+    box-shadow:0 14px 30px -10px rgba(183,129,179,.7);
+  }
+  .btn-pink::after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;pointer-events:none;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+    transform:skewX(-18deg);left:-70%}
+  .btn-pink:hover::after{animation:shine .7s ease}
+  .btn-pink:hover{transform:translateY(-2px);box-shadow:0 20px 40px -12px rgba(183,129,179,.85)}
+  .btn-ghost{background:var(--card);border:1px solid var(--line);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .btn-blue{background:linear-gradient(135deg,var(--blue-2),var(--navy-600));color:#fff;box-shadow:0 14px 30px -10px rgba(43,101,217,.6)}
+  .btn-blue:hover{transform:translateY(-2px)}
+
+  /* Top announcement bar */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:60;overflow:hidden;
+    min-height:42px;display:flex;align-items:center;justify-content:center;gap:9px;
+    padding:8px 46px 8px 18px;text-align:center;color:#fff;font-size:13.5px;font-weight:600;
+    background:linear-gradient(90deg,#b781b3,#8a63c9,#4C73CF);
+    box-shadow:0 8px 24px -10px rgba(0,0,0,.55)}
+  .topbar svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .topbar b{font-weight:800}
+  .topbar::after{content:"";position:absolute;top:0;left:-45%;width:30%;height:100%;pointer-events:none;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);
+    transform:skewX(-18deg);animation:tbshine 6s ease-in-out infinite}
+  @keyframes tbshine{0%{left:-45%}55%,100%{left:140%}}
+  .tb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:transparent;border:0;
+    color:#fff;font-size:20px;line-height:1;cursor:pointer;opacity:.75;padding:6px;transition:.2s}
+  .tb-close:hover{opacity:1}
+  .tb-hidden .topbar{display:none}
+
+  /* Navbar */
+  header.nav{position:fixed;top:56px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 16px;transition:top .3s}
+  .tb-hidden header.nav{top:18px}
+  .nav-inner{
+    width:100%;max-width:1080px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+    background:rgba(6,20,58,.72);border:1px solid var(--line);backdrop-filter:blur(14px);
+    border-radius:999px;padding:12px 12px 12px 26px;box-shadow:var(--shadow);position:relative;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800}
+  .logo-img{height:38px;width:auto;display:block}
+  .logo .mark{width:34px;height:34px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:2px}
+  .logo .mark span{background:#fff;border-radius:2px}
+  .logo .mark span:nth-child(1),.logo .mark span:nth-child(3),.logo .mark span:nth-child(7),.logo .mark span:nth-child(9){background:transparent}
+  .logo .txt small{display:block;font-family:'Plus Jakarta Sans';font-size:9px;letter-spacing:.35em;color:var(--muted);font-weight:600}
+  .logo .txt b{font-family:'Plus Jakarta Sans';font-size:22px;letter-spacing:.04em}
+  .nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500}
+  .nav-links a{color:#d6ddf5;transition:.2s}
+  .nav-links a:hover{color:#fff}
+  .nav .btn{padding:12px 22px}
+
+  /* Hero */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    padding:170px 0 90px;overflow:hidden;
+    background:
+      radial-gradient(1200px 700px at 75% 8%,rgba(76,115,207,.35),transparent 60%),
+      radial-gradient(900px 600px at 15% 90%,rgba(183,129,179,.18),transparent 60%),
+      linear-gradient(160deg,#020e35 0%,#011140 45%,#010920 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;opacity:.14;
+    background:
+      linear-gradient(115deg,transparent 40%,rgba(255,255,255,.06) 40% 60%,transparent 60%),
+      repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 3px,transparent 3px 26px);
+    transform:rotate(-2deg) scale(1.2);
+  }
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(40px,6vw,68px);font-weight:800;margin-bottom:22px}
+  .hero .lead{font-size:clamp(20px,2.4vw,26px);font-weight:700;margin-bottom:16px;max-width:520px}
+  .hero p.sub{color:#b9c2e0;max-width:470px;margin-bottom:32px}
+  .hero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .turmas{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#e7c9e3}
+  .pin{color:var(--pink-2)}
+
+  .hero-cards{display:flex;flex-direction:column;gap:16px;align-items:flex-end;position:relative}
+  .float-card{
+    display:flex;align-items:center;gap:14px;
+    background:linear-gradient(135deg,rgba(22,38,86,.72),rgba(9,20,52,.62));
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);border-radius:16px;padding:15px 22px;
+    box-shadow:0 22px 44px -26px rgba(0,0,0,.75);
+    font-weight:600;font-size:15px;width:340px;line-height:1.35;
+    transition:transform .3s cubic-bezier(.16,.8,.3,1),border-color .3s;
+  }
+  .float-card:hover{transform:translateX(-6px);border-color:rgba(183,129,179,.5)}
+  /* elegant diagonal cascade (seal is child 1) */
+  .float-card:nth-child(2){margin-right:0}
+  .float-card:nth-child(3){margin-right:28px}
+  .float-card:nth-child(4){margin-right:14px}
+  .float-card:nth-child(5){margin-right:42px}
+  .chk{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#e7b6e3,#b781b3);color:#fff;
+    box-shadow:0 6px 14px -4px rgba(183,129,179,.6)}
+  .mec-seal{width:98px;height:98px;flex:none;align-self:flex-end;margin:0 26px 4px 0;
+    filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+  .mec-seal svg{width:100%;height:100%;display:block}
+
+  /* Generic light-on-dark section band */
+  .band{background:linear-gradient(180deg,#010920,#011140)}
+  .band-alt{background:linear-gradient(180deg,#011140,#020e35)}
+
+  .sec-head{max-width:720px;margin:0 auto 56px}
+  .sec-head.center{text-align:center}
+  h2.title{font-size:clamp(30px,4.2vw,46px);font-weight:800;margin-bottom:16px}
+  .sec-head p{color:#b9c2e0;font-size:17px}
+
+  /* Challenge list */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+  .challenge{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .challenge .num{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    font-family:'Plus Jakarta Sans';font-weight:700;font-size:14px;background:var(--card);border:1px solid var(--line);color:var(--pink-2)}
+  .challenge p{font-weight:500}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;
+    background:var(--card);border:1px solid var(--line);font-size:14px;font-weight:600}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--pink)}
+
+  /* Cards grid */
+  .grid{display:grid;gap:22px}
+  .g-4{grid-template-columns:repeat(4,1fr)}
+  .g-3{grid-template-columns:repeat(3,1fr)}
+  .g-2{grid-template-columns:repeat(2,1fr)}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;
+    transition:.25s;backdrop-filter:blur(6px);
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(183,129,179,.4);background:rgba(255,255,255,.07)}
+  .card .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:20px;
+    background:linear-gradient(135deg,rgba(76,115,207,.4),rgba(183,129,179,.4));margin-bottom:18px}
+  .card h3{font-size:19px;margin-bottom:10px}
+  .card p{font-size:15px;color:#b9c2e0}
+  .step-n{font-family:'Plus Jakarta Sans';font-weight:800;font-size:30px;
+    background:linear-gradient(135deg,var(--pink-2),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+
+  /* Pillar cards with image */
+  .pilar{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;
+    padding:32px 32px 34px;backdrop-filter:blur(6px);
+    transition:transform .3s cubic-bezier(.16,.8,.3,1),border-color .3s}
+  .pilar:hover{transform:translateY(-5px);border-color:rgba(183,129,179,.4)}
+  .pilar .phead{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:28px}
+  .pilar .ic{width:58px;height:58px;border-radius:16px;flex:none;margin-bottom:0}
+  .pilar .ic svg{width:27px;height:27px}
+  .pilar .pimg{width:66%;max-width:360px;aspect-ratio:5/4;object-fit:cover;border-radius:18px;
+    margin-top:-64px;border:1px solid rgba(255,255,255,.14);box-shadow:0 26px 55px -20px rgba(0,0,0,.72)}
+  .pilar h3{font-size:23px;line-height:1.16;margin-bottom:14px}
+  .pilar p{color:#b9c2e0;font-size:15px;margin-bottom:12px}
+  .pilar p:last-child{margin-bottom:0}
+  .pimg-ph{display:grid;place-items:center;background:linear-gradient(135deg,rgba(76,115,207,.42),rgba(183,129,179,.36))}
+  .pimg-ph svg{width:38%;height:38%;stroke:rgba(255,255,255,.62);stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Video */
+  .video{position:relative;max-width:900px;margin:0 auto 56px;border-radius:24px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:var(--shadow);aspect-ratio:16/9;cursor:pointer;background:#0a1330}
+  .video img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:opacity .4s,transform .5s cubic-bezier(.16,.8,.3,1)}
+  .video:hover img{opacity:1;transform:scale(1.04)}
+  .video .veil{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(1,17,64,.15),rgba(1,9,32,.6))}
+  .video .play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;
+    background:linear-gradient(135deg,#f0c3ec,#b781b3);box-shadow:0 16px 36px -8px rgba(183,129,179,.85);
+    transition:transform .3s cubic-bezier(.16,.8,.3,1)}
+  .video:hover .play{transform:translate(-50%,-50%) scale(1.09)}
+  .video .play svg{width:32px;height:32px;fill:#3a1436;margin-left:5px}
+  .video .play::before{content:"";position:absolute;inset:-12px;border-radius:50%;
+    border:1px solid rgba(240,195,236,.5);animation:pulse 2.4s ease-out infinite}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+
+  /* Big stat */
+  .stat{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;max-width:860px;margin:0 auto;
+    background:linear-gradient(135deg,rgba(76,115,207,.16),rgba(183,129,179,.10));border:1px solid var(--line);
+    border-radius:32px;padding:48px}
+  .stat .big{font-family:'Plus Jakarta Sans';font-weight:800;font-size:clamp(74px,12vw,128px);line-height:.9;
+    min-width:2.5em;text-align:left;font-variant-numeric:tabular-nums;
+    background:linear-gradient(135deg,#e7b6e3,#4C73CF);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat h3{font-size:24px;margin-bottom:10px}
+
+  /* Pricing */
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;max-width:960px;margin:0 auto}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:36px;position:relative}
+  .plan.featured{border-color:rgba(183,129,179,.6);background:linear-gradient(180deg,rgba(183,129,179,.14),rgba(9,24,66,.4));box-shadow:var(--shadow)}
+  .plan .tag{position:absolute;top:-14px;right:26px;background:linear-gradient(135deg,#f0c3ec,#b781b3);
+    color:#3a1436;font-size:12px;font-weight:800;letter-spacing:.06em;padding:7px 16px;border-radius:999px}
+  .plan h3{font-size:24px;margin-bottom:12px}
+  .plan .desc{font-size:14px;color:#b9c2e0;margin-bottom:22px;min-height:96px}
+  .specs{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+  .spec{flex:1;min-width:90px;text-align:center;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:12px 8px}
+  .spec b{display:block;font-family:'Plus Jakarta Sans';font-size:18px}
+  .spec small{font-size:11px;color:var(--muted)}
+  .incl{list-style:none;margin-bottom:26px}
+  .incl li{display:flex;gap:10px;padding:8px 0;font-size:14px;border-bottom:1px solid rgba(255,255,255,.05)}
+  .incl li::before{content:"✓";color:var(--pink-2);font-weight:700;flex:none}
+  .plan .btn{width:100%;justify-content:center}
+
+  /* Payment */
+  .pay{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+  .pay .pill{padding:14px 22px;font-size:15px}
+
+  /* Testimonials */
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+    transition:transform .3s cubic-bezier(.16,.8,.3,1),border-color .3s}
+  .tcard:hover{transform:translateY(-5px);border-color:rgba(183,129,179,.4)}
+  .prof .ph{transition:transform .35s cubic-bezier(.16,.8,.3,1)}
+  .prof:hover .ph{transform:translateY(-6px) scale(1.02)}
+  .tcard .who{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+  .avatar{width:52px;height:52px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;
+    font-family:'Plus Jakarta Sans';color:#fff;background:linear-gradient(135deg,var(--blue),var(--pink))}
+  .who b{display:block;font-family:'Plus Jakarta Sans';font-size:16px}
+  .who span{font-size:12px;color:var(--pink-2)}
+  .tcard p{font-size:14px;color:#c3cbe6}
+
+  /* MEC / features 4-up */
+  .feat{text-align:center;padding:26px}
+  .feat .ic{margin:0 auto 16px}
+  .feat h3{font-size:18px;margin-bottom:6px}
+  .feat p{font-size:14px;color:#b9c2e0}
+
+  /* Guarantee */
+  .guarantee{max-width:820px;margin:0 auto;text-align:center;background:linear-gradient(135deg,rgba(38,103,51,.18),rgba(9,24,66,.35));
+    border:1px solid var(--line);border-radius:32px;padding:56px 40px}
+  .guarantee .shield{font-size:52px;margin-bottom:18px}
+
+  /* Faculty */
+  .prof{text-align:center}
+  .prof .ph{width:100%;aspect-ratio:3/4;border-radius:20px;margin-bottom:14px;
+    background:linear-gradient(160deg,#1a2a63,#0a1436);border:1px solid var(--line);display:grid;place-items:center;
+    font-family:'Plus Jakarta Sans';font-weight:800;font-size:40px;color:rgba(255,255,255,.25)}
+  .prof b{display:block;font-family:'Plus Jakarta Sans';font-size:16px;margin-bottom:4px}
+  .prof span{font-size:13px;color:#b9c2e0}
+
+  /* FAQ */
+  .faq{max-width:800px;margin:0 auto}
+  .qa{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;background:var(--card);overflow:hidden}
+  .qa summary{list-style:none;cursor:pointer;padding:20px 24px;font-family:'Plus Jakarta Sans';font-weight:600;
+    font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary::after{content:"+";font-size:24px;color:var(--pink-2);transition:.2s;flex:none}
+  .qa[open] summary::after{transform:rotate(45deg)}
+  .qa .a{padding:0 24px 22px;color:#b9c2e0;font-size:15px}
+
+  /* Final CTA */
+  .final{text-align:center;background:
+      radial-gradient(700px 400px at 50% 0%,rgba(183,129,179,.22),transparent 60%),
+      linear-gradient(180deg,#020e35,#010920)}
+  .final h2{font-size:clamp(30px,4.6vw,50px);max-width:900px;margin:0 auto 34px;font-weight:800}
+  .benef-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:40px}
+
+  /* Footer */
+  footer{background:#010920;border-top:1px solid var(--line);padding:60px 0 40px}
+  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px}
+  .foot-links{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:14px}
+  .foot-links a{color:#b9c2e0}
+  .foot-links a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
+  .foot-bottom a{color:var(--pink-2)}
+
+  /* ===== Animations ===== */
+  .reveal{opacity:0;transform:translateY(30px);
+    transition:opacity .75s cubic-bezier(.16,.8,.3,1),transform .75s cubic-bezier(.16,.8,.3,1)}
+  .reveal.left{transform:translateX(-46px)}
+  .reveal.right{transform:translateX(46px)}
+  .reveal.scale{transform:scale(.93)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* hero entrance on load */
+  .hero h1{animation:aUp .9s .10s both cubic-bezier(.16,.8,.3,1)}
+  .hero .lead{animation:aUp .9s .24s both cubic-bezier(.16,.8,.3,1)}
+  .hero p.sub{animation:aUp .9s .38s both cubic-bezier(.16,.8,.3,1)}
+  .hero-cta{animation:aUp .9s .52s both cubic-bezier(.16,.8,.3,1)}
+  .float-card{animation:aRight .8s both cubic-bezier(.16,.8,.3,1)}
+  .float-card:nth-child(2){animation-delay:.55s}
+  .float-card:nth-child(3){animation-delay:.68s}
+  .float-card:nth-child(4){animation-delay:.81s}
+  .float-card:nth-child(5){animation-delay:.94s}
+  .mec-seal{animation:aPop .7s .35s both cubic-bezier(.34,1.56,.5,1),bob 5s 1.3s ease-in-out infinite}
+
+  @keyframes aUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes aRight{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+  @keyframes aPop{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:scale(1)}}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  @keyframes shine{to{left:135%}}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important}
+    .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  }
+
+  @media(max-width:900px){
+    .nav-links{display:none}
+    /* CTAs full-width e centralizados no mobile (evita quebra feia e estouro) */
+    .btn{white-space:normal;justify-content:center;text-align:center}
+    section .btn{width:100%}
+    .hero-cta .btn{width:auto}
+    .topbar{font-size:12px;padding:8px 40px 8px 14px}
+    .nav-inner{padding:9px 10px 9px 18px}
+    .nav-inner > a.btn-pink{font-size:13.5px;padding:11px 18px}
+    .logo-img{height:32px}
+    .hero-grid,.split,.plans,.stat{grid-template-columns:1fr}
+    .g-4{grid-template-columns:repeat(2,1fr)}
+    .g-3,.g-2{grid-template-columns:1fr}
+    /* Pilares no mobile: imagem em banner + ícone como selo sobreposto */
+    .pilar .phead{position:relative;display:block;margin-bottom:36px}
+    .pilar .pimg{width:100%;max-width:none;aspect-ratio:16/10;margin-top:0}
+    .pilar .ic{position:absolute;left:14px;bottom:-22px;margin:0;box-shadow:0 14px 28px -8px rgba(0,0,0,.6)}
+    /* directional reveals become vertical on mobile (columns stack) */
+    .reveal.left,.reveal.right{transform:translateY(30px)}
+    .hero-cards{align-items:stretch;margin-top:56px;position:relative}
+    .float-card{margin:0!important;width:auto;transform:none!important}
+    .float-card:nth-child(2){padding-right:74px}
+    .mec-seal{position:absolute;top:-30px;right:6px;width:72px;height:72px;margin:0;z-index:4;align-self:auto}
+    .stat{text-align:center}
+    .stat .big{margin:0 auto}
+  }
+  /* ===== Lead capture modal ===== */
+  .lead-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;
+    padding:20px;background:rgba(2,8,24,.72);backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .25s}
+  .lead-overlay.open{opacity:1;pointer-events:auto}
+  .lead-box{background:#fff;color:#1a1f2e;width:100%;max-width:560px;max-height:94vh;overflow-y:auto;
+    border-radius:22px;padding:30px 32px 28px;position:relative;
+    transform:translateY(16px) scale(.97);transition:transform .32s cubic-bezier(.16,.8,.3,1)}
+  .lead-overlay.open .lead-box{transform:none}
+  .lead-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;
+    background:#e63946;color:#fff;font-size:19px;line-height:1;display:grid;place-items:center;transition:.25s;z-index:2}
+  .lead-close:hover{background:#c92a37;transform:rotate(90deg)}
+  .lead-box h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:23px;font-weight:800;color:#0c1230;
+    margin-bottom:16px;line-height:1.12;max-width:86%;letter-spacing:-.02em}
+  .lead-box form{display:flex;flex-direction:column;gap:11px}
+  .lead-box label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:#3f4657}
+  .lead-box input,.lead-box select{width:100%;padding:12px 15px;border-radius:11px;border:1px solid #e3e6ef;
+    background:#f5f6fa;font-size:15px;color:#1a1f2e;font-family:inherit;transition:.2s;appearance:none;-webkit-appearance:none}
+  .lead-box select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%239aa1b2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:19px;padding-right:44px}
+  .lead-box input::placeholder{color:#9aa1b2}
+  .lead-box input:focus,.lead-box select:focus{outline:0;border-color:#b781b3;box-shadow:0 0 0 3px rgba(183,129,179,.22);background:#fff}
+  .lead-box .invalid{border-color:#e63946!important;box-shadow:0 0 0 3px rgba(230,57,70,.15)!important}
+  .lead-lgpd{font-size:11.5px;color:#8a90a2;line-height:1.4;margin:3px 0 1px;text-align:center}
+  .lead-submit{margin-top:3px;padding:14px;border:0;border-radius:999px;cursor:pointer;font-weight:800;font-size:15.5px;
+    color:#3a1436;background:linear-gradient(135deg,#f0c3ec,#b781b3);box-shadow:0 12px 26px -10px rgba(183,129,179,.7);transition:.25s}
+  .lead-submit:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(183,129,179,.85)}
+  .lead-submit:disabled{opacity:.7;cursor:default;transform:none}
+  .lead-success{text-align:center;padding:10px 0 4px}
+  .lead-success .ok{width:66px;height:66px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;
+    font-size:32px;color:#fff;background:linear-gradient(135deg,#7ac07a,#2e8b57);box-shadow:0 14px 30px -10px rgba(46,139,87,.6)}
+  .lead-success h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;color:#0c1230;margin-bottom:8px}
+  .lead-success p{color:#6b7280;margin-bottom:20px}
+  body.no-scroll{overflow:hidden}
+  @media(max-width:560px){
+    .lead-overlay{padding:12px}
+    .lead-box{padding:22px 20px 20px}
+    .lead-box h2{font-size:19px;margin-bottom:12px;max-width:80%}
+    .lead-box form{gap:8px}
+    .lead-box label{gap:3px;font-size:12.5px}
+    .lead-box input,.lead-box select{padding:10px 14px}
+    .lead-lgpd{font-size:11px;margin:1px 0 0}
+  }
+
+  @media(max-width:560px){
+    .g-4{grid-template-columns:1fr}
+    .sec-pad{padding:80px 0}
+    .grid.g-3.people{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP ANNOUNCEMENT BAR -->
+<div class="topbar" id="topbar">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+  <span>Aproveite a <b>condição de aniversário ITH</b></span>
+  <button class="tb-close" id="tbClose" aria-label="Fechar aviso">&times;</button>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#" aria-label="Faculdade ITH — início">
+      <img class="logo-img" src="logo-faculdade-ith.avif" alt="Faculdade ITH" width="112" height="38">
+    </a>
+    <nav class="nav-links">
+      <a href="#desafios">Por que a ITH</a>
+      <a href="#como">Como funciona</a>
+      <a href="#conteudo">Aulas e Estágios</a>
+      <a href="#docentes">Professores</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-pink" href="#cta">Quero saber mais</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Enfermeira, você se sente realmente segura para conduzir um parto?</h1>
+      <p class="lead">Pós em Enfermagem Obstétrica</p>
+      <p class="sub">Aqui você faz estágios supervisionados, desenvolve autonomia obstétrica e atua com segurança clínica e respaldo legal.</p>
+      <div class="hero-cta">
+        <a class="btn btn-pink" href="#cta">Quero saber mais</a>
+        <span class="turmas"><span class="pin"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span> Turma confirmada: início imediato</span>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="mec-seal">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curso reconhecido pelo MEC">
+          <defs>
+            <path id="ring" d="M256,256 m0,-186 a186,186 0 1,1 -0.01,0"/>
+          </defs>
+          <!-- scalloped light edge -->
+          <g fill="#ececec"><circle cx="488.0" cy="256.0" r="20"/><circle cx="481.3" cy="311.5" r="20"/><circle cx="461.4" cy="363.8" r="20"/><circle cx="429.7" cy="409.8" r="20"/><circle cx="387.8" cy="446.9" r="20"/><circle cx="338.3" cy="472.9" r="20"/><circle cx="284.0" cy="486.3" r="20"/><circle cx="228.0" cy="486.3" r="20"/><circle cx="173.7" cy="472.9" r="20"/><circle cx="124.2" cy="446.9" r="20"/><circle cx="82.3" cy="409.8" r="20"/><circle cx="50.6" cy="363.8" r="20"/><circle cx="30.7" cy="311.5" r="20"/><circle cx="24.0" cy="256.0" r="20"/><circle cx="30.7" cy="200.5" r="20"/><circle cx="50.6" cy="148.2" r="20"/><circle cx="82.3" cy="102.2" r="20"/><circle cx="124.2" cy="65.1" r="20"/><circle cx="173.7" cy="39.1" r="20"/><circle cx="228.0" cy="25.7" r="20"/><circle cx="284.0" cy="25.7" r="20"/><circle cx="338.3" cy="39.1" r="20"/><circle cx="387.8" cy="65.1" r="20"/><circle cx="429.7" cy="102.2" r="20"/><circle cx="461.4" cy="148.2" r="20"/><circle cx="481.3" cy="200.5" r="20"/></g>
+          <circle cx="256" cy="256" r="238" fill="#ececec"/>
+          <!-- purple ring -->
+          <circle cx="256" cy="256" r="214" fill="#8f6ba8"/>
+          <circle cx="256" cy="256" r="150" fill="#ffffff"/>
+          <!-- curved ring text -->
+          <g fill="#ffffff" font-family="'Plus Jakarta Sans','Montserrat',sans-serif" font-weight="800" font-size="30" letter-spacing="4">
+            <text><textPath href="#ring" startOffset="50%" text-anchor="middle">PELO MEC&#160;&#160;✳&#160;&#160;RECONHECIDO&#160;&#160;✳&#160;&#160;CURSO&#160;&#160;✳&#160;&#160;RECONHECIDO&#160;&#160;✳</textPath></text>
+          </g>
+          <!-- center lock-up -->
+          <text x="256" y="212" text-anchor="middle" fill="#8f6ba8" font-family="'Plus Jakarta Sans','Montserrat',sans-serif" font-weight="800" font-size="34" letter-spacing="1">RECONHECIDO</text>
+          <text x="188" y="252" text-anchor="middle" fill="#8f6ba8" font-family="'Plus Jakarta Sans','Montserrat',sans-serif" font-weight="800" font-size="34" letter-spacing="1">PELO</text>
+          <text x="308" y="250" text-anchor="middle" fill="#a483ba" font-size="30" letter-spacing="4">★★★★★</text>
+          <text x="256" y="330" text-anchor="middle" fill="#1f52a0" font-family="'Plus Jakarta Sans','Montserrat',sans-serif" font-weight="800" font-size="96" letter-spacing="2">MEC</text>
+        </svg>
+      </div>
+      <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Exclusivo para enfermeiros</div>
+      <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Aulas presenciais e ao vivo</div>
+      <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Duração: 18 meses</div>
+      <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Estágio no padrão COFEN</div>
+    </div>
+  </div>
+</section>
+
+<!-- DESAFIOS -->
+<section class="sec-pad band" id="desafios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Cenário atual</span>
+      <h2 class="title">Os principais desafios do profissional de Enfermagem Obstétrica</h2>
+      <p>A Pós-graduação em Enfermagem Obstétrica prepara você com prática real, segurança clínica e respaldo legal para atuar com autonomia nas maternidades.</p>
+    </div>
+    <div class="split">
+      <div class="reveal left">
+        <div class="challenge"><span class="num">01</span><p>Falta de prática real para conduzir um parto com segurança</p></div>
+        <div class="challenge"><span class="num">02</span><p>Medo de errar diante de emergências obstétricas</p></div>
+        <div class="challenge"><span class="num">03</span><p>Insegurança sobre o que o enfermeiro obstetra pode ou não fazer</p></div>
+        <div class="challenge"><span class="num">04</span><p>O mercado exige experiência que a graduação não entrega</p></div>
+        <div class="challenge"><span class="num">05</span><p>Sensação de estagnação e falta de reconhecimento profissional</p></div>
+        <div class="challenge"><span class="num">06</span><p>Perda de espaço nas maternidades por falta de especialização</p></div>
+        <div class="challenge"><span class="num">07</span><p>Receio de investir em uma pós e continuar insegura</p></div>
+        <div class="challenge"><span class="num">08</span><p>Ausência de orientação prática e mentoria na formação</p></div>
+      </div>
+      <div class="reveal right">
+        <h3 style="font-size:20px;margin-bottom:6px">O que a ITH entrega na prática</h3>
+        <p class="muted" style="font-size:14px">Prática real, segurança clínica e respaldo legal desde os primeiros módulos.</p>
+        <div class="pills">
+          <span class="pill"><span class="dot"></span>Prática real em maternidades</span>
+          <span class="pill"><span class="dot"></span>Estágios supervisionados</span>
+          <span class="pill"><span class="dot"></span>Segurança clínica</span>
+          <span class="pill"><span class="dot"></span>Conformidade COFEN</span>
+          <span class="pill"><span class="dot"></span>Respaldo legal</span>
+          <span class="pill"><span class="dot"></span>Mentoria especializada</span>
+          <span class="pill"><span class="dot"></span>Autonomia obstétrica</span>
+          <span class="pill"><span class="dot"></span>Reconhecimento profissional</span>
+        </div>
+        <a class="btn btn-pink" style="margin-top:30px" href="#como">Quero ver como funciona na prática</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGIA -->
+<section class="sec-pad band-alt" id="metodologia">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Proposta da Faculdade ITH</span>
+      <h2 class="title">A Pós-Graduação que leva você ao próximo nível</h2>
+      <p>A Pós-graduação em Enfermagem Obstétrica da ITH une práticas supervisionadas e respaldo legal para preparar enfermeiras a conduzir partos com autonomia, confiança e reconhecimento no mercado. Tudo para que você saia da pós pronta para assumir a condução do parto com segurança e respaldo legal.</p>
+    </div>
+    <div class="video reveal scale" data-yt="G5FVaXowPBg" data-start="0" role="button" tabindex="0" aria-label="Assistir ao vídeo de apresentação da Pós em Enfermagem Obstétrica">
+      <img src="https://i.ytimg.com/vi/G5FVaXowPBg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/G5FVaXowPBg/hqdefault.jpg'" alt="Faculdade ITH — vídeo de apresentação da Pós em Enfermagem Obstétrica" loading="lazy">
+      <span class="veil"></span>
+      <button class="play" aria-label="Reproduzir vídeo"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+    </div>
+    <div class="grid g-2">
+      <div class="pilar reveal">
+        <div class="phead">
+          <div class="ic"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg></div>
+          <img class="pimg" src="neo-01.avif" alt="Enfermeira obstetra atuando em ambiente hospitalar" loading="lazy">
+        </div>
+        <h3>Aprendizagem voltada para a realidade das maternidades.</h3>
+        <p>Conteúdos modulares para você não perder tempo e já dar início, com estudo de casos e desenvolvimento de competências.</p>
+        <p>Certificações extras por módulo para incremento curricular e evolução consistente ao longo do curso.</p>
+      </div>
+      <div class="pilar reveal">
+        <div class="phead">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5l-8-3z"/><polyline points="9 12 11.5 14.5 16 9.5"/></svg></div>
+          <img class="pimg" src="neo-03.avif" alt="Estágio supervisionado em grupo com treinamento prático de enfermagem obstétrica" loading="lazy">
+        </div>
+        <h3>Estágios supervisionados, conforme as diretrizes do COFEN.</h3>
+        <p>Convênio com maternidades e supervisão de professores atuantes, que vivem o dia a dia dos partos.</p>
+        <p>Garantia de todos os atendimentos exigidos pelo COFEN — Resoluções nº 516/2016 e nº 672/2021.</p>
+      </div>
+      <div class="pilar reveal">
+        <div class="phead">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6l-5.4 9.3A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.7-3L14 9V3"/><path d="M7 15h10"/></svg></div>
+          <img class="pimg" src="neo-02.avif" alt="Cuidado humanizado com recém-nascido em maternidade" loading="lazy">
+        </div>
+        <h3>Laboratórios e simulações que preparam para o parto humanizado.</h3>
+        <p>Treinamento realístico antes de atuar, para desenvolver segurança e reduzir erros na condução do parto.</p>
+        <p>A capacidade de atuar com autonomia aumenta o valor profissional e abre posições mais bem remuneradas e respeitadas.</p>
+      </div>
+      <div class="pilar reveal">
+        <div class="phead">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 8L9 4l-3 8H2"/></svg></div>
+          <img class="pimg" src="neo-04.avif" alt="Simulação realística com treino de suturas perineais" loading="lazy">
+        </div>
+        <h3>Metodologia aplicada para desenvolver autonomia obstétrica.</h3>
+        <p>Treinar antes de atuar garante segurança, reduz erros e aumenta a autoconfiança.</p>
+        <p>Um diferencial que pesa na contratação e prepara você para assumir a condução do parto com respaldo legal.</p>
+      </div>
+    </div>
+    <p class="center muted reveal" style="margin-top:40px;max-width:700px;margin-left:auto;margin-right:auto">Tudo isso para que você saia da pós pronta para assumir a condução do parto com segurança e respaldo legal.</p>
+  </div>
+</section>
+
+<!-- STAT -->
+<section class="sec-pad band">
+  <div class="wrap">
+    <div class="stat reveal">
+      <div class="big">80%</div>
+      <div>
+        <h3>8 de cada 10 enfermeiras obstetras contratadas em Goiás são formadas pela ITH</h3>
+        <p class="muted">A prática supervisionada em maternidades de referência reduz inseguranças, acelera a evolução clínica e abre chances reais de contratação já durante a formação.</p>
+        <p class="muted" style="font-size:12px;margin-top:12px">*Dados referentes às enfermeiras obstétricas contratadas em Goiás.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec-pad band-alt" id="como">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="title">Como as aulas funcionam na Pós em Enfermagem Obstétrica</h2>
+      <p>As aulas combinam encontros presenciais estratégicos, conteúdos digitais guiados, tutoria ativa, simulação realística e prática supervisionada em maternidades de referência — desenvolvendo competências clínicas reais desde os primeiros módulos.</p>
+    </div>
+    <div class="grid g-4">
+      <div class="card reveal"><div class="step-n">01</div><h3>Aulas presenciais práticas</h3><p>Prática clínica e condução do parto.</p></div>
+      <div class="card reveal"><div class="step-n">02</div><h3>Livro da pós incluso</h3><p>Material exclusivo produzido para consulta no dia a dia.</p></div>
+      <div class="card reveal"><div class="step-n">03</div><h3>Acesso a docentes</h3><p>Acompanhamento direto com os professores.</p></div>
+      <div class="card reveal"><div class="step-n">04</div><h3>Simulação realística</h3><p>Treinamento prático em partos e emergências.</p></div>
+      <div class="card reveal"><div class="step-n">05</div><h3>Prática supervisionada</h3><p>Atuação em maternidades de referência.</p></div>
+      <div class="card reveal"><div class="step-n">06</div><h3>Metodologia ativa</h3><p>Aprendizado baseado em casos reais.</p></div>
+      <div class="card reveal"><div class="step-n">07</div><h3>Avaliação contínua</h3><p>Feedback prático para autonomia clínica.</p></div>
+      <div class="card reveal" style="display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,rgba(183,129,179,.18),rgba(76,115,207,.14))">
+        <div><h3 style="margin-bottom:14px">Pronta para conduzir partos com segurança?</h3><a class="btn btn-pink" href="#cta">Quero começar</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPOSTA DE VALOR -->
+<section class="sec-pad band">
+  <div class="wrap center reveal" style="max-width:800px">
+    <span class="eyebrow">Proposta única de valor</span>
+    <h2 class="title">A Metodologia ITH 4.0 entrega capacidade prática comprovada</h2>
+    <p class="muted" style="font-size:18px">Não entregamos apenas uma especialização. Entregamos uma formação estruturada para que você saia da pós preparada para conduzir partos com segurança, autonomia e respaldo legal.</p>
+  </div>
+</section>
+
+<!-- CONTEUDO PROGRAMATICO -->
+<section class="sec-pad band-alt" id="conteudo">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Conteúdo programático</span>
+      <h2 class="title">Conteúdo prático para assumir a condução do parto com segurança</h2>
+    </div>
+    <div class="split">
+      <div class="card reveal left">
+        <h3 style="margin-bottom:18px"><svg class="h-ic" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Módulos</h3>
+        <ul class="incl">
+          <li>Fundamentos da Obstetrícia e atuação do enfermeiro obstetra</li>
+          <li>Atuação do enfermeiro obstetra na atenção primária e PSF</li>
+          <li>Assistência ao Parto, Nascimento e Puerpério Imediato</li>
+          <li>Urgências e Emergências Obstétricas, Perinatologia e Puerpério</li>
+          <li>Traumas e Suturas Perineais</li>
+          <li>Assistência ao puerpério normal e patológico, banco de leite e aleitamento</li>
+          <li>Assistência ao recém-nascido, afecções respiratórias, UTI e segurança</li>
+          <li>Fisiologia aplicada à prática obstétrica</li>
+          <li>Assistência ao trabalho de parto e parto humanizado: cuidado à gestante</li>
+          <li>Cuidado Especializado no Pré-Natal de Alto Risco</li>
+          <li>Avaliação da Vitalidade Fetal e Cardiotocografia</li>
+          <li>Saúde ITH 4.0: Prática e Negócio</li>
+        </ul>
+        <p class="muted" style="font-size:12px;margin-top:4px">*Módulos com etapas presenciais obrigatórias.</p>
+      </div>
+      <div class="reveal right">
+        <div class="card" style="margin-bottom:22px">
+          <h3 style="margin-bottom:18px"><svg class="h-ic" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M12 8v6M9 11h6"/></svg>Estágios supervisionados</h3>
+          <ul class="incl">
+            <li>Estágios em maternidades de referência, no padrão COFEN, com chances reais de contratação</li>
+          </ul>
+          <a class="btn btn-ghost" href="#cta" style="margin-top:6px">Conheça os estágios práticos</a>
+        </div>
+        <div class="card" style="background:linear-gradient(135deg,rgba(76,115,207,.16),rgba(183,129,179,.12))">
+          <h3 style="margin-bottom:8px">Quer conhecer cada detalhe antes de decidir?</h3>
+          <p class="muted" style="margin-bottom:16px">Antes de se matricular, veja exatamente como funcionam as aulas, estágios, carga prática e o que você realmente vai aprender na Pós em Enfermagem Obstétrica.</p>
+          <div class="pills" style="margin:0 0 20px">
+            <span class="pill"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg> PDF completo</span>
+            <span class="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> Leitura em 5 min</span>
+            <span class="pill"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Acesso imediato</span>
+          </div>
+          <a class="btn btn-pink" href="#cta">Quero ver todos os detalhes do curso</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="sec-pad band" id="planos">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Escolha seu caminho</span>
+      <h2 class="title">Dois caminhos em Obstetrícia</h2>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Pós em Enfermagem Obstétrica</h3>
+        <p class="desc">Ideal para quem quer atuar na obstetrícia com prática supervisionada e respaldo legal para conduzir partos com segurança.</p>
+        <div class="specs">
+          <div class="spec"><b>600h</b><small>Carga horária</small></div>
+          <div class="spec"><b>1</b><small>Certificação</small></div>
+          <div class="spec"><b>Tripla</b><small>Habilitação</small></div>
+        </div>
+        <ul class="incl">
+          <li>15 módulos com certificação</li>
+          <li>Estágios supervisionados</li>
+          <li>Formação em Saúde da Mulher e do RN</li>
+          <li>Práticas em pacientes</li>
+          <li>Aulas ao vivo e/ou presenciais</li>
+          <li>Formação prática em obstetrícia</li>
+          <li>Curso Furo Humanizado de Orelha em RN</li>
+          <li>1 livro digital completo da pós</li>
+          <li>Manejo avançado da prematuridade (do parto à UTI)</li>
+          <li>Reanimação e estabilização neonatal avançada</li>
+          <li>Consultório obstétrico e planejamento de parto domiciliar</li>
+          <li>Carimbo da placenta (Placenta Printing)</li>
+          <li>Ultrassonografia para enfermeiro à beira-leito</li>
+          <li>Consultoria em amamentação e lactação</li>
+        </ul>
+        <a class="btn btn-ghost" href="#cta">Escolher essa opção</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="tag">MAIS ESCOLHIDO</span>
+        <h3>Pós Premium em Enfermagem Obstétrica</h3>
+        <p class="desc">Para quem quer acelerar a carreira com mais vivências clínicas, simulação realística e dupla certificação.</p>
+        <div class="specs">
+          <div class="spec"><b>960h</b><small>Carga horária</small></div>
+          <div class="spec"><b>2</b><small>Certificações</small></div>
+          <div class="spec"><b>Cinco</b><small>Habilitações</small></div>
+        </div>
+        <ul class="incl">
+          <li>21 módulos com certificação</li>
+          <li>Estágios + 6 vivências clínicas</li>
+          <li>Formação em Saúde da Mulher e do RN</li>
+          <li>Práticas em pacientes + simuladores realísticos</li>
+          <li>Aulas ao vivo e/ou presenciais</li>
+          <li>Formação prática em obstetrícia avançada 360°</li>
+          <li>Curso Furo Humanizado de Orelha em RN</li>
+          <li>2 livros digitais completos da pós</li>
+          <li>Manejo avançado da prematuridade (do parto à UTI)</li>
+          <li>Reanimação e estabilização neonatal avançada</li>
+          <li>Consultório obstétrico e planejamento de parto domiciliar</li>
+          <li>Carimbo da placenta (Placenta Printing)</li>
+          <li>Ultrassonografia para enfermeiro à beira-leito</li>
+          <li>Consultoria em amamentação e lactação</li>
+        </ul>
+        <a class="btn btn-pink" href="#cta">Escolher essa opção</a>
+      </div>
+    </div>
+
+    <div class="center reveal" style="margin-top:60px">
+      <h3 style="font-size:24px;margin-bottom:8px">Facilidades pensadas para caber no seu planejamento profissional</h3>
+      <div class="pay">
+        <span class="pill"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Cartão de crédito</span>
+        <span class="pill"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> PIX à vista</span>
+        <span class="pill"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> Crédito recorrente (não ocupa limite)</span>
+      </div>
+      <p class="muted" style="font-size:13px;margin-top:16px">*Consulte condições especiais diretamente com nossos especialistas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec-pad band-alt" id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2 class="title">Enfermeiras que fizeram a pós e hoje atuam na obstetrícia</h2>
+      <p>Profissionais reais que saíram da graduação inseguras e hoje atuam com prática, autonomia e respaldo legal nas melhores maternidades e hospitais.</p>
+    </div>
+    <div class="grid g-3">
+      <div class="tcard reveal"><div class="who"><div class="avatar">EG</div><div><b>Evelyn Gabryelle</b><span>Enfermeira Obstetra</span></div></div><p>Atuando no Hospital América, no Hospital Municipal da Mulher e na Maternidade Célia Câmara.</p></div>
+      <div class="tcard reveal"><div class="who"><div class="avatar">HP</div><div><b>Hávilla Cristina Pereira</b><span>Enfermeira Obstetra</span></div></div><p>Atuando na Maternidade Hapvida, com assistência humanizada ao ciclo gravídico-puerperal.</p></div>
+      <div class="tcard reveal"><div class="who"><div class="avatar">JB</div><div><b>Jussara Borges Guimarães</b><span>Coordenadora de Enfermagem</span></div></div><p>Coordenadora na Maternidade Nascer Cidadão, liderando equipes de enfermagem obstétrica.</p></div>
+      <div class="tcard reveal"><div class="who"><div class="avatar">LJ</div><div><b>Luiza Jurca</b><span>Enfermeira Obstetra</span></div></div><p>Atuando como consultora em amamentação, apoiando mães no aleitamento e no pós-parto.</p></div>
+      <div class="tcard reveal"><div class="who"><div class="avatar">NN</div><div><b>Nisley Nascimento da Silva</b><span>Enfermeira Obstetra</span></div></div><p>Há 5 anos como enfermeira no Hospital Municipal de Querência – MT, na assistência ao parto.</p></div>
+      <div class="tcard reveal" style="display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,rgba(183,129,179,.16),rgba(76,115,207,.12))"><div><h3 style="font-family:'Plus Jakarta Sans';margin-bottom:12px">Veja o que mudou depois da pós</h3><a class="btn btn-pink" href="#cta">Quero atuar na obstetrícia</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEC -->
+<section class="sec-pad band" id="mec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Reconhecimento MEC</span>
+      <h2 class="title">Reconhecimento que protege sua atuação profissional</h2>
+      <p>A Pós-graduação em Enfermagem Obstétrica da ITH é reconhecida pelo MEC, garantindo validade nacional, respaldo legal e segurança para atuar nas maternidades com tranquilidade.</p>
+    </div>
+    <div class="grid g-4">
+      <div class="feat card reveal"><div class="ic"><svg viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><line x1="4" y1="10" x2="4" y2="18"/><line x1="9" y1="10" x2="9" y2="18"/><line x1="15" y1="10" x2="15" y2="18"/><line x1="20" y1="10" x2="20" y2="18"/><polygon points="12 2 21 8 3 8 12 2"/></svg></div><h3>Autorizada</h3><p>Reconhecimento oficial pelo MEC para atuação segura.</p></div>
+      <div class="feat card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg></div><h3>QR Code</h3><p>Validação imediata do diploma.</p></div>
+      <div class="feat card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg></div><h3>Nacional</h3><p>Aceito em maternidades de todo o Brasil.</p></div>
+      <div class="feat card reveal"><div class="ic"><svg viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9 12 2"/></svg></div><h3>Prestígio</h3><p>Reconhecimento no mercado obstétrico.</p></div>
+    </div>
+    <div class="center reveal" style="margin-top:40px">
+      <p class="muted" style="margin-bottom:16px"><b style="color:#fff">Transparência total</b> — acesse a Portaria do curso diretamente no site do e-MEC.</p>
+      <a class="btn btn-ghost" href="#">Consultar Portaria e-MEC</a>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="sec-pad band-alt">
+  <div class="wrap">
+    <div class="guarantee reveal">
+      <div class="shield"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5l-8-3z"/><polyline points="9 12 11.5 14.5 16 9.5"/></svg></div>
+      <span class="eyebrow">Risco Zero</span>
+      <h2 class="title" style="font-size:36px">7 dias de garantia para sua decisão ser segura</h2>
+      <p class="muted" style="max-width:620px;margin:0 auto 26px">Você tem 7 dias após a matrícula para conhecer a metodologia, acessar os conteúdos iniciais e confirmar sua decisão com tranquilidade. Caso opte por não seguir, o valor da matrícula é devolvido conforme a política institucional.</p>
+      <a class="btn btn-pink" href="#cta">Quero iniciar com segurança</a>
+      <p class="muted" style="font-size:12px;margin-top:16px">*Garantia de 7 dias conforme política institucional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CORPO DOCENTE -->
+<section class="sec-pad band" id="docentes">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Corpo docente</span>
+      <h2 class="title">Aprenda com quem vive a prática obstétrica todos os dias</h2>
+      <p>Profissionais que acompanham você na prática, orientam decisões reais e ensinam o que realmente acontece na maternidade.</p>
+    </div>
+    <div class="grid g-3 people">
+      <div class="prof reveal"><div class="ph">TB</div><b>Dra. Thaynara Balbino</b><span>Enfermeira Obstetra — assistência ao parto e formação prática de enfermeiros em ambiente hospitalar</span></div>
+      <div class="prof reveal"><div class="ph">NN</div><b>Dra. Natália Nunes</b><span>Enfermeira Obstetra, +7 anos na assistência ao parto, com liderança no Centro de Parto Normal</span></div>
+      <div class="prof reveal"><div class="ph">JG</div><b>Dra. Jéssica Gomide</b><span>Enfermeira Obstetra, +8 anos na assistência humanizada ao ciclo gravídico-puerperal</span></div>
+      <div class="prof reveal"><div class="ph">FW</div><b>Dra. Fabiana Wille</b><span>Enfermeira Obstetra, +10 anos, com gestão de serviços de saúde e urgência/emergência</span></div>
+      <div class="prof reveal"><div class="ph">ML</div><b>Dra. Marla Lourenna</b><span>Enfermeira Obstetra Mestre — Maternidade Dona Iris e preceptora em obstetrícia</span></div>
+      <div class="prof reveal"><div class="ph">AS</div><b>Dra. Alline de Sá</b><span>Enfermeira Obstetra Mestre, formada pela UFG, com residência em Enfermagem Obstétrica</span></div>
+      <div class="prof reveal"><div class="ph">JB</div><b>Dra. Jussara Borges</b><span>Enfermeira Obstetra Especialista, +13 anos, coordenadora na Maternidade Nascer Cidadão</span></div>
+    </div>
+    <div class="center reveal" style="margin-top:44px"><a class="btn btn-pink" href="#cta">Quero aprender com esses profissionais</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-pad band-alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="title">Perguntas Frequentes</h2>
+      <p>Reunimos as principais dúvidas de nossas alunas para que você possa decidir com total confiança e transparência.</p>
+    </div>
+    <div class="faq">
+      <details class="qa reveal"><summary>Como funcionam os estágios práticos e a atuação em maternidades?</summary><div class="a">Os estágios são supervisionados, em maternidades conveniadas e no padrão COFEN (Resoluções nº 516/2016 e nº 672/2021), com acompanhamento de professores que atuam na assistência ao parto.</div></details>
+      <details class="qa reveal"><summary>O certificado é reconhecido pelo MEC e aceito nacionalmente?</summary><div class="a">Sim. A pós é reconhecida pelo MEC, com validade nacional e respaldo legal para atuar em maternidades de todo o Brasil.</div></details>
+      <details class="qa reveal"><summary>Preciso largar o trabalho para fazer a pós?</summary><div class="a">Não. A formação combina aulas ao vivo e/ou presenciais com conteúdos digitais guiados, pensada para caber na rotina de quem já trabalha.</div></details>
+      <details class="qa reveal"><summary>Quando as aulas começam e como funcionam os encontros presenciais?</summary><div class="a">A turma tem início imediato. Os encontros presenciais são estratégicos e focados em prática clínica e condução do parto; as datas são confirmadas no momento da matrícula.</div></details>
+      <details class="qa reveal"><summary>Qual é a duração do curso e por quanto tempo tenho acesso ao conteúdo?</summary><div class="a">A pós tem duração de 18 meses. O acesso aos conteúdos digitais é liberado durante a formação, conforme o cronograma.</div></details>
+      <details class="qa reveal"><summary>A Pós-graduação possui TCC?</summary><div class="a">Consulte as condições específicas diretamente com nossos especialistas no momento da matrícula.</div></details>
+      <details class="qa reveal"><summary>Terei suporte durante todo o curso?</summary><div class="a">Sim. Você conta com acesso direto aos docentes, tutoria ativa e avaliação contínua com feedback prático ao longo da formação.</div></details>
+      <details class="qa reveal"><summary>Como faço minha matrícula?</summary><div class="a">Clique em qualquer botão de inscrição, preencha o formulário e fale diretamente com nossos especialistas para garantir sua vaga.</div></details>
+      <details class="qa reveal"><summary>Vou sair preparada para conduzir partos com segurança?</summary><div class="a">Sim. A metodologia une simulação realística, estágios supervisionados e respaldo legal para você desenvolver autonomia e conduzir partos com segurança.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec-pad final" id="cta">
+  <div class="wrap reveal">
+    <span class="eyebrow">Últimas vagas</span>
+    <h2>Garanta sua vaga na Pós-graduação em Enfermagem Obstétrica</h2>
+    <p class="muted" style="max-width:720px;margin:0 auto 8px">Atue com segurança, autonomia e reconhecimento — preparada para a sala de parto desde o primeiro atendimento até a alta da mãe e do recém-nascido.</p>
+    <div style="margin-top:28px"><a class="btn btn-pink" style="font-size:17px;padding:18px 40px" href="#">Quero garantir minha vaga</a></div>
+    <div class="benef-pills">
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M12 2l2.3 1.7 2.9-.2.9 2.7 2.3 1.7-.9 2.8.9 2.8-2.3 1.7-.9 2.7-2.9-.2L12 22l-2.3-1.6-2.9.2-.9-2.7-2.3-1.7.9-2.8-.9-2.8 2.3-1.7.9-2.7 2.9.2L12 2z"/><polyline points="9 12 11 14 15 10"/></svg> Certificado válido nacionalmente</span>
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 0 1 4 0v6a8 8 0 0 1-8 8h-2a8 8 0 0 1-7-4l-2.5-4a2 2 0 0 1 3.4-2L8 14"/></svg> Metodologia ativa com prática</span>
+      <span class="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> Horários flexíveis</span>
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg> Networking profissional</span>
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M12 8v6M9 11h6"/></svg> Estágios supervisionados</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a class="logo" href="#topo" aria-label="Faculdade ITH — voltar ao topo">
+        <img class="logo-img" src="logo-faculdade-ith.avif" alt="Faculdade ITH" width="112" height="38" loading="lazy">
+      </a>
+      <nav class="foot-links">
+        <a href="#topo">Início</a>
+        <a href="#desafios">Cenário atual</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#como">Como funciona</a>
+        <a href="#docentes">Corpo Docente</a>
+        <a href="#conteudo">Conteúdo Programático</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Faculdade ITH — Formando especialistas de elite que transformam o cenário da saúde materno-infantil no Brasil. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LEAD CAPTURE MODAL -->
+<div class="lead-overlay" id="leadModal" aria-hidden="true">
+  <div class="lead-box" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+    <button class="lead-close" id="leadClose" type="button" aria-label="Fechar formulário">&times;</button>
+    <h2 id="leadTitle">Preencha o formulário para garantir sua inscrição</h2>
+    <form id="leadForm" novalidate>
+      <label>Nome Completo
+        <input type="text" name="nome" autocomplete="name" placeholder="Insira seu Nome" required>
+      </label>
+      <label>Telefone
+        <input type="tel" name="telefone" inputmode="tel" autocomplete="tel" placeholder="Insira seu WhatsApp" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" autocomplete="email" placeholder="Insira seu Email" required>
+      </label>
+      <label>Formação
+        <select name="formacao" required>
+          <option value="" disabled selected>Qual sua Formação Acadêmica?</option>
+          <option>Superior em Enfermagem</option>
+          <option>Ensino superior incompleto</option>
+          <option>Técnico em Enfermagem</option>
+          <option>Outros</option>
+        </select>
+      </label>
+      <label>Sua região
+        <select name="regiao" required>
+          <option value="" disabled selected>Qual sua região?</option>
+          <option>Goiás (GO)</option>
+          <option>Distrito Federal (DF)</option>
+          <option>Tocantins (TO)</option>
+        </select>
+      </label>
+      <p class="lead-lgpd">Ao clicar abaixo, você concorda com o uso dos seus dados conforme a LGPD e política de privacidade.</p>
+      <button type="submit" class="lead-submit">Toque aqui quando finalizar</button>
+    </form>
+    <div class="lead-success" id="leadSuccess" hidden>
+      <div class="ok">✓</div>
+      <h3>Inscrição enviada!</h3>
+      <p>Recebemos seus dados. Em breve nossa equipe entra em contato pelo WhatsApp.</p>
+      <button type="button" class="btn btn-pink" id="leadDone" style="justify-content:center">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Grouped stagger (grids / plans cascade their children in sequence)
+  const groups = document.querySelectorAll('.grid, .plans');
+  const grouped = new Set();
+  groups.forEach(g => g.querySelectorAll('.reveal').forEach(r => grouped.add(r)));
+
+  const clearDelay = el => el.addEventListener('transitionend',
+    () => { el.style.transitionDelay = ''; }, { once:true });
+
+  const groupIO = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      e.target.querySelectorAll('.reveal').forEach((el,i)=>{
+        el.style.transitionDelay = (i*80)+'ms';
+        el.classList.add('in');
+        clearDelay(el);
+      });
+      groupIO.unobserve(e.target);
+    });
+  },{threshold:.12});
+  groups.forEach(g=>groupIO.observe(g));
+
+  // Standalone reveals (everything not inside a stagger group)
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>{ if(!grouped.has(el)) io.observe(el); });
+
+  // Count-up for the 93% stat
+  const stat = document.querySelector('.stat .big');
+  if(stat){
+    const target = parseInt(stat.textContent,10) || 0;
+    const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const statIO = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(!e.isIntersecting) return;
+        statIO.unobserve(e.target);
+        if(reduce){ return; }
+        const dur = 1500; let start = null;
+        const step = (t)=>{
+          if(start===null) start=t;
+          const p = Math.min(1,(t-start)/dur);
+          const val = Math.round((1-Math.pow(1-p,3))*target);
+          stat.textContent = val+'%';
+          if(p<1) requestAnimationFrame(step);
+        };
+        stat.textContent = '0%';
+        requestAnimationFrame(step);
+      });
+    },{threshold:.6});
+    statIO.observe(stat);
+  }
+
+
+  // Dismiss top announcement bar
+  const tbClose = document.querySelector('#tbClose');
+  if(tbClose){ tbClose.addEventListener('click', ()=>document.documentElement.classList.add('tb-hidden')); }
+
+  // Click-to-play YouTube facade
+  document.querySelectorAll('.video').forEach(v=>{
+    const play = ()=>{
+      const id = v.dataset.yt, start = v.dataset.start || 0;
+      v.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+id+
+        '?autoplay=1&start='+start+'&rel=0&modestbranding=1" title="Vídeo Faculdade ITH" '+
+        'allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    };
+    v.addEventListener('click', play, {once:true});
+    v.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); play(); } }, {once:true});
+  });
+
+  // ===== Lead capture modal =====
+  // Cole a URL do seu webhook (Make/Kommo/CRM) para receber os leads automaticamente:
+  const LEAD_ENDPOINT = '';
+  const leadModal = document.querySelector('#leadModal');
+  const leadForm  = document.querySelector('#leadForm');
+  if(leadModal && leadForm){
+    const openLead = (e)=>{ if(e) e.preventDefault();
+      leadModal.classList.add('open'); leadModal.setAttribute('aria-hidden','false');
+      document.body.classList.add('no-scroll'); setTimeout(()=>leadForm.nome.focus(),120); };
+    const closeLead = ()=>{ leadModal.classList.remove('open'); leadModal.setAttribute('aria-hidden','true');
+      document.body.classList.remove('no-scroll'); };
+
+    // Qualquer CTA principal abre o formulário
+    document.querySelectorAll('a.btn-pink, a.btn[href="#cta"]').forEach(b=>b.addEventListener('click', openLead));
+    document.querySelector('#leadClose').addEventListener('click', closeLead);
+    document.querySelector('#leadDone')?.addEventListener('click', closeLead);
+    leadModal.addEventListener('click', e=>{ if(e.target === leadModal) closeLead(); });
+    addEventListener('keydown', e=>{ if(e.key === 'Escape' && leadModal.classList.contains('open')) closeLead(); });
+
+    // Máscara de telefone (BR)
+    const tel = leadForm.telefone;
+    tel.addEventListener('input', ()=>{ let v = tel.value.replace(/\D/g,'').slice(0,11);
+      if(v.length > 10) v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+      else if(v.length > 6) v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+      else if(v.length > 2) v = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+      else if(v.length > 0) v = v.replace(/(\d{0,2})/, '($1');
+      tel.value = v; });
+
+    leadForm.addEventListener('input', e=>e.target.classList.remove('invalid'));
+
+    leadForm.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      let ok = true;
+      const emailOk = v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+      ['nome','telefone','email','formacao','regiao'].forEach(n=>{
+        const f = leadForm[n];
+        const bad = !f.value.trim()
+          || (n==='email' && !emailOk(f.value))
+          || (n==='telefone' && f.value.replace(/\D/g,'').length < 10);
+        f.classList.toggle('invalid', bad); if(bad) ok = false;
+      });
+      if(!ok){ leadForm.querySelector('.invalid')?.focus(); return; }
+
+      const data = { nome:leadForm.nome.value.trim(), telefone:leadForm.telefone.value.trim(),
+        email:leadForm.email.value.trim(), formacao:leadForm.formacao.value, regiao:leadForm.regiao.value,
+        origem: location.href };
+      const btn = leadForm.querySelector('.lead-submit'); btn.disabled = true; btn.textContent = 'Enviando...';
+      try{ if(LEAD_ENDPOINT){ await fetch(LEAD_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)}); } }catch(err){}
+      try{ const arr = JSON.parse(localStorage.getItem('ith_leads')||'[]'); arr.push({...data, ts:Date.now()}); localStorage.setItem('ith_leads', JSON.stringify(arr)); }catch(err){}
+      if(window.dataLayer) window.dataLayer.push({event:'lead_submit'});
+      leadForm.hidden = true; document.querySelector('#leadSuccess').hidden = false;
+    });
+  }
+
+  // Navbar solid background via sentinel (IntersectionObserver — sem leitura de scroll/geometria, evita reflow forçado)
+  const nav = document.querySelector('.nav-inner');
+  const navSentinel = document.createElement('div');
+  navSentinel.setAttribute('aria-hidden','true');
+  navSentinel.style.cssText = 'position:absolute;top:40px;left:0;width:1px;height:1px;pointer-events:none';
+  document.body.appendChild(navSentinel);
+  new IntersectionObserver(([e])=>{
+    nav.style.background = e.isIntersecting ? 'rgba(6,20,58,.72)' : 'rgba(6,20,58,.92)';
+  }, {threshold:0}).observe(navSentinel);
+</script>
+</body>
+</html>
