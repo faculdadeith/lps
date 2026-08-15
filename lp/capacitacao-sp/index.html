@@ -244,6 +244,23 @@
   .pay{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:22px}
   .pay .pill{padding:12px 20px;font-size:14px}
 
+  /* Vídeo institucional */
+  .video{position:relative;max-width:900px;margin:0 auto;border-radius:24px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:var(--shadow);aspect-ratio:16/9;cursor:pointer;background:#1c0605}
+  .video img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:opacity .4s,transform .5s cubic-bezier(.16,.8,.3,1)}
+  .video:hover img{opacity:1;transform:scale(1.04)}
+  .video .veil{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(35,7,6,.15),rgba(21,4,3,.6))}
+  .video .play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--orange),var(--red));box-shadow:0 16px 36px -8px rgba(245,65,30,.85);
+    transition:transform .3s cubic-bezier(.16,.8,.3,1)}
+  .video:hover .play{transform:translate(-50%,-50%) scale(1.09)}
+  .video .play svg{width:32px;height:32px;fill:#fff;margin-left:5px}
+  .video .play::before{content:"";position:absolute;inset:-12px;border-radius:50%;
+    border:1px solid rgba(245,65,30,.5);animation:pulse 2.4s ease-out infinite}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+
   /* MEC-like features 4-up */
   .feat{text-align:center;padding:26px}
   .feat .ic{margin:0 auto 16px}
@@ -396,6 +413,7 @@
       <img class="logo-img" src="logo-ith.png" alt="ITH: Urgência, Emergência e UTI" width="118" height="40">
     </a>
     <nav class="nav-links">
+      <a href="#video">Vídeo</a>
       <a href="#cenario">Por que fazer</a>
       <a href="#conteudo">O que você domina</a>
       <a href="#agenda">Agenda</a>
@@ -431,6 +449,22 @@
       <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Prática hands on com equipamentos reais</div>
       <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Presencial em São Paulo · sem tirar você da escala</div>
       <div class="float-card"><span class="chk"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></span> Certificado ITH incluso</div>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEO INSTITUCIONAL -->
+<section class="sec-pad band-alt" id="video">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Vídeo institucional</span>
+      <h2 class="title">Conheça a ITH por dentro</h2>
+      <p>Veja a estrutura, a prática hands on e o ambiente onde você vai treinar no plantão de verdade.</p>
+    </div>
+    <div class="video reveal scale" data-yt="yuXHImlbsnc" data-start="0" role="button" tabindex="0" aria-label="Assistir ao vídeo institucional da ITH">
+      <img src="https://i.ytimg.com/vi/yuXHImlbsnc/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/yuXHImlbsnc/hqdefault.jpg'" alt="Vídeo institucional da ITH" loading="lazy">
+      <span class="veil"></span>
+      <button class="play" aria-label="Reproduzir vídeo"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
     </div>
   </div>
 </section>
@@ -768,9 +802,21 @@
   const tbClose = document.querySelector('#tbClose');
   if(tbClose){ tbClose.addEventListener('click', ()=>document.documentElement.classList.add('tb-hidden')); }
 
+  // Click-to-play YouTube facade (vídeo institucional)
+  document.querySelectorAll('.video').forEach(v=>{
+    const play = ()=>{
+      const id = v.dataset.yt, start = v.dataset.start || 0;
+      v.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+id+
+        '?autoplay=1&start='+start+'&rel=0&modestbranding=1" title="Vídeo institucional ITH" '+
+        'allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    };
+    v.addEventListener('click', play, {once:true});
+    v.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); play(); } }, {once:true});
+  });
+
   // ===== Lead capture modal =====
   // Cole a URL do seu webhook (Make/CRM) para receber os leads automaticamente:
-  const LEAD_ENDPOINT = '';
+  const LEAD_ENDPOINT = 'https://hook.us1.make.com/enei2petnvehlmr4i9nsq0bhn11qmzlq';
   const leadModal = document.querySelector('#leadModal');
   const leadForm  = document.querySelector('#leadForm');
   if(leadModal && leadForm){
