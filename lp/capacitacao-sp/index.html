@@ -817,6 +817,23 @@
   // ===== Lead capture modal =====
   // Cole a URL do seu webhook (Make/CRM) para receber os leads automaticamente:
   const LEAD_ENDPOINT = 'https://hook.us1.make.com/enei2petnvehlmr4i9nsq0bhn11qmzlq';
+
+  // ===== Captura de UTM / origem (first-touch persistente) =====
+  const TRACK_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'];
+  const tracking = (()=>{
+    try{
+      const qs = new URLSearchParams(location.search);
+      const cur = {}; TRACK_KEYS.forEach(k=>{ const v=qs.get(k); if(v) cur[k]=v; });
+      let saved = null; try{ saved = JSON.parse(localStorage.getItem('ith_track')||'null'); }catch(e){}
+      // grava o first-touch só na primeira visita que trouxer parâmetros
+      if(!saved && Object.keys(cur).length){
+        saved = {...cur, first_referrer: document.referrer||'', first_landing: location.href, ts: Date.now()};
+        localStorage.setItem('ith_track', JSON.stringify(saved));
+      }
+      return saved || {...cur, first_referrer: document.referrer||'', first_landing: location.href};
+    }catch(e){ return {}; }
+  })();
+
   const leadModal = document.querySelector('#leadModal');
   const leadForm  = document.querySelector('#leadForm');
   if(leadModal && leadForm){
@@ -858,7 +875,11 @@
 
       const data = { nome:leadForm.nome.value.trim(), telefone:leadForm.telefone.value.trim(),
         email:leadForm.email.value.trim(), formacao:leadForm.formacao.value, atuacao:leadForm.atuacao.value,
-        evento:'Capacitação Urgência e Emergência · SP 21/22 AGO', origem: location.href };
+        evento:'Capacitação Urgência e Emergência · SP 21/22 AGO',
+        utm_source: tracking.utm_source||'', utm_medium: tracking.utm_medium||'',
+        utm_campaign: tracking.utm_campaign||'', utm_content: tracking.utm_content||'',
+        utm_term: tracking.utm_term||'', gclid: tracking.gclid||'', fbclid: tracking.fbclid||'',
+        referrer: document.referrer||'', origem: location.href };
       const btn = leadForm.querySelector('.lead-submit'); btn.disabled = true; btn.textContent = 'Enviando...';
       try{ if(LEAD_ENDPOINT){ await fetch(LEAD_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)}); } }catch(err){}
       try{ const arr = JSON.parse(localStorage.getItem('ith_urg_leads')||'[]'); arr.push({...data, ts:Date.now()}); localStorage.setItem('ith_urg_leads', JSON.stringify(arr)); }catch(err){}
