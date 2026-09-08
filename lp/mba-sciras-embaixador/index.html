@@ -38,7 +38,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="hero-sciras.webp">
+<link rel="preload" as="image" href="hero-embaixadora-desktop.webp" media="(min-width:1001px)">
+<link rel="preload" as="image" href="hero-embaixadora-mobile.webp" media="(max-width:1000px)">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
@@ -137,8 +138,8 @@
 
   /* Hero */
   .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;min-height:640px;display:flex;align-items:center}
-  .hero-bg{position:absolute;inset:0;background:url(hero-sciras.webp) center right/cover no-repeat;}
-  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,64,.98) 0%,rgba(3,17,64,.92) 38%,rgba(3,17,64,.45) 70%,rgba(3,17,64,.25) 100%)}
+  .hero-bg{position:absolute;inset:0;background:url(hero-embaixadora-desktop.webp) center/cover no-repeat;}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,64,.72) 0%,rgba(3,17,64,.45) 40%,rgba(3,17,64,0) 62%)}
   .hero .wrap{position:relative;z-index:2;padding-top:72px;padding-bottom:72px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .hero-tag{display:inline-flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
   .chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line-dk);color:#e2e8ff}
@@ -244,20 +245,6 @@
   .vsl.is-playing .vsl-poster,.vsl.is-playing .vsl-play,.vsl.is-playing .vsl-badge{display:none}
   @media(max-width:640px){.vsl{border-radius:14px;margin-top:26px}.vsl-play{width:68px;height:68px}.vsl-play svg{width:28px;height:28px}}
 
-
-  /* Ambassador slot (hero right) */
-  .hero .wrap{align-items:end}
-  .hero-amb{position:relative;display:flex;align-items:flex-end;justify-content:center;height:100%;min-height:520px;margin-bottom:-72px}
-  .hero-amb img{width:auto;max-width:100%;max-height:680px;object-fit:contain;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
-  .hero-amb::before{content:"";position:absolute;left:50%;bottom:60px;transform:translateX(-50%);width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(45,217,141,.28),transparent 65%);filter:blur(10px);z-index:0}
-  .hero-amb img{position:relative;z-index:1}
-  @media(max-width:1000px){
-    .hero .wrap{align-items:start}
-    .hero-amb{min-height:0;margin-bottom:-40px;margin-top:-10px}
-    .hero-amb img{max-height:440px}
-    .hero-amb::before{width:300px;height:300px;bottom:30px}
-  }
-  @media(max-width:640px){.hero-amb img{max-height:360px}.hero-amb{margin-bottom:-40px}}
 
   /* Trust strip */
   .trust{background:#fff;border-bottom:1px solid var(--line)}
@@ -501,6 +488,26 @@
     details.mod .body{padding-left:20px}
     footer .cols{grid-template-columns:1fr}
   }
+
+  /* Ambassador hero */
+  .hero{min-height:720px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;min-height:720px}
+  .amb-tag{justify-self:end;align-self:end;display:inline-flex;flex-direction:column;gap:2px;background:rgba(3,17,64,.55);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);border-radius:14px;padding:10px 16px;color:#fff;margin-bottom:8px}
+  .amb-tag small{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+  .amb-tag b{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:800}
+  @media(max-width:1000px){
+    .hero{min-height:0}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;padding-bottom:105vw;align-items:start}
+    .hero-bg{background-image:url(hero-embaixadora-mobile.webp);background-position:center bottom;background-size:100% auto;background-color:var(--navy)}
+    .hero-bg::after{background:linear-gradient(180deg,rgba(3,17,64,1) 0,rgba(3,17,64,1) calc(100% - 178vw),rgba(3,17,64,.85) calc(100% - 158vw),rgba(3,17,64,0) calc(100% - 118vw))}
+    .amb-tag{justify-self:start;margin-bottom:0;position:absolute;left:22px;bottom:28px}
+    .hero .wrap{position:relative}
+  }
+  @media(max-width:640px){.hero .wrap{padding-bottom:130vw}}
+
+  .hero-proof{gap:14px 22px}
+  @media(max-width:640px){.amb-tag{left:22px;bottom:24px}}
+
 </style>
 </head>
 <body>
@@ -539,7 +546,7 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="topo">
-  <div class="hero-bg" role="img" aria-label="Profissional de saúde colocando máscara cirúrgica em ambiente hospitalar"></div>
+  <div class="hero-bg" role="img" aria-label="Esp. Juliana Dias, embaixadora do MBA em SCIRAS e Segurança do Paciente"></div>
   <div class="wrap">
     <div>
       <div class="kicker">
@@ -575,10 +582,7 @@
       </div>
     </div>
 
-    <!-- FOTO DO EMBAIXADOR: substitua o arquivo embaixador.png nesta pasta (PNG com fundo transparente, retrato vertical, ~900x1100px). -->
-    <div class="hero-amb rv">
-      <img src="embaixador.png" alt="Embaixador do MBA em SCIRAS e Segurança do Paciente" width="900" height="1100" fetchpriority="high">
-    </div>
+    <div class="amb-tag rv"><small>Embaixadora</small><b>Esp. Juliana Dias</b></div>
   </div>
 </section>
 
