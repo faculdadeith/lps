@@ -222,6 +222,9 @@
   .pb-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:60px;font-weight:800;color:var(--navy);letter-spacing:-.04em}
   .pb-val small{font-size:30px;font-weight:800;letter-spacing:-.02em}
   .pb-per{font-size:16px;font-weight:700;color:var(--ink-2)}
+  .pb-limit{display:inline-flex;align-items:center;gap:7px;margin-top:10px;background:#eef2ff;border:1px solid #c7d2fe;color:var(--blue);font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;text-align:left;line-height:1.3}
+  .pb-limit b{font-weight:800}
+  .pb-limit svg{width:15px;height:15px;flex:none;stroke:var(--blue);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   .pb-total{font-size:12.5px;color:var(--muted);margin-top:8px}
   .pb-save{display:inline-flex;align-items:center;gap:7px;text-align:left;line-height:1.35;margin-top:10px;background:#ecfdf5;color:#047857;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px}
   .pb-save b{font-weight:800}
@@ -558,7 +561,7 @@
       </div>
       <ul class="hero-notes">
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Acesso imediato ao portal</li>
-        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Cartão de crédito recorrente</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Não compromete o limite do cartão</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sem TCC tradicional</li>
       </ul>
       <div class="hero-proof">
@@ -575,6 +578,7 @@
       <div class="pricebox">
         <div class="pb-top"><span class="pb-old">De <s>R$ 199,99</s>/mês</span><span class="pb-off">-40% · até 30/09</span></div>
         <div class="pb-main"><span class="pb-x">22x de</span><span class="pb-cur">R$</span><span class="pb-val">119<small>,99</small></span><span class="pb-per">/mês</span></div>
+        <div class="pb-limit"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>R$ 119,99/mês <b>sem comprometer o limite</b> do cartão</span></div>
         <div class="pb-total">Total de R$ 2.639,78 no cartão de crédito recorrente</div>
         <div class="pb-save"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Você economiza <b>R$ 1.760</b> no curso inteiro</span></div>
         <div class="pb-deadline js-deadline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Condição válida até <b>30/09</b> · encerra em <b class="js-cd-short">--</b></div>
@@ -887,6 +891,7 @@
       <div class="pricebox pricebox-lg">
         <div class="pb-top"><span class="pb-old">De <s>R$ 199,99</s>/mês</span><span class="pb-off">-40% · só até 30 de setembro</span></div>
         <div class="pb-main"><span class="pb-x">22x de</span><span class="pb-cur">R$</span><span class="pb-val">119<small>,99</small></span><span class="pb-per">/mês</span></div>
+        <div class="pb-limit"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>R$ 119,99/mês <b>sem comprometer o limite</b> do cartão</span></div>
         <div class="pb-total">Total de R$ 2.639,78 no cartão de crédito recorrente · sem juros</div>
         <div class="pb-save"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Você economiza <b>R$ 1.760</b> em relação ao valor regular</span></div>
         <div class="pb-deadline js-deadline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Condição especial válida até <b>30 de setembro</b> · encerra em <b class="js-cd-short">--</b></div>
@@ -899,6 +904,7 @@
       <div class="pc-title">O que está incluso</div>
       <ul class="pc-list">
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>440 horas · conclua em 6 ou 12 meses</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Parcela mensal no cartão recorrente, sem bloquear o limite</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Aulas 100% online, sem encontros presenciais</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>+60 videoaulas, 50 cases e 40 e-books inclusos</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Fórum com professor em até 24h + suporte 24h</li>
@@ -983,7 +989,7 @@
       <details class="q"><summary>O diploma é reconhecido pelo MEC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. O diploma é digital, emitido pela ITH Educação (nota 5 no MEC), com QR Code de autenticidade e validade em todo o território nacional. Ele tem a mesma validade e peso da versão presencial e não menciona a modalidade cursada.</p></div></details>
       <details class="q"><summary>Preciso fazer TCC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Não há TCC tradicional. Em vez disso, você desenvolve um plano de negócio estruturado, pensado para transformar ideias em projetos reais na sua instituição ou na sua consultoria.</p></div></details>
       <details class="q"><summary>Quais profissionais podem cursar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>A pós é multiprofissional: qualquer graduado que atue ou queira atuar em saúde e gestão, como enfermeiros, médicos, farmacêuticos, fisioterapeutas, dentistas e administradores hospitalares.</p></div></details>
-      <details class="q"><summary>Como funciona o pagamento e a condição especial?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O investimento regular é de 22 parcelas de R$ 199,99 no cartão de crédito recorrente. Na condição especial de matrícula, válida até 30 de setembro, cada parcela sai por R$ 119,99.</p></div></details>
+      <details class="q"><summary>Como funciona o pagamento e a condição especial?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O investimento regular é de 22 parcelas de R$ 199,99 no cartão de crédito recorrente. Na condição especial de matrícula, válida até 30 de setembro, cada parcela sai por R$ 119,99.</p><p>A cobrança é recorrente: a cada mês é lançado apenas o valor da parcela, como uma assinatura. O total do curso não fica bloqueado no limite do seu cartão.</p></div></details>
       <details class="q"><summary>Quais documentos preciso enviar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>RG e CPF, título de eleitor, comprovante de endereço, certidão de nascimento ou casamento, certificado e histórico do ensino médio, diploma e histórico da graduação, foto digital e, para o sexo masculino, comprovante de reservista.</p><p>Tudo em PDF, enviado pelo Portal do Aluno, 100% online.</p></div></details>
       <details class="q"><summary>Tenho suporte durante o curso?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. Cada módulo tem fórum com resposta do professor em até 24h, além da Central de Atendimento ao Aluno (CAA) com suporte técnico 24h por WhatsApp e e-mail.</p></div></details>
     </div>
