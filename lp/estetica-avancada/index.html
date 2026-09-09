@@ -528,8 +528,8 @@
   /* ===== Seção do ciclo (3 atos) ===== */
   .ciclo-scroll{position:relative;height:320vh}
   .ciclo-sticky{position:sticky;top:68px;height:calc(100vh - 68px);height:calc(100svh - 68px);display:flex;align-items:center;overflow:hidden}
-  .ciclo-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%}
-  .ciclo-stage{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:1/1;perspective:1500px}
+  .ciclo-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%;padding:70px 0 30px}
+  .ciclo-stage{position:relative;width:min(100%,560px,calc((100vh - 68px) * .70));width:min(100%,560px,calc((100svh - 68px) * .70));margin:0 auto;aspect-ratio:1/1;perspective:1500px}
   .ciclo-layer{position:absolute;inset:0;transition:transform 1.1s cubic-bezier(.16,.86,.2,1),opacity .8s ease;will-change:transform,opacity}
   .ciclo-svg{width:100%;height:100%;display:block;overflow:visible}
   .ciclo-cone{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;pointer-events:none}
@@ -598,7 +598,8 @@
     .ciclo-sticky{align-items:flex-start;padding-top:14px}
     #ciclo .wrap.center + .ciclo-scroll{margin-top:-10px}
     .ciclo-grid{grid-template-columns:1fr;gap:20px}
-    .ciclo-stage{max-width:min(74vw,380px)}
+    .ciclo-stage{width:min(74vw,380px,calc((100svh - 68px) * .5))}
+    .ciclo-grid{padding:44px 0 10px}
     .ciclo-caps{min-height:210px}
     .ciclo-mes-txt{font-size:44px}
     .ciclo-mod-txt{font-size:24px}
