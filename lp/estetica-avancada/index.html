@@ -572,9 +572,12 @@
   .ciclo-cap .eyebrow{margin-bottom:10px}
   .ciclo-cap h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#fff;line-height:1.2;margin-bottom:10px;letter-spacing:-.02em}
   .ciclo-cap p{font-size:15.5px;color:#c7d0ea;line-height:1.6}
-  .ciclo-steps{display:flex;gap:8px;margin-top:22px}
-  .ciclo-steps span{width:34px;height:4px;border-radius:99px;background:rgba(255,255,255,.18)}
-  .ciclo-steps span.on{background:#2dd98d}
+  .ciclo-steps{display:flex;gap:6px;margin-top:18px}
+  .ciclo-steps button{appearance:none;-webkit-appearance:none;border:0;background:transparent;padding:8px 2px;cursor:pointer;position:relative;width:44px}
+  .ciclo-steps button::before{content:"";display:block;height:4px;border-radius:99px;background:rgba(255,255,255,.18);transition:background .25s,transform .25s}
+  .ciclo-steps button:hover::before{background:rgba(255,255,255,.45);transform:scaleY(1.5)}
+  .ciclo-steps button.on::before{background:#2dd98d}
+  .ciclo-steps button:focus-visible{outline:2px solid #2dd98d;outline-offset:2px;border-radius:6px}
 
   /* atos */
   .ciclo-stage[data-act="1"] .ciclo-trilha,
@@ -911,19 +914,19 @@
               <span class="eyebrow">Ato 1 · A jornada</span>
               <h3>Entrou em setembro? Conclui em agosto do ano seguinte</h3>
               <p>Cada mês é uma porta de entrada. Quem se matricula em setembro percorre os doze meses do ciclo externo e conclui a pós em agosto do ano seguinte. Quem entra em março termina em fevereiro. O ritmo é o mesmo para todos, a data de início é a sua.</p>
-              <div class="ciclo-steps"><span class="on"></span><span></span><span></span></div>
+              <div class="ciclo-steps" role="tablist" aria-label="Etapas"><button type="button" class="on" data-step="1" aria-label="Ato 1: a jornada"></button><button type="button" data-step="2" aria-label="Ato 2: o aprofundamento"></button><button type="button" data-step="3" aria-label="Ato 3: nada raso"></button></div>
             </div>
             <div class="ciclo-cap" data-cap="2">
               <span class="eyebrow">Ato 2 · O aprofundamento</span>
               <h3>O Master em Estética e Injetáveis é a camada de dentro</h3>
               <p>A pós dá a base: avaliação, protocolos, tecnologias e segurança clínica. O Master aprofunda o que separa quem aplica de quem domina: injetáveis, harmonização e manejo de intercorrências, em seis módulos que giram em ciclo dentro da formação.</p>
-              <div class="ciclo-steps"><span></span><span class="on"></span><span></span></div>
+              <div class="ciclo-steps" role="tablist" aria-label="Etapas"><button type="button" data-step="1" aria-label="Ato 1: a jornada"></button><button type="button" class="on" data-step="2" aria-label="Ato 2: o aprofundamento"></button><button type="button" data-step="3" aria-label="Ato 3: nada raso"></button></div>
             </div>
             <div class="ciclo-cap" data-cap="3">
               <span class="eyebrow">Ato 3 · Nada raso</span>
               <h3>O Master é o fundo, não a superfície</h3>
               <p>Visto de lado, o ciclo vira um funil. A pós é a boca larga, por onde todo mundo entra. O Master é a profundidade, onde a mão fica firme e o protocolo vira rotina. Nada raso.</p>
-              <div class="ciclo-steps"><span></span><span></span><span class="on"></span></div>
+              <div class="ciclo-steps" role="tablist" aria-label="Etapas"><button type="button" data-step="1" aria-label="Ato 1: a jornada"></button><button type="button" data-step="2" aria-label="Ato 2: o aprofundamento"></button><button type="button" class="on" data-step="3" aria-label="Ato 3: nada raso"></button></div>
             </div>
           </div>
         </div>
@@ -952,6 +955,17 @@
       var fixo = r.top <= 1;
       set(!fixo ? 0 : p < 0.40 ? 1 : p < 0.70 ? 2 : 3);
     }
+    var alvo = {1:0.16, 2:0.55, 3:0.86};
+    wrap.querySelectorAll('.ciclo-steps button').forEach(function(b){
+      b.addEventListener('click', function(){
+        var n = +b.getAttribute('data-step');
+        var r = wrap.getBoundingClientRect();
+        var total = r.height - window.innerHeight;
+        var y = window.scrollY + r.top + total * (alvo[n] || 0);
+        window.scrollTo({top: y, behavior: 'smooth'});
+        try{ gtag('event','ciclo_step_click',{ato:n}); }catch(e){}
+      });
+    });
     window.addEventListener('scroll', onScroll, {passive:true});
     window.addEventListener('resize', onScroll);
     onScroll();
