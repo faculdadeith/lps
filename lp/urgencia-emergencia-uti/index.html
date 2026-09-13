@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
-<title>Pós-graduação presencial e híbrida em Saúde | ITH Educação</title>
-<meta name="description" content="Escolha sua pós-graduação presencial ou híbrida em saúde na ITH: Urgência e Emergência + UTI, UTI Neonatal e Pediátrica, Estética Avançada e Enfermagem Obstétrica. Imersões, estágios e simulação realística, diploma MEC (ITH nota 5). Turmas em Goiânia e Brasília.">
+<title>Pós-Graduação em Urgência e Emergência + UTI | Presencial · Dupla certificação | ITH Educação</title>
+<meta name="description" content="Pós-graduação presencial em Urgência e Emergência + UTI com dupla certificação: 440h + 440h, APH, trauma, ECG, ventilação mecânica, PICC e simulação realística. Diploma reconhecido pelo MEC (ITH nota 5).">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="https://faculdadeith.com.br/wp-content/uploads/2021/08/cropped-new-icon-32x32.png">
 
@@ -142,7 +142,7 @@
 
   /* Hero */
   .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;min-height:640px;display:flex;align-items:center}
-  .hero-bg{position:absolute;inset:0;background:url(hero-urgencia.webp) center right/cover no-repeat;}
+  .hero-bg{position:absolute;inset:0;background:url(hero-auditoria.webp) center right/cover no-repeat;}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,64,.98) 0%,rgba(3,17,64,.92) 38%,rgba(3,17,64,.45) 70%,rgba(3,17,64,.25) 100%)}
   .hero .wrap{position:relative;z-index:2;padding-top:72px;padding-bottom:72px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .hero-tag{display:inline-flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
@@ -504,47 +504,16 @@
     footer .cols{grid-template-columns:1fr}
   }
 
-  /* ===== Hub presencial / híbrido ===== */
-  .sticky .p small{text-decoration:none}
-  .hero h1 .nw{white-space:nowrap}
-  .hero-geral .wrap{grid-template-columns:minmax(0,720px) 1fr}
-  .hero-geral .hero-bg::after{background:linear-gradient(90deg,rgba(3,17,64,.97) 0%,rgba(3,17,64,.9) 40%,rgba(3,17,64,.35) 75%,rgba(3,17,64,.2) 100%)}
-  .hero-list{display:grid;gap:8px;margin-top:22px}
-  .hero-list a{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;background:var(--soft);border:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--navy);transition:.2s;line-height:1.3}
-  .hero-list a:hover{background:#eef2ff;border-color:#c7d2fe;transform:translateX(3px)}
-  .hero-list a small{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green-2);white-space:nowrap}
-  .hero-list a svg{width:16px;height:16px;flex:none;stroke:var(--green-2);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-  .pcs{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:36px}
-  .pc{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 30px -20px rgba(3,17,64,.25)}
-  .pc-img{position:relative;aspect-ratio:16/6;background:var(--navy)}
-  .pc-img img{width:100%;height:100%;object-fit:cover;object-position:right center}
-  .pc-kind{position:absolute;left:14px;top:14px;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--navy);color:#fff}
-  .pc-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
-  .pc-body h3{font-size:21px;color:var(--navy);line-height:1.25}
-  .pc-body p{font-size:14.5px;color:var(--ink-2);flex:1}
-  .pc-tags{display:flex;flex-wrap:wrap;gap:6px}
-  .pc-tags span{font-size:11.5px;font-weight:700;color:var(--blue);background:#eef2ff;padding:4px 9px;border-radius:999px}
-  .pc-meta{display:flex;flex-wrap:wrap;gap:6px;font-size:12.5px;color:var(--muted);font-weight:600}
-  .pc-price{display:block;margin-top:4px;line-height:1.2}
-  .pc-price s{display:block;font-size:12.5px;color:var(--muted);margin-bottom:2px}
-  .pc-price b{margin-right:4px}
-  .pc-price b{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;color:var(--navy);letter-spacing:-.02em}
-  .pc-price small{font-size:12px;color:var(--muted);font-weight:600}
-  .pc .btn{margin-top:4px;padding:15px 18px;font-size:15px}
-  .pc-more{font-size:13px;font-weight:700;color:var(--blue);text-align:center}
-  /* trilha 1fr tem mínimo min-content: sem minmax(0,..) o hero estoura a largura no mobile */
-  @media(max-width:1000px){.hero-geral .wrap{grid-template-columns:minmax(0,1fr)}.hero-geral .kicker{flex-wrap:wrap}.hero-geral h1,.hero-geral .hook,.hero-geral .sub{overflow-wrap:break-word}}
-  .pcs-dots{display:none;justify-content:center;gap:7px;margin-top:14px}
-  .pcs-dots span{width:8px;height:8px;border-radius:50%;background:#c7d2fe;transition:.2s}
-  .pcs-dots span.on{background:var(--blue);width:22px;border-radius:999px}
-  .pcs-hint{display:none;text-align:center;font-size:12.5px;color:var(--muted);margin-top:8px}
-  @media(max-width:640px){
-    .pcs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 22px 6px;margin:28px -22px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-    .pcs::-webkit-scrollbar{display:none}
-    .pc{flex:0 0 84%;scroll-snap-align:center;opacity:1!important;transform:none!important}
-    .pc-body h3{font-size:18px}
-    .pcs-dots{display:flex}.pcs-hint{display:block}
-  }
+  /* ===== Presencial / híbrido ===== */
+  .hyb{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+  .hyb div{background:rgba(255,255,255,.05);border:1px solid var(--line-dk);border-radius:18px;padding:24px}
+  .hyb .n{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.1em;color:var(--green)}
+  .hyb h3{font-size:18px;color:#fff;margin:8px 0 6px}
+  .hyb p{font-size:14px;color:#c7d0ea}
+  .cities{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+  .cities span{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:#e2e8ff;background:rgba(255,255,255,.07);border:1px solid var(--line-dk);padding:9px 15px;border-radius:999px}
+  .cities svg{width:15px;height:15px;stroke:var(--green);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  @media(max-width:1000px){.hyb{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -552,7 +521,7 @@
 <!-- ============ BARRA DE ESCASSEZ ============ -->
 <div class="topbar" id="topbar">
   <div class="wrap topbar-in">
-    <span class="tb-txt"><b>Matrículas abertas</b> para as próximas turmas · condição especial até <b>30 de setembro</b></span>
+    <span class="tb-txt"><b>Matrículas abertas</b> para a próxima turma · condição especial até <b>30 de setembro</b></span>
     <span class="tb-cd" id="cd" aria-live="polite">
       <span><b id="cdD">00</b><small>dias</small></span><i>:</i>
       <span><b id="cdH">00</b><small>horas</small></span><i>:</i>
@@ -567,48 +536,70 @@
   <div class="wrap nav">
     <a class="logo" href="#topo" aria-label="ITH Educação"><img src="logo-ith.webp" alt="ITH Educação" width="1177" height="662"></a>
     <nav class="nav-links" aria-label="Seções">
-      <a href="#cursos">Cursos</a>
-      <a href="#incluso">O que inclui</a>
       <a href="#video">Vídeo</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#professores">Professores</a>
       <a href="#ith">A ITH</a>
-      <a href="#cursos">Investimento</a>
+      <a href="#investimento">Investimento</a>
       <a href="#faq">Dúvidas</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary js-goto" href="#cursos">Matricular agora</a>
+      <a class="btn btn-primary js-goto" href="#investimento">Matricular agora</a>
     </div>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero hero-geral" id="topo">
+<section class="hero" id="topo">
   <div class="hero-bg" role="img" aria-label="Enfermeira operando monitor multiparamétrico em centro cirúrgico"></div>
   <div class="wrap">
     <div>
       <div class="kicker">
         <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><em class="kx">Pós-graduação </em>lato sensu</span><i></i>
-        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Presencial e híbrida</span><i></i>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Presencial · 880h</span><i></i>
         <span class="hi"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>MEC · Nota 5</span>
       </div>
-      <h1>Pós-graduação <span class="nw">presencial e híbrida</span> <span class="h1b">para quem vive a prática</span></h1>
-      <p class="hook">Quatro formações com imersões, estágios supervisionados e simulação realística. Turmas em Goiânia e Brasília.</p>
-      <p class="sub">Teoria online no seu ritmo e prática de verdade em laboratórios, clínicas-escola e maternidades, com encontros presenciais uma vez por mês. Diploma digital com validade MEC e professor respondendo no fórum em até 24h.</p>
+      <h1>Pós em <span class="h1b">Urgência e Emergência + UTI</span></h1>
+      <p class="hook">No pronto-socorro e na UTI, cada segundo define a vida do paciente. Hesitar não é opção.</p>
+      <p class="sub">Duas pós em uma: APH, trauma, ECG, ventilação mecânica, PICC e paciente crítico, com vivências clínicas em simulação realística e aulas presenciais uma vez por mês. 440h de Urgência e Emergência + 440h de UTI, com dupla certificação.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg js-goto" href="#cursos"><span>Escolher minha pós <small>4 formações presenciais e híbridas</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-outline btn-lg js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20as%20p%C3%B3s%20presenciais%20e%20h%C3%ADbridas%20da%20ITH" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Falar com um consultor</a>
+        <a class="btn btn-primary btn-lg js-checkout" href="https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52224"><span>Garantir minha vaga <small>30x de R$ 449,99</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-outline btn-lg js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Falar com um consultor</a>
       </div>
       <ul class="hero-notes">
-        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Estágios e práticas inclusos</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Vivências clínicas inclusas</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Não compromete o limite do cartão</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sem TCC tradicional</li>
       </ul>
       <div class="hero-proof">
-        <div><b>4</b><small>FORMAÇÕES</small></div>
-        <div><b>1x</b><small>POR MÊS PRESENCIAL</small></div>
+        <div><b>880h</b><small>CARGA HORÁRIA</small></div>
+        <div><b>18 meses</b><small>DE FORMAÇÃO</small></div>
+        <div><b>2</b><small>CERTIFICAÇÕES</small></div>
         <div><b>+12 mil</b><small>ALUNOS FORMADOS</small></div>
-        <div><b>95%</b><small>DE SATISFAÇÃO</small></div>
       </div>
     </div>
+
+    <aside class="offer" aria-label="Resumo da oferta">
+      <span class="badge">Condição especial até 30/09</span>
+      <h3>Pós em Urgência e Emergência + UTI · Presencial · 880h</h3>
+      <div class="pricebox">
+        <div class="pb-top"><span class="pb-old">De <s>R$ 529,40</s>/mês</span><span class="pb-off">-15% · pontualidade</span></div>
+        <div class="pb-main"><span class="pb-x">30x de</span><span class="pb-cur">R$</span><span class="pb-val">449<small>,99</small></span><span class="pb-per">/mês</span></div>
+        <div class="pb-limit"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Mensalidade recorrente, <b>sem comprometer o limite</b> do cartão</span></div>
+        <div class="pb-total">Pagando em dia, você economiza R$ 2.382,30 no curso inteiro</div>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Dupla certificação: Urgência e Emergência + UTI</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>18 módulos com 4 vivências clínicas</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>PICC, ventilação mecânica, APH e trauma</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Curso bônus BLS com certificado internacional</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Tutoria ativa e suporte técnico 24h</li>
+      </ul>
+      <a class="btn btn-blue btn-block js-checkout" href="https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52224">Quero me matricular agora</a>
+      <div class="safe"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro no site oficial da ITH Educação</div>
+    </aside>
   </div>
 </section>
 
@@ -622,60 +613,73 @@
   </div>
 </div>
 
-<!-- ============ CURSOS ============ -->
-<section class="sec soft" id="cursos">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">Escolha a sua</span>
-      <h2>Quatro formações presenciais e híbridas. Escolha a sua.</h2>
-      <p class="lead center">Cada pós tem metodologia ITH 4.0, práticas supervisionadas e diploma com validade MEC. Escolha a sua e veja a página completa, com grade, professores, datas e matrícula.</p>
+<section class="sec soft" id="para-quem">
+  <div class="wrap two">
+    <div class="rv">
+      <span class="eyebrow">Para quem é esta pós</span>
+      <h2>Para o enfermeiro que quer liderar o atendimento crítico com segurança e dupla certificação</h2>
+      <p class="lead">Protocolos complexos de urgência e o plantão da UTI cobram decisão imediata. Aqui você treina a conduta em simulação realística até ela virar rotina, e sai com dois títulos de especialista.</p>
+      <p class="lead" style="margin-top:14px">Público-alvo: <strong>enfermeiros</strong> que atuam ou querem atuar em pronto-socorro, APH, SAMU, unidades de terapia intensiva e serviços de emergência.</p>
     </div>
-    <div class="pcs" id="pcs">
-      <article class="pc rv" id="curso-urgencia">
-        <div class="pc-img"><img src="hero-urgencia.webp" alt="" width="1920" height="700" loading="lazy"><span class="pc-kind">Pós-graduação · Presencial</span></div>
-        <div class="pc-body">
-          <h3>Urgência e Emergência + UTI</h3>
-          <p>Duas pós em uma: trauma, APH, ventilação mecânica, PICC e paciente crítico, com simulação realística e aulas presenciais uma vez por mês.</p>
-          <div class="pc-tags"><span>2 pós (440h + 440h)</span><span>PICC e ventilação</span><span>APH e trauma</span></div>
-          <div class="pc-meta"><span>880h</span><span>·</span><span>18 meses</span><span>·</span><span>Turma em Goiânia</span><span>·</span><span>Diploma MEC</span></div>
-          <a class="btn btn-primary btn-block js-lp" href="https://mkt.faculdadeith.com.br/lp/urgencia-emergencia-uti/" data-course="urgencia">Conhecer esta pós <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-      <article class="pc rv" id="curso-neonatal">
-        <div class="pc-img"><img src="hero-neonatal.webp" alt="" width="1920" height="700" loading="lazy"><span class="pc-kind">Pós-graduação · Híbrido</span></div>
-        <div class="pc-body">
-          <h3>UTI Neonatal e Pediátrica</h3>
-          <p>Simulação realística, ventilação mecânica, PICC e urgência neopediátrica para decidir sob pressão no plantão, sem depender de terceiros.</p>
-          <div class="pc-tags"><span>Ventilação mecânica</span><span>PICC</span><span>4 a 5 imersões</span></div>
-          <div class="pc-meta"><span>440h</span><span>·</span><span>6 ou 12 meses</span><span>·</span><span>Turmas GO e DF</span><span>·</span><span>Diploma MEC</span></div>
-          <a class="btn btn-primary btn-block js-lp" href="https://mkt.faculdadeith.com.br/lp/uti-neonatal-pediatrica/" data-course="neonatal">Conhecer esta pós <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-      <article class="pc rv" id="curso-estetica">
-        <div class="pc-img"><img src="hero-estetica.webp" alt="" width="1920" height="700" loading="lazy"><span class="pc-kind">Pós-graduação · Híbrido</span></div>
-        <div class="pc-body">
-          <h3>Estética Avançada: Facial, Corporal e Capilar</h3>
-          <p>Injetáveis, bioestimuladores, laser e tecnologias de alta performance em vivências clínicas com pacientes modelo. Encontros presenciais uma vez por mês.</p>
-          <div class="pc-tags"><span>Injetáveis</span><span>Laser e tecnologias</span><span>5 vivências clínicas</span></div>
-          <div class="pc-meta"><span>600h</span><span>·</span><span>14 meses</span><span>·</span><span>Turmas GO e DF</span><span>·</span><span>Diploma MEC</span></div>
-          <a class="btn btn-primary btn-block js-lp" href="https://mkt.faculdadeith.com.br/lp/estetica-avancada/" data-course="estetica">Conhecer esta pós <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-      <article class="pc rv" id="curso-obstetrica">
-        <div class="pc-img"><img src="hero-obstetrica.webp" alt="" width="1920" height="700" loading="lazy"><span class="pc-kind">Pós-graduação · Presencial</span></div>
-        <div class="pc-body">
-          <h3>Enfermagem Obstétrica</h3>
-          <p>Estágios supervisionados em maternidades, autonomia obstétrica e respaldo legal para assumir a condução do parto. Encontros mensais no fim de semana.</p>
-          <div class="pc-tags"><span>Estágio em maternidades</span><span>Condução do parto</span><span>Só enfermeiros</span></div>
-          <div class="pc-meta"><span>600h</span><span>·</span><span>18 meses</span><span>·</span><span>Turma em Goiânia</span><span>·</span><span>Diploma MEC</span></div>
-          <a class="btn btn-primary btn-block js-lp" href="https://mkt.faculdadeith.com.br/lp/enfermagem-obstetrica/" data-course="obstetrica">Conhecer esta pós <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
+    <div class="rv">
+      <ul class="pain-list">
+        <li class="ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Você atende no pronto-socorro, mas se sente limitado diante de protocolos complexos de urgência.</li>
+        <li class="ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sabe a teoria, porém falta segurança para programar o ventilador, inserir PICC e conduzir a reanimação.</li>
+        <li class="ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Quer assumir a liderança de uma UTI ou de um serviço de emergência, mas não tem título nem vivência para comprovar.</li>
+        <li class="ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Depois da pós:</strong> você domina protocolos avançados de urgência e terapia intensiva, realiza intervenções imediatas, coordena equipes em situações críticas e tem dupla certificação para cargos de liderança em pronto-socorro e UTI.</span></li>
+      </ul>
     </div>
-    <div class="pcs-dots" id="pcsDots" aria-hidden="true"></div>
-    <p class="pcs-hint">Deslize para ver as outras formações</p>
   </div>
 </section>
+
+
+<section class="sec" id="resultados">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">O que você conquista</span>
+      <h2>5 competências que você desenvolve na pós</h2>
+      <p class="lead center">Resultados práticos, aplicáveis no plantão desde os primeiros módulos.</p>
+    </div>
+    <div class="grid g3" style="margin-top:38px">
+      <div class="card rv">
+        <span class="num">01</span>
+        <div class="ic" style="margin-top:10px"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Formação clínica avançada</h3>
+        <p>Protocolos de urgência, emergência e terapia intensiva aplicados com segurança e agilidade em situações críticas.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">02</span>
+        <div class="ic" style="margin-top:10px"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+        <h3>Decisão rápida sob pressão</h3>
+        <p>Avaliação de cenários complexos, classificação de risco e condução de atendimentos que exigem resposta imediata.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">03</span>
+        <div class="ic" style="margin-top:10px"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/></svg></div>
+        <h3>Gestão de equipes e setores críticos</h3>
+        <p>Liderança de equipes de enfermagem, coordenação de fluxos em pronto-socorro e UTI e implantação de processos.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">04</span>
+        <div class="ic" style="margin-top:10px"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></div>
+        <h3>Reconhecimento e empregabilidade</h3>
+        <p>Dupla certificação como diferencial competitivo para cargos estratégicos em hospitais de alta complexidade.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">05</span>
+        <div class="ic" style="margin-top:10px"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-6"/></svg></div>
+        <h3>Prática aplicada e atualizada</h3>
+        <p>Ventilação mecânica, PICC, ECG, APH e trauma treinados em vivências clínicas para aplicar no próximo plantão.</p>
+      </div>
+      <div class="card rv" style="background:var(--navy);border-color:var(--navy);display:flex;flex-direction:column;justify-content:center;align-items:flex-start">
+        <h3 style="color:#fff;margin-top:0">Pronto para liderar o atendimento crítico?</h3>
+        <p style="color:#c7d0ea;margin-bottom:18px">Vagas limitadas por turma.</p>
+        <a class="btn btn-primary js-goto" href="#investimento">Quero começar essa pós</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sec dark" id="incluso">
   <div class="wrap">
@@ -685,21 +689,166 @@
       <p class="lead center">Metodologia ITH 4.0: prática supervisionada, cases reais, material didático incluso e suporte contínuo do professor.</p>
     </div>
     <ul class="incl" style="margin-top:38px">
-      <li class="rv"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span><b>Encontros práticos presenciais</b>Imersões, vivências clínicas e estágios supervisionados em laboratórios, clínicas-escola e maternidades, com simulação realística.</span></li>
-      <li class="rv"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span><b>Videoaulas e vídeocases</b>Teoria online no seu ritmo, com casos clínicos comentados por especialistas.</span></li>
-      <li class="rv"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><b>Livro digital e material incluso</b>E-books, protocolos e materiais científicos prontos para consulta no plantão.</span></li>
+      <li class="rv"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span><b>Vivências clínicas em simulação realística</b>APH, ECG, ventilação mecânica e trauma craniano treinados no laboratório antes do plantão.</span></li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span><b>Encontros presenciais mensais</b>Aulas teórico-práticas uma vez por mês, no fim de semana, para caber na escala de plantão.</span></li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><b>Livro digital e material incluso</b>E-books, protocolos e materiais científicos construídos pelos professores, prontos para consulta.</span></li>
       <li class="rv"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span><b>Tutoria ativa e suporte 24h</b>Fórum com resposta do professor e Central de Atendimento ao Aluno.</span></li>
-      <li class="rv"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><span><b>Comunidade AlunITH</b>Networking com profissionais da saúde do Brasil inteiro, da sua turma e das outras unidades.</span></li>
-      <li class="rv"><svg viewBox="0 0 24 24"><path d="M12 15l-2 5 4-3 4 3-2-5"/><circle cx="12" cy="8" r="6"/></svg><span><b>Diploma digital validado pelo MEC</b>Com QR Code de autenticidade, emitido pela ITH Educação (Conceito 5).</span></li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><span><b>Bônus: curso BLS</b>Basic Life Support com certificado e carteirinha internacional, incluso na matrícula.</span></li>
+      <li class="rv"><svg viewBox="0 0 24 24"><path d="M12 15l-2 5 4-3 4 3-2-5"/><circle cx="12" cy="8" r="6"/></svg><span><b>Dupla certificação validada pelo MEC</b>Dois diplomas digitais com QR Code, Urgência e Emergência e UTI, emitidos pela ITH Educação (Conceito 5).</span></li>
     </ul>
   </div>
 </section>
+
+
+<section class="sec" id="conteudo">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Conteúdo programático · 880 horas</span>
+      <h2>O que você vai dominar, módulo a módulo</h2>
+      <p class="lead center">Dois eixos, duas certificações: da classificação de risco e do APH à ventilação mecânica avançada e ao paciente crítico na UTI.</p>
+    </div>
+    <div class="cur2 rv">
+      <div class="axis-col">
+        <div class="axis-head"><span class="axis-n">Eixo 1</span><h3>Urgência e Emergência</h3><p>10 módulos · certificação 1: APH, trauma, ECG e pronto-socorro.</p></div>
+        <details class="mod" open>
+          <summary><span class="n">01</span>Classificação de Risco nos Serviços de Emergência<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Principais sistemas de classificação de risco</li><li>Protocolos de priorização e triagem</li><li>Aspectos éticos e legais da classificação</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">02</span>Emergências Traumáticas: APH e Intra-Hospitalar + Vivência Clínica I<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Suporte básico e avançado de vida</li><li>Imobilização, transporte e equipamentos de APH</li><li>Liderança, trabalho em equipe e comunicação na cena</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">03</span>Suporte de Vida Obstétrico (SVO)<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Objetivos e protocolos de SVO</li><li>Manejo das emergências obstétricas</li><li>Sinais de intervenção no atendimento materno e neonatal</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">04</span>Urgências Psiquiátricas e Intervenções Rápidas<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Tipos de urgências psiquiátricas</li><li>Intervenções rápidas e contenção</li><li>Medicamentos e terapias de suporte</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">05</span>Distúrbios Cardiovasculares e ECG + Vivência Clínica II<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Alterações cardíacas e distúrbios no eletrocardiograma</li><li>Arritmias, isquemias e distúrbios de condução</li><li>Protocolos de emergências cardiovasculares</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">06</span>Imaginologia e Monitorização do Paciente Crítico<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Princípios básicos da radiologia</li><li>Principais exames de imagem</li><li>Monitorização básica e avançada</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">07</span>Uso e Programação de Equipamentos em Ambientes Críticos<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Princípios do ventilador mecânico</li><li>Desfibriladores e bombas de infusão</li><li>Calibração e segurança dos equipamentos</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">08</span>Farmacologia Aplicada à Urgência e Emergência<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Classificação dos medicamentos do paciente crítico</li><li>Farmacocinética na parada cardiorrespiratória</li><li>Drogas usadas durante a ventilação mecânica</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">09</span>Processo de Enfermagem<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Ferramentas do processo de enfermagem</li><li>Avaliação e diagnóstico de enfermagem</li><li>Planejamento, implementação e avaliação</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">10</span>Biossegurança e Controle de Infecções (IRAS)<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Infecções relacionadas à assistência à saúde</li><li>Prevenção e controle</li><li>Aspectos éticos e legais</li></ul>
+        </details>
+      </div>
+      <div class="axis-col">
+        <div class="axis-head"><span class="axis-n">Eixo 2</span><h3>Terapia Intensiva (UTI)</h3><p>8 módulos · certificação 2: ventilação, PICC, neurologia e paciente crítico.</p></div>
+        <details class="mod" open>
+          <summary><span class="n">11</span>Ventilação Mecânica Avançada e Distúrbios Respiratórios + Vivência Clínica III<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Princípios e fisiopatologia respiratória</li><li>Estratégias avançadas de ventilação mecânica</li><li>Operação do ventilador e máscara laríngea em simulação</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">12</span>Máscara Laríngea e PICC<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Anatomia das vias aéreas superiores</li><li>Indicações, contraindicações e técnica de inserção</li><li>Manuseio e manutenção do cateter central</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">13</span>Emergências Neurológicas, Crânio e Coluna Vertebral + Vivência Clínica IV<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Avaliação neurológica rápida</li><li>Traumatismo cranioencefálico e medular</li><li>Imobilização, transporte seguro e monitoramento neurológico</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">14</span>Distúrbios Abdominais e Metabólicos<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Emergências abdominais no paciente crítico</li><li>Distúrbios metabólicos e hidroeletrolíticos</li><li>Conduta e monitorização na UTI</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">15</span>Terapia Farmacológica na UTI<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Farmacologia aplicada ao paciente crítico</li><li>Drogas vasoativas, sedação e analgesia</li><li>Medicamentos durante a ventilação mecânica</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">16</span>Exames Laboratoriais Aplicados<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Interpretação dos exames do paciente crítico</li><li>Correlação clínico-laboratorial</li><li>Tomada de decisão a partir dos resultados</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">17</span>Núcleo de Segurança do Paciente<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Protocolos de segurança do paciente</li><li>Ferramentas para análise de riscos</li><li>Análise de incidentes e cultura de segurança</li></ul>
+        </details>
+        <details class="mod">
+          <summary><span class="n">18</span>Saúde ITH 4.0: Prática e Negócio<svg class="arr" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <ul class="body"><li>Estrutura organizacional de um negócio em saúde</li><li>Análise de mercado e posicionamento</li><li>Plano de negócio no lugar do TCC</li></ul>
+        </details>
+      </div>
+    </div>
+    <div class="center rv" style="margin-top:40px">
+      <a class="btn btn-primary btn-lg js-goto" href="#investimento">Quero acesso a esse conteúdo</a>
+      <p class="cta-note">30x de R$ 449,99 com desconto de pontualidade</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec dark" id="como-funciona">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Formato presencial</span>
+      <h2>Teoria online, prática em simulação realística</h2>
+      <p class="lead center">Você estuda sem parar de trabalhar e treina a conduta em aulas presenciais mensais e vivências clínicas, antes de aplicar no plantão.</p>
+    </div>
+    <div class="hyb">
+      <div class="rv"><span class="n">TEORIA</span><h3>Conteúdo online no seu ritmo</h3><p>Videoaulas, e-books e materiais científicos liberados mensalmente no portal do aluno.</p></div>
+      <div class="rv"><span class="n">PRESENCIAL</span><h3>Aulas mensais no fim de semana</h3><p>Encontros teórico-práticos uma vez por mês, em laboratórios com simulação realística, para conciliar com a escala.</p></div>
+      <div class="rv"><span class="n">VIVÊNCIAS</span><h3>4 vivências clínicas</h3><p>APH, distúrbios cardiovasculares e ECG, ventilação mecânica e emergências neurológicas treinados em cenários reais.</p></div>
+    </div>
+    <div class="cities rv">
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Goiânia · GO</span>
+    </div>
+    <p class="center cta-note rv" style="margin-top:14px">As datas de início de cada turma são confirmadas pelo consultor no momento da matrícula.</p>
+  </div>
+</section>
+
+
+<section class="sec soft" id="professores">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Professores referência</span>
+      <h2>Aprenda com quem vive a urgência e a UTI todos os dias</h2>
+      <p class="lead center">Professores atuantes em SAMU, pronto-socorro e terapia intensiva, que trazem para a sala o que realmente acontece no plantão.</p>
+    </div>
+    <div class="grid g3" style="margin-top:36px">
+      <div class="card prof rv">
+        <div class="prof-head"><div class="avatar">CM</div><div><h3>Caroline Marinho</h3><div class="role">Mestre · Terapia intensiva e gestão</div></div></div>
+        <p>Mais de 15 anos em terapia intensiva e gestão em saúde. Foi supervisora e coordenadora de UTI, implantou POPs e liderou equipes e comissões de segurança do paciente.</p>
+      </div>
+      <div class="card prof rv">
+        <div class="prof-head"><div class="avatar">LM</div><div><h3>Leles Morais</h3><div class="role">Especialista · Urgência e Emergência</div></div></div>
+        <p>Mais de 15 anos de experiência em pronto-socorro e hospitais de alta complexidade, com especialização em Urgência e Emergência e em Cardiologia Hemodinâmica.</p>
+      </div>
+      <div class="card prof rv">
+        <div class="prof-head"><div class="avatar">CX</div><div><h3>Charles Xavier</h3><div class="role">Mestre · Enfermagem pré-hospitalar</div></div></div>
+        <p>Mais de 10 anos em APH, urgência, emergência e UTI. Enfermeiro intervencionista e instrutor no Núcleo de Ensino e Treinamento do SAMU Centro-Sul.</p>
+      </div>
+      <div class="card prof rv">
+        <div class="prof-head"><div class="avatar">SN</div><div><h3>Sidney Netto</h3><div class="role">Especialista · Dispositivos médicos</div></div></div>
+        <p>Mais de 10 anos no desenvolvimento e treinamento sobre o uso de dispositivos médicos, com consultoria estratégica a instituições de saúde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec dark" id="video">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Vídeo de apresentação</span>
       <h2>Conheça por dentro a ITH Educação, que vai emitir o seu diploma</h2>
-      <p class="lead center">Um tour pela ITH Educação, nota 5 no MEC: estrutura, laboratórios e a equipe por trás de cada pós presencial e híbrida.</p>
+      <p class="lead center">Um tour pela ITH Educação, nota 5 no MEC: estrutura, laboratórios e a equipe por trás da Pós em Urgência e Emergência + UTI.</p>
     </div>
     <div class="vsl rv" data-youtube="_Nf8z-ax6wc" role="button" tabindex="0" aria-label="Assistir ao vídeo de apresentação">
       <img class="vsl-poster" src="vsl-poster.webp" alt="Vídeo tour: conhecendo a ITH Educação" width="1280" height="720" loading="lazy">
@@ -707,8 +856,8 @@
       <div class="vsl-badge">Tour pela ITH Educação</div>
     </div>
     <div class="center rv" style="margin-top:28px">
-      <a class="btn btn-primary btn-lg js-goto" href="#cursos">Quero garantir minha vaga</a>
-      <p class="cta-note">4 formações · turmas em GO e DF</p>
+      <a class="btn btn-primary btn-lg js-goto" href="#investimento">Quero garantir minha vaga</a>
+      <p class="cta-note">30x de R$ 449,99 · vagas limitadas por turma</p>
     </div>
   </div>
 </section>
@@ -747,17 +896,56 @@
   </div>
 </section>
 
+<section class="sec dark" id="investimento">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Investimento</span>
+      <h2>Garanta sua vaga na próxima turma</h2>
+      <p class="lead center">Matrícula 100% online e mensalidade no cartão de crédito recorrente.</p>
+    </div>
+    <div class="price-card rv">
+      <div class="t">Pós-Graduação em Urgência e Emergência + UTI · Presencial · 880h · 880h</div>
+      <div class="pricebox pricebox-lg">
+        <div class="pb-top"><span class="pb-old">De <s>R$ 529,40</s>/mês</span><span class="pb-off">-15% · desconto de pontualidade</span></div>
+        <div class="pb-main"><span class="pb-x">30x de</span><span class="pb-cur">R$</span><span class="pb-val">449<small>,99</small></span><span class="pb-per">/mês</span></div>
+        <div class="pb-limit"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Mensalidade recorrente, <b>sem comprometer o limite</b> do cartão</span></div>
+        <div class="pb-total">Pagando em dia, você economiza R$ 2.382,30 no curso inteiro</div>
+      </div>
+      <a class="btn btn-primary btn-lg btn-block js-checkout" href="https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52224">Garantir minha vaga agora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="fine">Parcele no cartão de crédito recorrente. Vagas limitadas por turma. Pagamento no site oficial faculdadeith.com.br.</p>
+      <div class="pc-title">O que está incluso</div>
+      <ul class="pc-list">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>880 horas (440h + 440h) · 18 meses de formação</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Dois diplomas digitais com QR Code e validade MEC</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Aulas presenciais mensais e vivências clínicas em simulação realística</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Curso bônus BLS (Basic Life Support) com certificado internacional</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Livro digital, e-books e materiais científicos</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Tutoria ativa e suporte técnico 24h</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sem TCC tradicional: você entrega um plano de negócio</li>
+      </ul>
+      <div class="bonus"><svg viewBox="0 0 24 24"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg><span><strong>Bônus de conclusão:</strong> mais 3 meses de acesso liberado ao conteúdo completo, comunidade e eventos da ITH depois que você terminar.</span></div>
+      <div class="pc-trust">
+        <span><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>Nota 5 no MEC</span>
+        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Acesso imediato ao portal</span>
+      </div>
+      <a class="btn btn-wa btn-block js-wa" style="margin-top:14px" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener">Ainda tem dúvida? Fale com um consultor de carreira</a>
+    </div>
+  </div>
+</section>
+
+
 <section class="sec soft" id="depoimentos">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Quem já fez</span>
-      <h2>Milhares já estão nessa missão. Agora é a sua vez.</h2>
+      <h2>Enfermeiros que fizeram a pós e hoje lideram o atendimento crítico</h2>
     </div>
     <div class="grid g4" style="margin-top:36px">
-      <div class="quote rv"><div class="stars">★★★★★</div><p>"Parabéns, sem dúvida o ITH faz a diferença. Agora, como aluno, tenho certeza que fiz a melhor escolha ao ver como essa instituição se destaca."</p><div class="who"><div class="avatar">AL</div><div><b>André Lopes</b><small>Aluno ITH</small></div></div></div>
-      <div class="quote rv"><div class="stars">★★★★★</div><p>"Estou gostando muito, tenho aprendido muito a cada aula. Todas as professoras até agora foram maravilhosas, só elogios!"</p><div class="who"><div class="avatar">AC</div><div><b>Aline Cristina</b><small>Aluna ITH</small></div></div></div>
-      <div class="quote rv"><div class="stars">★★★★★</div><p>"Ensinar e aprender não pode dar-se fora da procura, fora da boniteza e da alegria. Estou muito grata pela experiência na ITH."</p><div class="who"><div class="avatar">LM</div><div><b>Lilian Maria</b><small>Aluna ITH</small></div></div></div>
-      <div class="quote rv"><div class="stars">★★★★★</div><p>"As imersões práticas fizeram toda a diferença. Cheguei ao plantão seguinte sabendo exatamente o que fazer, sem depender de ninguém."</p><div class="who"><div class="avatar">RS</div><div><b>Renata S.</b><small>Pós em UTI Neonatal e Pediátrica</small></div></div></div>
+      <div class="quote rv"><div class="stars">★★★★★</div><p>"A pós me preparou para atuar em UTI com confiança, dominando protocolos avançados que aplico diariamente nos atendimentos críticos."</p><div class="who"><div class="avatar">LS</div><div><b>Larissa Souza</b><small>Aluno da Pós em Urgência e Emergência + UTI</small></div></div></div>
+      <div class="quote rv"><div class="stars">★★★★★</div><p>"Consegui a promoção para enfermeiro responsável da UTI após concluir a especialização. O curso foi decisivo para minha carreira."</p><div class="who"><div class="avatar">FM</div><div><b>Fabrício Miller</b><small>Aluno da Pós em Urgência e Emergência + UTI</small></div></div></div>
+      <div class="quote rv"><div class="stars">★★★★★</div><p>"Antes eu me sentia insegura diante de situações graves. Hoje atuo com agilidade e segurança em pronto-socorro e terapia intensiva."</p><div class="who"><div class="avatar">CF</div><div><b>Camila Fernandes</b><small>Aluno da Pós em Urgência e Emergência + UTI</small></div></div></div>
+      <div class="quote rv"><div class="stars">★★★★★</div><p>"Graças à formação, conquistei uma vaga em hospital de alta complexidade. A dupla certificação foi meu diferencial competitivo."</p><div class="who"><div class="avatar">MD</div><div><b>Marina Dantas</b><small>Aluno da Pós em Urgência e Emergência + UTI</small></div></div></div>
     </div>
   </div>
 </section>
@@ -789,26 +977,25 @@
       <h2>Tire suas dúvidas antes de se matricular</h2>
     </div>
     <div class="faq rv" style="margin-top:32px">
-      <details class="q" open><summary>Quando começam as aulas?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O acesso ao portal EAD é liberado logo após a matrícula, com os módulos liberados mensalmente. As datas dos encontros presenciais, imersões e estágios são por turma e cidade, e o consultor confirma no momento da matrícula.</p></div></details>
-      <details class="q"><summary>Qual a diferença entre presencial e híbrida?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Nas duas, a teoria fica online e a prática é presencial, uma vez por mês, em fins de semana. Na presencial (Enfermagem Obstétrica e Urgência e Emergência + UTI) o peso das aulas práticas, estágios e simulações é maior. Na híbrida (UTI Neonatal e Pediátrica e Estética Avançada) você faz imersões e vivências clínicas concentradas, entre 4 e 5 por curso.</p></div></details>
-      <details class="q"><summary>Quanto tempo dura cada pós?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Depende da formação: UTI Neonatal e Pediátrica tem 440 horas em 6 ou 12 meses; Estética Avançada e Enfermagem Obstétrica têm 600 horas, em 14 e 18 meses; Urgência e Emergência + UTI são duas pós (440h + 440h) em 18 meses. Ao concluir, você ganha mais 3 meses de acesso ao conteúdo completo.</p></div></details>
-      <details class="q"><summary>Em quais cidades tem turma?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Goiânia (GO) tem turma de todas as formações. UTI Neonatal e Pediátrica e Estética Avançada também abrem turma em Brasília (DF). Urgência e Emergência + UTI tem turma em Goiânia.</p></div></details>
-      <details class="q"><summary>O diploma é reconhecido pelo MEC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. O diploma é digital, emitido pela ITH Educação (nota 5 no MEC), com QR Code de autenticidade e validade em todo o território nacional.</p></div></details>
-      <details class="q"><summary>Preciso fazer TCC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Não há TCC tradicional. Em vez disso, você desenvolve um plano de negócio estruturado, pensado para transformar ideias em projetos reais na sua instituição ou no seu consultório.</p></div></details>
-      <details class="q"><summary>Quais profissionais podem cursar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Enfermagem Obstétrica é exclusiva para enfermeiros. UTI Neonatal e Pediátrica e Urgência e Emergência + UTI são para enfermeiros e demais profissionais da saúde. Estética Avançada é para profissionais da saúde habilitados a atuar em estética. Na dúvida, o consultor confirma pela sua formação.</p></div></details>
-      <details class="q"><summary>Como funciona o pagamento e a condição especial?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Cada formação tem o seu valor, informado pelo consultor no momento da matrícula. O pagamento é no cartão de crédito recorrente: a cada mês é lançado apenas o valor da parcela, como uma assinatura, sem bloquear o total do curso no limite do cartão. Pagando em dia, vale o desconto de pontualidade.</p></div></details>
-      <details class="q"><summary>Quais documentos preciso enviar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>RG e CPF, título de eleitor, comprovante de endereço, certidão de nascimento ou casamento, certificado e histórico do ensino médio, diploma e histórico da graduação, foto digital e, para o sexo masculino, certificado de reservista. Tudo pode ser enviado em formato digital.</p></div></details>
-      </div>
+      <details class="q" open><summary>Quando começam as aulas?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O acesso ao portal é liberado imediatamente após a matrícula, com os módulos liberados mensalmente. As datas das aulas presenciais e das vivências clínicas são confirmadas pelo consultor no momento da matrícula.</p></div></details>
+      <details class="q"><summary>Quanto tempo dura a pós?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>São duas pós em uma: 440 horas de Urgência e Emergência e 440 horas de UTI, em 18 meses de formação, com dois diplomas ao final. Ao concluir, você ganha mais 3 meses de acesso ao conteúdo completo.</p></div></details>
+      <details class="q"><summary>O diploma é reconhecido pelo MEC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. O diploma é digital, emitido pela ITH Educação (nota 5 no MEC), com QR Code de autenticidade e validade em todo o território nacional. Ele tem a mesma validade e peso da versão presencial e não menciona a modalidade cursada.</p></div></details>
+      <details class="q"><summary>Preciso fazer TCC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Não há TCC tradicional. Em vez disso, você desenvolve um plano de negócio estruturado, pensado para transformar ideias em projetos reais na sua instituição ou na sua consultoria.</p></div></details>
+      <details class="q"><summary>Quais profissionais podem cursar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>A pós é voltada a enfermeiros que atuam ou querem atuar em pronto-socorro, APH, SAMU, UTI e serviços de emergência.</p></div></details>
+      <details class="q"><summary>Como funciona o pagamento e a condição especial?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O investimento é de 30 parcelas de R$ 529,40 no cartão de crédito recorrente. Pagando em dia, cada parcela sai por R$ 449,99, o desconto de pontualidade.</p><p>A cobrança é recorrente: a cada mês é lançado apenas o valor da parcela, como uma assinatura. O total do curso não fica bloqueado no limite do seu cartão.</p></div></details>
+      <details class="q"><summary>Quais documentos preciso enviar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>RG e CPF, título de eleitor, comprovante de endereço, certidão de nascimento ou casamento, certificado e histórico do ensino médio, diploma e histórico da graduação, foto digital e, para o sexo masculino, comprovante de reservista.</p><p>Tudo em PDF, enviado pelo Portal do Aluno, 100% online.</p></div></details>
+      <details class="q"><summary>Tenho suporte durante o curso?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. Cada módulo tem fórum com resposta do professor em até 24h, além da Central de Atendimento ao Aluno (CAA) com suporte técnico 24h por WhatsApp e e-mail.</p></div></details>
+    </div>
   </div>
 </section>
 
 <section class="sec final" id="cta">
   <div class="wrap rv">
-    <span class="eyebrow">Condição especial até 30 de setembro</span>
-    <h2>Escolha a sua pós e garanta a vaga na próxima turma</h2>
-    <p class="lead center">Quatro formações presenciais e híbridas em saúde, com estágios e imersões inclusos e diploma MEC. Parcelas no cartão recorrente, sem comprometer o limite.</p>
-    <a class="btn btn-primary btn-lg js-goto" href="#cursos">Ver as quatro formações</a>
-    <p class="cta-note">ou <a class="js-wa" style="text-decoration:underline;color:#fff" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20as%20p%C3%B3s%20presenciais%20e%20h%C3%ADbridas%20da%20ITH" target="_blank" rel="noopener">fale com um consultor de carreira</a></p>
+    <span class="eyebrow">Vagas abertas para a próxima turma</span>
+    <h2>Garanta sua vaga na Pós em Urgência e Emergência + UTI</h2>
+    <p class="lead center">880 horas, vivências clínicas em simulação realística, dupla certificação e diploma reconhecido pelo MEC. 30x de R$ 449,99 com desconto de pontualidade.</p>
+    <a class="btn btn-primary btn-lg js-checkout" href="https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52224">Quero começar essa pós agora</a>
+    <p class="cta-note">ou <a class="js-wa" style="text-decoration:underline;color:#fff" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener">fale com um consultor de carreira</a></p>
   </div>
 </section>
 
@@ -841,13 +1028,45 @@
   </div>
 </footer>
 
+<!-- ============ MODAL DE CAPTURA (abre ao clicar em "Garantir minha vaga agora") ============ -->
+<div class="modal" id="leadModal" hidden aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="lmTitle">
+    <button class="modal-x" type="button" data-close aria-label="Fechar">&times;</button>
+    <div class="modal-head">
+      <span class="modal-tag">Condição especial até 30/09</span>
+      <h3 id="lmTitle">Preencha seus dados para liberar a matrícula</h3>
+      <p>Leva 20 segundos. Em seguida você vai direto para o pagamento seguro, com a condição de <strong>30x de R$ 449,99</strong>.</p>
+    </div>
+    <form id="leadForm" novalidate>
+      <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Como está no seu documento" required minlength="3"></label>
+      <label class="fld"><span>WhatsApp com DDD</span><input type="tel" name="celular" inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999" required></label>
+      <label class="fld"><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required></label>
+      <label class="fld"><span>Sua formação</span>
+        <select name="formacao" required>
+          <option value="" disabled selected>Selecione</option>
+          <option>Enfermagem</option>
+          <option>Outra graduação na saúde</option>
+        </select>
+      </label>
+      <p class="fld-err" id="leadErr" hidden>Confira os campos destacados.</p>
+      <button class="btn btn-primary btn-lg btn-block" type="submit" id="leadSubmit">
+        Ir para o pagamento
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="modal-fine"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seus dados ficam com a ITH Educação e não são compartilhados. Pagamento no site oficial.</p>
+    </form>
+  </div>
+</div>
+
+<!-- Sticky mobile CTA -->
 <div class="sticky" aria-hidden="false">
-  <div class="p"><small>4 pós presenciais e híbridas</small><b>Turmas em GO e DF</b></div>
-  <a class="btn btn-primary js-goto" href="#cursos">Escolher pós</a>
+  <div class="p"><small>30x R$ 529,40</small><b>30x R$ 449,99</b></div>
+  <a class="btn btn-primary js-checkout" href="https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52224">Garantir vaga</a>
 </div>
 
 <!-- WhatsApp float -->
-<a class="wa-float js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20as%20p%C3%B3s%20presenciais%20e%20h%C3%ADbridas%20da%20ITH" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a class="wa-float js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
 </a>
 
@@ -877,16 +1096,6 @@
   })();
 
 
-  // Carrossel de cursos (mobile): pontos de navegação
-  (function(){
-    var track=document.getElementById('pcs'), dots=document.getElementById('pcsDots'); if(!track||!dots) return;
-    var cards=track.querySelectorAll('.pc'); cards.forEach(function(_,i){ var d=document.createElement('span'); if(i===0) d.className='on'; dots.appendChild(d); });
-    var t; track.addEventListener('scroll', function(){ clearTimeout(t); t=setTimeout(function(){
-      var mid=track.scrollLeft+track.clientWidth/2, best=0, bd=1e9;
-      cards.forEach(function(c,i){ var cm=c.offsetLeft+c.offsetWidth/2, d=Math.abs(cm-mid); if(d<bd){bd=d;best=i;} });
-      dots.querySelectorAll('span').forEach(function(s,i){ s.classList.toggle('on',i===best); });
-    },60); }, {passive:true});
-  })();
   // Reveal on scroll
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -898,8 +1107,7 @@
     try{ if(window.gtag){ gtag('event', name, params||{}); } }catch(e){}
     try{ if(window.fbq){ fbq('track', name==='begin_checkout' ? 'InitiateCheckout' : 'Contact', params||{}); } }catch(e){}
   }
-  var item = {currency:'BRL', value:2639.78, items:[{item_id:'52347', item_name:'Pós presencial/híbrida ITH (hub)', price:2639.78, quantity:1}]};
-  document.querySelectorAll('.js-lp').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','select_content',{content_type:'curso',item_id:a.getAttribute('data-course')}); }catch(e){} }); });
+  var item = {currency:'BRL', value:13499.70, items:[{item_id:'52224', item_name:'Pós-Graduação em Urgência e Emergência + UTI', price:13499.70, quantity:1}]};
   document.querySelectorAll('.js-goto').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','cta_click',{cta_text:a.textContent.trim().slice(0,60)}); }catch(e){} }); });
   document.querySelectorAll('.js-ith').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','view_institution',{}); }catch(e){} }); });
   document.querySelectorAll('.js-wa').forEach(function(a){
@@ -924,6 +1132,64 @@
   })();
 
 
+  // ===== Captura de lead antes do checkout =====
+  var LEAD_WEBHOOK = ''; // VAZIO de propósito: nenhum dado do lead é enviado. Para ativar, cole aqui a URL do webhook (ex.: Make/CRM).
+  var CHECKOUT_URL = 'https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52224';
+  (function(){
+    var modal=document.getElementById('leadModal'), form=document.getElementById('leadForm'), err=document.getElementById('leadErr'), btn=document.getElementById('leadSubmit');
+    if(!modal||!form) return;
+    var params=new URLSearchParams(window.location.search);
+    function utm(k){ return params.get(k)||''; }
+    function checkoutHref(){
+      var extra=[]; ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','gbraid','wbraid'].forEach(function(k){ if(params.get(k)) extra.push(k+'='+encodeURIComponent(params.get(k))); });
+      return CHECKOUT_URL + (extra.length ? '&'+extra.join('&') : '');
+    }
+    function open(){ modal.hidden=false; modal.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open'); setTimeout(function(){ var f=form.querySelector('input'); if(f) f.focus(); },60); try{ gtag('event','lead_form_open',{}); }catch(e){} }
+    function close(){ modal.hidden=true; modal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open'); }
+    document.querySelectorAll('.js-checkout').forEach(function(a){
+      a.addEventListener('click', function(e){ e.preventDefault(); open(); });
+    });
+    modal.querySelectorAll('[data-close]').forEach(function(el){ el.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !modal.hidden) close(); });
+    // máscara simples de telefone
+    var tel=form.querySelector('[name=celular]');
+    tel.addEventListener('input', function(){
+      var v=tel.value.replace(/\D/g,'').slice(0,11);
+      if(v.length>6) v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+      else if(v.length>2) v='('+v.slice(0,2)+') '+v.slice(2);
+      tel.value=v;
+    });
+    // prefill se já preencheu antes
+    try{ var saved=JSON.parse(localStorage.getItem('ith_lead_urgencia-nova')||'null'); if(saved){ ['nome','celular','email','formacao'].forEach(function(k){ if(saved[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var ok=true;
+      ['nome','celular','email','formacao'].forEach(function(k){
+        var el=form.elements[k], wrap=el.closest('.fld'), valid=el.checkValidity();
+        if(k==='celular') valid = el.value.replace(/\D/g,'').length>=10;
+        wrap.classList.toggle('bad',!valid); if(!valid) ok=false;
+      });
+      err.hidden=ok; if(!ok) return;
+      var data={
+        nome:form.elements.nome.value.trim(), celular:form.elements.celular.value.trim(), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value,
+        curso:'Pós-Graduação em Urgência e Emergência + UTI', origem:window.location.href.split('?')[0], pagina:'LP Google Ads Pós Urgência e Emergência + UTI',
+        utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'),
+        dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop', data:new Date().toISOString()
+      };
+      btn.disabled=true; btn.firstChild.textContent='Enviando... ';
+      try{ localStorage.setItem('ith_lead_urgencia-nova', JSON.stringify(data)); }catch(e){}
+      try{ gtag('event','generate_lead',{method:'checkout_modal',value:13499.70,currency:'BRL'}); gtag('event','begin_checkout',item); }catch(e){}
+      try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso}); fbq('track','InitiateCheckout',{value:13499.70,currency:'BRL'}); } }catch(e){}
+      var go=function(){ window.location.href=checkoutHref(); };
+      var done=false, finish=function(){ if(!done){ done=true; go(); } };
+      setTimeout(finish, 2500); // não deixa o lead esperando se o webhook demorar
+      try{
+        if(LEAD_WEBHOOK.indexOf('http')===0){
+          fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(finish,finish);
+        } else { finish(); }
+      }catch(e){ finish(); }
+    });
+  })();
 
 </script>
 </body>
