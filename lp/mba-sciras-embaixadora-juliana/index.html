@@ -542,6 +542,9 @@
   .toast-x{flex:none;width:30px;height:30px;border-radius:50%;border:0;background:var(--soft);color:var(--ink-2);font-size:20px;line-height:1;cursor:pointer;margin-left:auto}
   @media(max-width:640px){.toast{top:auto;bottom:86px;transform:translate(-50%,140%)}.toast.show{transform:translate(-50%,0)}}
   .sticky .p small{text-decoration:none;color:#047857;font-weight:700}
+
+  /* mobile: trilha 1fr tem mínimo min-content; sem minmax(0,..) o hero estoura a largura (13/09) */
+  @media(max-width:1000px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .kicker{flex-wrap:wrap}.hero h1,.hero .hook,.hero .sub{overflow-wrap:break-word}}
 </style>
 </head>
 <body>

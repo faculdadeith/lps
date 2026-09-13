@@ -503,6 +503,9 @@
     details.mod .body{padding-left:20px}
     footer .cols{grid-template-columns:1fr}
   }
+
+  /* mobile: trilha 1fr tem mínimo min-content; sem minmax(0,..) o hero estoura a largura (13/09) */
+  @media(max-width:1000px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .kicker{flex-wrap:wrap}.hero h1,.hero .hook,.hero .sub{overflow-wrap:break-word}}
 </style>
 </head>
 <body>
