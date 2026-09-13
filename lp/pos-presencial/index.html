@@ -532,7 +532,8 @@
   .pc-price small{font-size:12px;color:var(--muted);font-weight:600}
   .pc .btn{margin-top:4px;padding:15px 18px;font-size:15px}
   .pc-more{font-size:13px;font-weight:700;color:var(--blue);text-align:center}
-  @media(max-width:1000px){.hero-geral .wrap{grid-template-columns:1fr}}
+  /* trilha 1fr tem mínimo min-content: sem minmax(0,..) o hero estoura a largura no mobile */
+  @media(max-width:1000px){.hero-geral .wrap{grid-template-columns:minmax(0,1fr)}.hero-geral .kicker{flex-wrap:wrap}.hero-geral h1,.hero-geral .hook,.hero-geral .sub{overflow-wrap:break-word}}
   .pcs-dots{display:none;justify-content:center;gap:7px;margin-top:14px}
   .pcs-dots span{width:8px;height:8px;border-radius:50%;background:#c7d2fe;transition:.2s}
   .pcs-dots span.on{background:var(--blue);width:22px;border-radius:999px}
