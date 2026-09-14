@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
-<title>Pós-Graduação em Urgência e Emergência + UTI | Presencial | Turma em Goiânia | ITH Educação</title>
-<meta name="description" content="Pós-graduação presencial em Urgência e Emergência + UTI com dupla certificação: 440h + 440h, APH, trauma, ECG, ventilação mecânica, PICC e simulação realística. Diploma reconhecido pelo MEC (ITH nota 5).">
+<title>Pós-Graduação em Urgência e Emergência + UTI | Híbrido | Turmas GO e DF | ITH Educação</title>
+<meta name="description" content="Pós-graduação híbrida em Urgência e Emergência + UTI com dupla certificação: 440h + 440h, APH, trauma, ECG, ventilação mecânica, PICC e simulação realística. Diploma reconhecido pelo MEC (ITH nota 5).">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://mkt.faculdadeith.com.br/lp/urgencia-emergencia-uti/">
 <link rel="icon" href="https://faculdadeith.com.br/wp-content/uploads/2021/08/cropped-new-icon-32x32.png">
@@ -505,6 +505,9 @@
     footer .cols{grid-template-columns:1fr}
   }
 
+  /* mobile: trilha 1fr tem mínimo min-content; sem minmax(0,..) o hero estoura a largura (13/09) */
+  @media(max-width:1000px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .kicker{flex-wrap:wrap}.hero h1,.hero .hook,.hero .sub{overflow-wrap:break-word}}
+
   /* ===== Presencial / híbrido ===== */
   .hyb{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
   .hyb div{background:rgba(255,255,255,.05);border:1px solid var(--line-dk);border-radius:18px;padding:24px}
@@ -516,13 +519,10 @@
   .cities svg{width:15px;height:15px;stroke:var(--green);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:1000px){.hyb{grid-template-columns:1fr}}
 
-  /* mobile: trilha 1fr tem mínimo min-content; sem minmax(0,..) o hero estoura a largura (13/09) */
-  @media(max-width:1000px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .kicker{flex-wrap:wrap}.hero h1,.hero .hook,.hero .sub{overflow-wrap:break-word}}
-
   /* ===== Captura de lead ===== */
   .hero-solo .wrap{grid-template-columns:minmax(0,720px) 1fr}
   .hero-solo .hero-bg::after{background:linear-gradient(90deg,rgba(3,17,64,.97) 0%,rgba(3,17,64,.9) 40%,rgba(3,17,64,.35) 75%,rgba(3,17,64,.2) 100%)}
-  @media(max-width:1000px){.hero-solo .wrap{grid-template-columns:1fr}}
+  @media(max-width:1000px){.hero-solo .wrap{grid-template-columns:minmax(0,1fr)}.hero-solo .kicker{flex-wrap:wrap}}
   .lead-form .fld{margin-bottom:10px}
   .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .lead-form .btn{margin-top:4px}
@@ -550,7 +550,7 @@
 <!-- ============ BARRA DE ESCASSEZ ============ -->
 <div class="topbar" id="topbar">
   <div class="wrap topbar-in">
-    <span class="tb-txt"><b>Matrículas abertas</b> para a próxima turma · condição especial até <b>30 de setembro</b></span>
+    <span class="tb-txt"><b>Inscrições abertas</b> para a próxima turma · encerram em <b>30 de setembro</b></span>
     <span class="tb-cd" id="cd" aria-live="polite">
       <span><b id="cdD">00</b><small>dias</small></span><i>:</i>
       <span><b id="cdH">00</b><small>horas</small></span><i>:</i>
@@ -587,19 +587,19 @@
     <div>
       <div class="kicker">
         <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><em class="kx">Pós-graduação </em>lato sensu</span><i></i>
-        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Presencial · 880h</span><i></i>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Híbrido · 880h</span><i></i>
         <span class="hi"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>MEC · Nota 5</span>
       </div>
       <h1>Pós em <span class="h1b">Urgência e Emergência + UTI</span></h1>
       <p class="hook">No pronto-socorro e na UTI, cada segundo define a vida do paciente. Hesitar não é opção.</p>
       <p class="sub">Duas pós em uma: APH, trauma, ECG, ventilação mecânica, PICC e paciente crítico, com vivências clínicas em simulação realística e aulas presenciais uma vez por mês. 440h de Urgência e Emergência + 440h de UTI, com dupla certificação.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg js-goto" href="#inscricao"><span>Quero mais informações <small>Turma em Goiânia</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-primary btn-lg js-goto" href="#inscricao"><span>Quero mais informações <small>Turmas em GO e DF</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-outline btn-lg js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Falar com um consultor</a>
       </div>
       <ul class="hero-notes">
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Vivências clínicas inclusas</li>
-        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Não compromete o limite do cartão</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Consultor de carreira dedicado</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sem TCC tradicional</li>
       </ul>
       <div class="hero-proof">
@@ -800,7 +800,7 @@
     </div>
     <div class="center rv" style="margin-top:40px">
       <a class="btn btn-primary btn-lg js-goto" href="#inscricao">Quero receber a grade completa</a>
-      <p class="cta-note">Turma em Goiânia · vagas limitadas por turma</p> · vagas limitadas por turma
+      <p class="cta-note">Turmas em GO e DF · vagas limitadas por turma</p>
     </div>
   </div>
 </section>
@@ -809,7 +809,7 @@
 <section class="sec dark" id="como-funciona">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">Formato presencial</span>
+      <span class="eyebrow">Formato híbrido</span>
       <h2>Teoria online, prática em simulação realística</h2>
       <p class="lead center">Você estuda sem parar de trabalhar e treina a conduta em aulas presenciais mensais e vivências clínicas, antes de aplicar no plantão.</p>
     </div>
@@ -820,6 +820,7 @@
     </div>
     <div class="cities rv">
       <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Goiânia · GO</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Brasília · DF</span>
     </div>
     <p class="center cta-note rv" style="margin-top:14px">As datas de início de cada turma são confirmadas pelo consultor no momento da matrícula.</p>
   </div>
@@ -868,7 +869,7 @@
     </div>
     <div class="center rv" style="margin-top:28px">
       <a class="btn btn-primary btn-lg js-goto" href="#inscricao">Quero falar com um consultor</a>
-      <p class="cta-note">Turma em Goiânia · vagas limitadas por turma</p> · vagas limitadas por turma
+      <p class="cta-note">Turmas em GO e DF · vagas limitadas por turma</p>
     </div>
   </div>
 </section>
@@ -912,13 +913,13 @@
     <div class="center rv">
       <span class="eyebrow">Inscrição</span>
       <h2>Garanta sua vaga na próxima turma</h2>
-      <p class="lead center">Turma presencial em Goiânia, com vagas limitadas por causa das vivências clínicas em simulação realística. Deixe seus dados e um consultor de carreira fala com você.</p>
+      <p class="lead center">Turmas em Goiânia e Brasília, com vagas limitadas por causa das vivências clínicas em simulação realística. Deixe seus dados e um consultor de carreira fala com você.</p>
     </div>
     <div class="lead-wrap">
       <div class="lead-side rv">
         <h3>O que você recebe ao se inscrever</h3>
         <ul class="lead-list">
-          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Datas de início da próxima turma em Goiânia</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Datas de início da turma da sua cidade</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Grade completa dos 18 módulos das duas pós</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Como funcionam as vivências clínicas e a dupla certificação</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Condições de matrícula e formas de pagamento</li>
@@ -945,6 +946,7 @@
             <select name="turma" required>
               <option value="" disabled selected>Selecione</option>
               <option>Goiânia · GO</option>
+              <option>Brasília · DF</option>
               <option>Ainda não sei</option>
             </select>
           </label>
@@ -1059,7 +1061,7 @@
 
 <!-- Sticky mobile CTA -->
 <div class="sticky" aria-hidden="false">
-  <div class="p"><small class="nostrike">Presencial · 880h</small><b>Pós em Urgência e Emergência + UTI</b></div>
+  <div class="p"><small class="nostrike">Híbrido · 880h</small><b>Pós em Urgência e Emergência + UTI</b></div>
   <a class="btn btn-primary js-goto" href="#inscricao">Quero informações</a>
 </div>
 
@@ -1132,7 +1134,7 @@
         });
         err.hidden=valid; if(!valid) return;
         var data={ nome:form.elements.nome.value.trim(), celular:form.elements.celular.value.trim(), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value, turma:form.elements.turma.value,
-          curso:'Pós-Graduação em Urgência e Emergência + UTI - Presencial', pagina:'LP Captura Urgência e Emergência + UTI', origem:window.location.href.split('?')[0],
+          curso:'Pós-Graduação em Urgência e Emergência + UTI - Híbrido', pagina:'LP Captura Urgência e Emergência + UTI', origem:window.location.href.split('?')[0],
           utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'),
           dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop', data:new Date().toISOString() };
         btn.disabled=true;
