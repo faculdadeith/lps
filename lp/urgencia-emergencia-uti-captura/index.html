@@ -834,7 +834,7 @@
       <h2>Aprenda com quem vive a urgência e a UTI todos os dias</h2>
       <p class="lead center">Professores atuantes em SAMU, pronto-socorro e terapia intensiva, que trazem para a sala o que realmente acontece no plantão.</p>
     </div>
-    <div class="grid g3" style="margin-top:36px">
+    <div class="grid g2" style="margin-top:36px">
       <div class="card prof rv">
         <div class="prof-head"><div class="avatar">CM</div><div><h3>Caroline Marinho</h3><div class="role">Mestre · Terapia intensiva e gestão</div></div></div>
         <p>Mais de 15 anos em terapia intensiva e gestão em saúde. Foi supervisora e coordenadora de UTI, implantou POPs e liderou equipes e comissões de segurança do paciente.</p>
@@ -1110,7 +1110,7 @@
   var item = {currency:'BRL', value:13499.70, items:[{item_id:'52224', item_name:'Pós-Graduação em Urgência e Emergência + UTI', price:13499.70, quantity:1}]};
 
   // ===== Captura de lead (sem checkout) =====
-  var LEAD_WEBHOOK = ''; // cole aqui a URL do webhook (Make/CRM) quando for configurar
+  var LEAD_WEBHOOK = 'https://hook.us1.make.com/x9fckmioiupn2b17iwde65hgy7nafqn7'; // URL do webhook (Make) que manda o lead ao Eduq; vazio = não envia
   (function(){
     var params=new URLSearchParams(window.location.search);
     function utm(k){ return params.get(k)||''; }

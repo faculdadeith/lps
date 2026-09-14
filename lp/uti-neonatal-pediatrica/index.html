@@ -504,6 +504,9 @@
     footer .cols{grid-template-columns:1fr}
   }
 
+  /* mobile: trilha 1fr tem mínimo min-content; sem minmax(0,..) o hero estoura a largura (13/09) */
+  @media(max-width:1000px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .kicker{flex-wrap:wrap}.hero h1,.hero .hook,.hero .sub{overflow-wrap:break-word}}
+
   /* ===== Presencial / híbrido ===== */
   .hyb{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
   .hyb div{background:rgba(255,255,255,.05);border:1px solid var(--line-dk);border-radius:18px;padding:24px}
@@ -514,9 +517,6 @@
   .cities span{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:#e2e8ff;background:rgba(255,255,255,.07);border:1px solid var(--line-dk);padding:9px 15px;border-radius:999px}
   .cities svg{width:15px;height:15px;stroke:var(--green);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:1000px){.hyb{grid-template-columns:1fr}}
-
-  /* mobile: trilha 1fr tem mínimo min-content; sem minmax(0,..) o hero estoura a largura (13/09) */
-  @media(max-width:1000px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .kicker{flex-wrap:wrap}.hero h1,.hero .hook,.hero .sub{overflow-wrap:break-word}}
 </style>
 </head>
 <body>
@@ -810,7 +810,7 @@
       <h2>Aprenda com quem vive a UTI diariamente</h2>
       <p class="lead center">Professores atuantes no mercado, com supervisão clínica real e simulação para desenvolver segurança técnica na terapia intensiva infantil.</p>
     </div>
-    <div class="grid g3" style="margin-top:36px">
+    <div class="grid g2" style="margin-top:36px">
       <div class="card prof rv">
         <div class="prof-head"><div class="avatar">JC</div><div><h3>Juliana Caldas</h3><div class="role">Enfermeira · Simulação clínica</div></div></div>
         <p>Doutoranda no PPGENF/UFG, especialista em simulação clínica e professora na PUC.</p>
@@ -826,10 +826,6 @@
       <div class="card prof rv">
         <div class="prof-head"><div class="avatar">TB</div><div><h3>Thaynara Balbino</h3><div class="role">Especialista em enfermagem obstétrica</div></div></div>
         <p>Mais de 5 anos em liderança de UTI neonatal e gestão de enfermagem.</p>
-      </div>
-      <div class="card prof rv">
-        <div class="prof-head"><div class="avatar">VC</div><div><h3>Vitória Correia</h3><div class="role">Enfermeira obstetra</div></div></div>
-        <p>Especializada em parto humanizado, com expertise em pré-natal, parto e pós-parto.</p>
       </div>
     </div>
   </div>
