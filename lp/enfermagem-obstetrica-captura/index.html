@@ -1118,7 +1118,7 @@
   // ===== Captura de lead (sem checkout) =====
   // ATENCAO: enquanto LEAD_WEBHOOK estiver vazio, o lead NAO e' enviado a lugar nenhum.
   // Esta pagina e' 100% captura: sem esta URL ela nao entrega nada. Cole aqui o webhook do Make/CRM.
-  var LEAD_WEBHOOK = '';
+  var LEAD_WEBHOOK = 'https://hook.us1.make.com/sig9cq4yuvmk1zuwrg4khvqno07gtgw5';
   (function(){
     var params=new URLSearchParams(window.location.search);
     function utm(k){ return params.get(k)||''; }
