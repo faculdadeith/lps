@@ -512,7 +512,7 @@
         { label: 'Enfermagem',            value: 'Enfermagem',            icon: 'badge-check', onPick: pickPerfil },
         { label: 'Farmácia / Biomedicina', value: 'Farmácia / Biomedicina', icon: 'flask-conical', onPick: pickPerfil },
         { label: 'Fisioterapia / Biologia', value: 'Fisioterapia / Biologia', icon: 'activity', onPick: pickPerfil },
-        { label: 'Estética / Outra',      value: 'Estética / Outra',      icon: 'sparkles',    onPick: pickPerfil },
+        { label: 'Outra formação',        value: 'Outra formação',        icon: 'sparkles',    onPick: pickPerfil },
       ]);
     }
 
@@ -520,7 +520,7 @@
       data.perfil = value;
       addUser(label);
       hideInputs();
-      await botSay('Perfeito — essa pós é <strong>aberta a graduados em enfermagem, farmácia, biomedicina, fisioterapia, biologia e estética</strong>, então você está no lugar certo! 🙌', 850);
+      await botSay('Perfeito — essa pós é <strong>aberta a graduados em enfermagem, farmácia, biomedicina, fisioterapia e biologia</strong>, então você está no lugar certo! 🙌', 850);
       await askObjetivo();
     }
 
