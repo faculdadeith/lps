@@ -1147,7 +1147,7 @@
 
 
   // ===== Captura de lead antes do checkout =====
-  var LEAD_WEBHOOK = ''; // VAZIO de propósito: nenhum dado do lead é enviado. Para ativar, cole aqui a URL do webhook (ex.: Make/CRM).
+  var LEAD_WEBHOOK = 'https://hook.us1.make.com/c95vvxd38dtf2htwc2eiwby7yoml7hma'; // Make: grava o lead na planilha (Nome, Contato, E-mail, Data, UTM, Curso, Formação)
   var CHECKOUT_URL = 'https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52102';
   (function(){
     var modal=document.getElementById('leadModal'), form=document.getElementById('leadForm'), err=document.getElementById('leadErr'), btn=document.getElementById('leadSubmit');
@@ -1190,6 +1190,11 @@
         utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'),
         dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop', data:new Date().toISOString()
       };
+      // campos no formato da planilha de leads: Nome, Contato, E-mail, Data, UTM, Curso, Formação
+      data.contato=data.celular;
+      data.data_iso=data.data;
+      data.data=new Date().toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).replace(',','');
+      data.utm=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].map(function(k){ return utm(k) ? k.replace('utm_','')+'='+utm(k) : ''; }).filter(Boolean).join(' | ');
       btn.disabled=true; btn.firstChild.textContent='Enviando... ';
       try{ localStorage.setItem('ith_lead_sciras_juliana', JSON.stringify(data)); }catch(e){}
       try{ gtag('event','generate_lead',{method:'checkout_modal',value:2639.78,currency:'BRL'}); gtag('event','begin_checkout',item); }catch(e){}
