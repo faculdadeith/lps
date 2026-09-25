@@ -1179,7 +1179,7 @@
       data.utm=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].map(function(k){ return utm(k) ? k.replace('utm_','')+'='+utm(k) : ''; }).filter(Boolean).join(' | ');
       btn.disabled=true; btn.firstChild.textContent='Enviando... ';
       try{ localStorage.setItem('ith_lead_qualidade', JSON.stringify(data)); }catch(e){}
-      try{ gtag('event','generate_lead',{method:'checkout_modal',value:2639.78,currency:'BRL'}); gtag('event','begin_checkout',item); }catch(e){}
+      try{ gtag('event','generate_lead',{method:'checkout_modal',value:2639.78,currency:'BRL'}); gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); gtag('event','begin_checkout',item); }catch(e){}
       try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso}); fbq('track','InitiateCheckout',{value:2639.78,currency:'BRL'}); } }catch(e){}
       var go=function(){ window.location.href=checkoutHref(); };
       var done=false, finish=function(){ if(!done){ done=true; go(); } };
