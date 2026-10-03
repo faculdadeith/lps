@@ -6,13 +6,13 @@
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <title>MBA Master em Qualidade e Acreditação em Saúde EAD | ITH Educação</title>
-<meta name="description" content="MBA 100% EAD Master em Qualidade e Acreditação em Saúde: ONA, JCI, ISO, indicadores, auditorias e gestão de riscos. 440 horas, diploma reconhecido pelo MEC (ITH nota 5), acesso imediato. Matricule-se em 22x.">
+<meta name="description" content="MBA 100% EAD Master em Qualidade e Acreditação em Saúde: ONA, JCI, ISO, indicadores, auditorias e gestão de riscos. 440 horas, diploma reconhecido pelo MEC (ITH nota 5), acesso imediato. Fale com um consultor da ITH.">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="https://faculdadeith.com.br/wp-content/uploads/2021/08/cropped-new-icon-32x32.png">
 
 <!-- ===== GOOGLE ADS / GA4 =====
      Tag do Google Ads da conta ITH (AW-16842015422).
-     Os cliques nos botões disparam os eventos: begin_checkout, generate_lead -->
+     O envio do formulário dispara os eventos: generate_lead + conversão -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16842015422"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -461,6 +461,7 @@
   .sticky .p{display:flex;flex-direction:column;line-height:1.1}
   .sticky .p small{font-size:11px;color:var(--muted);text-decoration:line-through}
   .sticky .p b{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;color:var(--navy)}
+  .sticky .p .sk-sub{font-size:11.5px;color:var(--muted)}
   .sticky .btn{flex:1;padding:14px 16px;font-size:15px}
   .wa-float{position:fixed;right:18px;bottom:18px;z-index:55;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.8)}
   .wa-float svg{width:30px;height:30px;fill:#fff}
@@ -510,18 +511,6 @@
 </head>
 <body>
 
-<!-- ============ BARRA DE ESCASSEZ ============ -->
-<div class="topbar" id="topbar">
-  <div class="wrap topbar-in">
-    <span class="tb-txt"><b>Condição especial</b> 22x de R$ 119,99 válida só até <b>30 de setembro</b></span>
-    <span class="tb-cd" id="cd" aria-live="polite">
-      <span><b id="cdD">00</b><small>dias</small></span><i>:</i>
-      <span><b id="cdH">00</b><small>horas</small></span><i>:</i>
-      <span><b id="cdM">00</b><small>min</small></span><i>:</i>
-      <span><b id="cdS">00</b><small>seg</small></span>
-    </span>
-  </div>
-</div>
 
 <!-- ============ HEADER ============ -->
 <header>
@@ -533,11 +522,11 @@
       <a href="#conteudo">Conteúdo</a>
       <a href="#professores">Professores</a>
       <a href="#ith">A ITH</a>
-      <a href="#investimento">Investimento</a>
+      <a href="#inscricao">Inscrição</a>
       <a href="#faq">Dúvidas</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary js-goto" href="#investimento">Matricular agora</a>
+      <a class="btn btn-primary js-goto js-checkout" href="#inscricao">Falar com consultor</a>
     </div>
   </div>
 </header>
@@ -558,14 +547,14 @@
       <p class="hook">Sistemas de saúde não melhoram com sorte. Melhoram com padrões.</p>
       <p class="sub">Lidere acreditações ONA, JCI e ISO, domine indicadores, protocolos e gestão de riscos e assuma cargos estratégicos na gestão da qualidade. 440 horas, no seu ritmo, com acesso liberado na hora da matrícula.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg js-goto" href="#investimento">
-          <span>Garantir minha vaga <small>22x de R$ 119,99</small></span>
+        <a class="btn btn-primary btn-lg js-goto js-checkout" href="#inscricao">
+          <span>Quero mais informações <small>fale com um consultor</small></span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
       <ul class="hero-notes">
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Acesso imediato ao portal</li>
-        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Não compromete o limite do cartão</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Atendimento com consultor da ITH</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sem TCC tradicional</li>
       </ul>
       <div class="hero-proof">
@@ -577,16 +566,8 @@
     </div>
 
     <aside class="offer" aria-label="Resumo da oferta">
-      <span class="badge">Condição especial até 30/09</span>
+      <span class="badge">Inscrições abertas</span>
       <h3>MBA Master em Qualidade e Acreditação · EAD</h3>
-      <div class="pricebox">
-        <div class="pb-top"><span class="pb-old">De <s>R$ 199,99</s>/mês</span><span class="pb-off">-40% · até 30/09</span></div>
-        <div class="pb-main"><span class="pb-x">22x de</span><span class="pb-cur">R$</span><span class="pb-val">119<small>,99</small></span><span class="pb-per">/mês</span></div>
-        <div class="pb-limit"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>R$ 119,99/mês <b>sem comprometer o limite</b> do cartão</span></div>
-        <div class="pb-total">Total de R$ 2.639,78 no cartão de crédito recorrente</div>
-        <div class="pb-save"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Você economiza <b>R$ 1.760</b> no curso inteiro</span></div>
-        <div class="pb-deadline js-deadline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Condição válida até <b>30/09</b> · encerra em <b class="js-cd-short">--</b></div>
-      </div>
       <ul>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Diploma digital com QR Code e validade MEC</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>+60 videoaulas, 50 estudos de caso e 40 e-books inclusos</li>
@@ -594,8 +575,8 @@
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Professor responde no fórum em até 24h</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Bônus: +3 meses de acesso após concluir</li>
       </ul>
-      <a class="btn btn-blue btn-block js-goto" href="#investimento">Quero me matricular agora</a>
-      <div class="safe"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro no site oficial da ITH Educação</div>
+      <a class="btn btn-blue btn-block js-goto js-checkout" href="#inscricao">Quero falar com um consultor</a>
+      <div class="safe"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Atendimento de segunda a sexta, das 8h às 18h</div>
     </aside>
   </div>
 </section>
@@ -627,8 +608,8 @@
       <div class="vsl-badge">Tour pela ITH Educação</div>
     </div>
     <div class="center rv" style="margin-top:28px">
-      <a class="btn btn-primary btn-lg js-goto" href="#investimento">Quero garantir minha vaga</a>
-      <p class="cta-note">22x de R$ 119,99 · acesso liberado na hora</p>
+      <a class="btn btn-primary btn-lg js-goto js-checkout" href="#inscricao">Quero garantir minha vaga</a>
+      <p class="cta-note">Fale com um consultor e tire suas dúvidas</p>
     </div>
   </div>
 </section>
@@ -695,7 +676,7 @@
       <div class="card rv" style="background:var(--navy);border-color:var(--navy);display:flex;flex-direction:column;justify-content:center;align-items:flex-start">
         <h3 style="color:#fff;margin-top:0">Pronto para ser referência em qualidade e acreditação?</h3>
         <p style="color:#c7d0ea;margin-bottom:18px">Acesso liberado na hora. Comece hoje mesmo.</p>
-        <a class="btn btn-primary js-goto" href="#investimento">Quero começar esse MBA</a>
+        <a class="btn btn-primary js-goto js-checkout" href="#inscricao">Quero começar esse MBA</a>
       </div>
     </div>
   </div>
@@ -789,8 +770,8 @@
       </div>
     </div>
     <div class="center rv" style="margin-top:40px">
-      <a class="btn btn-primary btn-lg js-goto" href="#investimento">Quero acesso a esse conteúdo</a>
-      <p class="cta-note">22x de R$ 119,99 na condição especial de matrícula</p>
+      <a class="btn btn-primary btn-lg js-goto js-checkout" href="#inscricao">Quero acesso a esse conteúdo</a>
+      <p class="cta-note">Fale com um consultor e tire suas dúvidas</p>
     </div>
   </div>
 </section>
@@ -831,7 +812,7 @@
       <h2>Como começar hoje, em 3 passos</h2>
     </div>
     <div class="steps rv" style="margin-top:36px">
-      <div><h3>Finalize a matrícula no cartão</h3><p>Clique em "Garantir minha vaga", preencha seus dados no site oficial da ITH e pague em até 22x no cartão de crédito recorrente.</p></div>
+      <div><h3>Fale com um consultor</h3><p>Clique em "Quero falar com um consultor" e deixe seus dados. Um consultor da ITH entra em contato para tirar suas dúvidas e fazer sua matrícula.</p></div>
       <div><h3>Acesse o portal na hora</h3><p>O acesso ao portal EAD é liberado imediatamente. Você começa a estudar no dia e horário que quiser, no seu ritmo.</p></div>
       <div><h3>Envie a documentação em PDF</h3><p>RG, CPF, diploma e histórico da graduação e demais documentos vão pelo próprio portal, sem burocracia presencial.</p></div>
     </div>
@@ -874,33 +855,24 @@
   </div>
 </section>
 
-<!-- ============ INVESTIMENTO ============ -->
-<section class="sec dark" id="investimento">
+<!-- ============ INSCRIÇÃO (captura de lead, sem preço) ============ -->
+<section class="sec dark" id="inscricao">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">Investimento</span>
-      <h2>Garanta sua vaga no MBA Master em Qualidade e Acreditação</h2>
-      <p class="lead center">Matrícula 100% online, acesso liberado na hora e parcelamento no cartão de crédito recorrente. A condição especial de 22x de R$ 119,99 vale até <strong>30 de setembro</strong>.</p>
+      <span class="eyebrow">Inscrição</span>
+      <h2>Fale com um consultor sobre o MBA Master em Qualidade e Acreditação</h2>
+      <p class="lead center">Deixe seus dados e um consultor da ITH entra em contato para tirar suas dúvidas, apresentar as condições de matrícula e te ajudar a começar. Matrícula 100% online, acesso liberado na hora.</p>
     </div>
     <div class="price-card rv">
       <div class="t">MBA Master em Qualidade e Acreditação em Saúde · EAD · 440h</div>
-      <div class="pricebox pricebox-lg">
-        <div class="pb-top"><span class="pb-old">De <s>R$ 199,99</s>/mês</span><span class="pb-off">-40% · só até 30 de setembro</span></div>
-        <div class="pb-main"><span class="pb-x">22x de</span><span class="pb-cur">R$</span><span class="pb-val">119<small>,99</small></span><span class="pb-per">/mês</span></div>
-        <div class="pb-limit"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>R$ 119,99/mês <b>sem comprometer o limite</b> do cartão</span></div>
-        <div class="pb-total">Total de R$ 2.639,78 no cartão de crédito recorrente · sem juros</div>
-        <div class="pb-save"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Você economiza <b>R$ 1.760</b> em relação ao valor regular</span></div>
-        <div class="pb-deadline js-deadline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Condição especial válida até <b>30 de setembro</b> · encerra em <b class="js-cd-short">--</b></div>
-      </div>
-      <a class="btn btn-primary btn-lg btn-block js-checkout" href="https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52285">
-        Garantir minha vaga agora
+      <a class="btn btn-primary btn-lg btn-block js-checkout" href="#inscricao">
+        Quero falar com um consultor
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <p class="fine">Parcele no cartão de crédito recorrente em até 22x. Vagas disponíveis. Pagamento no site oficial faculdadeith.com.br.</p>
+      <p class="fine">Atendimento de segunda a sexta, das 8h às 18h. Seus dados ficam com a ITH Educação.</p>
       <div class="pc-title">O que está incluso</div>
       <ul class="pc-list">
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>440 horas · conclua em 6 ou 12 meses</li>
-        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Parcela mensal no cartão recorrente, sem bloquear o limite</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Aulas 100% online, sem encontros presenciais</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>+60 videoaulas, 50 cases e 40 e-books inclusos</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Fórum com professor em até 24h + suporte 24h</li>
@@ -984,7 +956,7 @@
       <details class="q"><summary>O diploma é reconhecido pelo MEC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. O diploma é digital, emitido pela ITH Educação (nota 5 no MEC), com QR Code de autenticidade e validade em todo o território nacional. Ele tem a mesma validade e peso da versão presencial e não menciona a modalidade cursada.</p></div></details>
       <details class="q"><summary>Preciso fazer TCC?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Não há TCC tradicional. Em vez disso, você desenvolve um plano de negócio estruturado, pensado para transformar ideias em projetos reais na sua instituição ou na sua consultoria.</p></div></details>
       <details class="q"><summary>Quais profissionais podem cursar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O MBA é multiprofissional: qualquer graduado que atue ou queira atuar em saúde e gestão, como enfermeiros, médicos, farmacêuticos, fisioterapeutas, dentistas e administradores hospitalares.</p></div></details>
-      <details class="q"><summary>Como funciona o pagamento e a condição especial?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>O investimento regular é de 22 parcelas de R$ 199,99 no cartão de crédito recorrente. Na condição especial de matrícula, válida até 30 de setembro, cada parcela sai por R$ 119,99.</p><p>A cobrança é recorrente: a cada mês é lançado apenas o valor da parcela, como uma assinatura. O total do curso não fica bloqueado no limite do seu cartão.</p></div></details>
+      <details class="q"><summary>Como faço a matrícula?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Deixe seus dados no formulário desta página. Um consultor da ITH entra em contato com você para tirar suas dúvidas, apresentar as condições de matrícula vigentes e acompanhar sua inscrição até o acesso ao portal.</p></div></details>
       <details class="q"><summary>Quais documentos preciso enviar?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>RG e CPF, título de eleitor, comprovante de endereço, certidão de nascimento ou casamento, certificado e histórico do ensino médio, diploma e histórico da graduação, foto digital e, para o sexo masculino, comprovante de reservista.</p><p>Tudo em PDF, enviado pelo Portal do Aluno, 100% online.</p></div></details>
       <details class="q"><summary>Tenho suporte durante o curso?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a"><p>Sim. Cada módulo tem fórum com resposta do professor em até 24h, além da Central de Atendimento ao Aluno (CAA) com suporte técnico 24h por e-mail.</p></div></details>
     </div>
@@ -994,10 +966,10 @@
 <!-- ============ CTA FINAL ============ -->
 <section class="sec final" id="cta">
   <div class="wrap rv">
-    <span class="eyebrow">Condição especial até 30 de setembro</span>
+    <span class="eyebrow">Inscrições abertas</span>
     <h2>Torne-se a pessoa que a instituição chama quando o dinheiro some no papel</h2>
-    <p class="lead center">MBA Master em Qualidade e Acreditação em Saúde EAD. 440 horas, diploma MEC, acesso imediato e 22x de R$ 119,99 na condição especial, válida só até 30/09.</p>
-    <a class="btn btn-primary btn-lg js-goto" href="#investimento">Quero começar esse MBA agora</a>
+    <p class="lead center">MBA Master em Qualidade e Acreditação em Saúde EAD. 440 horas, diploma MEC e acesso imediato. Fale com um consultor e garanta sua vaga.</p>
+    <a class="btn btn-primary btn-lg js-goto js-checkout" href="#inscricao">Quero começar esse MBA agora</a>
   </div>
 </section>
 
@@ -1023,21 +995,21 @@
       </div>
     </div>
     <div class="legal">
-      <p>Instituto Health Eireli ME · CNPJ 15.272.624/0001-35 · Instituição reconhecida pelo MEC, Conceito 5. Valores sujeitos a alteração sem aviso prévio. *Condição especial de matrícula válida para matrículas realizadas até 30/09/2026, sujeita a disponibilidade de vagas.</p>
+      <p>Instituto Health Eireli ME · CNPJ 15.272.624/0001-35 · Instituição reconhecida pelo MEC, Conceito 5. </p>
       <p style="margin-top:6px">© <span id="yr"></span> ITH Educação. Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>
 
-<!-- ============ MODAL DE CAPTURA (abre ao clicar em "Garantir minha vaga agora") ============ -->
+<!-- ============ MODAL DE CAPTURA (abre em todos os CTAs; lead vai para o comercial) ============ -->
 <div class="modal" id="leadModal" hidden aria-hidden="true">
   <div class="modal-bg" data-close></div>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="lmTitle">
     <button class="modal-x" type="button" data-close aria-label="Fechar">&times;</button>
     <div class="modal-head">
-      <span class="modal-tag">Condição especial até 30/09</span>
-      <h3 id="lmTitle">Preencha seus dados para liberar a matrícula</h3>
-      <p>Leva 20 segundos. Em seguida você vai direto para o pagamento seguro, com a condição de <strong>22x de R$ 119,99</strong>.</p>
+      <span class="modal-tag">Fale com um consultor</span>
+      <h3 id="lmTitle">Preencha seus dados e fale com um consultor</h3>
+      <p>Leva 20 segundos. Um consultor da ITH entra em contato com você para tirar suas dúvidas e apresentar as condições de matrícula.</p>
     </div>
     <form id="leadForm" novalidate>
       <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Como está no seu documento" required minlength="3"></label>
@@ -1054,45 +1026,24 @@
       </label>
       <p class="fld-err" id="leadErr" hidden>Confira os campos destacados.</p>
       <button class="btn btn-primary btn-lg btn-block" type="submit" id="leadSubmit">
-        Ir para o pagamento
+        Quero falar com um consultor
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
-      <p class="modal-fine"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seus dados ficam com a ITH Educação e não são compartilhados. Pagamento no site oficial.</p>
+      <p class="modal-fine"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seus dados ficam com a ITH Educação e não são compartilhados.</p>
     </form>
   </div>
 </div>
 
 <!-- Sticky mobile CTA -->
 <div class="sticky" aria-hidden="false">
-  <div class="p"><small>22x R$ 199,99 · até 30/09</small><b>22x R$ 119,99</b></div>
-  <a class="btn btn-primary js-goto" href="#investimento">Garantir vaga</a>
+  <div class="p"><b>Inscrições abertas</b><span class="sk-sub">Fale com um consultor</span></div>
+  <a class="btn btn-primary js-goto js-checkout" href="#inscricao">Quero informações</a>
 </div>
 
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // ===== Contagem regressiva da condição especial (30/09/2026 23:59:59, horário de Brasília) =====
-  (function(){
-    var END=new Date('2026-09-30T23:59:59-03:00').getTime();
-    var d=document.getElementById('cdD'),h=document.getElementById('cdH'),m=document.getElementById('cdM'),sec=document.getElementById('cdS');
-    var shorts=document.querySelectorAll('.js-cd-short');
-    function p(n){ return (n<10?'0':'')+n; }
-    function tick(){
-      var diff=END-Date.now();
-      if(diff<=0){
-        document.getElementById('topbar').classList.add('expired');
-        document.querySelectorAll('.js-deadline').forEach(function(el){ el.classList.add('expired'); });
-        return;
-      }
-      var D=Math.floor(diff/864e5), H=Math.floor(diff%864e5/36e5), M=Math.floor(diff%36e5/6e4), S=Math.floor(diff%6e4/1e3);
-      d.textContent=p(D); h.textContent=p(H); m.textContent=p(M); sec.textContent=p(S);
-      var short = D>0 ? (D+' dia'+(D>1?'s':'')+' e '+H+'h') : (H+'h '+p(M)+'min');
-      shorts.forEach(function(el){ el.textContent=short; });
-      setTimeout(tick,1000);
-    }
-    tick();
-  })();
 
 
   // Reveal on scroll
@@ -1128,18 +1079,13 @@
   })();
 
 
-  // ===== Captura de lead antes do checkout =====
+  // ===== Captura de lead (sem checkout: o comercial entra em contato) =====
   var LEAD_WEBHOOK = 'https://hook.us2.make.com/d7gt1alwp8h249ry8c3u70kqebszginu'; // Make: grava o lead na planilha (Nome, Contato, E-mail, Data, UTM, Curso, Formação)
-  var CHECKOUT_URL = 'https://faculdadeith.com.br/finalizar-compra/?add-to-cart=52285';
   (function(){
     var modal=document.getElementById('leadModal'), form=document.getElementById('leadForm'), err=document.getElementById('leadErr'), btn=document.getElementById('leadSubmit');
     if(!modal||!form) return;
     var params=new URLSearchParams(window.location.search);
     function utm(k){ return params.get(k)||''; }
-    function checkoutHref(){
-      var extra=[]; ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','gbraid','wbraid'].forEach(function(k){ if(params.get(k)) extra.push(k+'='+encodeURIComponent(params.get(k))); });
-      return CHECKOUT_URL + (extra.length ? '&'+extra.join('&') : '');
-    }
     function open(){ modal.hidden=false; modal.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open'); setTimeout(function(){ var f=form.querySelector('input'); if(f) f.focus(); },60); try{ gtag('event','lead_form_open',{}); }catch(e){} }
     function close(){ modal.hidden=true; modal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open'); }
     document.querySelectorAll('.js-checkout').forEach(function(a){
@@ -1179,9 +1125,14 @@
       data.utm=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].map(function(k){ return utm(k) ? k.replace('utm_','')+'='+utm(k) : ''; }).filter(Boolean).join(' | ');
       btn.disabled=true; btn.firstChild.textContent='Enviando... ';
       try{ localStorage.setItem('ith_lead_qualidade', JSON.stringify(data)); }catch(e){}
-      try{ gtag('event','generate_lead',{method:'checkout_modal',value:2639.78,currency:'BRL'}); gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); gtag('event','begin_checkout',item); }catch(e){}
-      try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso}); fbq('track','InitiateCheckout',{value:2639.78,currency:'BRL'}); } }catch(e){}
-      var go=function(){ window.location.href=checkoutHref(); };
+      try{ gtag('event','generate_lead',{method:'lead_modal',value:2639.78,currency:'BRL'}); gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); }catch(e){}
+      try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso}); } }catch(e){}
+      var go=function(){
+        var head=modal.querySelector('.modal-head'), nome=(data.nome.split(' ')[0]||'');
+        head.innerHTML='<span class="modal-tag">Recebemos seus dados</span><h3 id="lmTitle">Pronto'+(nome?', '+nome.replace(/[<>&"]/g,''):'')+'!</h3>'+
+          '<p>Um consultor da ITH vai entrar em contato com você em breve pelo celular informado. Atendimento de segunda a sexta, das 8h às 18h.</p>';
+        form.hidden=true;
+      };
       var done=false, finish=function(){ if(!done){ done=true; go(); } };
       setTimeout(finish, 2500); // não deixa o lead esperando se o webhook demorar
       try{
