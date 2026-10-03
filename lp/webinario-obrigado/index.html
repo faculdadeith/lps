@@ -558,6 +558,14 @@
   .ty .wname{display:inline-block;margin:6px auto 0;padding:10px 18px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid var(--line-dk);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;font-size:clamp(15px,1.8vw,18px)}
   .ty .wdate{display:block;margin-top:10px;color:#9fb0dc;font-size:14px;font-weight:600}
   .ty .how{text-align:left;margin-top:40px}
+  .prog{max-width:560px;margin:22px auto 26px;text-align:left}
+  .prog-top{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9fb0dc;margin-bottom:8px}
+  .prog-top b{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;color:var(--green);letter-spacing:0}
+  .prog-bar{height:14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid var(--line-dk);overflow:hidden}
+  .prog-bar i{display:block;height:100%;width:79%;border-radius:999px;background:linear-gradient(90deg,var(--green-2),var(--green));background-size:200% 100%;animation:fillbar 1.4s cubic-bezier(.22,1,.36,1) both,shine 2.4s linear 1.4s infinite}
+  .prog-note{font-size:13.5px;color:#c7d0ea;margin-top:8px;text-align:center}
+  @keyframes fillbar{from{width:0}to{width:79%}}
+  @keyframes shine{0%{background-position:200% 0}100%{background-position:-200% 0}}
   .grp{margin:30px auto 0;max-width:560px;padding:22px;border-radius:20px;background:rgba(37,211,102,.1);border:1.5px solid rgba(37,211,102,.45)}
   .grp[hidden]{display:none}
   .grp-t{color:#dfe6ff;font-size:15.5px;margin-bottom:14px}
@@ -586,6 +594,11 @@
     <div class="ty-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
     <span class="eyebrow">Falta só um passo</span>
     <h1 id="tyTitle">Sua vaga está <span>quase garantida!</span></h1>
+    <div class="prog" role="progressbar" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100" aria-label="Inscrição 79% concluída">
+      <div class="prog-top"><span>Inscrição em andamento</span><b>79%</b></div>
+      <div class="prog-bar"><i></i></div>
+      <p class="prog-note">Falta só entrar no grupo do WhatsApp para concluir.</p>
+    </div>
     <p class="lead center">Você está inscrito(a) no webinário gratuito da ITH Educação:</p>
     <div class="wname" id="tyName">Webinário ITH · SCIRAS e Segurança do Paciente</div>
     <span class="wdate" id="tyDate">Data a definir: o aviso e o link serão disponibilizados no grupo do WhatsApp.</span>
