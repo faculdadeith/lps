@@ -501,6 +501,11 @@
   /* ===== Webinário ===== */
   .hero-bg{background-image:url(../mba-sciras/hero-sciras.webp)}
   .hero{min-height:0}
+  .w-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .w-chips .chip{white-space:nowrap;backdrop-filter:blur(6px)}
+  .w-chips .chip.hi{color:var(--green);border-color:rgba(45,217,141,.35);background:rgba(45,217,141,.1)}
+  .w-chips .chip.hi svg{fill:var(--green)}
+  @media(max-width:640px){.w-chips .chip{font-size:11px;padding:6px 10px}}
   .hero h1{font-size:clamp(30px,4.2vw,50px)}
   .w-meta{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 22px}
   .w-meta div{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid var(--line-dk)}
@@ -567,12 +572,10 @@
   <div class="hero-bg" role="img" aria-label="Profissional de saúde colocando máscara cirúrgica"></div>
   <div class="wrap">
     <div>
-      <div class="kicker">
-        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Webinário gratuito</span>
-        <i></i>
-        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Online e ao vivo</span>
-        <i></i>
-        <span class="hi"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>ITH · MEC nota 5</span>
+      <div class="w-chips">
+        <span class="chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Webinário gratuito</span>
+        <span class="chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Online e ao vivo</span>
+        <span class="chip hi"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>ITH · MEC nota 5</span>
       </div>
       <h1>CCIH/SCIRAS: o que faz, como estruturar e a <span>carreira do controlador de infecção</span></h1>
       <p class="hook">Entenda o serviço por dentro e o que o mercado exige de quem quer atuar no controle de infecção.</p>

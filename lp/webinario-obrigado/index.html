@@ -497,6 +497,11 @@
   /* ===== Webinário ===== */
   .hero-bg{background-image:url(../mba-sciras/hero-sciras.webp)}
   .hero{min-height:0}
+  .w-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .w-chips .chip{white-space:nowrap;backdrop-filter:blur(6px)}
+  .w-chips .chip.hi{color:var(--green);border-color:rgba(45,217,141,.35);background:rgba(45,217,141,.1)}
+  .w-chips .chip.hi svg{fill:var(--green)}
+  @media(max-width:640px){.w-chips .chip{font-size:11px;padding:6px 10px}}
   .hero h1{font-size:clamp(30px,4.2vw,50px)}
   .w-meta{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 22px}
   .w-meta div{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid var(--line-dk)}
