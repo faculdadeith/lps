@@ -530,6 +530,11 @@
   .ith-box li{display:flex;gap:10px;align-items:flex-start;color:#c7d0ea}
   .ith-box li svg{width:18px;height:18px;flex:none;margin-top:3px;stroke:var(--green);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
   .final-cta{text-align:center}
+  .prof-box{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+  .prof-photo{max-width:420px;width:100%;justify-self:center}
+  .prof-photo img{width:100%;border-radius:24px;box-shadow:var(--shadow);border:6px solid #fff;outline:1px solid var(--line)}
+  .prof-role{font-weight:700;color:var(--blue);margin:-4px 0 14px;font-size:16px}
+  @media(max-width:900px){.prof-box{grid-template-columns:1fr;gap:28px}.prof-photo{max-width:340px}}
   .sticky .p b{font-size:15px}
   @media(max-width:1000px){
     .hero .wrap{grid-template-columns:minmax(0,1fr)}
@@ -551,7 +556,7 @@
     <nav class="nav-links" aria-label="Seções">
       <a href="#conteudo">O que você vai aprender</a>
       <a href="#para-quem">Para quem é</a>
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#professora">Professora</a>
       <a href="#ith">A ITH</a>
     </nav>
     <div class="nav-cta"><a class="btn btn-primary js-goto" href="#inscricao">Inscrever-se grátis</a></div>
@@ -631,7 +636,20 @@
   </div>
 </section>
 
-<section class="sec" id="como-funciona">
+<section class="sec" id="professora">
+  <div class="wrap prof-box">
+    <div class="prof-photo rv"><img src="juliana-dias.webp" alt="Esp. Juliana Dias, professora do webinário" width="720" height="900" loading="lazy"></div>
+    <div class="rv">
+      <span class="eyebrow">Quem será sua professora</span>
+      <h2>Esp. Juliana Dias</h2>
+      <p class="prof-role">Embaixadora do MBA em SCIRAS e Segurança do Paciente da ITH Educação</p>
+      <p class="lead">É a Juliana quem conduz este webinário ao vivo, explicando bundles de prevenção de IRAS com exemplos da rotina e respondendo às dúvidas no chat.</p>
+      <div style="margin-top:24px"><a class="btn btn-primary js-goto" href="#inscricao">Quero aprender com a Juliana</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft" id="como-funciona">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Como funciona</span>
@@ -661,7 +679,7 @@
   </div>
 </section>
 
-<section class="sec soft final-cta" id="cta">
+<section class="sec final-cta" id="cta">
   <div class="wrap rv">
     <span class="eyebrow">Vagas gratuitas</span>
     <h2>Bundles de prevenção de IRAS: cateter central, PAV, sonda vesical e sítio cirúrgico</h2>
