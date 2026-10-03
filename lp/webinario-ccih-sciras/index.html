@@ -590,7 +590,7 @@
     <aside class="wform" id="inscricao" aria-label="Inscrição no webinário">
       <span class="badge">Inscrições abertas</span>
       <h3>Garanta sua vaga gratuita</h3>
-      <p class="wf-sub js-data-note">Assim que a data for confirmada, você recebe o aviso e o link de acesso no WhatsApp e no e-mail.</p>
+      <p class="wf-sub js-data-note">Depois da inscrição, você entra no grupo do WhatsApp, onde o link do webinário será disponibilizado.</p>
       <form class="js-wform" id="wForm1" novalidate>
         <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required minlength="3"></label>
         <label class="fld"><span>WhatsApp com DDD</span><input type="tel" name="celular" inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999" required></label>
@@ -656,11 +656,11 @@
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Como funciona</span>
-      <h2>Inscreva-se agora e receba o link quando a data sair</h2>
+      <h2>Inscreva-se, entre no grupo e receba o link por lá</h2>
     </div>
     <div class="how">
       <div class="card rv"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><h3>1. Faça sua inscrição</h3><p>Preencha nome, WhatsApp e e-mail. Leva menos de 30 segundos e é gratuito.</p></div>
-      <div class="card rv"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.3-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg><h3>2. Receba a data e o link</h3><p>Avisamos pelo WhatsApp e pelo e-mail a data, o horário e o link para entrar ao vivo.</p></div>
+      <div class="card rv"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.3-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg><h3>2. Entre no grupo do WhatsApp</h3><p>Na página seguinte você entra no grupo. É lá que a data, o horário e o link para entrar ao vivo serão disponibilizados.</p></div>
       <div class="card rv"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><h3>3. Participe ao vivo</h3><p>Assista de onde estiver, pelo celular ou computador, e tire suas dúvidas no chat.</p></div>
     </div>
   </div>
@@ -686,7 +686,7 @@
   <div class="wrap rv">
     <span class="eyebrow">Vagas gratuitas</span>
     <h2>CCIH/SCIRAS: o que faz, como estruturar e a carreira do controlador de infecção</h2>
-    <p class="lead center">Inscreva-se agora. A data será confirmada em breve e você recebe tudo no WhatsApp e no e-mail.</p>
+    <p class="lead center">Inscreva-se agora e entre no grupo do WhatsApp. A data e o link serão disponibilizados por lá.</p>
     <div style="margin-top:26px"><a class="btn btn-primary btn-lg js-goto" href="#inscricao">Quero me inscrever grátis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
@@ -734,7 +734,7 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
   if(DATA_WEBINAR){
     document.querySelectorAll('.js-data').forEach(function(el){ el.textContent = DATA_WEBINAR; });
-    document.querySelectorAll('.js-data-note').forEach(function(el){ el.textContent = 'Você recebe o link de acesso no WhatsApp e no e-mail.'; });
+    document.querySelectorAll('.js-data-note').forEach(function(el){ el.textContent = 'O link de acesso será disponibilizado no grupo do WhatsApp.'; });
   }
 
   var io = new IntersectionObserver(function(es){
