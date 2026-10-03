@@ -558,6 +558,14 @@
   .ty .wname{display:inline-block;margin:6px auto 0;padding:10px 18px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid var(--line-dk);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;font-size:clamp(15px,1.8vw,18px)}
   .ty .wdate{display:block;margin-top:10px;color:#9fb0dc;font-size:14px;font-weight:600}
   .ty .how{text-align:left;margin-top:40px}
+  .grp{margin:30px auto 0;max-width:560px;padding:22px;border-radius:20px;background:rgba(37,211,102,.1);border:1.5px solid rgba(37,211,102,.45)}
+  .grp[hidden]{display:none}
+  .grp-t{color:#dfe6ff;font-size:15.5px;margin-bottom:14px}
+  .grp-t b{color:#fff}
+  .btn-wa-g{background:#25D366;color:#fff;width:100%;box-shadow:0 16px 34px -12px rgba(37,211,102,.75);animation:pulse 2s ease-in-out infinite}
+  .btn-wa-g:hover{background:#1ebe5a;transform:translateY(-2px)}
+  .btn-wa-g svg{width:24px;height:24px;fill:#fff}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}50%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
   .ty .card h3{margin-top:12px}
   .mba{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
   .mba img{border-radius:var(--radius);box-shadow:var(--shadow)}
@@ -581,8 +589,12 @@
     <p class="lead center">Você está inscrito(a) no webinário gratuito da ITH Educação:</p>
     <div class="wname" id="tyName">Webinário ITH · SCIRAS e Segurança do Paciente</div>
     <span class="wdate" id="tyDate">Data a definir: avisaremos assim que for confirmada.</span>
+    <div class="grp" id="tyGroup" hidden>
+      <p class="grp-t"><b>Último passo:</b> entre no grupo do WhatsApp. É por lá que enviamos a data, o horário e o link do webinário.</p>
+      <a class="btn btn-wa-g btn-lg" id="tyGroupBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.8L0 24l6.3-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.1-3.6-8.4z"/></svg>Entrar no grupo do WhatsApp</a>
+    </div>
     <div class="how">
-      <div class="card"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.3-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg><h3>1. Fique de olho no WhatsApp</h3><p>Enviamos a data, o horário e o link de acesso para o número que você informou.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.3-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg><h3 id="tyStep1T">1. Fique de olho no WhatsApp</h3><p id="tyStep1P">Enviamos a data, o horário e o link de acesso para o número que você informou.</p></div>
       <div class="card"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><h3>2. Confira seu e-mail</h3><p>Você também recebe tudo por e-mail. Se não encontrar, olhe a caixa de spam e a aba Promoções.</p></div>
       <div class="card"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><h3>3. Reserve o horário</h3><p>Quando a data sair, anote na agenda. O webinário é ao vivo e as dúvidas são respondidas no chat.</p></div>
     </div>
@@ -631,6 +643,9 @@
 <script>
   var WEBINARS = {"webinario-metas-seguranca-paciente": "As 6 metas internacionais de segurança do paciente na prática", "webinario-ccih-sciras": "CCIH/SCIRAS: o que faz, como estruturar e a carreira do controlador de infecção", "webinario-protocolo-sepse": "Protocolo de sepse atualizado: da triagem inicial ao pacote da primeira hora", "webinario-precaucoes-isolamento": "Precauções e isolamento: contato, gotículas e aerossóis sem erro", "webinario-bundles-iras": "Bundles de prevenção de IRAS: cateter central, PAV, sonda vesical e sítio cirúrgico", "webinario-evento-adverso-notivisa": "Evento adverso: como notificar no Notivisa e investigar a causa"};
   var DATAS = {"webinario-metas-seguranca-paciente": "", "webinario-ccih-sciras": "", "webinario-protocolo-sepse": "", "webinario-precaucoes-isolamento": "", "webinario-bundles-iras": "", "webinario-evento-adverso-notivisa": ""};
+  // ===== GRUPO DO WHATSAPP ===== (vazio = botão escondido)
+  var GRUPO_WHATSAPP = "";
+  var GRUPOS_POR_WEBINAR = {};
   document.getElementById('yr').textContent = new Date().getFullYear();
   (function(){
     var p=new URLSearchParams(window.location.search), slug=p.get('w')||'', info=null;
@@ -640,6 +655,14 @@
     if(WEBINARS[slug]) document.getElementById('tyName').textContent = WEBINARS[slug];
     var data=(info&&info.data)||DATAS[slug]||'';
     if(data) document.getElementById('tyDate').textContent = 'Data: '+data;
+    var grupo=GRUPOS_POR_WEBINAR[slug]||GRUPO_WHATSAPP;
+    if(/^https?:\/\//.test(grupo)){
+      var gb=document.getElementById('tyGroupBtn'); gb.href=grupo;
+      document.getElementById('tyGroup').hidden=false;
+      document.getElementById('tyStep1T').textContent='1. Entre no grupo do WhatsApp';
+      document.getElementById('tyStep1P').textContent='A data, o horário e o link de acesso são enviados no grupo. Entre agora para não perder.';
+      gb.addEventListener('click',function(){ try{ gtag('event','join_whatsapp_group',{webinar:slug}); }catch(e){} try{ if(window.fbq) fbq('track','Contact',{content_name:'Grupo WhatsApp webinário'}); }catch(e){} });
+    }
     if(info&&info.nome) document.getElementById('tyTitle').innerHTML = 'Pronto, '+info.nome.replace(/[<>&"]/g,'')+'! Sua vaga está <span>garantida</span>';
     var q=new URLSearchParams();
     ['utm_source','utm_medium','utm_campaign'].forEach(function(k){ if(p.get(k)) q.set(k,p.get(k)); });
