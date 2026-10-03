@@ -589,7 +589,7 @@
     <p class="lead center">Você está inscrito(a) no webinário gratuito da ITH Educação:</p>
     <div class="wname" id="tyName">Webinário ITH · SCIRAS e Segurança do Paciente</div>
     <span class="wdate" id="tyDate">Data a definir: o aviso e o link serão disponibilizados no grupo do WhatsApp.</span>
-    <div class="grp" id="tyGroup" hidden>
+    <div class="grp" id="tyGroup">
       <p class="grp-t"><b>Para garantir sua vaga, entre no grupo do WhatsApp.</b> O link do webinário será disponibilizado no grupo.</p>
       <a class="btn btn-wa-g btn-lg" id="tyGroupBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.8L0 24l6.3-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.1-3.6-8.4z"/></svg>Entrar no grupo do WhatsApp</a>
     </div>
@@ -643,7 +643,7 @@
 <script>
   var WEBINARS = {"webinario-metas-seguranca-paciente": "As 6 metas internacionais de segurança do paciente na prática", "webinario-ccih-sciras": "CCIH/SCIRAS: o que faz, como estruturar e a carreira do controlador de infecção", "webinario-protocolo-sepse": "Protocolo de sepse atualizado: da triagem inicial ao pacote da primeira hora", "webinario-precaucoes-isolamento": "Precauções e isolamento: contato, gotículas e aerossóis sem erro", "webinario-bundles-iras": "Bundles de prevenção de IRAS: cateter central, PAV, sonda vesical e sítio cirúrgico", "webinario-evento-adverso-notivisa": "Evento adverso: como notificar no Notivisa e investigar a causa"};
   var DATAS = {"webinario-metas-seguranca-paciente": "", "webinario-ccih-sciras": "", "webinario-protocolo-sepse": "", "webinario-precaucoes-isolamento": "", "webinario-bundles-iras": "", "webinario-evento-adverso-notivisa": ""};
-  // ===== GRUPO DO WHATSAPP ===== (vazio = botão escondido)
+  // ===== GRUPO DO WHATSAPP ===== (cole o link entre as aspas; vazio = botão sem destino)
   var GRUPO_WHATSAPP = "";
   var GRUPOS_POR_WEBINAR = {};
   document.getElementById('yr').textContent = new Date().getFullYear();
@@ -656,9 +656,11 @@
     var data=(info&&info.data)||DATAS[slug]||'';
     if(data) document.getElementById('tyDate').textContent = 'Data: '+data+' · o link será disponibilizado no grupo do WhatsApp.';
     var grupo=GRUPOS_POR_WEBINAR[slug]||GRUPO_WHATSAPP;
+    var gb=document.getElementById('tyGroupBtn');
+    // sem link ainda: o botão aparece, mas o clique não faz nada
+    gb.addEventListener('click',function(e){ if(!/^https?:\/\//.test(grupo)) e.preventDefault(); });
     if(/^https?:\/\//.test(grupo)){
-      var gb=document.getElementById('tyGroupBtn'); gb.href=grupo;
-      document.getElementById('tyGroup').hidden=false;
+      gb.href=grupo;
       gb.addEventListener('click',function(){ try{ gtag('event','join_whatsapp_group',{webinar:slug}); }catch(e){} try{ if(window.fbq) fbq('track','Contact',{content_name:'Grupo WhatsApp webinário'}); }catch(e){} });
     }
     if(info&&info.nome) document.getElementById('tyTitle').innerHTML = info.nome.replace(/[<>&"]/g,'')+', sua vaga está <span>quase garantida!</span>';
