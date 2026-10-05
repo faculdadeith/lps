@@ -1136,10 +1136,9 @@
       try{ gtag('event','generate_lead',{method:'lead_modal',value:2639.78,currency:'BRL'}); gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); }catch(e){}
       try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso}); } }catch(e){}
       var go=function(){
-        var head=modal.querySelector('.modal-head'), nome=(data.nome.split(' ')[0]||'');
-        head.innerHTML='<span class="modal-tag">Recebemos seus dados</span><h3 id="lmTitle">Pronto'+(nome?', '+nome.replace(/[<>&"]/g,''):'')+'!</h3>'+
-          '<p>Um consultor da ITH vai entrar em contato com você em breve pelo celular informado. Atendimento de segunda a sexta, das 8h às 18h.</p>';
-        form.hidden=true;
+        // vai para a página de obrigado com o botão do WhatsApp comercial
+        try{ sessionStorage.setItem('ith_ead_lead', JSON.stringify({slug:'seguranca-paciente', nome:(data.nome.split(' ')[0]||'')})); }catch(e){}
+        window.location.href='../pos-ead-obrigado/?c=seguranca-paciente';
       };
       var done=false, finish=function(){ if(!done){ done=true; go(); } };
       setTimeout(finish, 2500); // não deixa o lead esperando se o webhook demorar
