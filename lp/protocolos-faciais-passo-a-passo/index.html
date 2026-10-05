@@ -135,7 +135,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="formcard" id="baixar">
   <form id="leadForm" novalidate>
     <h2>Receba o ebook grátis</h2>
-    <p class="s">Preencha e o download é liberado na hora.</p>
+    <p class="s">Preencha e receba o acesso ao material no grupo do WhatsApp.</p>
     <label class="fld"><span>Nome</span><input name="nome" autocomplete="name" required></label>
     <label class="fld"><span>WhatsApp</span><input name="celular" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
     <label class="fld"><span>E-mail</span><input name="email" type="email" autocomplete="email" required></label>
@@ -144,13 +144,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <button class="btn" type="submit"><span>Quero o ebook grátis</span><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M8 18h10V8"/></svg></i></button>
     <p class="priv">Seus dados ficam só com a ITH Educação. Nada de spam.</p>
   </form>
-  <div class="ok" id="ok" hidden>
-    <div class="big"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-    <h2>Seu ebook está liberado</h2>
-    <p>Clique para baixar o PDF. Guarde no celular para consultar quando precisar.</p>
-    <a class="btn" href="protocolos-faciais-passo-a-passo.pdf" download id="dl"><span>Baixar o ebook (PDF)</span><i><svg viewBox="0 0 24 24"><path d="M12 4v16M5 13l7 7 7-7"/></svg></i></a>
-    <a class="alt" href="https://mkt.faculdadeith.com.br/lp/estetica-captura/?utm_source=isca&utm_medium=lp&utm_campaign=protocolos-faciais-passo-a-passo">Conheça a Pós em Saúde Estética Avançada →</a>
-  </div>
 </div>
   </div>
 </section>
@@ -192,7 +185,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 (function(){
   var LEAD_WEBHOOK = ''; // preencher com o webhook do Make quando o cenário existir
   var KEY = 'ith_isca_protocolos_faciais_passo_a_passo';
-  var form = document.getElementById('leadForm'), ok = document.getElementById('ok'), err = document.getElementById('err');
+  var form = document.getElementById('leadForm'), err = document.getElementById('err');
   var btn = form.querySelector('button'), tel = form.elements.celular;
   function utm(k){ try{ return new URLSearchParams(location.search).get(k) || ''; }catch(e){ return ''; } }
   tel.addEventListener('input', function(){
@@ -200,7 +193,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     if(v.length>6) v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7); else if(v.length>2) v='('+v.slice(0,2)+') '+v.slice(2);
     tel.value = v;
   });
-  function liberar(){ form.hidden = true; ok.hidden = false; }
+  var foi = false;
+  function liberar(){ if(foi) return; foi = true; location.href = 'obrigado/' + location.search; }
   try{ var saved = JSON.parse(localStorage.getItem(KEY)||'null'); if(saved){ ['nome','celular','email','formacao'].forEach(function(k){ if(saved[k]) form.elements[k].value = saved[k]; }); } }catch(e){}
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -219,11 +213,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     try{ localStorage.setItem(KEY, JSON.stringify(data)); }catch(e){}
     try{ if(window.fbq) fbq('track','Lead',{content_name:data.isca}); }catch(e){}
     try{
-      if(LEAD_WEBHOOK.indexOf('http')===0){ fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(liberar,liberar); }
+      if(LEAD_WEBHOOK.indexOf('http')===0){ fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(liberar,liberar); setTimeout(liberar, 2500); }
       else { liberar(); }
     }catch(e){ liberar(); }
   });
-  document.getElementById('dl').addEventListener('click', function(){ try{ if(window.fbq) fbq('trackCustom','DownloadIsca',{content_name:'Protocolos faciais passo a passo'}); }catch(e){} });
 })();
 </script>
 </body>
