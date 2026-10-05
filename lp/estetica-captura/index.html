@@ -1242,6 +1242,43 @@
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
 </a>
 
+<!-- Pop-up de captura (todo CTA e botão de WhatsApp abre aqui antes) -->
+<div class="modal" id="leadModal" hidden role="dialog" aria-modal="true" aria-labelledby="leadModalT">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Fechar">&times;</button>
+    <div class="modal-head"><span class="modal-tag">Atendimento pelo WhatsApp</span><h3 id="leadModalT">Fale com um consultor de carreira</h3><p>Deixe seus dados e um consultor de carreira da ITH chama você no WhatsApp com datas, grade e condições.</p></div>
+    <form class="lead-form" id="leadForm9" novalidate data-form="9">
+        <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Como está no seu documento" required minlength="3"></label>
+        <label class="fld"><span>WhatsApp com DDD</span><input type="tel" name="celular" inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999" required></label>
+        <label class="fld"><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required></label>
+        <div class="fld-row">
+          <label class="fld"><span>Sua formação</span>
+            <select name="formacao" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Enfermagem</option><option>Farmácia</option><option>Biomedicina</option><option>Fisioterapia</option><option>Estética e Cosmética</option><option>Outra graduação na saúde</option>
+            </select>
+          </label>
+          <label class="fld"><span>Turma de interesse</span>
+            <select name="turma" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Goiânia · GO</option><option>Brasília · DF</option><option>Ainda não sei</option>
+            </select>
+          </label>
+        </div>
+        <p class="fld-err" hidden>Confira os campos destacados.</p>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Quero mais informações <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="modal-fine"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seus dados ficam com a ITH Educação. Um consultor de carreira fala com você pelo WhatsApp.</p>
+      </form>
+      <div class="lead-ok" id="leadOk9" hidden>
+        <div class="lead-ok-ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Recebemos seus dados!</h3>
+        <p>Um consultor de carreira da ITH vai falar com você pelo WhatsApp com as datas da turma da sua cidade e todos os detalhes da pós.</p>
+        <a class="btn btn-wa btn-block js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20P%C3%B3s%20em%20Sa%C3%BAde%20Est%C3%A9tica%20Avan%C3%A7ada" target="_blank" rel="noopener">Prefere falar agora? Chame no WhatsApp</a>
+      </div>
+  </div>
+</div>
+
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -1323,9 +1360,6 @@
 
   document.querySelectorAll('.js-goto').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','cta_click',{cta_text:a.textContent.trim().slice(0,60)}); }catch(e){} }); });
   document.querySelectorAll('.js-ith').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','view_institution',{}); }catch(e){} }); });
-  document.querySelectorAll('.js-wa').forEach(function(a){
-    a.addEventListener('click', function(){ track('whatsapp_click', {method:'whatsapp'}); track('generate_lead', {method:'whatsapp'}); });
-  });
 
 
   // VSL: carrega o YouTube só no clique
@@ -1346,6 +1380,21 @@
 
 
 
+
+  // ===== Pop-up de captura: consultor, WhatsApp e CTAs sempre passam pelo formulário =====
+  (function(){
+    var m=document.getElementById('leadModal'); if(!m) return; var last=null;
+    function abrir(e){
+      e.preventDefault(); last=this; m.hidden=false; document.body.classList.add('modal-open');
+      var f=m.querySelector('.lead-form:not([hidden]) input:not([type=hidden])'); if(f) setTimeout(function(){ try{ f.focus({preventScroll:true}); }catch(_){} },80);
+      try{ gtag('event','popup_open',{cta_text:(this.textContent||this.getAttribute('aria-label')||'').trim().slice(0,60)}); }catch(_){}
+    }
+    function fechar(){ m.hidden=true; document.body.classList.remove('modal-open'); if(last) try{ last.focus({preventScroll:true}); }catch(_){} }
+    document.querySelectorAll('.js-wa, .js-goto').forEach(function(a){ if(a.closest('.lead-ok, .ok')) return; a.addEventListener('click', abrir); });
+    m.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click', fechar); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !m.hidden) fechar(); });
+  })();
+  document.querySelectorAll('.lead-ok .js-wa, .ok .js-wa').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','whatsapp_click',{method:'whatsapp'}); }catch(_){} }); });
 </script>
 </body>
 </html>

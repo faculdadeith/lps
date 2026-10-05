@@ -225,6 +225,23 @@
   @media (max-width:640px){ .box .cta.full i{display:none} .box .cta.full span{justify-content:center;padding:0 12px} .cta span{min-width:0} }
   @media (max-width:370px){ .sticky .p b{font-size:14px} .sticky .p small{font-size:11px} .sticky .cta span{padding:0 14px;font-size:14px} h1{font-size:40px}
     .cta span{font-size:15px;padding:0 14px} .cta i{width:50px} .cta{height:54px} }
+
+  /* Pop-up de captura */
+  .modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px}
+  .modal[hidden]{display:none!important}
+  .modal-bg{position:absolute;inset:0;background:rgba(3,17,64,.78);backdrop-filter:blur(4px);animation:mBg .35s ease both}
+  .modal-card{position:relative;width:100%;max-width:480px;max-height:calc(100vh - 32px);overflow:auto;background:#fff;border-radius:22px;padding:28px 26px 22px;box-shadow:0 40px 90px -30px rgba(0,0,0,.7);animation:mIn .58s cubic-bezier(.22,1.25,.36,1) both}
+  @keyframes mBg{from{opacity:0}to{opacity:1}}
+  @keyframes mIn{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+  @keyframes mInUp{from{transform:translateY(100%)}to{transform:none}}
+  .modal-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:#eef2fb;color:#031140;font-size:22px;line-height:1;cursor:pointer;z-index:2}
+  .modal-head h3{font-size:22px;margin:0 0 6px;padding-right:32px}
+  .modal-head p{font-size:15px;margin:0 0 18px;opacity:.8}
+  .modal-tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0f8a57;background:#ecfdf5;padding:5px 10px;border-radius:999px;margin-bottom:10px}
+  .modal .lead-form h3{display:none}
+  body.modal-open{overflow:hidden}
+  @media(max-width:640px){.modal{align-items:flex-end;padding:0}.modal-card{border-radius:22px 22px 0 0;max-height:92vh;padding:24px 20px calc(20px + env(safe-area-inset-bottom));animation:mInUp .62s cubic-bezier(.22,1.28,.36,1) both}}
+  @media(prefers-reduced-motion:reduce){.modal-card,.modal-bg{animation:none}}
 </style>
 </head>
 <body>
@@ -384,6 +401,38 @@
 </div>
 <a class="wa js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20turma%20de%20S%C3%A3o%20Paulo%20da%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
 
+<!-- Pop-up de captura (todo CTA e botão de WhatsApp abre aqui antes) -->
+<div class="modal" id="leadModal" hidden role="dialog" aria-modal="true" aria-labelledby="leadModalT">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Fechar">&times;</button>
+    <div class="modal-head"><span class="modal-tag">Atendimento pelo WhatsApp</span><h3 id="leadModalT">Entre na lista de espera</h3><p>Deixe seus dados e um consultor de carreira da ITH chama você no WhatsApp quando as inscrições abrirem.</p></div>
+    <form class="lead-form" id="leadForm9" novalidate data-form="9">
+        <h3>Entre na lista de espera</h3>
+        <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Como está no seu documento" required minlength="3"></label>
+        <label class="fld"><span>WhatsApp com DDD</span><input type="tel" name="celular" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" required></label>
+        <label class="fld"><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required></label>
+        <label class="fld"><span>Sua formação</span>
+          <select name="formacao" required>
+            <option value="" disabled selected>Selecione</option>
+            <option>Enfermagem</option>
+            <option>Outra graduação na saúde</option>
+          </select>
+        </label>
+        <input type="hidden" name="turma" value="São Paulo · SP (lista de espera)">
+        <p class="fld-err" hidden>Confira os campos destacados.</p>
+        <button class="cta full" type="submit"><span>Entrar na lista de espera</span><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M8 18h10V8"/></svg></i></button>
+        <p class="fine"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seus dados ficam com a ITH Educação. Um consultor de carreira fala com você quando as inscrições abrirem.</p>
+      </form>
+      <div class="ok" id="leadOk9" hidden>
+        <i><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></i>
+        <h3>Você está na lista!</h3>
+        <p>Um consultor de carreira da ITH vai falar com você pelo WhatsApp assim que as inscrições da turma de São Paulo abrirem.</p>
+        <a class="js-wa" href="https://wa.me/5562982445664?text=Quero%20saber%20mais%20sobre%20a%20turma%20de%20S%C3%A3o%20Paulo%20da%20P%C3%B3s%20em%20Urg%C3%AAncia%20e%20Emerg%C3%AAncia%20%2B%20UTI" target="_blank" rel="noopener">Prefere falar agora? Chame no WhatsApp</a>
+      </div>
+  </div>
+</div>
+
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   function track(name, params){ try{ if(window.gtag){ gtag('event', name, params||{}); } }catch(e){} }
@@ -429,7 +478,21 @@
     });
   })();
   document.querySelectorAll('.js-goto').forEach(function(a){ a.addEventListener('click', function(){ track('cta_click',{cta_text:a.textContent.trim().slice(0,60)}); }); });
-  document.querySelectorAll('.js-wa').forEach(function(a){ a.addEventListener('click', function(){ track('whatsapp_click',{method:'whatsapp'}); track('generate_lead',{method:'whatsapp'}); }); });
+
+  // ===== Pop-up de captura: consultor, WhatsApp e CTAs sempre passam pelo formulário =====
+  (function(){
+    var m=document.getElementById('leadModal'); if(!m) return; var last=null;
+    function abrir(e){
+      e.preventDefault(); last=this; m.hidden=false; document.body.classList.add('modal-open');
+      var f=m.querySelector('.lead-form:not([hidden]) input:not([type=hidden])'); if(f) setTimeout(function(){ try{ f.focus({preventScroll:true}); }catch(_){} },80);
+      try{ gtag('event','popup_open',{cta_text:(this.textContent||this.getAttribute('aria-label')||'').trim().slice(0,60)}); }catch(_){}
+    }
+    function fechar(){ m.hidden=true; document.body.classList.remove('modal-open'); if(last) try{ last.focus({preventScroll:true}); }catch(_){} }
+    document.querySelectorAll('.js-wa, .js-goto').forEach(function(a){ if(a.closest('.lead-ok, .ok')) return; a.addEventListener('click', abrir); });
+    m.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click', fechar); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !m.hidden) fechar(); });
+  })();
+  document.querySelectorAll('.lead-ok .js-wa, .ok .js-wa').forEach(function(a){ a.addEventListener('click', function(){ try{ gtag('event','whatsapp_click',{method:'whatsapp'}); }catch(_){} }); });
 </script>
 </body>
 </html>
