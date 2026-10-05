@@ -106,16 +106,13 @@ section.blk h2{font-size:clamp(28px,3.6vw,42px);line-height:1.08;letter-spacing:
 .pos .tags span{font-size:13px;font-weight:700;color:#fff;background:rgba(255,255,255,.14);border-radius:99px;padding:6px 12px}
 footer{padding:36px 0 90px;color:#7d8dbd;font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none}
-.sticky .btn{height:54px;margin:0}
 @media (max-width:900px){
  .hero .wrap{grid-template-columns:1fr;gap:28px}
  .mock{height:300px}
  .caps,.split,.pos{grid-template-columns:1fr}
  .pos{padding:30px 24px}
  .pages{grid-template-columns:repeat(3,1fr);gap:8px}
- .sticky{display:block}
- header.top img{height:28px}
+  header.top img{height:28px}
  .pill{font-size:11px;padding:7px 12px}
 }
 @media (max-width:420px){ .btn span{font-size:15.5px;padding:0 10px} .mock{height:240px} .formcard{padding:24px 18px} section.blk{padding:56px 0} }
@@ -190,21 +187,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 
 <footer><div class="wrap"><span>© ITH Educação · Faculdade ITH, conceito 5 no MEC</span><span>Material educativo gratuito. Não substitui protocolos institucionais.</span></div></footer>
-<div class="sticky" id="sticky"><a class="btn" href="#baixar"><span>Quero o ebook grátis</span><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M8 18h10V8"/></svg></i></a></div>
 
 <script>
 (function(){
   var LEAD_WEBHOOK = ''; // preencher com o webhook do Make quando o cenário existir
   var KEY = 'ith_isca_nutricao_rn_uti_neonatal';
   var form = document.getElementById('leadForm'), ok = document.getElementById('ok'), err = document.getElementById('err');
-  var btn = form.querySelector('button'), tel = form.elements.celular, sticky = document.getElementById('sticky');
+  var btn = form.querySelector('button'), tel = form.elements.celular;
   function utm(k){ try{ return new URLSearchParams(location.search).get(k) || ''; }catch(e){ return ''; } }
   tel.addEventListener('input', function(){
     var v = tel.value.replace(/\D/g,'').slice(0,11);
     if(v.length>6) v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7); else if(v.length>2) v='('+v.slice(0,2)+') '+v.slice(2);
     tel.value = v;
   });
-  function liberar(){ form.hidden = true; ok.hidden = false; if(sticky) sticky.style.display='none'; }
+  function liberar(){ form.hidden = true; ok.hidden = false; }
   try{ var saved = JSON.parse(localStorage.getItem(KEY)||'null'); if(saved){ ['nome','celular','email','formacao'].forEach(function(k){ if(saved[k]) form.elements[k].value = saved[k]; }); } }catch(e){}
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -228,8 +224,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     }catch(e){ liberar(); }
   });
   document.getElementById('dl').addEventListener('click', function(){ try{ if(window.fbq) fbq('trackCustom','DownloadIsca',{content_name:'Nutrição do RN na UTI Neonatal'}); }catch(e){} });
-  var fc = document.getElementById('baixar');
-  if('IntersectionObserver' in window && sticky){ new IntersectionObserver(function(es){ es.forEach(function(x){ sticky.style.opacity = x.isIntersecting ? '0' : '1'; sticky.style.pointerEvents = x.isIntersecting ? 'none' : 'auto'; }); }).observe(fc); }
 })();
 </script>
 </body>
