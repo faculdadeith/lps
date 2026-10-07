@@ -556,6 +556,34 @@
   .bonus{background:linear-gradient(rgba(255,93,48,.04),rgba(255,93,48,.12));border:1px solid rgba(255,93,48,.45);color:#5b2312}
   .bonus svg{stroke:var(--neo)}
   .mec-badge .lbl{color:#fff}
+
+  /* ===== Tom de azul da LP neonatal-new_page_c =====
+     Página inteira no azul: seções alternam #061d56 <-> #001140 em degradê (emendas sem corte),
+     cards escuros translúcidos, azul de apoio #2b65d9/#4c73cf. Card de preço e parceiros ficam brancos. */
+  :root{--navy:#001140;--navy-2:#061d56;--navy-3:#103972;--blue:#2b65d9;--blue-2:#4c73cf}
+  html,body{background:#001140}
+  @media(prefers-color-scheme:dark){html,body{background:#001140}}
+  body{color:#eef1fb}
+  .sec,.trust,footer{--ink:#eef1fb;--ink-2:#b4bfe0;--muted:#8d9ac4;--line:rgba(255,255,255,.10);--soft:rgba(255,255,255,.04)}
+  .price-card,.offer,.partners{--ink:#0f172a;--ink-2:#334155;--muted:#64748b;--line:#e5e9f2;--soft:#f4f6fb}
+  header{background:rgba(0,17,64,.88)}
+  .trust{background:#001140;border-bottom:1px solid rgba(255,255,255,.08)}
+  .trust svg{stroke:var(--blue-2)}
+  .sec.a{background:radial-gradient(800px 480px at 100% 45%,rgba(43,101,217,.16),transparent 70%),linear-gradient(180deg,#001140,#061d56)}
+  .sec.b{background:radial-gradient(800px 480px at 0% 55%,rgba(43,101,217,.13),transparent 70%),linear-gradient(180deg,#061d56,#001140)}
+  h2,.dark h2{color:#fff}
+  .lead,.dark .lead{color:#aeb9dd}
+  .card h3,.axis-head h3,details.mod summary,.steps h3,.quote .who b,.about-stats b,.trust b,details.q summary,.sec h3{color:#fff}
+  .price-card h3,.offer h3,.partners h3{color:var(--navy)}
+  .card,.pain-list li,details.mod,.steps div,.quote,.about-stats li,details.q,.incl li{background:linear-gradient(180deg,rgba(1,9,32,.55),rgba(1,9,32,.35));border:1px solid rgba(255,255,255,.09);box-shadow:none}
+  .axis-n{background:transparent;border-color:rgba(255,255,255,.22);color:#c7d0ea}
+  .axis-col{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08)}
+  .eyebrow,.soft .eyebrow,.dark .eyebrow,.final .eyebrow{color:#c7d0ea;background:transparent;border-color:rgba(255,255,255,.22)}
+  .price-card .eyebrow{color:var(--ink-2);border-color:var(--line)}
+  .partners-t{background:#fff;border-radius:6px}
+  .btn-wa{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.18)}
+  .price-card .btn-wa{background:#fff;color:var(--navy);border-color:var(--line)}
+  .final{background:radial-gradient(900px 500px at 20% 0%,rgba(43,101,217,.35),transparent 60%),radial-gradient(700px 400px at 90% 100%,rgba(255,93,48,.18),transparent 60%),#001140}
 </style>
 </head>
 <body>
@@ -655,7 +683,7 @@
   </div>
 </div>
 
-<section class="sec soft" id="para-quem">
+<section class="sec soft a" id="para-quem">
   <div class="wrap two">
     <div class="rv">
       <span class="eyebrow">Para quem é esta pós</span>
@@ -675,7 +703,7 @@
 </section>
 
 
-<section class="sec" id="resultados">
+<section class="sec b" id="resultados">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">O que você conquista</span>
@@ -723,7 +751,7 @@
 </section>
 
 
-<section class="sec dark" id="incluso">
+<section class="sec dark a" id="incluso">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Tudo incluso na matrícula</span>
@@ -742,7 +770,7 @@
 </section>
 
 
-<section class="sec" id="conteudo">
+<section class="sec b" id="conteudo">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Conteúdo programático · 440 horas</span>
@@ -821,7 +849,7 @@
 </section>
 
 
-<section class="sec dark" id="como-funciona">
+<section class="sec dark a" id="como-funciona">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Formato híbrido</span>
@@ -842,7 +870,7 @@
 </section>
 
 
-<section class="sec soft" id="professores">
+<section class="sec soft b" id="professores">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Professores referência</span>
@@ -870,7 +898,7 @@
   </div>
 </section>
 
-<section class="sec dark" id="video">
+<section class="sec dark a" id="video">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Vídeo de apresentação</span>
@@ -888,7 +916,7 @@
     </div>
   </div>
 </section>
-<section class="sec soft" id="ith">
+<section class="sec soft b" id="ith">
   <div class="wrap">
     <div class="about">
       <div class="rv">
@@ -923,7 +951,7 @@
   </div>
 </section>
 
-<section class="sec dark" id="investimento">
+<section class="sec dark a" id="investimento">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Investimento</span>
@@ -962,7 +990,7 @@
 </section>
 
 
-<section class="sec soft" id="depoimentos">
+<section class="sec soft b" id="depoimentos">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Quem já fez</span>
@@ -977,7 +1005,7 @@
   </div>
 </section>
 
-<section class="sec dark" id="mec">
+<section class="sec dark a" id="mec">
   <div class="wrap mec">
     <div class="rv mec-badge" aria-label="Reconhecida pelo MEC, Conceito 5">
       <div class="ring"><span class="n5">5</span><span class="lbl">Conceito<br>MEC</span></div>
@@ -997,7 +1025,7 @@
     </div>
   </div>
 </section>
-<section class="sec" id="faq">
+<section class="sec b" id="faq">
   <div class="wrap">
     <div class="center rv">
       <span class="eyebrow">Perguntas frequentes</span>
