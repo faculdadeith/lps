@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light only">
+<title>Ebooks ITH · Time de vendas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#031140;--azul:#0539d9;--verde:#2dd98d;--verde-esc:#0f9a5c;--fundo:#f4f6fb;--linha:#e2e7f2;--texto:#1b2440;--suave:#5b6684}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light only}
+body{background:var(--fundo);color:var(--texto);font:15px/1.5 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;padding:28px 0 34px;border-bottom:4px solid var(--verde)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}
+.logo{height:34px;width:auto;display:block}
+.int{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:6px 12px;color:#c9d3ef}
+h1{font:800 clamp(28px,4.4vw,42px)/1.1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.8px;max-width:720px}
+h1 em{font-style:normal;color:var(--verde)}
+.lead{color:#c9d3ef;max-width:640px;margin-top:12px;font-size:16px}
+.como{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;max-width:860px}
+.como div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;font-size:13.5px;color:#dbe2f5}
+.como b{display:block;color:#fff;font-size:14px;margin-bottom:2px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(244,246,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.bar .wrap{display:flex;gap:12px;align-items:center;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;flex:1}
+.chip{font:600 13px Inter,sans-serif;border:1px solid var(--linha);background:#fff;color:var(--texto);border-radius:99px;padding:8px 14px;cursor:pointer}
+.chip i{font-style:normal;color:var(--suave);margin-left:4px}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip.on i{color:var(--verde)}
+.busca{flex:0 1 260px;min-width:200px;border:1px solid var(--linha);background:#fff;border-radius:10px;padding:9px 12px;font:14px Inter,sans-serif;color:var(--texto)}
+.busca:focus{outline:2px solid var(--azul);outline-offset:-1px}
+main{padding:28px 0 60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{min-width:0;background:#fff;border:1px solid var(--linha);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.cover{display:block;background:var(--navy);aspect-ratio:900/1060;overflow:hidden}
+.cover img{width:100%;height:auto;display:block;transition:transform .35s}
+.card:hover .cover img{transform:scale(1.03)}
+.body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
+.tag{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:4px 8px;margin-bottom:10px}
+.t-urgencia{background:#e7edff;color:#1d3fb8}
+.t-estetica{background:#fde9f1;color:#a3245a}
+.t-neonatal{background:#e6f7f1;color:#0c7a50}
+.t-sciras{background:#fff3df;color:#8a5600}
+h3{font:700 17px/1.25 'Plus Jakarta Sans',sans-serif;color:var(--navy);letter-spacing:-.2px}
+.sub{color:var(--suave);font-size:13.5px;margin-top:6px}
+.meta{color:var(--suave);font-size:12.5px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--linha)}
+.meta b{color:var(--texto);font-weight:600}
+.acts{margin-top:auto;padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--verde);color:var(--navy);font:700 15px 'Plus Jakarta Sans',sans-serif;text-decoration:none;border-radius:99px;padding:12px 16px}
+.cta:hover{background:#22c97f}
+.cta svg,.copy svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.copy{display:flex;align-items:center;justify-content:center;gap:6px;background:none;border:0;color:var(--azul);font:600 13px Inter,sans-serif;cursor:pointer;padding:4px}
+.copy.ok{color:var(--verde-esc)}
+.vazio{display:none;text-align:center;color:var(--suave);padding:40px 0}
+footer{border-top:1px solid var(--linha);padding:20px 0 30px;color:var(--suave);font-size:12.5px}
+@media (max-width:720px){.como{grid-template-columns:1fr}.busca{flex:1 1 100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tag{font-size:10px}.top .int{font-size:10px;padding:5px 9px}.body{padding:12px}h3{font-size:15px}.sub{display:none}.cta{font-size:14px;padding:11px 10px}}
+@media (max-width:380px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><img class="logo" src="logo-ith-branco.png" alt="ITH Educação"><span class="int">Uso interno · Time de vendas</span></div>
+    <h1>23 ebooks gratuitos para <em>abrir conversa</em> com o lead</h1>
+    <p class="lead">Cada material puxa para uma pós da ITH. Mande o que conversa com a dor do lead e use como gancho para apresentar o curso.</p>
+    <div class="como">
+      <div><b>1. Filtre pelo curso</b>Escolha o curso de interesse do lead.</div>
+      <div><b>2. Baixe ou copie o link</b>Envie o PDF ou o link direto no WhatsApp.</div>
+      <div><b>3. Volte em 1 ou 2 dias</b>Pergunte o que achou e apresente a pós.</div>
+    </div>
+  </div>
+</header>
+<div class="bar"><div class="wrap">
+  <div class="chips"><button class="chip on" data-f="todos">Todos <i>23</i></button><button class="chip" data-f="urgencia">Urgência e Emergência + UTI <i>6</i></button><button class="chip" data-f="estetica">Saúde Estética <i>7</i></button><button class="chip" data-f="neonatal">UTI Neonatal <i>4</i></button><button class="chip" data-f="sciras">SCIRAS e Segurança do Paciente <i>6</i></button></div>
+  <input class="busca" type="search" placeholder="Buscar tema (ex.: sepse, melasma)" aria-label="Buscar ebook">
+</div></div>
+<main class="wrap">
+  <div class="grid">
+<article class="card" data-curso="urgencia" data-busca="bls, acls, atls, phtls: qual curso fazer, quanto custa e em que ordem urgência e emergência + uti">
+  <a class="cover" href="../lp/cursos-bls-acls-atls-phtls/cursos-bls-acls-atls-phtls.pdf" target="_blank" rel="noopener"><img src="../lp/cursos-bls-acls-atls-phtls/capa.jpg" alt="Capa: BLS, ACLS, ATLS, PHTLS" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-urgencia">Urgência e Emergência + UTI</span>
+    <h3>BLS, ACLS, ATLS, PHTLS</h3>
+    <p class="sub">Qual curso fazer, quanto custa e em que ordem</p>
+    <p class="meta">7 páginas · PDF · 8,0 MB<br>Conduz para: <b>Pós em Urgência e Emergência + UTI</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/cursos-bls-acls-atls-phtls/cursos-bls-acls-atls-phtls.pdf" download="cursos-bls-acls-atls-phtls.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/cursos-bls-acls-atls-phtls/cursos-bls-acls-atls-phtls.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="urgencia" data-busca="tabela de drogas vasoativas e de emergência: diluição, dose e gotejamento urgência e emergência + uti">
+  <a class="cover" href="../lp/drogas-vasoativas-emergencia/drogas-vasoativas-emergencia.pdf" target="_blank" rel="noopener"><img src="../lp/drogas-vasoativas-emergencia/capa.jpg" alt="Capa: Tabela de drogas vasoativas e de emergência" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-urgencia">Urgência e Emergência + UTI</span>
+    <h3>Tabela de drogas vasoativas e de emergência</h3>
+    <p class="sub">Diluição, dose e gotejamento</p>
+    <p class="meta">7 páginas · PDF · 4,6 MB<br>Conduz para: <b>Pós em Urgência e Emergência + UTI</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/drogas-vasoativas-emergencia/drogas-vasoativas-emergencia.pdf" download="drogas-vasoativas-emergencia.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/drogas-vasoativas-emergencia/drogas-vasoativas-emergencia.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="urgencia" data-busca="guia de bolso das escalas da uti e emergência: glasgow, rass, ramsay, braden, morse, cincinnati, nihss e qsofa urgência e emergência + uti">
+  <a class="cover" href="../lp/escalas-uti-emergencia/escalas-uti-emergencia.pdf" target="_blank" rel="noopener"><img src="../lp/escalas-uti-emergencia/capa.jpg" alt="Capa: Guia de bolso das escalas da UTI e emergência" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-urgencia">Urgência e Emergência + UTI</span>
+    <h3>Guia de bolso das escalas da UTI e emergência</h3>
+    <p class="sub">Glasgow, RASS, Ramsay, Braden, Morse, Cincinnati, NIHSS e qSOFA</p>
+    <p class="meta">7 páginas · PDF · 6,6 MB<br>Conduz para: <b>Pós em Urgência e Emergência + UTI</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/escalas-uti-emergencia/escalas-uti-emergencia.pdf" download="escalas-uti-emergencia.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/escalas-uti-emergencia/escalas-uti-emergencia.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="urgencia" data-busca="gasometria arterial em 5 passos + distúrbios hidroeletrolíticos: valores, compensação, ânion gap, sódio e potássio urgência e emergência + uti">
+  <a class="cover" href="../lp/gasometria-arterial/gasometria-arterial.pdf" target="_blank" rel="noopener"><img src="../lp/gasometria-arterial/capa.jpg" alt="Capa: Gasometria arterial em 5 passos + distúrbios hidroeletrolíticos" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-urgencia">Urgência e Emergência + UTI</span>
+    <h3>Gasometria arterial em 5 passos + distúrbios hidroeletrolíticos</h3>
+    <p class="sub">Valores, compensação, ânion gap, sódio e potássio</p>
+    <p class="meta">7 páginas · PDF · 4,6 MB<br>Conduz para: <b>Pós em Urgência e Emergência + UTI</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/gasometria-arterial/gasometria-arterial.pdf" download="gasometria-arterial.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/gasometria-arterial/gasometria-arterial.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="urgencia" data-busca="guia de salários da enfermagem: piso, quanto ganha cada especialidade e onde uti/emergência se encaixa urgência e emergência + uti">
+  <a class="cover" href="../lp/guia-salarios-enfermagem/guia-salarios-enfermagem.pdf" target="_blank" rel="noopener"><img src="../lp/guia-salarios-enfermagem/capa.jpg" alt="Capa: Guia de salários da enfermagem" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-urgencia">Urgência e Emergência + UTI</span>
+    <h3>Guia de salários da enfermagem</h3>
+    <p class="sub">Piso, quanto ganha cada especialidade e onde UTI/emergência se encaixa</p>
+    <p class="meta">7 páginas · PDF · 5,9 MB<br>Conduz para: <b>Pós em Urgência e Emergência + UTI</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/guia-salarios-enfermagem/guia-salarios-enfermagem.pdf" download="guia-salarios-enfermagem.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/guia-salarios-enfermagem/guia-salarios-enfermagem.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="urgencia" data-busca="manual do plantão 12x36: direitos, escala, adicional noturno e como sobreviver ao plantão noturno urgência e emergência + uti">
+  <a class="cover" href="../lp/manual-plantao-12x36/manual-plantao-12x36.pdf" target="_blank" rel="noopener"><img src="../lp/manual-plantao-12x36/capa.jpg" alt="Capa: Manual do plantão 12x36" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-urgencia">Urgência e Emergência + UTI</span>
+    <h3>Manual do plantão 12x36</h3>
+    <p class="sub">Direitos, escala, adicional noturno e como sobreviver ao plantão noturno</p>
+    <p class="meta">7 páginas · PDF · 5,8 MB<br>Conduz para: <b>Pós em Urgência e Emergência + UTI</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/manual-plantao-12x36/manual-plantao-12x36.pdf" download="manual-plantao-12x36.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/manual-plantao-12x36/manual-plantao-12x36.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="guia de ativos cosméticos: qual ácido indicar para cada queixa e fototipo saúde estética">
+  <a class="cover" href="../lp/guia-ativos-cosmeticos/guia-ativos-cosmeticos.pdf" target="_blank" rel="noopener"><img src="../lp/guia-ativos-cosmeticos/capa.jpg" alt="Capa: Guia de ativos cosméticos" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Guia de ativos cosméticos</h3>
+    <p class="sub">Qual ácido indicar para cada queixa e fototipo</p>
+    <p class="meta">7 páginas · PDF · 3,8 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/guia-ativos-cosmeticos/guia-ativos-cosmeticos.pdf" download="guia-ativos-cosmeticos.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/guia-ativos-cosmeticos/guia-ativos-cosmeticos.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="guia de carreira na estética: quem pode fazer o quê em cada profissão e quanto ganha saúde estética">
+  <a class="cover" href="../lp/carreira-estetica-quem-pode/carreira-estetica-quem-pode.pdf" target="_blank" rel="noopener"><img src="../lp/carreira-estetica-quem-pode/capa.jpg" alt="Capa: Guia de carreira na estética" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Guia de carreira na estética</h3>
+    <p class="sub">Quem pode fazer o quê em cada profissão e quanto ganha</p>
+    <p class="meta">7 páginas · PDF · 5,1 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/carreira-estetica-quem-pode/carreira-estetica-quem-pode.pdf" download="carreira-estetica-quem-pode.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/carreira-estetica-quem-pode/carreira-estetica-quem-pode.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="ficha de anamnese pronta (facial e corporal) + modelo de termo de consentimento, para profissionais de estética saúde estética">
+  <a class="cover" href="../lp/ficha-anamnese-estetica/ficha-anamnese-estetica.pdf" target="_blank" rel="noopener"><img src="../lp/ficha-anamnese-estetica/capa.jpg" alt="Capa: Ficha de anamnese pronta (facial e corporal) + modelo de termo de consentimento, para profissionais de estética" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Ficha de anamnese pronta (facial e corporal) + modelo de termo de consentimento, para profissionais de estética</h3>
+    
+    <p class="meta">7 páginas · PDF · 6,8 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/ficha-anamnese-estetica/ficha-anamnese-estetica.pdf" download="ficha-anamnese-estetica.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/ficha-anamnese-estetica/ficha-anamnese-estetica.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="protocolo de melasma e manchas, com tabela de fototipos de fitzpatrick: avaliação, mmasi e pilares do tratamento saúde estética">
+  <a class="cover" href="../lp/protocolo-melasma-manchas/protocolo-melasma-manchas.pdf" target="_blank" rel="noopener"><img src="../lp/protocolo-melasma-manchas/capa.jpg" alt="Capa: Protocolo de melasma e manchas, com tabela de fototipos de Fitzpatrick" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Protocolo de melasma e manchas, com tabela de fototipos de Fitzpatrick</h3>
+    <p class="sub">Avaliação, mMASI e pilares do tratamento</p>
+    <p class="meta">7 páginas · PDF · 7,2 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/protocolo-melasma-manchas/protocolo-melasma-manchas.pdf" download="protocolo-melasma-manchas.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/protocolo-melasma-manchas/protocolo-melasma-manchas.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="protocolos corporais: celulite, estrias e gordura localizada, com evidência, alertas e quem pode fazer saúde estética">
+  <a class="cover" href="../lp/protocolos-corporais-celulite-estrias/protocolos-corporais-celulite-estrias.pdf" target="_blank" rel="noopener"><img src="../lp/protocolos-corporais-celulite-estrias/capa.jpg" alt="Capa: Protocolos corporais" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Protocolos corporais</h3>
+    <p class="sub">Celulite, estrias e gordura localizada, com evidência, alertas e quem pode fazer</p>
+    <p class="meta">7 páginas · PDF · 5,1 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/protocolos-corporais-celulite-estrias/protocolos-corporais-celulite-estrias.pdf" download="protocolos-corporais-celulite-estrias.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/protocolos-corporais-celulite-estrias/protocolos-corporais-celulite-estrias.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="protocolos faciais passo a passo: limpeza de pele, peelings, microagulhamento e dermaplaning saúde estética">
+  <a class="cover" href="../lp/protocolos-faciais-passo-a-passo/protocolos-faciais-passo-a-passo.pdf" target="_blank" rel="noopener"><img src="../lp/protocolos-faciais-passo-a-passo/capa.jpg" alt="Capa: Protocolos faciais passo a passo" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Protocolos faciais passo a passo</h3>
+    <p class="sub">Limpeza de pele, peelings, microagulhamento e dermaplaning</p>
+    <p class="meta">7 páginas · PDF · 5,3 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/protocolos-faciais-passo-a-passo/protocolos-faciais-passo-a-passo.pdf" download="protocolos-faciais-passo-a-passo.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/protocolos-faciais-passo-a-passo/protocolos-faciais-passo-a-passo.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="estetica" data-busca="guia de tecnologias em estética: criolipólise, ultrassom microfocado, lavieen (laser 1927 nm), jato de plasma e endolaser. indicação e contraindicação para profissionais saúde estética">
+  <a class="cover" href="../lp/guia-tecnologias-estetica/guia-tecnologias-estetica.pdf" target="_blank" rel="noopener"><img src="../lp/guia-tecnologias-estetica/capa.jpg" alt="Capa: Guia de tecnologias em estética" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-estetica">Saúde Estética</span>
+    <h3>Guia de tecnologias em estética</h3>
+    <p class="sub">Criolipólise, ultrassom microfocado, Lavieen (laser 1927 nm), jato de plasma e endolaser. Indicação e contraindicação para profissionais</p>
+    <p class="meta">7 páginas · PDF · 5,0 MB<br>Conduz para: <b>Pós em Saúde Estética Avançada</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/guia-tecnologias-estetica/guia-tecnologias-estetica.pdf" download="guia-tecnologias-estetica.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/guia-tecnologias-estetica/guia-tecnologias-estetica.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="neonatal" data-busca="icterícia neonatal e fototerapia: cuidados de enfermagem passo a passo uti neonatal">
+  <a class="cover" href="../lp/ictericia-neonatal-fototerapia/ictericia-neonatal-fototerapia.pdf" target="_blank" rel="noopener"><img src="../lp/ictericia-neonatal-fototerapia/capa.jpg" alt="Capa: Icterícia neonatal e fototerapia" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-neonatal">UTI Neonatal</span>
+    <h3>Icterícia neonatal e fototerapia</h3>
+    <p class="sub">Cuidados de enfermagem passo a passo</p>
+    <p class="meta">7 páginas · PDF · 7,7 MB<br>Conduz para: <b>Pós em UTI Neonatal e Pediátrica</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/ictericia-neonatal-fototerapia/ictericia-neonatal-fototerapia.pdf" download="ictericia-neonatal-fototerapia.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/ictericia-neonatal-fototerapia/ictericia-neonatal-fototerapia.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="neonatal" data-busca="nutrição do recém-nascido na uti neonatal: leite materno, sonda, parenteral e enterocolite, guia para a enfermagem uti neonatal">
+  <a class="cover" href="../lp/nutricao-rn-uti-neonatal/nutricao-rn-uti-neonatal.pdf" target="_blank" rel="noopener"><img src="../lp/nutricao-rn-uti-neonatal/capa.jpg" alt="Capa: Nutrição do recém-nascido na UTI neonatal" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-neonatal">UTI Neonatal</span>
+    <h3>Nutrição do recém-nascido na UTI neonatal</h3>
+    <p class="sub">Leite materno, sonda, parenteral e enterocolite, guia para a enfermagem</p>
+    <p class="meta">7 páginas · PDF · 6,8 MB<br>Conduz para: <b>Pós em UTI Neonatal e Pediátrica</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/nutricao-rn-uti-neonatal/nutricao-rn-uti-neonatal.pdf" download="nutricao-rn-uti-neonatal.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/nutricao-rn-uti-neonatal/nutricao-rn-uti-neonatal.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="neonatal" data-busca="avaliação do recém-nascido na sala de parto: apgar, capurro, reanimação e hora de ouro, guia para a enfermagem uti neonatal">
+  <a class="cover" href="../lp/avaliacao-rn-sala-de-parto/avaliacao-rn-sala-de-parto.pdf" target="_blank" rel="noopener"><img src="../lp/avaliacao-rn-sala-de-parto/capa.jpg" alt="Capa: Avaliação do recém-nascido na sala de parto" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-neonatal">UTI Neonatal</span>
+    <h3>Avaliação do recém-nascido na sala de parto</h3>
+    <p class="sub">Apgar, Capurro, reanimação e hora de ouro, guia para a enfermagem</p>
+    <p class="meta">7 páginas · PDF · 8,5 MB<br>Conduz para: <b>Pós em UTI Neonatal e Pediátrica</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/avaliacao-rn-sala-de-parto/avaliacao-rn-sala-de-parto.pdf" download="avaliacao-rn-sala-de-parto.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/avaliacao-rn-sala-de-parto/avaliacao-rn-sala-de-parto.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="neonatal" data-busca="triagem neonatal: guia dos testes do pezinho, orelhinha, coraçãozinho e olhinho para a enfermagem uti neonatal">
+  <a class="cover" href="../lp/triagem-neonatal-enfermagem/triagem-neonatal-enfermagem.pdf" target="_blank" rel="noopener"><img src="../lp/triagem-neonatal-enfermagem/capa.jpg" alt="Capa: Triagem neonatal" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-neonatal">UTI Neonatal</span>
+    <h3>Triagem neonatal</h3>
+    <p class="sub">Guia dos testes do pezinho, orelhinha, coraçãozinho e olhinho para a enfermagem</p>
+    <p class="meta">7 páginas · PDF · 6,2 MB<br>Conduz para: <b>Pós em UTI Neonatal e Pediátrica</b></p>
+    <div class="acts">
+      <a class="cta" href="../lp/triagem-neonatal-enfermagem/triagem-neonatal-enfermagem.pdf" download="triagem-neonatal-enfermagem.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/lp/triagem-neonatal-enfermagem/triagem-neonatal-enfermagem.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="sciras" data-busca="ccih/sciras: estrutura, rotina e carreira sciras e segurança do paciente">
+  <a class="cover" href="ebooks/guia-ccih-sciras-estrutura-e-carreira.pdf" target="_blank" rel="noopener"><img src="ebooks/guia-ccih-sciras-estrutura-e-carreira.jpg" alt="Capa: CCIH/SCIRAS" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-sciras">SCIRAS e Segurança do Paciente</span>
+    <h3>CCIH/SCIRAS</h3>
+    <p class="sub">Estrutura, rotina e carreira</p>
+    <p class="meta">5 páginas · PDF · 1,0 MB<br>Conduz para: <b>MBA em SCIRAS e Segurança do Paciente</b></p>
+    <div class="acts">
+      <a class="cta" href="ebooks/guia-ccih-sciras-estrutura-e-carreira.pdf" download="guia-ccih-sciras-estrutura-e-carreira.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/materiais/ebooks/guia-ccih-sciras-estrutura-e-carreira.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="sciras" data-busca="as 6 metas internacionais de segurança do paciente sciras e segurança do paciente">
+  <a class="cover" href="ebooks/guia-6-metas-internacionais-seguranca-do-paciente.pdf" target="_blank" rel="noopener"><img src="ebooks/guia-6-metas-internacionais-seguranca-do-paciente.jpg" alt="Capa: As 6 metas internacionais de segurança do paciente" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-sciras">SCIRAS e Segurança do Paciente</span>
+    <h3>As 6 metas internacionais de segurança do paciente</h3>
+    
+    <p class="meta">5 páginas · PDF · 0,9 MB<br>Conduz para: <b>MBA em SCIRAS e Segurança do Paciente</b></p>
+    <div class="acts">
+      <a class="cta" href="ebooks/guia-6-metas-internacionais-seguranca-do-paciente.pdf" download="guia-6-metas-internacionais-seguranca-do-paciente.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/materiais/ebooks/guia-6-metas-internacionais-seguranca-do-paciente.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="sciras" data-busca="protocolo de sepse: da triagem ao pacote da primeira hora sciras e segurança do paciente">
+  <a class="cover" href="ebooks/fluxograma-protocolo-de-sepse.pdf" target="_blank" rel="noopener"><img src="ebooks/fluxograma-protocolo-de-sepse.jpg" alt="Capa: Protocolo de sepse" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-sciras">SCIRAS e Segurança do Paciente</span>
+    <h3>Protocolo de sepse</h3>
+    <p class="sub">Da triagem ao pacote da primeira hora</p>
+    <p class="meta">5 páginas · PDF · 0,8 MB<br>Conduz para: <b>MBA em SCIRAS e Segurança do Paciente</b></p>
+    <div class="acts">
+      <a class="cta" href="ebooks/fluxograma-protocolo-de-sepse.pdf" download="fluxograma-protocolo-de-sepse.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/materiais/ebooks/fluxograma-protocolo-de-sepse.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="sciras" data-busca="bundles de prevenção de iras: checklist sciras e segurança do paciente">
+  <a class="cover" href="ebooks/checklist-bundles-de-prevencao-de-iras.pdf" target="_blank" rel="noopener"><img src="ebooks/checklist-bundles-de-prevencao-de-iras.jpg" alt="Capa: Bundles de prevenção de IRAS" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-sciras">SCIRAS e Segurança do Paciente</span>
+    <h3>Bundles de prevenção de IRAS</h3>
+    <p class="sub">Checklist</p>
+    <p class="meta">5 páginas · PDF · 0,8 MB<br>Conduz para: <b>MBA em SCIRAS e Segurança do Paciente</b></p>
+    <div class="acts">
+      <a class="cta" href="ebooks/checklist-bundles-de-prevencao-de-iras.pdf" download="checklist-bundles-de-prevencao-de-iras.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/materiais/ebooks/checklist-bundles-de-prevencao-de-iras.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="sciras" data-busca="precauções e isolamento: tabela por doença sciras e segurança do paciente">
+  <a class="cover" href="ebooks/tabela-precaucoes-e-isolamento-por-doenca.pdf" target="_blank" rel="noopener"><img src="ebooks/tabela-precaucoes-e-isolamento-por-doenca.jpg" alt="Capa: Precauções e isolamento" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-sciras">SCIRAS e Segurança do Paciente</span>
+    <h3>Precauções e isolamento</h3>
+    <p class="sub">Tabela por doença</p>
+    <p class="meta">5 páginas · PDF · 0,8 MB<br>Conduz para: <b>MBA em SCIRAS e Segurança do Paciente</b></p>
+    <div class="acts">
+      <a class="cta" href="ebooks/tabela-precaucoes-e-isolamento-por-doenca.pdf" download="tabela-precaucoes-e-isolamento-por-doenca.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/materiais/ebooks/tabela-precaucoes-e-isolamento-por-doenca.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-curso="sciras" data-busca="evento adverso: notificação no notivisa e investigação sciras e segurança do paciente">
+  <a class="cover" href="ebooks/guia-evento-adverso-notivisa-e-investigacao.pdf" target="_blank" rel="noopener"><img src="ebooks/guia-evento-adverso-notivisa-e-investigacao.jpg" alt="Capa: Evento adverso" loading="lazy" width="900" height="1273"></a>
+  <div class="body">
+    <span class="tag t-sciras">SCIRAS e Segurança do Paciente</span>
+    <h3>Evento adverso</h3>
+    <p class="sub">Notificação no Notivisa e investigação</p>
+    <p class="meta">5 páginas · PDF · 1,0 MB<br>Conduz para: <b>MBA em SCIRAS e Segurança do Paciente</b></p>
+    <div class="acts">
+      <a class="cta" href="ebooks/guia-evento-adverso-notivisa-e-investigacao.pdf" download="guia-evento-adverso-notivisa-e-investigacao.pdf"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Baixar ebook</a>
+      <button class="copy" type="button" data-url="https://mkt.faculdadeith.com.br/materiais/ebooks/guia-evento-adverso-notivisa-e-investigacao.pdf" aria-label="Copiar link do PDF"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copiar link</span></button>
+    </div>
+  </div>
+</article>
+  </div>
+  <p class="vazio">Nenhum ebook com esse tema. Limpe a busca ou troque o filtro.</p>
+</main>
+<footer><div class="wrap">ITH Educação · página interna, não divulgar ao público. Links dos PDFs podem ser enviados aos leads.</div></footer>
+<script>
+const cards=[...document.querySelectorAll('.card')],busca=document.querySelector('.busca'),vazio=document.querySelector('.vazio');
+let filtro='todos';
+function aplicar(){const q=busca.value.trim().toLowerCase();let n=0;
+  cards.forEach(c=>{const ok=(filtro==='todos'||c.dataset.curso===filtro)&&(!q||c.dataset.busca.includes(q));c.hidden=!ok;if(ok)n++;});
+  vazio.style.display=n?'none':'block';}
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');filtro=b.dataset.f;aplicar();}));
+busca.addEventListener('input',aplicar);
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{
+  const u=b.dataset.url,s=b.querySelector('span');
+  try{await navigator.clipboard.writeText(u);}catch(e){const t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();}
+  b.classList.add('ok');s.textContent='Link copiado';setTimeout(()=>{b.classList.remove('ok');s.textContent='Copiar link';},1800);}));
+</script>
+</body>
+</html>
