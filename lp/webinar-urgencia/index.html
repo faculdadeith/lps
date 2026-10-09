@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>Masterclass Urgência: O Próximo Nível | Webinar gratuito ITH</title>
+<meta name="description" content="Aulas ao vivo e gratuitas para quem precisa sair do automático no plantão e decidir com segurança na Urgência e UTI. Certificado de participação.">
+<meta property="og:title" content="Masterclass Urgência: O Próximo Nível">
+<meta property="og:description" content="Onde a teoria acaba e a decisão clínica começa. Aula ao vivo, online e gratuita, com certificado de participação.">
+<meta property="og:image" content="https://mkt.faculdadeith.com.br/lp/webinar-urgencia/banner-seguranca.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://faculdadeith.com.br/wp-content/uploads/2021/08/cropped-new-icon-32x32.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16842015422"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16842015422');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '735147367298275');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=735147367298275&ev=PageView&noscript=1" alt=""></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap">
+<link rel="preload" as="image" href="bg-webinar.webp">
+<style>
+  :root{
+    color-scheme:light only;
+    --red:#ff1a1a; --red-2:#e30613; --red-3:#b3000b; --red-4:#7a0008;
+    --ink:#0b0b0d; --ink-2:#151518; --white:#fff; --muted:#5d6170;
+    --line:rgba(255,255,255,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--white);background:var(--ink);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+  b,strong{font-weight:800}
+
+  /* ===== Botões ===== */
+  .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:0;cursor:pointer;font:800 15px/1 'Montserrat',sans-serif;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:18px 34px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
+  .btn-red{color:#fff;background:radial-gradient(120% 140% at 30% 0%,#ff4a3d 0%,var(--red-2) 55%,var(--red-3) 100%);box-shadow:0 0 0 1px rgba(255,255,255,.18) inset,0 10px 28px rgba(227,6,19,.45),0 0 44px rgba(255,40,40,.35)}
+  .btn-dark{color:#fff;background:radial-gradient(120% 140% at 30% 0%,#2b2b31 0%,#141417 70%);box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 10px 28px rgba(0,0,0,.45)}
+  .btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite}
+  .btn:hover{transform:scale(1.03)}
+  .btn .ar{width:30px;height:30px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;margin-left:-14px}
+  .btn .ar svg{width:16px;height:16px;stroke:var(--red-2);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .btn-dark .ar{background:var(--red-2)}
+  .btn-dark .ar svg{stroke:#fff}
+  @keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+  .btn[disabled]{opacity:.7;cursor:wait}
+
+  /* ===== Topo ===== */
+  .hero{position:relative;background:#c4000b url(bg-webinar.webp) center/cover no-repeat;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:90px;background:linear-gradient(transparent,rgba(120,0,8,.55))}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:end;gap:24px;padding-top:28px}
+  .logo{position:absolute;top:26px;left:20px;z-index:3;width:118px}
+  .hero-photo{align-self:end;margin-top:56px}
+  .hero-photo img{width:100%;max-width:460px;margin:0 auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
+  .hero-txt{padding:70px 0 64px}
+  .selo{width:min(330px,80%);margin-bottom:22px}
+  .hero h1{font-weight:800;font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spacing:-.02em;text-shadow:0 4px 24px rgba(0,0,0,.25)}
+  .hero .sub{font-size:clamp(16px,1.5vw,19px);font-weight:600;max-width:470px;margin:14px 0 30px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+  .hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.03em;padding:8px 13px;border-radius:999px;background:rgba(0,0,0,.22);border:1px solid var(--line);backdrop-filter:blur(6px)}
+  .chip svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* entrada escalonada */
+  .fx{opacity:0;transform:translateY(18px);animation:fadeSlideIn .8s cubic-bezier(.22,1,.36,1) forwards}
+  .d1{animation-delay:.08s}.d2{animation-delay:.2s}.d3{animation-delay:.32s}.d4{animation-delay:.44s}.d5{animation-delay:.56s}
+  @keyframes fadeSlideIn{to{opacity:1;transform:none}}
+
+  /* ===== Inscrição ===== */
+  .insc{position:relative;background:var(--red) url(bg-ambulancia.webp) center/cover no-repeat;padding:72px 0 84px}
+  .insc .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:48px;align-items:center}
+  .insc h2{font-weight:900;font-size:clamp(26px,3vw,38px);line-height:1.1;text-transform:uppercase;letter-spacing:-.01em;color:#2a0003}
+  .insc h2 span{color:#fff}
+  .insc .lead{font-weight:600;font-size:17px;margin:14px 0 30px;max-width:460px}
+  .bens{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:520px}
+  .bem{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:16px;background:rgba(80,0,4,.22);border:1px solid var(--line);backdrop-filter:blur(4px)}
+  .bem i{flex:none;width:40px;height:40px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center}
+  .bem i svg{width:21px;height:21px;stroke:var(--red-2);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .bem p{font-size:14.5px;line-height:1.35;font-weight:500}
+  .card{background:#fff;color:#1a1a1f;border-radius:22px;padding:30px 28px;box-shadow:0 30px 70px rgba(70,0,4,.45)}
+  .card .ct{font-weight:800;font-size:20px;line-height:1.2;margin-bottom:6px;color:#111}
+  .card .cs{font-size:14px;color:var(--muted);margin-bottom:20px}
+
+  /* ===== Formulário ===== */
+  .fld{margin-bottom:12px}
+  .fld input,.fld select{width:100%;height:52px;border-radius:12px;border:1.5px solid #e2e3ea;background:#f7f7fa;padding:0 16px;font:500 15px 'Montserrat',sans-serif;color:#111;outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+  .fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e30613' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:40px}
+  .fld select:invalid{color:#8a8d99}
+  .fld input:focus,.fld select:focus{border-color:var(--red-2);background:#fff}
+  .fld.bad input,.fld.bad select{border-color:#e30613;background:#fff3f3}
+  .lgpd{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.4;color:var(--muted);margin:6px 0 16px;cursor:pointer}
+  .lgpd input{flex:none;width:18px;height:18px;margin-top:1px;accent-color:var(--red-2)}
+  .lgpd.bad{color:#e30613}
+  .fld-err{font-size:13px;font-weight:600;color:#e30613;margin:-4px 0 12px}
+  .fld-err[hidden]{display:none}
+  form .btn{width:100%}
+  .safe{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--muted);margin-top:12px}
+  .safe svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+  .ok-box{text-align:center;padding:10px 0}
+  .ok-box[hidden]{display:none}
+  .ok-ico{width:70px;height:70px;border-radius:50%;margin:0 auto 16px;background:var(--red-2);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(227,6,19,.14);animation:pop .55s cubic-bezier(.22,1.4,.36,1) both}
+  .ok-ico svg{width:34px;height:34px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  @keyframes pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+  .ok-box h3{font-weight:800;font-size:22px;color:#111;margin-bottom:8px}
+  .ok-box p{font-size:15px;color:var(--muted)}
+  .ok-box .when{display:inline-block;margin-top:14px;padding:10px 16px;border-radius:12px;background:#fff1f1;color:var(--red-3);font-weight:800;font-size:14px}
+
+  /* ===== Conteúdo ===== */
+  .divider{position:relative;height:0}
+  .divider span{position:absolute;left:50%;top:0;transform:translate(-50%,-50%) rotate(45deg);width:46px;height:46px;background:var(--ink);display:flex;align-items:center;justify-content:center;z-index:2}
+  .divider svg{transform:rotate(-45deg);width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{50%{transform:rotate(-45deg) translate(3px,3px)}}
+  .cont{background:radial-gradient(70% 60% at 50% 0%,#2a0508 0%,var(--ink) 70%);padding:80px 0 84px}
+  .cont .wrap{max-width:940px}
+  .banner{border-radius:26px;overflow:hidden;box-shadow:0 30px 80px rgba(227,6,19,.25)}
+  .banner img{width:100%}
+  .cont h2{font-weight:500;font-size:clamp(24px,3.2vw,38px);line-height:1.15;text-transform:uppercase;margin:44px 0 26px;letter-spacing:-.01em}
+  .cont h2 b{font-weight:900;background:linear-gradient(90deg,#ff3b30,#ff7a59);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cert{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .cert img{width:260px}
+  .cert p{font-size:17px;line-height:1.35;max-width:430px;text-transform:uppercase;font-weight:500}
+  .pontos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:38px 0 40px}
+  .ponto{padding:20px;border-radius:18px;background:var(--ink-2);border:1px solid rgba(255,255,255,.08)}
+  .ponto i{display:block;font-style:normal;font-weight:900;font-size:13px;letter-spacing:.08em;color:#ff3b30;margin-bottom:8px}
+  .ponto p{font-size:15px;color:#d9dae0;line-height:1.45}
+  .center{text-align:center}
+
+  /* ===== Datas ===== */
+  .datas{background:linear-gradient(180deg,var(--red) 0%,var(--red-2) 100%);padding:80px 0 90px;position:relative;overflow:hidden}
+  .datas::before{content:"";position:absolute;inset:0;background:url(bg-webinar.webp) center/cover;opacity:.18;mix-blend-mode:multiply}
+  .datas .wrap{position:relative}
+  .datas h2{font-weight:500;font-size:clamp(26px,3.4vw,40px);line-height:1.15;margin-bottom:38px}
+  .datas h2 b{display:block;font-style:italic;font-weight:800}
+  .aula{position:relative;width:min(340px,100%);margin:0 auto 38px;aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:#222 url(aula-13-out.webp) center/cover;box-shadow:0 30px 60px rgba(80,0,4,.45);display:flex;flex-direction:column;justify-content:space-between;text-align:center;padding:22px 20px 26px;transition:transform .3s ease}
+  .aula:hover{transform:translateY(-4px)}
+  .aula::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,transparent 30%,transparent 42%,rgba(0,0,0,.85) 100%)}
+  .aula>*{position:relative;z-index:1}
+  .aula .tag{align-self:center;font-weight:800;font-size:15px;letter-spacing:.08em;padding:7px 16px;border-radius:999px;background:var(--red-2);display:inline-flex;align-items:center;gap:8px}
+  .aula .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  .aula .dt{font-size:30px;font-weight:500;line-height:1}
+  .aula .dt b{font-weight:900}
+  .aula .tt{font-weight:800;font-size:15px;line-height:1.25;text-transform:uppercase;margin-top:12px}
+  .aula .tt span{display:block;font-weight:500}
+
+  /* ===== Rodapé ===== */
+  footer{background:#060607;color:#9a9ca6;border-top:1px solid rgba(255,255,255,.06);padding:36px 0 110px;text-align:center}
+  footer img{width:96px;margin:0 auto 16px;opacity:.9}
+  footer p{font-size:12px;line-height:1.55;max-width:700px;margin:0 auto}
+  footer .yr{margin-top:12px;font-weight:600}
+
+  /* ===== Barra fixa (mobile) ===== */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;align-items:center;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(11,11,13,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);transition:transform .35s ease}
+  .sticky.on{transform:none}
+  .sticky .p{flex:1;min-width:0;line-height:1.2}
+  .sticky .p b{display:block;font-size:13.5px}
+  .sticky .p span{font-size:12px;color:#c9cad2}
+  .sticky .btn{padding:13px 18px;font-size:12.5px}
+
+  /* ===== Modal ===== */
+  .modal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(10,0,2,.72);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .25s ease}
+  .modal.open{opacity:1;pointer-events:auto}
+  .modal .card{width:100%;max-width:440px;max-height:calc(100vh - 36px);overflow:auto;position:relative;transform:translateY(16px) scale(.98);transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .modal.open .card{transform:none}
+  .x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:#f1f1f4;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .x svg{width:16px;height:16px;stroke:#333;stroke-width:2.6;fill:none;stroke-linecap:round}
+
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+  .rv.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:minmax(0,1fr);gap:0;padding-top:84px;text-align:center}
+    .logo{left:50%;transform:translateX(-50%);width:104px}
+    .hero-txt{order:1;padding:0 0 10px}
+    .hero-photo{order:2;margin-top:18px}
+    .hero-photo img{max-width:330px}
+    .selo{margin:0 auto 18px}
+    .hero .sub{margin-left:auto;margin-right:auto}
+    .hero-cta,.chips{justify-content:center}
+    .insc{padding:56px 0 64px;background-position:70% center}
+    .insc .wrap{grid-template-columns:minmax(0,1fr);gap:30px}
+    .insc .txt{text-align:center}
+    .insc .lead{margin-left:auto;margin-right:auto}
+    .bens{margin:0 auto;text-align:left}
+    .insc .card{order:-1}
+    .insc .txt{order:1}
+    .pontos{grid-template-columns:minmax(0,1fr)}
+    .cert{justify-content:center;text-align:center}
+    .sticky{display:flex}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 16px}
+    .bens{grid-template-columns:minmax(0,1fr)}
+    .card{padding:24px 18px}
+    .btn{padding:17px 24px;font-size:14px}
+    .cont{padding:64px 0}
+    .banner{border-radius:18px}
+    .cert img{width:230px}
+    .cert p{font-size:15px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .fx,.rv{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOPO ===== -->
+<header class="hero">
+  <img class="logo fx" src="logo-ith.webp" alt="ITH Educação" width="155" height="61">
+  <div class="wrap">
+    <div class="hero-photo fx d3">
+      <img src="palestrante.webp" alt="Professora da Masterclass Urgência ITH" width="481" height="549" fetchpriority="high">
+    </div>
+    <div class="hero-txt">
+      <img class="selo fx d1" src="selo-proximo-nivel.webp" alt="Masterclass Urgência: O Próximo Nível. Onde a teoria acaba e a decisão clínica começa." width="312" height="194">
+      <h1 class="fx d2">Uma sequência de aulas ao vivo</h1>
+      <p class="sub fx d3">para quem precisa sair do automático no plantão e começar a decidir com segurança.</p>
+      <div class="hero-cta fx d4">
+        <a class="btn btn-dark js-open" href="#inscricao"><span class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Venha sair da teoria</a>
+      </div>
+      <div class="chips fx d5">
+        <span class="chip"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>13 de outubro</span>
+        <span class="chip"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Online e ao vivo</span>
+        <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.3L7 22l5-3 5 3-1.2-8.7"/></svg>Com certificado</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== INSCRIÇÃO ===== -->
+<section class="insc" id="inscricao">
+  <div class="wrap">
+    <div class="txt rv">
+      <h2>Garanta sua participação <span>gratuita</span> no webinar</h2>
+      <p class="lead">Preencha seus dados para confirmar sua vaga e receber o link de acesso no seu WhatsApp e e-mail.</p>
+      <div class="bens">
+        <div class="bem"><i><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></i><p>Aula <b>100% online</b> e gratuita</p></div>
+        <div class="bem"><i><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></i><p>Conteúdo <b>prático e atualizado</b></p></div>
+        <div class="bem"><i><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></i><p>Certificado de <b>participação</b></p></div>
+        <div class="bem"><i><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></i><p><b>Vagas limitadas</b> para a transmissão ao vivo</p></div>
+      </div>
+    </div>
+    <div class="card rv" id="form-card">
+      <div class="js-formwrap">
+        <p class="ct">Venha sair da teoria</p>
+        <p class="cs">Inscrição gratuita. Leva menos de 1 minuto.</p>
+        <form class="js-wform" novalidate>
+          <div class="fld"><input name="nome" type="text" placeholder="Seu nome" autocomplete="name" required minlength="2"></div>
+          <div class="fld"><input name="celular" type="tel" placeholder="DDD + WhatsApp" autocomplete="tel" inputmode="tel" required></div>
+          <div class="fld"><input name="email" type="email" placeholder="Seu melhor e-mail" autocomplete="email" required></div>
+          <div class="fld"><select name="formacao" required>
+            <option value="" disabled selected>Qual sua formação acadêmica?</option>
+            <option>Superior em Enfermagem</option>
+            <option>Superior em Farmácia</option>
+            <option>Superior em Biomedicina</option>
+            <option>Superior em Biologia</option>
+            <option>Superior em Nutrição</option>
+            <option>Superior em Fisioterapia</option>
+            <option>Outros</option>
+          </select></div>
+          <label class="lgpd"><input type="checkbox" name="lgpd" required><span>Concordo com o uso dos meus dados para contato, conforme a LGPD e a Política de Privacidade.</span></label>
+          <p class="fld-err" hidden>Confira os campos destacados.</p>
+          <button class="btn btn-red" type="submit"><span class="bt">Quero minha vaga gratuita</span></button>
+          <p class="safe"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seus dados estão protegidos</p>
+        </form>
+      </div>
+      <div class="ok-box js-ok" hidden>
+        <div class="ok-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Vaga confirmada<span class="js-nome"></span>!</h3>
+        <p>O link de acesso chega no seu WhatsApp e no seu e-mail antes da aula.</p>
+        <span class="when">13/10/2026 · Online e ao vivo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></div>
+
+<!-- ===== CONTEÚDO ===== -->
+<section class="cont">
+  <div class="wrap">
+    <div class="banner rv">
+      <picture>
+        <source media="(max-width:640px)" srcset="banner-seguranca-mob.webp">
+        <img src="banner-seguranca.webp" alt="Desenvolva segurança para atuar em situações críticas" width="1950" height="756" loading="lazy">
+      </picture>
+    </div>
+    <h2 class="rv"><b>Conteúdo direto,</b> aplicado e com foco no que realmente acontece na Urgência e UTI.</h2>
+    <div class="cert rv">
+      <img src="selo-certificacao.webp" alt="Certificação de 2 horas" width="400" height="71" loading="lazy">
+      <p>Ao final de cada aula, você recebe <b>certificado de participação.</b></p>
+    </div>
+    <div class="pontos">
+      <div class="ponto rv"><i>01 · RACIOCÍNIO</i><p>Do sinal clínico à conduta: como pensar quando o paciente piora na sua frente.</p></div>
+      <div class="ponto rv"><i>02 · PRÁTICA</i><p>Casos de plantão, sem enrolação, com o que muda na hora de decidir.</p></div>
+      <div class="ponto rv"><i>03 · SEGURANÇA</i><p>Mais firmeza para agir em situações críticas e conversar com a equipe.</p></div>
+    </div>
+    <div class="center rv">
+      <a class="btn btn-red js-open" href="#inscricao"><span class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Quero participar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATAS ===== -->
+<section class="datas">
+  <div class="wrap center">
+    <h2 class="rv">Confira as datas e temas dos <b>encontros ao vivo:</b></h2>
+    <div class="aula rv">
+      <span class="tag">ONLINE</span>
+      <div>
+        <p class="dt">13.<b>OUT</b>.2026</p>
+        <p class="tt">Distúrbios abdominais e metabólicos:<span>do diagnóstico à conduta</span></p>
+      </div>
+    </div>
+    <div class="rv"><a class="btn btn-dark js-open" href="#inscricao"><span class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Venha sair da teoria</a></div>
+  </div>
+</section>
+
+<footer>
+  <img src="logo-ith.webp" alt="ITH Educação" width="155" height="61" loading="lazy">
+  <p><b>Aviso legal:</b> não somos afiliados, endossados ou parceiros de negócio do Facebook, Instagram, WhatsApp, LinkedIn ou Google. As informações dos visitantes são protegidas e não serão compartilhadas com terceiros. Ao se inscrever, você concorda em receber atualizações sobre o webinar.</p>
+  <p class="yr">© <span id="yr">2026</span> ITH Educação</p>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="p"><b>Webinar gratuito · 13/10</b><span>Online, ao vivo e com certificado</span></div>
+  <a class="btn btn-red js-open" href="#inscricao">Inscrever-se</a>
+</div>
+
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-label="Inscrição no webinar">
+  <div class="card">
+    <button class="x" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+</div>
+
+<script>
+  // ===== CONFIG =====
+  var WEBINAR = {slug:'webinar-urgencia', titulo:'Masterclass Urgência: Distúrbios abdominais e metabólicos (do diagnóstico à conduta)', data:'13/10/2026'};
+  var LEAD_WEBHOOK = 'https://hook.us2.make.com/d7gt1alwp8h249ry8c3u70kqebszginu'; // mesmo Make dos webinários SCIRAS → planilha de leads
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  // Modal: clona o formulário da página (sempre captura pelo pop-up)
+  var modal=document.getElementById('leadModal'), mcard=modal.querySelector('.card');
+  var src=document.getElementById('form-card');
+  mcard.appendChild(src.querySelector('.js-formwrap').cloneNode(true));
+  mcard.appendChild(src.querySelector('.js-ok').cloneNode(true));
+  function openModal(){
+    modal.classList.add('open'); document.body.style.overflow='hidden';
+    setTimeout(function(){ var f=mcard.querySelector('input'); if(f && !mcard.querySelector('.js-formwrap').hidden) f.focus({preventScroll:true}); },250);
+  }
+  function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+  modal.querySelector('.x').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  document.querySelectorAll('.js-open').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault(); openModal();
+      try{ gtag('event','cta_click',{cta_text:a.textContent.trim().slice(0,60)}); }catch(err){}
+    });
+  });
+
+  // Barra fixa aparece depois do topo, some quando o formulário está na tela
+  (function(){
+    var st=document.getElementById('sticky'), hero=document.querySelector('.hero'), insc=document.getElementById('inscricao');
+    var pastHero=false, formVis=false;
+    function upd(){ st.classList.toggle('on', pastHero && !formVis); }
+    new IntersectionObserver(function(es){ pastHero=!es[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function(es){ formVis=es[0].isIntersecting; upd(); },{threshold:.25}).observe(insc);
+  })();
+
+  (function(){
+    var params=new URLSearchParams(window.location.search);
+    function utm(k){ return params.get(k)||''; }
+    var sent=false;
+    function showOk(nome){
+      document.querySelectorAll('.js-formwrap').forEach(function(w){ w.hidden=true; });
+      document.querySelectorAll('.js-ok').forEach(function(o){ o.hidden=false; });
+      document.querySelectorAll('.js-nome').forEach(function(n){ n.textContent = nome ? ', '+nome : ''; });
+    }
+    document.querySelectorAll('.js-wform').forEach(function(form){
+      var err=form.querySelector('.fld-err'), btn=form.querySelector('button[type=submit]');
+      var tel=form.querySelector('[name=celular]');
+      tel.addEventListener('input', function(){
+        var v=tel.value.replace(/\D/g,'').slice(0,11);
+        if(v.length>6) v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+        else if(v.length>2) v='('+v.slice(0,2)+') '+v.slice(2);
+        tel.value=v;
+      });
+      try{ var saved=JSON.parse(localStorage.getItem('ith_lead_webinar')||'null'); if(saved){ ['nome','celular','email'].forEach(function(k){ if(saved[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(sent) return;
+        var ok=true;
+        ['nome','celular','email','formacao'].forEach(function(k){
+          var el=form.elements[k], wrap=el.closest('.fld'), valid=el.checkValidity();
+          if(k==='celular') valid = el.value.replace(/\D/g,'').length>=10;
+          wrap.classList.toggle('bad',!valid); if(!valid) ok=false;
+        });
+        var lg=form.elements.lgpd; lg.closest('.lgpd').classList.toggle('bad',!lg.checked); if(!lg.checked) ok=false;
+        err.hidden=ok; if(!ok) return;
+        var data={
+          nome:form.elements.nome.value.trim(), celular:form.elements.celular.value.trim(), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value,
+          curso:'Webinário: '+WEBINAR.titulo, webinario:WEBINAR.titulo, data_webinario:WEBINAR.data,
+          origem:window.location.href.split('?')[0], pagina:'LP Webinar Urgência (Masterclass O Próximo Nível)',
+          utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'), fbclid:utm('fbclid'),
+          dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop'
+        };
+        data.contato=data.celular;
+        data.data_iso=new Date().toISOString();
+        data.data=new Date().toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).replace(',','');
+        data.utm=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].map(function(k){ return utm(k) ? k.replace('utm_','')+'='+utm(k) : ''; }).filter(Boolean).join(' | ');
+        btn.disabled=true; btn.querySelector('.bt').textContent='Enviando...';
+        try{ localStorage.setItem('ith_lead_webinar', JSON.stringify({nome:data.nome,celular:data.celular,email:data.email})); }catch(e){}
+        try{ gtag('event','generate_lead',{method:'webinar_form',webinar:WEBINAR.slug}); }catch(e){}
+        try{ if(window.fbq){ fbq('track','CompleteRegistration',{content_name:data.curso}); } }catch(e){}
+        sent=true;
+        var done=false, fin=function(){ if(done) return; done=true; showOk(data.nome.split(' ')[0]); };
+        setTimeout(fin, 2500); // não deixa o lead esperando se o webhook demorar
+        try{
+          if(LEAD_WEBHOOK.indexOf('http')===0){
+            fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(fin,fin);
+          } else { fin(); }
+        }catch(e){ fin(); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
