@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
-<title>Super Black ITH · Escolha a sua pós-graduação | ITH Educação</title>
-<meta name="description" content="Super Black ITH: escolha a sua pós-graduação. Pós híbridas em Estética Avançada, Urgência e Emergência + UTI, UTI Neonatal e Pediátrica e Enfermagem Obstétrica, além de todas as pós e MBAs EAD. ITH nota 5 no MEC.">
+<title>Super Black ITH · Pós-graduações e MBAs</title>
+<meta name="description" content="Super Black ITH: condição especial de Black Friday nas pós-graduações e MBAs da ITH Educação, nota 5 no MEC. Cursos híbridos e EAD. Válida até 30/11/2026.">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Super Black ITH · Escolha a sua pós-graduação">
-<meta property="og:description" content="Pós híbridas e EAD com a condição Super Black até 30/11.">
-<meta property="og:image" content="https://mkt.faculdadeith.com.br/lp/super-black/bg-desktop.webp">
+<link rel="canonical" href="https://mkt.faculdadeith.com.br/lp/super-black/">
+<meta property="og:title" content="Super Black ITH · Pós-graduações e MBAs">
+<meta property="og:description" content="O momento de investir na sua pós-graduação é agora. Condição Super Black até 30/11.">
+<meta property="og:image" content="https://mkt.faculdadeith.com.br/lp/super-black-estetica/bg-desktop.webp">
 <link rel="icon" href="https://faculdadeith.com.br/wp-content/uploads/2021/08/cropped-new-icon-32x32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,10 +48,14 @@
 :root{
   color-scheme:light only;
   --ink:#05070d;
+  --night:#07102b;
+  --navy:#041a5c;
+  --royal:#0a3fd6;
+  --blue:#0057ff;
   --sky:#00a6ff;
   --ice:#8fe2ff;
   --lav:#cdd6ff;
-  --blue:#0057ff;
+  --white:#fff;
   --muted:#a9b6d8;
   --line:rgba(160,190,255,.16);
   --card:rgba(10,25,70,.55);
@@ -58,13 +63,14 @@
   --r:22px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{color-scheme:light only;background:var(--ink);color:#fff}
+html,body{color-scheme:light only;background:var(--ink);color:var(--white)}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-.wrap{width:min(1100px,100% - 32px);margin-inline:auto;position:relative}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto;position:relative}
+.disp{font-family:Archivo,Inter,sans-serif}
 .center{text-align:center}
 
 /* ---------- elementos da marca ---------- */
@@ -81,159 +87,284 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .cd span{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:2px 7px;font-weight:700}
 .cd small{font-weight:500;opacity:.75;margin-left:1px}
 
-/* ---------- topo ---------- */
-.hero{position:relative;padding:34px 0 70px;background:#071a63 url(bg-desktop.webp) center/cover no-repeat;overflow:hidden}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(transparent,var(--ink));pointer-events:none}
-.hero .wrap{position:relative;z-index:4;text-align:center}
-.hero .logo{display:inline-block;margin-bottom:34px}
-.hero .logo img{height:34px;width:auto}
-.sb{width:min(460px,88%);margin:0 auto 18px}
-.sb img{width:100%;filter:drop-shadow(0 10px 40px rgba(0,110,255,.45))}
-h1{text-wrap:balance;font-family:Archivo;font-weight:300;font-size:clamp(30px,4.2vw,50px);line-height:1.06;letter-spacing:-.025em;color:var(--sky);text-shadow:0 2px 24px rgba(0,0,0,.35)}
+/* ---------- header ---------- */
+header.nav{position:absolute;left:0;right:0;z-index:20}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+header.nav .logo img{height:34px;width:auto}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;border:1.5px solid rgba(120,185,255,.75);background:rgba(4,12,40,.88);backdrop-filter:blur(8px);color:#fff;font-weight:700;font-size:14px;box-shadow:0 6px 24px rgba(2,8,30,.45),0 0 18px rgba(0,110,255,.35);transition:.25s}
+.btn-ghost:hover{background:#0057ff;border-color:#8fd0ff;transform:scale(1.03)}
+
+/* ---------- CTA principal (pílula com ícone redondo, igual à peça) ---------- */
+.cta{position:relative;display:inline-flex;align-items:center;gap:0;padding:0;border-radius:999px;isolation:isolate;transition:transform .25s}
+.cta .ic{position:relative;z-index:2;flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#7fd0ff,#1a8cff 55%,#0057ff);display:grid;place-items:center;box-shadow:0 0 0 3px rgba(5,10,30,.6),0 0 22px rgba(0,140,255,.7)}
+.cta .ic svg{width:22px;height:22px}
+.cta .tx{position:relative;overflow:hidden;margin-left:-20px;padding:15px 30px 15px 36px;border-radius:0 999px 999px 0;background:radial-gradient(120% 160% at 30% 0%,#2f7dff 0%,#0057ff 45%,#0038d6 100%);border:1.5px solid rgba(140,200,255,.65);font-family:Archivo;font-style:italic;font-weight:800;font-size:15px;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 0 1px rgba(0,87,255,.4),0 8px 30px rgba(0,87,255,.55),0 0 60px rgba(0,140,255,.35)}
+.cta .tx::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);transform:translateX(-120%);animation:shine 3.6s ease-in-out infinite}
+.cta:hover{transform:scale(1.035)}
+@keyframes shine{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+.cta-micro{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-size:13.5px;color:var(--muted)}
+.cta-micro span{display:inline-flex;align-items:center;gap:6px}
+.cta-micro svg{width:15px;height:15px;color:var(--ice)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(860px,100svh);padding:120px 0 70px;background:#071a63 url(bg-desktop.webp) center/cover no-repeat;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--ink));z-index:2;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:center;gap:20px;min-height:600px}
+.hero-txt{position:relative;z-index:4;padding-top:10px}
+.kicker{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--lav);margin-bottom:6px}
+.kicker i{width:4px;height:4px;border-radius:50%;background:var(--ice);opacity:.8}
+.sb{position:relative;width:min(560px,100%);margin:6px 0 14px -6px}
+.sb img{width:100%;height:auto;position:relative;z-index:2;filter:drop-shadow(0 10px 40px rgba(0,110,255,.45))}
+.sb .orbit{position:absolute;left:-9%;top:-6%;width:118%;height:118%;z-index:1;overflow:visible}
+.sb .orbit.front{z-index:3}
+.sb .hole{position:absolute;z-index:3;left:44.6%;top:47%;width:13%;color:#fff;filter:drop-shadow(0 0 16px rgba(150,210,255,.9))}
+.sb .tw{position:absolute;z-index:3;right:5%;top:2%;width:8.5%;color:#fff;filter:drop-shadow(0 0 12px rgba(150,210,255,.9))}
+.sb svg.st{width:100%;height:auto;display:block}
+h1{text-wrap:balance;font-family:Archivo;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.025em;color:var(--sky);text-shadow:0 2px 24px rgba(0,0,0,.35)}
 h1 em{display:block;font-style:italic;font-weight:800;color:#fff;letter-spacing:-.03em}
-.hero-sub{margin:16px auto 0;max-width:560px;color:#d5def5;font-size:17px;text-shadow:0 1px 12px rgba(0,0,0,.35)}
-.jump{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
-.jump a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:1px solid rgba(130,180,255,.45);background:rgba(4,12,40,.6);backdrop-filter:blur(8px);font-size:14px;font-weight:600;transition:.25s}
-.jump a:hover{background:var(--blue);border-color:#8fd0ff}
-.jump .spark{width:11px;height:11px}
-.hero .star4.l{width:120px;left:4%;top:28%;transform:rotate(-8deg)}
-.hero .star4.r{width:80px;right:6%;top:58%;transform:rotate(10deg)}
-.hero .vert.l{left:22px;top:90px}
-.hero .vert.r{right:22px;top:90px}
+h1 em .c{color:var(--sky);font-weight:300;font-style:normal}
+.hero-sub{margin:16px 0 26px;max-width:520px;color:#d5def5;font-size:17px;text-shadow:0 1px 12px rgba(0,0,0,.35)}
+.hero-img{position:relative;align-self:stretch;min-height:560px;z-index:1}
+.duo{position:absolute;inset:-40px -60px -70px 0}
+.duo img{position:absolute;bottom:0;height:auto;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 99%);mask-image:linear-gradient(180deg,#000 72%,transparent 99%)}
+.duo .woman{left:50%;transform:translateX(-46%);width:92%;max-width:640px;z-index:2}
+.hero .star4.big{width:150px;left:-4%;top:12%;z-index:3;transform:rotate(-8deg)}
+.hero .tw-top{position:absolute;right:4%;top:110px;width:62px;z-index:3}
+.hero .vert.l{left:22px;top:150px}
+.hero .vert.r{right:22px;bottom:110px}
 .fade-in{opacity:0;transform:translateY(18px);animation:fin .8s cubic-bezier(.2,.7,.2,1) forwards}
-.d1{animation-delay:.08s}.d2{animation-delay:.2s}.d3{animation-delay:.32s}.d4{animation-delay:.44s}
+.d1{animation-delay:.08s}.d2{animation-delay:.2s}.d3{animation-delay:.32s}.d4{animation-delay:.44s}.d5{animation-delay:.56s}
 @keyframes fin{to{opacity:1;transform:none}}
 .float{animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-10px) rotate(-8deg)}}
 
+/* ---------- números ---------- */
+.stats{position:relative;z-index:5;margin-top:-30px}
+.stats .grid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(14,34,100,.7),rgba(6,14,40,.85));backdrop-filter:blur(10px);overflow:hidden}
+.stat{padding:22px 18px;text-align:center;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Archivo;font-style:italic;font-weight:800;font-size:30px;line-height:1.1;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;filter:brightness(1.25)}
+.stat span{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
 /* ---------- seções ---------- */
-.sec{position:relative;padding:40px 0 60px}
-.head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(150,190,255,.35);background:rgba(0,87,255,.12);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lav);margin-bottom:14px}
+.sec{position:relative;padding:100px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(150,190,255,.35);background:rgba(0,87,255,.12);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lav);margin-bottom:18px}
 .eyebrow .spark{width:12px;height:12px}
-h2{text-wrap:balance;font-family:Archivo;font-weight:800;font-size:clamp(26px,3vw,38px);line-height:1.1;letter-spacing:-.025em}
+h2{text-wrap:balance;font-family:Archivo;font-weight:800;font-size:clamp(28px,3.4vw,44px);line-height:1.1;letter-spacing:-.025em;max-width:820px}
 h2 .g{font-style:italic;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;filter:brightness(1.3);padding-right:.08em}
-.head p{color:var(--muted);font-size:15.5px;max-width:420px}
-.hr{height:1px;background:linear-gradient(90deg,transparent,rgba(120,170,255,.35),transparent);width:min(1100px,100% - 32px);margin:0 auto}
+.center h2{margin-inline:auto}
+.lead{color:var(--muted);font-size:17px;max-width:680px;margin-top:16px}
+.center .lead{margin-inline:auto}
+.hr{height:1px;background:linear-gradient(90deg,transparent,rgba(120,170,255,.35),transparent);width:min(1180px,100% - 32px);margin:0 auto}
 
-/* cards das híbridas */
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.course{position:relative;display:flex;flex-direction:column;border-radius:var(--r);border:1px solid var(--line);background:var(--card);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
-.course::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(160deg,rgba(120,180,255,.55),transparent 45%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
-.course:hover{transform:translateY(-4px);border-color:rgba(130,190,255,.5);box-shadow:0 20px 50px rgba(0,40,160,.35)}
-.course .ph{position:relative;aspect-ratio:800/400;overflow:hidden;background:#0a2a8a}
-.course .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform .6s}
-.course:hover .ph img{transform:scale(1.04)}
-.course .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,16,50,.9))}
-.course .badge{position:absolute;left:16px;top:16px;z-index:2;padding:5px 12px;border-radius:999px;background:rgba(4,12,40,.8);border:1px solid rgba(130,180,255,.45);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ice)}
-.course .bd{display:flex;flex-direction:column;flex:1;padding:4px 24px 24px;margin-top:-30px;position:relative;z-index:2}
-.course h3{font-family:Archivo;font-weight:800;font-size:22px;line-height:1.15;letter-spacing:-.015em}
-.course p{color:var(--muted);font-size:14.5px;margin-top:8px;line-height:1.5}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px}
-.tags span{padding:4px 10px;border-radius:999px;background:rgba(0,87,255,.16);border:1px solid rgba(130,180,255,.25);font-size:12.5px;font-weight:600;color:#dbe6ff}
-.go{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px 13px 22px;border-radius:999px;background:radial-gradient(120% 160% at 30% 0%,#2f7dff 0%,#0057ff 45%,#0038d6 100%);border:1.5px solid rgba(140,200,255,.65);font-family:Archivo;font-style:italic;font-weight:800;font-size:14.5px;letter-spacing:.02em;text-transform:uppercase;box-shadow:0 8px 26px rgba(0,87,255,.45);position:relative;overflow:hidden}
-.go::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.4) 50%,transparent 65%);transform:translateX(-120%);animation:shine 3.6s ease-in-out infinite}
-.go i{flex:0 0 32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#7fd0ff,#1a8cff 55%,#0057ff);display:grid;place-items:center;box-shadow:0 0 0 2px rgba(5,10,30,.45),0 0 16px rgba(0,140,255,.6)}
-.go i svg{width:15px;height:15px}
-@keyframes shine{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+/* por que agora */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.card{position:relative;padding:30px 26px;border-radius:var(--r);border:1px solid var(--line);background:var(--card);overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(160deg,rgba(120,180,255,.55),transparent 45%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.card .n{font-family:Archivo;font-style:italic;font-weight:900;font-size:15px;color:var(--ice);letter-spacing:.06em}
+.card h3{font-family:Archivo;font-weight:700;font-size:21px;line-height:1.2;margin:10px 0 8px}
+.card p{color:var(--muted);font-size:15px}
 
-/* bloco EAD */
-.ead{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);border-radius:28px;border:1px solid rgba(130,180,255,.3);background:linear-gradient(135deg,rgba(10,50,170,.55),rgba(5,15,50,.75));overflow:hidden;transition:transform .3s,box-shadow .3s}
-.ead:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,40,160,.4)}
-.ead .bd{padding:40px}
-.ead h3{font-family:Archivo;font-weight:800;font-size:clamp(24px,2.6vw,32px);line-height:1.1;letter-spacing:-.02em}
-.ead h3 .g{font-style:italic;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;filter:brightness(1.3)}
-.ead p{color:var(--muted);font-size:15.5px;margin-top:10px}
-.ead ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 26px}
-.ead li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;font-weight:600;line-height:1.35}
-.ck{flex:0 0 20px;height:20px;border-radius:6px;background:var(--grad-blue);display:grid;place-items:center;margin-top:1px;box-shadow:0 0 12px rgba(0,140,255,.5)}
-.ck svg{width:12px;height:12px}
-.ead .go{display:inline-flex;gap:16px}
-.ead .ph{position:relative;min-height:100%}
-.ead .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 30%}
-.ead .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,30,110,.95),transparent 45%)}
-.ead .star4{width:96px;right:22px;top:22px;z-index:2;transform:rotate(12deg)}
+/* oferta */
+.offer{background:radial-gradient(70% 90% at 80% 0%,rgba(0,110,255,.35),transparent 60%),radial-gradient(60% 80% at 0% 100%,rgba(0,60,200,.3),transparent 60%),#050b22;overflow:hidden}
+.offer-box{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding:54px;border-radius:32px;border:1px solid rgba(130,180,255,.3);background:linear-gradient(135deg,rgba(10,50,170,.55),rgba(5,15,50,.7))}
+.offer-box .star4{width:120px;right:-34px;top:-58px;z-index:4;transform:rotate(12deg)}
+.offer-box h2{font-size:clamp(28px,3vw,38px)}
+.offer-list{list-style:none;display:grid;gap:12px;margin-top:24px}
+.offer-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.ck{flex:0 0 22px;height:22px;border-radius:7px;background:var(--grad-blue);display:grid;place-items:center;margin-top:2px;box-shadow:0 0 14px rgba(0,140,255,.5)}
+.ck svg{width:13px;height:13px}
+.offer-side{position:relative;z-index:2;text-align:center;padding:34px 26px;border-radius:24px;background:rgba(3,8,26,.7);border:1px solid var(--line)}
+.offer-side .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav)}
+.offer-side .big{font-family:Archivo;font-style:italic;font-weight:900;font-size:clamp(34px,4vw,48px);line-height:1;margin:12px 0 6px;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;filter:brightness(1.3)}
+.offer-side p{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.offer-side .cd{justify-content:center;margin-bottom:24px}
+.offer-side .cd span{font-size:22px;padding:8px 10px;min-width:58px;border-radius:12px;background:rgba(0,87,255,.18);border-color:rgba(130,180,255,.35)}
+.offer-side .cd small{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 0}
 
-/* comercial */
-.talk{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:32px 36px;border-radius:28px;border:1px solid rgba(24,196,99,.35);background:radial-gradient(80% 140% at 100% 0%,rgba(24,196,99,.16),transparent 60%),rgba(6,16,46,.8)}
-.talk .l{display:flex;gap:18px;align-items:center}
-.talk .ic{flex:0 0 58px;height:58px;border-radius:50%;background:#18c463;display:grid;place-items:center;box-shadow:0 0 26px rgba(24,196,99,.45)}
-.talk .ic svg{width:30px;height:30px}
-.talk h3{font-family:Archivo;font-weight:800;font-size:24px;line-height:1.15}
-.talk p{color:var(--muted);font-size:15px;margin-top:4px}
-.wa-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:#18c463;font-weight:700;box-shadow:0 8px 24px rgba(24,196,99,.4);transition:transform .2s}
-.wa-btn:hover{transform:scale(1.03)}
-.wa-btn svg{width:20px;height:20px}
+/* grade */
+.axes{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
+.axis{padding:30px;border-radius:var(--r);border:1px solid var(--line);background:var(--card)}
+.axis .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ice)}
+.axis h3{font-family:Archivo;font-weight:700;font-size:22px;margin:6px 0 18px}
+.mods{list-style:none;counter-reset:m}
+.mods li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px}
+.mods li b{font-family:Archivo;font-style:italic;font-weight:800;color:var(--sky);min-width:28px}
 
-/* rodapé */
-footer{border-top:1px solid var(--line);margin-top:40px;padding:36px 0 50px;font-size:13px;color:var(--muted)}
-footer .wrap{display:grid;gap:14px}
-footer .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer img{height:30px;width:auto}
-footer .reg{font-size:12px;line-height:1.6;opacity:.85}
+/* formato */
+.fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.fmt .card .lbl{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--ice)}
+.cities{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.cities span{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:1px solid rgba(130,180,255,.4);background:rgba(0,87,255,.15);font-weight:600}
+.cities svg{width:16px;height:16px;color:var(--ice)}
 
-/* modal */
-.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(1,4,14,.75);backdrop-filter:blur(6px)}
-.modal.open{display:flex}
-.fbox{position:relative;width:min(460px,100%);max-height:calc(100svh - 32px);overflow:auto;padding:32px;border-radius:26px;background:rgba(4,10,32,.95);border:1px solid rgba(130,180,255,.35);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 80px rgba(0,87,255,.2);animation:mIn .5s cubic-bezier(.34,1.56,.64,1)}
+/* incluso + foto */
+.inc{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:50px;align-items:center}
+.inc-img{position:relative;border-radius:30px;overflow:hidden;background:radial-gradient(80% 70% at 50% 25%,#7fdcff 0%,#1b73f0 45%,#062066 100%);aspect-ratio:4/5}
+.inc-img img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:96%;-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent);mask-image:linear-gradient(180deg,#000 80%,transparent)}
+.inc-img .star4{width:110px;right:18px;top:24px;z-index:2}
+.inc-img .vert{left:16px;bottom:24px}
+.inc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.inc-list li{padding:18px;border-radius:16px;border:1px solid var(--line);background:rgba(10,25,70,.45)}
+.inc-list b{display:block;font-size:15.5px;margin-bottom:4px}
+.inc-list span{font-size:14px;color:var(--muted);line-height:1.5;display:block}
+
+/* professores */
+.profs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.prof{display:flex;gap:16px;align-items:flex-start;padding:24px;border-radius:var(--r);border:1px solid var(--line);background:var(--card)}
+.av{flex:0 0 56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:Archivo;font-style:italic;font-weight:800;font-size:18px;background:var(--grad-blue);box-shadow:0 0 20px rgba(0,120,255,.45)}
+.prof h3{font-family:Archivo;font-size:18px;font-weight:700}
+.prof .r{font-size:13px;color:var(--ice);font-weight:600}
+.prof p{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.5}
+
+/* inscrição */
+.form-sec{background:#020611 url(bg-desktop.webp) center/cover no-repeat;overflow:hidden}
+.form-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--ink) 0%,rgba(5,7,13,.35) 30%,rgba(5,7,13,.5) 70%,var(--ink) 100%)}
+.form-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:50px;align-items:center}
+.form-grid .sb{width:min(420px,100%);margin-bottom:20px}
+.get{list-style:none;display:grid;gap:10px;margin-top:22px}
+.get li{display:flex;gap:10px;font-size:15.5px;color:#dbe4fb}
+.fbox{position:relative;padding:32px;border-radius:26px;background:rgba(4,10,32,.82);border:1px solid rgba(130,180,255,.35);backdrop-filter:blur(14px);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 80px rgba(0,87,255,.2)}
 .fbox h3{font-family:Archivo;font-style:italic;font-weight:800;font-size:23px;line-height:1.15;margin-bottom:4px}
 .fbox .s{font-size:14px;color:var(--muted);margin-bottom:20px}
-.modal .x{position:absolute;right:14px;top:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);font-size:22px;line-height:1}
-@keyframes mIn{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
 .fld{margin-bottom:12px}
 .fld label{display:block;font-size:13px;font-weight:600;color:#cfdaf6;margin-bottom:5px}
 .fld input,.fld select{width:100%;height:50px;padding:0 16px;border-radius:14px;border:1px solid rgba(150,185,255,.3);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:15.5px;outline:none;transition:.2s;-webkit-appearance:none;appearance:none}
-.fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238fe2ff' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:38px}
-.fld select option,.fld select optgroup{color:#111;background:#fff}
+.fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238fe2ff' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.fld select option{color:#111;background:#fff}
 .fld input::placeholder{color:rgba(205,214,255,.45)}
 .fld input:focus,.fld select:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(0,166,255,.25)}
 .fld.bad input,.fld.bad select{border-color:#ff6b7d;box-shadow:0 0 0 3px rgba(255,80,100,.2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .fld-err{color:#ff9aa6;font-size:13px;margin:4px 0 8px}
-.submit{width:100%;margin-top:8px;display:flex;justify-content:center;align-items:center;gap:10px;height:56px;border-radius:999px;font-family:Archivo;font-style:italic;font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.02em;background:radial-gradient(120% 160% at 30% 0%,#2f7dff 0%,#0057ff 45%,#0038d6 100%);border:1.5px solid rgba(140,200,255,.65);box-shadow:0 8px 30px rgba(0,87,255,.55);position:relative;overflow:hidden}
+.submit{width:100%;margin-top:8px;display:flex;justify-content:center;align-items:center;gap:10px;height:56px;border-radius:999px;font-family:Archivo;font-style:italic;font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.02em;background:radial-gradient(120% 160% at 30% 0%,#2f7dff 0%,#0057ff 45%,#0038d6 100%);border:1.5px solid rgba(140,200,255,.65);box-shadow:0 8px 30px rgba(0,87,255,.55),0 0 50px rgba(0,140,255,.3);position:relative;overflow:hidden;transition:transform .2s}
 .submit::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.4) 50%,transparent 65%);transform:translateX(-120%);animation:shine 3.6s ease-in-out infinite}
+.submit:hover{transform:scale(1.02)}
 .submit:disabled{opacity:.7}
 .priv{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px}
 .lead-ok{text-align:center;padding:10px 4px}
 .lead-ok .okic{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:var(--grad-blue);box-shadow:0 0 30px rgba(0,140,255,.6)}
 .lead-ok h3{margin-bottom:8px}
 .lead-ok p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;background:#18c463;font-weight:700;box-shadow:0 8px 24px rgba(24,196,99,.4)}
+.wa-btn svg{width:20px;height:20px}
+
+/* FAQ */
+.faq{max-width:820px;margin:40px auto 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;font-family:Archivo;font-weight:700;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:0 0 34px;height:34px;border-radius:50%;background:rgba(0,87,255,.2);border:1px solid rgba(130,180,255,.35);display:grid;place-items:center;transition:transform .3s}
+.faq summary i svg{width:14px;height:14px}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--blue)}
+.faq p{padding:0 4px 22px;color:var(--muted);font-size:15.5px;max-width:740px}
+
+/* final + rodapé */
+.final{padding:110px 0 120px;text-align:center;background:radial-gradient(60% 70% at 50% 100%,rgba(0,100,255,.35),transparent 70%)}
+.final .sb{margin:0 auto 18px}
+.final h2{margin:0 auto}
+.final .cta{margin-top:30px}
+footer{border-top:1px solid var(--line);padding:36px 0 110px;font-size:13px;color:var(--muted)}
+footer .wrap{display:grid;gap:14px}
+footer .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:30px;width:auto}
+footer .reg{font-size:12px;line-height:1.6;opacity:.85}
+
+/* WhatsApp flutuante (abre o formulário) */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:40;width:58px;height:58px;border-radius:50%;background:#18c463;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.wa-float svg{width:30px;height:30px}
+
+/* barra fixa mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:35;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(4,8,22,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:none;transform:translateY(110%);transition:transform .35s}
+.sticky.on{transform:none}
+.sticky .submit{height:50px;margin:0;font-size:14.5px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(1,4,14,.75);backdrop-filter:blur(6px)}
+.modal.open{display:flex}
+.modal .fbox{width:min(460px,100%);max-height:calc(100svh - 32px);overflow:auto;animation:mIn .5s cubic-bezier(.34,1.56,.64,1)}
+.modal .x{position:absolute;right:14px;top:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);font-size:22px;line-height:1}
+@keyframes mIn{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
 
 /* reveal */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 
 /* ---------- responsivo ---------- */
+@media (max-width:1020px){
+  .stats .grid{grid-template-columns:repeat(3,1fr)}
+  .stat:nth-child(4){border-left:0}
+  .stat:nth-child(n+4){border-top:1px solid var(--line)}
+  .why,.fmt,.profs{grid-template-columns:1fr 1fr}
+  .offer-box{grid-template-columns:1fr;padding:38px}
+  .inc{grid-template-columns:1fr}
+  .inc-img{max-width:440px;margin:0 auto;width:100%}
+  .form-grid{grid-template-columns:1fr}
+}
 @media (max-width:899px){
-  .hero{background-image:url(bg-mobile.webp);background-position:center top;padding:26px 0 50px}
-  .hero .logo{margin-bottom:26px}
-  .hero .logo img{height:28px}
-  .hero .vert{display:none}
-  .hero .star4.l{width:70px;left:-10px;top:24%}
-  .hero .star4.r{width:52px;right:-6px;top:62%}
+  .hero{background-image:url(bg-mobile.webp);background-position:center top;padding:84px 0 60px;min-height:0}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0;gap:0}
+  .hero-img{order:-1;min-height:0;height:min(112vw,560px);margin:0 -16px}
+  .duo{inset:0}
+  .duo .woman{width:84%;max-width:420px}
+  .hero .star4.big{width:92px;left:auto;right:6%;top:30%}
+  .hero .tw-top{top:90px;right:auto;left:10%;width:40px}
+  .hero-txt{margin-top:-90px;text-align:center}
+  .sb{margin:0 auto 10px}
+  .kicker{justify-content:center}
+  .hero-sub{margin-inline:auto;font-size:16px}
+  .cta-micro{justify-content:center}
+  .hero .vert.l{left:12px;top:110px}
+  .hero .vert.r{right:12px;bottom:40%}
+  header.nav .wrap{padding:16px 0}
+  header.nav .logo img{height:28px}
+  .hero .kicker{display:none}
+  h1{font-size:clamp(25px,7vw,32px)}
+  .hero .vert.r{display:none}
   .topbar .msg{display:none}
-  .ead{grid-template-columns:minmax(0,1fr)}
-  .ead .ph{order:-1;min-height:0;aspect-ratio:800/360}
-  .ead .ph::after{background:linear-gradient(180deg,transparent 40%,rgba(8,30,110,.95))}
-  .ead .bd{padding:6px 24px 28px;margin-top:-20px;position:relative;z-index:2}
 }
 @media (max-width:640px){
-  .grid{grid-template-columns:minmax(0,1fr)}
-  .sec{padding:30px 0 44px}
-  .hero-sub{font-size:16px}
-  .jump a{padding:9px 14px;font-size:13px}
-  .course .bd{padding:4px 20px 20px}
-  .course h3{font-size:20px}
-  .ead ul{grid-template-columns:minmax(0,1fr)}
-  .ead .go{display:flex}
-  .talk{padding:26px 22px}
-  .talk .l{flex-direction:column;align-items:flex-start;gap:14px}
-  .talk .wa-btn{width:100%;justify-content:center}
+  .sec{padding:72px 0}
+  .stats .grid{grid-template-columns:1fr 1fr}
+  .stat{border-left:0!important;border-top:1px solid var(--line)}
+  .stat:nth-child(odd){border-right:1px solid var(--line)}
+  .stat:nth-child(-n+2){border-top:0}
+  .stat:last-child{grid-column:1/-1;border-right:0}
+  .stat b{font-size:26px}
+  .why,.fmt,.profs,.axes,.inc-list,.row2{grid-template-columns:minmax(0,1fr)}
+  .offer-box{padding:28px 20px;border-radius:24px}
+  .offer-box .star4{width:76px;right:-8px;top:-40px}
+  .axis{padding:24px 20px}
   .fbox{padding:26px 20px}
+  .cta .tx{font-size:13.5px;padding:14px 22px 14px 32px}
+  .cta .ic{width:48px;height:48px}
+  .btn-ghost{padding:8px 14px;font-size:13px}
+  .sticky{display:block}
+  .wa-float{bottom:84px}
+  .faq summary{font-size:16.5px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv,.fade-in{opacity:1;transform:none}
 }
+</style>
+<style>
+.av.ph{padding:0;overflow:hidden;background:#0a1d55}
+.av.ph img{width:100%;height:100%;object-fit:cover}
+.profs.g2{grid-template-columns:repeat(2,1fr);max-width:900px;margin-inline:auto}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.course{display:flex;flex-direction:column;gap:10px;padding:26px 24px;border-radius:var(--r);border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden}
+.course .mod{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)}
+.course h3{font-family:Archivo;font-weight:800;font-size:21px;line-height:1.15}
+.course p{color:var(--muted);font-size:14.5px;flex:1}
+.course .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.course .go{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:#fff;padding:10px 16px;border-radius:999px;background:radial-gradient(120% 160% at 30% 0%,#2f7dff 0%,#0057ff 45%,#0038d6 100%);border:1px solid rgba(140,200,255,.6);box-shadow:0 6px 20px rgba(0,87,255,.4)}
+.course .more{display:inline-flex;align-items:center;font-weight:600;font-size:14px;color:var(--lav);padding:10px 6px}
+.course .more:hover{color:#fff}
+.hub-grid.g2{grid-template-columns:repeat(2,1fr)}
+.grp{font-family:Archivo;font-style:italic;font-weight:800;font-size:20px;margin:54px 0 -26px;color:var(--lav)}
+@media (max-width:1020px){.hub-grid{grid-template-columns:1fr 1fr}.grp{font-size:18px}}
+@media (max-width:640px){.hub-grid,.hub-grid.g2,.profs.g2{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -243,125 +374,166 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   <symbol id="tw" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C53 30 70 47 100 50 70 53 53 70 50 100 47 70 30 53 0 50 30 47 47 30 50 0Z"/></symbol>
   <symbol id="ck" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M20 6L9 17l-5-5"/></symbol>
   <symbol id="arr" viewBox="0 0 24 24"><path fill="#fff" d="M14 4l7 7-7 7v-4.2c-5.2 0-8.6 1.6-11 5.2 1-5.4 4.2-10.4 11-11.3V4z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></symbol>
   <symbol id="wa" viewBox="0 0 24 24"><path fill="#fff" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.5c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.6.9 1-3.5-.2-.4A9.5 9.5 0 1112 21.5zM12 1a11 11 0 00-9.4 16.6L1 23l5.6-1.5A11 11 0 1012 1z"/></symbol>
 </svg>
 
-<div class="topbar">
+<div class="topbar" id="topbar">
   <div class="wrap">
     <b>Super Black ITH</b>
-    <span class="msg">Condição especial nas pós-graduações até 30/11</span>
+    <span class="msg">Condição especial nas pós e MBAs da ITH até 30/11</span>
     <span class="cd" aria-label="Tempo restante"><span><b class="js-d">00</b><small>d</small></span><span><b class="js-h">00</b><small>h</small></span><span><b class="js-m">00</b><small>m</small></span><span><b class="js-s">00</b><small>s</small></span></span>
   </div>
 </div>
 
-<!-- ============ TOPO ============ -->
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="ITH Educação"><img src="logo-ith.webp" alt="ITH Educação" width="945" height="354"></a>
+    <button class="btn-ghost js-open" type="button">Falar com um consultor</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
 <section class="hero" id="topo">
   <span class="vert l">Black Friday ITH</span>
   <span class="vert r">Black Friday ITH</span>
-  <span class="star4 l float"></span>
-  <span class="star4 r"></span>
   <div class="wrap">
-    <a class="logo fade-in d1" href="https://faculdadeith.com.br" aria-label="ITH Educação"><img src="logo-ith.webp" alt="ITH Educação" width="945" height="354"></a>
-    <div class="sb fade-in d2"><img src="super-black-ith.webp" alt="Super Black ITH" width="679" height="250"></div>
-    <h1 class="fade-in d3">Escolha a sua <em>pós-graduação</em></h1>
-    <p class="hero-sub fade-in d4">Pós híbridas com prática presencial em Goiânia e Brasília, ou pós e MBAs 100% EAD. Todas com a condição Super Black até 30/11.</p>
-    <nav class="jump fade-in d4" aria-label="Atalhos">
-      <a href="#hibridas"><span class="spark"><svg><use href="#tw"/></svg></span>Pós híbridas</a>
-      <a href="#ead"><span class="spark"><svg><use href="#tw"/></svg></span>Pós e MBAs EAD</a>
-      <a href="#comercial"><span class="spark"><svg><use href="#tw"/></svg></span>Fale com o comercial</a>
-    </nav>
-  </div>
-</section>
-
-<!-- ============ HÍBRIDAS ============ -->
-<section class="sec" id="hibridas">
-  <div class="wrap">
-    <div class="head rv">
-      <div>
-        <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Turmas em GO e DF</span>
-        <h2>Pós-graduações <span class="g">híbridas</span></h2>
+    <div class="hero-txt">
+      <div class="kicker fade-in d1">Pós-graduações e MBAs <i></i> Híbridos e EAD <i></i> Nota 5 no MEC</div>
+      <div class="sb fade-in d2">
+        <img src="super-black-ith.webp" alt="Super Black ITH" width="679" height="250">
       </div>
-      <p>Teoria no digital e prática presencial uma vez por mês, com vivências em laboratório e campo.</p>
+      <h1 class="fade-in d3">O momento de investir na sua <em>pós-graduação <span class="c">é</span> agora!</em></h1>
+      <p class="hero-sub fade-in d4">Pós-graduações e MBAs em saúde e gestão, com certificado reconhecido pelo MEC. Na Super Black, a sua matrícula sai com a melhor condição do ano.</p>
+      <div class="fade-in d5">
+        <button class="cta js-open" type="button"><span class="ic"><svg><use href="#arr"/></svg></span><span class="tx">Quero a condição Super Black</span></button>
+        <div class="cta-micro"><span><svg><use href="#ck"/></svg>Válida até 30/11</span><span><svg><use href="#ck"/></svg>Cursos híbridos e EAD</span><span><svg><use href="#ck"/></svg>Não compromete o limite do cartão</span></div>
+      </div>
     </div>
-    <div class="grid">
-      <a class="course rv js-link" href="../super-black-estetica/" data-curso="Estética Avançada">
-        <div class="ph"><span class="badge">Híbrida</span><img src="card-estetica.webp" alt="" width="800" height="528" loading="lazy"></div>
-        <div class="bd">
-          <h3>Estética Avançada</h3>
-          <p>Facial, corporal e capilar, com injetáveis, bioestimuladores e tecnologias em pacientes modelo.</p>
-          <div class="tags"><span>600h</span><span>12 a 14 meses</span><span>Goiânia · Brasília</span></div>
-          <span class="go">Ver a pós<i><svg><use href="#arr"/></svg></i></span>
-        </div>
-      </a>
-      <a class="course rv js-link" href="../urgencia-emergencia-uti/" data-curso="Urgência e Emergência + UTI">
-        <div class="ph"><span class="badge">Dupla certificação</span><img src="card-urgencia.webp" alt="" width="800" height="528" loading="lazy"></div>
-        <div class="bd">
-          <h3>Urgência e Emergência + UTI</h3>
-          <p>Duas pós em uma formação: atendimento ao paciente crítico do pronto-socorro à terapia intensiva.</p>
-          <div class="tags"><span>880h</span><span>18 meses</span><span>Goiânia · Brasília</span></div>
-          <span class="go">Ver a pós<i><svg><use href="#arr"/></svg></i></span>
-        </div>
-      </a>
-      <a class="course rv js-link" href="../uti-neonatal-pediatrica/" data-curso="UTI Neonatal e Pediátrica">
-        <div class="ph"><span class="badge">Híbrida</span><img src="card-neonatal.webp" alt="" width="800" height="528" loading="lazy"></div>
-        <div class="bd">
-          <h3>UTI Neonatal e Pediátrica</h3>
-          <p>Cuidado intensivo ao recém-nascido e à criança, com imersões práticas ao longo do curso.</p>
-          <div class="tags"><span>440h</span><span>6 ou 12 meses</span><span>Goiânia · Brasília</span></div>
-          <span class="go">Ver a pós<i><svg><use href="#arr"/></svg></i></span>
-        </div>
-      </a>
-      <a class="course rv js-link" href="../enfermagem-obstetrica/" data-curso="Enfermagem Obstétrica">
-        <div class="ph"><span class="badge">Híbrida</span><img src="card-obstetrica.webp" alt="" width="800" height="528" loading="lazy"></div>
-        <div class="bd">
-          <h3>Enfermagem Obstétrica</h3>
-          <p>Pré-natal, parto e puerpério com estágios em maternidades, para atuar como enfermeira obstetra.</p>
-          <div class="tags"><span>600h</span><span>18 meses</span><span>Goiânia · Brasília</span></div>
-          <span class="go">Ver a pós<i><svg><use href="#arr"/></svg></i></span>
-        </div>
-      </a>
+    <div class="hero-img" aria-hidden="true">
+      <div class="duo">
+        <img class="woman" src="aluna.webp" alt="" width="1100" height="1374" fetchpriority="high">
+      </div>
+      <span class="star4 big float"></span>
+      <span class="tw-top spark"><svg><use href="#tw"/></svg></span>
     </div>
   </div>
 </section>
 
-<div class="hr"></div>
-
-<!-- ============ EAD ============ -->
-<section class="sec" id="ead">
+<div class="stats">
   <div class="wrap">
-    <a class="ead rv js-link" href="../pos-graduacao/" data-curso="Pós e MBAs EAD">
-      <div class="bd">
-        <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>100% online</span>
-        <h3>Todas as pós e <span class="g">MBAs EAD</span></h3>
-        <p>Estude no seu ritmo, de qualquer cidade, com certificado reconhecido pelo MEC.</p>
-        <ul>
-          <li><span class="ck"><svg><use href="#ck"/></svg></span>MBA em SCIRAS e Segurança do Paciente</li>
-          <li><span class="ck"><svg><use href="#ck"/></svg></span>MBA em Gestão Hospitalar</li>
-          <li><span class="ck"><svg><use href="#ck"/></svg></span>MBA em Qualidade e Acreditação em Saúde</li>
-          <li><span class="ck"><svg><use href="#ck"/></svg></span>Auditoria em Serviços de Saúde</li>
-          <li><span class="ck"><svg><use href="#ck"/></svg></span>Segurança do Paciente e Qualidade</li>
-          <li><span class="ck"><svg><use href="#ck"/></svg></span>Farmácia Clínica e Atenção Farmacêutica</li>
+    <div class="grid rv"><div class="stat"><b>10</b><span>Cursos na Black</span></div><div class="stat"><b>Nota 5</b><span>no MEC</span></div><div class="stat"><b>+12 mil</b><span>Alunos formados</span></div><div class="stat"><b>+6</b><span>Países com alunos</span></div><div class="stat"><b>95%</b><span>De satisfação</span></div></div>
+  </div>
+</div>
+
+<!-- ============ CURSOS ============ -->
+<section class="sec" id="cursos">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Cursos na Super Black</span>
+      <h2>Escolha a sua especialização e <span class="g">garanta a condição</span></h2>
+      <p class="lead">Clique no curso, deixe seus dados e um consultor de carreira envia a condição Super Black pelo WhatsApp.</p>
+    </div>
+    <h3 class="grp rv">Híbridas · aulas presenciais em Goiânia e Brasília</h3><div class="hub-grid g2"><div class="course rv"><span class="mod">Híbrida · GO e DF · 600h</span><h3>Saúde Estética Avançada</h3><p>Facial, corporal e capilar com prática em pacientes modelo: injetáveis, bioestimuladores, laser e tecnologias.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="estetica">Quero a condição</button><a class="more" href="../super-black-estetica/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">Híbrida · GO e DF · 880h</span><h3>Urgência e Emergência + UTI</h3><p>No pronto-socorro e na UTI, cada segundo define a vida do paciente. Hesitar não é opção.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="urgencia-emergencia-uti">Quero a condição</button><a class="more" href="../super-black-urgencia-emergencia-uti/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">Híbrida · GO e DF · 600h</span><h3>Enfermagem Obstétrica</h3><p>Enfermeira, você se sente realmente segura para conduzir um parto?</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="enfermagem-obstetrica">Quero a condição</button><a class="more" href="../super-black-enfermagem-obstetrica/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">Híbrida · GO e DF · 440h</span><h3>UTI Neonatal e Pediátrica</h3><p>No plantão da UTI, hesitar custa caro. Decisão firme se treina antes.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="uti-neonatal-pediatrica">Quero a condição</button><a class="more" href="../super-black-uti-neonatal-pediatrica/">Ver o curso →</a></div></div></div><h3 class="grp rv">100% EAD · estude no seu ritmo</h3><div class="hub-grid"><div class="course rv"><span class="mod">100% EAD · 440h</span><h3>Auditoria em Serviços de Saúde</h3><p>Não basta trabalhar na saúde. Você precisa saber onde ela adoece no papel.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="auditoria">Quero a condição</button><a class="more" href="../super-black-auditoria/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">100% EAD · 440h</span><h3>MBA em Qualidade e Acreditação</h3><p>Sistemas de saúde não melhoram com sorte. Melhoram com padrões.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="mba-qualidade">Quero a condição</button><a class="more" href="../super-black-mba-qualidade/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">100% EAD · 440h</span><h3>MBA em SCIRAS e Segurança do Paciente</h3><p>Quando o erro custa vidas, não existe espaço para amadorismo.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="mba-sciras">Quero a condição</button><a class="more" href="../super-black-mba-sciras/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">100% EAD · 440h</span><h3>MBA em Gestão Hospitalar</h3><p>Hospitais não entram em colapso por falta de gente. Entram por falta de liderança estratégica.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="mba-gestao-hospitalar">Quero a condição</button><a class="more" href="../super-black-mba-gestao-hospitalar/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">100% EAD · 440h</span><h3>Farmácia Clínica</h3><p>Atenção farmacêutica não é balcão. É ciência aplicada à vida de cada paciente.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="farmacia-clinica">Quero a condição</button><a class="more" href="../super-black-farmacia-clinica/">Ver o curso →</a></div></div><div class="course rv"><span class="mod">100% EAD · 440h</span><h3>Segurança do Paciente</h3><p>Segurança do paciente não nasce de boa vontade. Nasce de protocolo, indicador e acreditação.</p>
+          <div class="acts"><button class="go js-open" type="button" data-curso="seguranca-paciente">Quero a condição</button><a class="more" href="../super-black-seguranca-paciente/">Ver o curso →</a></div></div></div>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section class="sec offer" id="oferta">
+  <div class="wrap">
+    <div class="offer-box rv">
+      <span class="star4"></span>
+      <div style="position:relative;z-index:2">
+        <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Condição Super Black</span>
+        <h2>A melhor condição do ano para <span class="g">investir na sua carreira</span></h2>
+        <ul class="offer-list">
+          <li><span class="ck"><svg><use href="#ck"/></svg></span>Pós-graduações e MBAs lato sensu com certificado reconhecido pelo MEC</li>
+          <li><span class="ck"><svg><use href="#ck"/></svg></span>Cursos híbridos com vivências clínicas em Goiânia e Brasília</li>
+          <li><span class="ck"><svg><use href="#ck"/></svg></span>Cursos 100% EAD com acesso liberado logo após a matrícula</li>
+          <li><span class="ck"><svg><use href="#ck"/></svg></span>Parcelamento que não compromete o limite do cartão</li>
+          <li><span class="ck"><svg><use href="#ck"/></svg></span>Simulação da parcela enviada pelo consultor no WhatsApp</li>
         </ul>
-        <span class="go">Ver todas as EAD<i><svg><use href="#arr"/></svg></i></span>
       </div>
-      <div class="ph" aria-hidden="true"><span class="star4"></span><img src="card-ead.webp" alt="" width="800" height="528" loading="lazy"></div>
-    </a>
+      <div class="offer-side">
+        <div class="lbl">A Super Black termina em</div>
+        <div class="big">30/11</div>
+        <div class="cd"><span><b class="js-d">00</b><small>dias</small></span><span><b class="js-h">00</b><small>horas</small></span><span><b class="js-m">00</b><small>min</small></span></div>
+        <p>Deixe seus dados e receba a sua condição pelo WhatsApp.</p>
+        <button class="cta js-open" type="button"><span class="ic"><svg><use href="#arr"/></svg></span><span class="tx">Quero minha condição</span></button>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ COMERCIAL ============ -->
-<section class="sec" id="comercial" style="padding-top:0">
-  <div class="wrap">
-    <div class="talk rv">
-      <div class="l">
-        <span class="ic"><svg><use href="#wa"/></svg></span>
-        <div>
-          <h3>Ainda em dúvida? Fale com o comercial</h3>
-          <p>Um consultor de carreira ajuda você a escolher a pós e envia a condição Super Black.</p>
-        </div>
-      </div>
-      <button class="wa-btn js-open" type="button"><svg><use href="#wa"/></svg>Falar com o comercial</button>
+<!-- ============ INSCRIÇÃO ============ -->
+<section class="sec form-sec" id="inscricao">
+  <div class="wrap form-grid">
+    <div class="rv" style="position:relative">
+      <div class="sb"><img src="super-black-ith.webp" alt="Super Black ITH" width="679" height="250" loading="lazy"></div>
+      <h2>Garanta a condição <span class="g">Super Black</span></h2>
+      <p class="lead">Escolha o curso, deixe seus dados e um consultor de carreira da ITH fala com você pelo WhatsApp.</p>
+      <ul class="get">
+        <li><span class="ck"><svg><use href="#ck"/></svg></span>A condição Super Black e a simulação da parcela</li>
+        <li><span class="ck"><svg><use href="#ck"/></svg></span>Grade completa do curso escolhido</li>
+        <li><span class="ck"><svg><use href="#ck"/></svg></span>Datas de início e formato das aulas</li>
+        <li><span class="ck"><svg><use href="#ck"/></svg></span>Atendimento pelo WhatsApp com consultor</li>
+      </ul>
     </div>
+    <div class="fbox rv">
+      <form class="lead-form" data-form="1" novalidate>
+        <h3>Quero a condição Super Black</h3>
+        <p class="s">Leva menos de 1 minuto.</p>
+        <div class="fld"><label for="nome1">Nome completo</label><input id="nome1" name="nome" required minlength="3" autocomplete="name" placeholder="Seu nome"></div>
+        <div class="fld"><label for="cel1">WhatsApp com DDD</label><input id="cel1" name="celular" required inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999"></div>
+        <div class="fld"><label for="em1">E-mail</label><input id="em1" name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></div>
+        <div class="fld"><label for="cu1">Curso de interesse</label><select id="cu1" name="curso_sel" required><option value="">Selecione</option><option value="estetica">Saúde Estética Avançada</option><option value="urgencia-emergencia-uti">Urgência e Emergência + UTI</option><option value="enfermagem-obstetrica">Enfermagem Obstétrica</option><option value="uti-neonatal-pediatrica">UTI Neonatal e Pediátrica</option><option value="auditoria">Auditoria em Serviços de Saúde</option><option value="mba-qualidade">MBA em Qualidade e Acreditação</option><option value="mba-sciras">MBA em SCIRAS e Segurança do Paciente</option><option value="mba-gestao-hospitalar">MBA em Gestão Hospitalar</option><option value="farmacia-clinica">Farmácia Clínica</option><option value="seguranca-paciente">Segurança do Paciente</option></select></div><div class="fld"><label for="fo1">Sua formação</label><select id="fo1" name="formacao" required><option value="">Selecione</option><option>Enfermagem</option><option>Farmácia</option><option>Biomedicina</option><option>Fisioterapia</option><option>Medicina</option><option>Estética e Cosmética</option><option>Outra graduação na saúde</option><option>Graduação em outra área</option><option>Ainda estou na graduação</option></select></div><div class="fld fld-turma" hidden><label for="tu1">Turma</label><select id="tu1" name="turma"><option value="">Selecione</option><option>Goiânia · GO</option><option>Brasília · DF</option><option>Ainda não sei</option></select></div>
+        <p class="fld-err" hidden>Confira os campos destacados.</p>
+        <button class="submit" type="submit">Quero minha condição</button>
+        <p class="priv">Seus dados ficam com a ITH Educação. Sem spam.</p>
+      </form>
+      <div class="lead-ok" id="leadOk1" hidden>
+        <div class="okic"><svg width="30" height="30"><use href="#ck"/></svg></div>
+        <h3>Recebemos seus dados!</h3>
+        <p>Um consultor de carreira da ITH vai falar com você pelo WhatsApp com a condição Super Black e todos os detalhes do curso.</p>
+        <a class="wa-btn js-wa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Prefere falar agora? Chame no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="duvidas">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Dúvidas</span>
+      <h2>Perguntas <span class="g">frequentes</span></h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>Qual é a condição da Super Black?<i><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></i></summary><p>É a condição especial de matrícula da Black Friday ITH nos cursos desta página. O consultor envia o valor e a simulação da parcela do curso escolhido pelo WhatsApp. A condição vale para matrículas feitas até 30/11.</p></details>
+      <details><summary>Qual a diferença entre híbrido e EAD?<i><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></i></summary><p>Nos cursos híbridos a teoria é online e há encontros presenciais uma vez por mês em Goiânia ou Brasília, com vivências clínicas. Nos cursos EAD todo o conteúdo fica no portal e você estuda no seu ritmo.</p></details>
+      <details><summary>O certificado é reconhecido pelo MEC?<i><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></i></summary><p>Sim. Os certificados de pós-graduação e MBA lato sensu são digitais, emitidos pela ITH Educação (Conceito 5 no MEC), com QR Code de autenticidade e validade em todo o território nacional.</p></details>
+      <details><summary>Preciso fazer TCC?<i><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></i></summary><p>Não no formato tradicional. No lugar do TCC você estrutura um plano de negócio aplicado à sua área.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final">
+  <div class="wrap rv">
+    <div class="sb" style="width:min(380px,90%)"><img src="super-black-ith.webp" alt="Super Black ITH" width="679" height="250" loading="lazy"></div>
+    <h2>A sua especialização <span class="g">começa na Black</span></h2>
+    <p class="lead center" style="margin-inline:auto">Condição válida até 30/11.</p>
+    <button class="cta js-open" type="button"><span class="ic"><svg><use href="#arr"/></svg></span><span class="tx">Quero a condição Super Black</span></button>
   </div>
 </section>
 
@@ -371,36 +543,34 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
       <img src="logo-ith.webp" alt="ITH Educação" width="945" height="354" loading="lazy">
       <span>© <span id="yr">2026</span> ITH Educação · Nota 5 no MEC · Atendimento seg a sex, 8h às 18h</span>
     </div>
-    <p class="reg">Super Black ITH: condição especial válida para novas matrículas nas pós-graduações participantes realizadas até 30/11/2026 ou enquanto houver vagas na turma. Não cumulativa com outras ofertas. Valores, formas de pagamento e datas de início são informados pelo consultor no atendimento.</p>
+    <p class="reg">Super Black ITH: condição especial válida para novas matrículas nas pós-graduações e MBAs participantes realizadas até 30/11/2026 (nos cursos híbridos, enquanto houver vagas na turma). Não cumulativa com outras ofertas. Valores, formas de pagamento e datas de início são informados pelo consultor no atendimento.</p>
   </div>
 </footer>
 
-<!-- Pop-up de captura (Fale com o comercial) -->
-<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-label="Fale com o comercial">
+<button class="wa-float js-open" type="button" aria-label="Falar com um consultor"><svg><use href="#wa"/></svg></button>
+<div class="sticky" id="sticky"><button class="submit js-open" type="button">Quero a condição Super Black</button></div>
+
+<!-- Pop-up de captura -->
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-label="Formulário Super Black">
   <div class="fbox">
     <button class="x" type="button" aria-label="Fechar">×</button>
     <form class="lead-form" data-form="9" novalidate>
-      <h3>Fale com o comercial</h3>
-      <p class="s">Deixe seus dados e um consultor chama você no WhatsApp.</p>
-      <div class="fld"><label for="nome9">Nome completo</label><input id="nome9" name="nome" required minlength="3" autocomplete="name" placeholder="Seu nome"></div>
-      <div class="fld"><label for="cel9">WhatsApp com DDD</label><input id="cel9" name="celular" required inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999"></div>
-      <div class="fld"><label for="em9">E-mail</label><input id="em9" name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></div>
-      <div class="fld"><label for="cu9">Pós de interesse</label><select id="cu9" name="curso" required>
-        <option value="">Selecione</option>
-        <optgroup label="Híbridas (GO e DF)"><option>Estética Avançada</option><option>Urgência e Emergência + UTI</option><option>UTI Neonatal e Pediátrica</option><option>Enfermagem Obstétrica</option></optgroup>
-        <optgroup label="EAD"><option>MBA em SCIRAS e Segurança do Paciente</option><option>MBA em Gestão Hospitalar</option><option>MBA em Qualidade e Acreditação em Saúde</option><option>Auditoria em Serviços de Saúde</option><option>Segurança do Paciente e Qualidade</option><option>Farmácia Clínica e Atenção Farmacêutica</option></optgroup>
-        <option>Ainda não sei</option>
-      </select></div>
-      <p class="fld-err" hidden>Confira os campos destacados.</p>
-      <button class="submit" type="submit">Quero falar com o comercial</button>
-      <p class="priv">Seus dados ficam com a ITH Educação. Sem spam.</p>
-    </form>
-    <div class="lead-ok" id="leadOk9" hidden>
-      <div class="okic"><svg width="30" height="30"><use href="#ck"/></svg></div>
-      <h3>Recebemos seus dados!</h3>
-      <p>Um consultor de carreira da ITH vai falar com você pelo WhatsApp com a condição Super Black.</p>
-      <a class="wa-btn js-wa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Prefere falar agora? Chame no WhatsApp</a>
-    </div>
+        <h3>Quero a condição Super Black</h3>
+        <p class="s">Um consultor envia a sua condição pelo WhatsApp.</p>
+        <div class="fld"><label for="nome9">Nome completo</label><input id="nome9" name="nome" required minlength="3" autocomplete="name" placeholder="Seu nome"></div>
+        <div class="fld"><label for="cel9">WhatsApp com DDD</label><input id="cel9" name="celular" required inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999"></div>
+        <div class="fld"><label for="em9">E-mail</label><input id="em9" name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></div>
+        <div class="fld"><label for="cu9">Curso de interesse</label><select id="cu9" name="curso_sel" required><option value="">Selecione</option><option value="estetica">Saúde Estética Avançada</option><option value="urgencia-emergencia-uti">Urgência e Emergência + UTI</option><option value="enfermagem-obstetrica">Enfermagem Obstétrica</option><option value="uti-neonatal-pediatrica">UTI Neonatal e Pediátrica</option><option value="auditoria">Auditoria em Serviços de Saúde</option><option value="mba-qualidade">MBA em Qualidade e Acreditação</option><option value="mba-sciras">MBA em SCIRAS e Segurança do Paciente</option><option value="mba-gestao-hospitalar">MBA em Gestão Hospitalar</option><option value="farmacia-clinica">Farmácia Clínica</option><option value="seguranca-paciente">Segurança do Paciente</option></select></div><div class="fld"><label for="fo9">Sua formação</label><select id="fo9" name="formacao" required><option value="">Selecione</option><option>Enfermagem</option><option>Farmácia</option><option>Biomedicina</option><option>Fisioterapia</option><option>Medicina</option><option>Estética e Cosmética</option><option>Outra graduação na saúde</option><option>Graduação em outra área</option><option>Ainda estou na graduação</option></select></div><div class="fld fld-turma" hidden><label for="tu9">Turma</label><select id="tu9" name="turma"><option value="">Selecione</option><option>Goiânia · GO</option><option>Brasília · DF</option><option>Ainda não sei</option></select></div>
+        <p class="fld-err" hidden>Confira os campos destacados.</p>
+        <button class="submit" type="submit">Quero minha condição</button>
+        <p class="priv">Seus dados ficam com a ITH Educação. Sem spam.</p>
+      </form>
+      <div class="lead-ok" id="leadOk9" hidden>
+        <div class="okic"><svg width="30" height="30"><use href="#ck"/></svg></div>
+        <h3>Recebemos seus dados!</h3>
+        <p>Um consultor de carreira da ITH vai falar com você pelo WhatsApp com a condição Super Black e todos os detalhes do curso.</p>
+        <a class="wa-btn js-wa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Prefere falar agora? Chame no WhatsApp</a>
+      </div>
   </div>
 </div>
 
@@ -427,24 +597,25 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
 
-  // Links dos cursos levam as UTMs da campanha junto
+  // Barra fixa no celular depois do hero
   (function(){
-    var qs=window.location.search;
-    document.querySelectorAll('.js-link').forEach(function(a){
-      if(qs) a.href=a.getAttribute('href')+qs;
-      a.addEventListener('click',function(){ try{ gtag('event','select_content',{content_type:'curso',item_id:a.getAttribute('data-curso')}); }catch(e){} });
-    });
+    var st=document.getElementById('sticky'), hero=document.getElementById('topo'), insc=document.getElementById('inscricao');
+    var vis={hero:true,insc:false};
+    function upd(){ st.classList.toggle('on', !vis.hero && !vis.insc); }
+    new IntersectionObserver(function(es){ es.forEach(function(e){ vis.hero=e.isIntersecting; }); upd(); }).observe(hero);
+    new IntersectionObserver(function(es){ es.forEach(function(e){ vis.insc=e.isIntersecting; }); upd(); }).observe(insc);
   })();
 
-  // ===== Captura de lead (Fale com o comercial) =====
-  var LEAD_WEBHOOK = ''; // cole aqui a URL do webhook (Make → Eduq) quando for configurar
-  var WA_BASE = 'https://wa.me/5562982445664?text=';
-  function waMsg(curso){ return 'Olá! Quero a condição Super Black' + (curso && curso!=='Ainda não sei' ? ' da pós em ' + curso + '.' : ' e ajuda para escolher a minha pós.'); }
-  document.querySelectorAll('.js-wa').forEach(function(a){ a.href=WA_BASE+encodeURIComponent(waMsg('')); a.addEventListener('click',function(){ try{ gtag('event','whatsapp_click',{}); }catch(e){} try{ fbq('track','Contact'); }catch(e){} }); });
+  // ===== Captura de lead =====
+  var LEAD_WEBHOOK = ''; // Make → Eduq/planilha (vazio = não envia)
+  var COURSES={"estetica": {"curso": "Pós em Saúde Estética Avançada - Híbrido", "hook": "", "tipo": "hib", "nome": "Saúde Estética Avançada"}, "urgencia-emergencia-uti": {"curso": "Pós-Graduação em Urgência e Emergência + UTI - Híbrido", "hook": "https://hook.us1.make.com/x9fckmioiupn2b17iwde65hgy7nafqn7", "tipo": "hib", "nome": "Urgência e Emergência + UTI"}, "enfermagem-obstetrica": {"curso": "Pós-Graduação em Enfermagem Obstétrica - Híbrido", "hook": "https://hook.us1.make.com/sig9cq4yuvmk1zuwrg4khvqno07gtgw5", "tipo": "hib", "nome": "Enfermagem Obstétrica"}, "uti-neonatal-pediatrica": {"curso": "Pós-Graduação em UTI Neonatal e Pediátrica - Híbrido", "hook": "", "tipo": "hib", "nome": "UTI Neonatal e Pediátrica"}, "auditoria": {"curso": "Pós-Graduação em Auditoria em Serviços de Saúde - EAD", "hook": "https://hook.us1.make.com/tdy8fmpm4y828imcd65q7ghh9sr6e56u", "tipo": "ead", "nome": "Auditoria em Serviços de Saúde"}, "mba-qualidade": {"curso": "MBA Master em Qualidade e Acreditação em Saúde - EAD", "hook": "https://hook.us1.make.com/tdy8fmpm4y828imcd65q7ghh9sr6e56u", "tipo": "ead", "nome": "MBA em Qualidade e Acreditação"}, "mba-sciras": {"curso": "MBA em SCIRAS e Segurança do Paciente - EAD", "hook": "https://hook.us1.make.com/tdy8fmpm4y828imcd65q7ghh9sr6e56u", "tipo": "ead", "nome": "MBA em SCIRAS e Segurança do Paciente"}, "mba-gestao-hospitalar": {"curso": "MBA em Gestão Hospitalar - EAD", "hook": "https://hook.us1.make.com/tdy8fmpm4y828imcd65q7ghh9sr6e56u", "tipo": "ead", "nome": "MBA em Gestão Hospitalar"}, "farmacia-clinica": {"curso": "Pós-Graduação em Farmácia Clínica e Atenção Farmacêutica com Ênfase em Prescrição - EAD", "hook": "https://hook.us1.make.com/tdy8fmpm4y828imcd65q7ghh9sr6e56u", "tipo": "ead", "nome": "Farmácia Clínica"}, "seguranca-paciente": {"curso": "Pós-Graduação em Segurança do Paciente e Qualidade em Serviços de Saúde com Ênfase em Acreditação - EAD", "hook": "https://hook.us1.make.com/tdy8fmpm4y828imcd65q7ghh9sr6e56u", "tipo": "ead", "nome": "Segurança do Paciente"}};
+  var WA_URL = 'https://wa.me/5562982445664?text=' + encodeURIComponent('Olá! Quero a condição Super Black da pós-graduação na ITH.');
+  document.querySelectorAll('.js-wa').forEach(function(a){ a.href=WA_URL; a.addEventListener('click',function(){ try{ gtag('event','whatsapp_click',{}); }catch(e){} try{ fbq('track','Contact'); }catch(e){} }); });
   (function(){
     var params=new URLSearchParams(window.location.search);
     function utm(k){ return params.get(k)||''; }
-    var FIELDS=['nome','celular','email','curso'];
+    var FIELDS=['nome','celular','email','formacao'];
+    var KEY='ith_lead_super_black_hub';
     document.querySelectorAll('.lead-form').forEach(function(form){
       var idx=form.getAttribute('data-form'), ok=document.getElementById('leadOk'+idx), err=form.querySelector('.fld-err'), btn=form.querySelector('button[type=submit]');
       var tel=form.querySelector('[name=celular]');
@@ -454,7 +625,7 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
         else if(v.length>2) v='('+v.slice(0,2)+') '+v.slice(2);
         tel.value=v;
       });
-      try{ var saved=JSON.parse(localStorage.getItem('ith_lead_super_black')||'null'); if(saved){ FIELDS.forEach(function(k){ if(saved[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
+      try{ var saved=JSON.parse(localStorage.getItem(KEY)||'null'); if(saved){ FIELDS.forEach(function(k){ if(saved[k]&&form.elements[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
       form.addEventListener('submit', function(e){
         e.preventDefault();
         var valid=true;
@@ -463,26 +634,37 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
           if(k==='celular') v = el.value.replace(/\D/g,'').length>=10;
           wrap.classList.toggle('bad',!v); if(!v) valid=false;
         });
+        if(!form.elements.curso_sel.value){ form.elements.curso_sel.closest('.fld').classList.add('bad'); valid=false; } else form.elements.curso_sel.closest('.fld').classList.remove('bad'); var tsel=COURSES[form.elements.curso_sel.value]; if(tsel&&tsel.tipo==='hib'){ var t=form.elements.turma, tv=!!t.value; t.closest('.fld').classList.toggle('bad',!tv); if(!tv) valid=false; }
         err.hidden=valid; if(!valid) return;
-        var data={ nome:form.elements.nome.value.trim(), celular:form.elements.celular.value.trim(), email:form.elements.email.value.trim(), curso:form.elements.curso.value,
-          pagina:'LP Super Black · Escolha a sua pós', campanha:'Black Friday 2026', origem:window.location.href.split('?')[0],
+        var sel=COURSES[form.elements.curso_sel.value]||{}; var curso=sel.curso||''; var hook=sel.hook||''; var nomeCurso=sel.nome||'';
+        var data={ nome:form.elements.nome.value.trim(), celular:form.elements.celular.value.trim(), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value, turma:(form.elements.turma?form.elements.turma.value:''),
+          curso:curso, pagina:'LP Super Black - Hub', campanha:'Black Friday 2026', origem:window.location.href.split('?')[0],
           utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'), fbclid:utm('fbclid'),
           dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop', data:new Date().toISOString() };
+        // campos no formato da planilha de leads EAD: Nome, Contato, E-mail, Data, UTM, Curso, Formação
+        data.contato=data.celular; data.data_iso=data.data;
+        data.data=new Date().toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).replace(',','');
         btn.disabled=true;
-        try{ localStorage.setItem('ith_lead_super_black', JSON.stringify(data)); }catch(e){}
+        try{ localStorage.setItem(KEY, JSON.stringify({nome:data.nome,celular:data.celular,email:data.email,formacao:data.formacao,turma:data.turma})); }catch(e){}
         try{ gtag('event','generate_lead',{method:'form',form_id:idx}); }catch(e){}
-        try{ if(window.fbq) fbq('track','Lead',{content_name:data.curso}); }catch(e){}
-        ok.querySelectorAll('.js-wa').forEach(function(a){ a.href=WA_BASE+encodeURIComponent(waMsg(data.curso)); });
-        var done=function(){ form.hidden=true; ok.hidden=false; };
+        if(sel.tipo==='ead'){ try{ gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); }catch(e){} }
+        try{ if(window.fbq) fbq('track','Lead',{content_name:curso}); }catch(e){}
+        var done=function(){ form.hidden=true; ok.hidden=false; if(idx!=='9') ok.scrollIntoView({behavior:'smooth',block:'center'}); };
         try{
-          if(LEAD_WEBHOOK.indexOf('http')===0){ fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(done,done); }
+          if(hook.indexOf('http')===0){ fetch(hook,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(done,done); }
           else { done(); }
         }catch(e){ done(); }
       });
     });
   })();
 
-  // ===== Pop-up: o botão do comercial sempre passa pelo formulário =====
+  // Hub: turma só aparece para curso híbrido; card do curso pré-seleciona o formulário
+  document.querySelectorAll('select[name=curso_sel]').forEach(function(s){
+    s.addEventListener('change',function(){ var c=COURSES[s.value], f=s.form.querySelector('.fld-turma'); f.hidden=!(c&&c.tipo==='hib'); if(f.hidden) s.form.elements.turma.value=''; });
+  });
+  document.querySelectorAll('[data-curso]').forEach(function(b){ b.addEventListener('click',function(){ var s=document.querySelector('#leadModal select[name=curso_sel]'); s.value=b.getAttribute('data-curso'); s.dispatchEvent(new Event('change')); }); });
+
+  // ===== Pop-up: consultor, WhatsApp e CTAs sempre passam pelo formulário =====
   (function(){
     var m=document.getElementById('leadModal');
     function open(){ m.classList.add('open'); document.body.style.overflow='hidden'; setTimeout(function(){ var f=m.querySelector('form:not([hidden]) input'); if(f) f.focus({preventScroll:true}); },350); try{ gtag('event','cta_click',{}); }catch(e){} }
