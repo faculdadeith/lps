@@ -185,6 +185,10 @@ h2 .g{font-style:italic;background:var(--grad-blue);-webkit-background-clip:text
 .mods{list-style:none;counter-reset:m}
 .mods li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px}
 .mods li b{font-family:Archivo;font-style:italic;font-weight:800;color:var(--sky);min-width:28px}
+.mods li span{flex:1}
+.mods li small{flex:0 0 auto;align-self:center;padding:3px 9px;border-radius:999px;border:1px solid rgba(0,166,255,.45);background:rgba(0,98,255,.14);color:var(--ice);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.mods-note{max-width:820px;margin:22px auto 0;text-align:center;font-size:14.5px;color:var(--muted)}
+.mods-note b{color:#fff}
 
 /* formato */
 .fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
@@ -378,7 +382,7 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
         <img src="super-black-ith.webp" alt="Super Black ITH" width="679" height="250">
       </div>
       <h1 class="fade-in d3">O momento de investir na sua <em>pós em Estética <span class="c">é</span> agora!</em></h1>
-      <p class="hero-sub fade-in d4">Facial, corporal e capilar com prática em pacientes modelo: injetáveis, bioestimuladores, laser e tecnologias de alta performance. Na Super Black, a matrícula na turma de Goiânia ou Brasília sai com a melhor condição do ano.</p>
+      <p class="hero-sub fade-in d4">Facial, corporal e capilar com prática em pacientes modelo: bioestimuladores, toxina, preenchimento e tecnologias de alta performance. Na Super Black, a matrícula na turma de Goiânia ou Brasília sai com a melhor condição do ano.</p>
       <div class="fade-in d5">
         <button class="cta js-open" type="button"><span class="ic"><svg><use href="#arr"/></svg></span><span class="tx">Quero a condição Super Black</span></button>
         <div class="cta-micro">
@@ -400,7 +404,7 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   <div class="wrap">
     <div class="grid rv">
       <div class="stat"><b>600h</b><span>Carga horária</span></div>
-      <div class="stat"><b>12 a 14</b><span>Meses de formação</span></div>
+      <div class="stat"><b>14</b><span>Meses de formação</span></div>
       <div class="stat"><b>+30</b><span>Técnicas na prática</span></div>
       <div class="stat"><b>Nota 5</b><span>no MEC</span></div>
       <div class="stat"><b>+12 mil</b><span>Alunos formados</span></div>
@@ -454,36 +458,38 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
 <section class="sec" id="conteudo">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Conteúdo · 600 horas</span>
+      <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Conteúdo · 600 horas · 14 meses</span>
       <h2>O que você vai dominar, <span class="g">módulo a módulo</span></h2>
-      <p class="lead">Da anamnese aos injetáveis avançados e às tecnologias de alta performance, com marketing e respaldo jurídico para atender com autoridade.</p>
+      <p class="lead">Seis módulos com aula ao vivo e encontro presencial, quase todos com vivência clínica em pacientes modelo, e a base teórica no EAD: farmacologia, primeiros socorros, marketing e direito.</p>
     </div>
     <div class="axes">
       <div class="axis rv">
-        <span class="tag">Eixo 1</span>
-        <h3>Estética facial, injetáveis e harmonização</h3>
+        <span class="tag">Ao vivo + presencial</span>
+        <h3>Prática com vivência clínica</h3>
         <ol class="mods">
-          <li><b>01</b>Semiologia e Avaliação Facial, Corporal e Capilar</li>
-          <li><b>02</b>Harmonização Corporal e Facial: Fios PDO e Bioestimuladores</li>
-          <li><b>03</b>Harmonização Avançada: Toxina Botulínica e Preenchimento</li>
-          <li><b>04</b>Microagulhamento, Peeling, Microdermoabrasão e PEIM</li>
-          <li><b>05</b>Intradermoterapia Estética e Tricologia</li>
-          <li><b>06</b>Ozonioterapia Estética e Terapêutica</li>
+          <li><b>01</b><span>Procedimentos intradérmicos: bioestimuladores de colágeno facial e corporal e fios absorvíveis</span><small>VC</small></li>
+          <li><b>02</b><span>Microagulhamento, Peeling Químico, Microdermoabrasão e PEIM</span><small>VC</small></li>
+          <li><b>03</b><span>Intradermoterapia Estética e Tricologia</span><small>VC</small></li>
+          <li><b>04</b><span>Habilitação em Tecnologias de Alta Performance</span><small>VC</small></li>
+          <li><b>05</b><span>Procedimentos intradérmicos: Toxina Botulínica e Preenchimento</span><small>VC</small></li>
+          <li><b>06</b><span>Avaliação e Regeneração da Pele</span></li>
         </ol>
       </div>
       <div class="axis rv">
-        <span class="tag">Eixo 2</span>
-        <h3>Tecnologias, corpo e carreira</h3>
+        <span class="tag">EAD</span>
+        <h3>Base teórica, segurança e carreira</h3>
         <ol class="mods">
-          <li><b>07</b>Tecnologias de Alta Performance</li>
-          <li><b>08</b>Ultraformer MPT: Lifting Facial e Remodelação Corporal</li>
-          <li><b>09</b>Laserterapia</li>
-          <li><b>10</b>Terapias Manuais e Tapping Estético</li>
-          <li><b>11</b>Marketing Estratégico e Comunicação</li>
-          <li><b>12</b>Direito Aplicado à Estética + Saúde ITH 4.0</li>
+          <li><b>07</b><span>Primeiros Socorros na Estética</span></li>
+          <li><b>08</b><span>Farmacologia, Nutracêuticos e Cosmetologia Aplicada</span></li>
+          <li><b>09</b><span>Tratamentos Avançados com Ultraformer MPT: Lifting Facial e Remodelação Corporal</span></li>
+          <li><b>10</b><span>Marketing Estratégico e Comunicação</span></li>
+          <li><b>11</b><span>Direito Aplicado à Estética</span></li>
+          <li><b>12</b><span>Comunicação e Oratória</span><small>Complementar</small></li>
+          <li><b>13</b><span>Saúde ITH 4.0: Prática e Negócio</span><small>Complementar</small></li>
         </ol>
       </div>
     </div>
+    <p class="mods-note rv"><b>VC</b> = vivência clínica em pacientes modelo. <b>Bônus:</b> formação em Cadáver Fresh Frozen no Anatomy Lab ITC, em Brasília, com certificado (participação opcional).</p>
     <div class="center rv" style="margin-top:40px">
       <button class="cta js-open" type="button"><span class="ic"><svg><use href="#arr"/></svg></span><span class="tx">Receber a grade completa</span></button>
     </div>
