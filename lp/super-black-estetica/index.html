@@ -340,6 +340,17 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv,.fade-in{opacity:1;transform:none}
 }
+/* tirinhas Black November */
+.tapes{position:relative;z-index:4;height:150px;margin:18px 0 -40px;overflow:hidden;pointer-events:none}
+.tape{position:absolute;left:-5%;width:110%;top:50%;padding:13px 0;overflow:hidden;white-space:nowrap}
+.tape.t1{z-index:2;background:linear-gradient(90deg,#0040d8,#0066ff 50%,#00a6ff);transform:translateY(-50%) rotate(-3deg);box-shadow:0 12px 40px rgba(0,100,255,.45)}
+.tape.t2{z-index:1;background:#0b0c10;border-block:1px solid rgba(255,255,255,.14);transform:translateY(-50%) rotate(3deg)}
+.trk{display:inline-flex;align-items:center;gap:26px;padding-right:26px;animation:tape 40s linear infinite;font:italic 900 24px/1 Archivo,Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+.trk svg{width:18px;height:18px;flex:0 0 auto;color:#fff}
+.t2 .trk{animation-direction:reverse;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.75)}
+.t2 .trk svg{color:var(--sky)}
+@keyframes tape{to{transform:translateX(-50%)}}
+@media (max-width:640px){.tapes{height:130px;margin:10px 0 -30px}.tape{padding:10px 0}.tape.t1{transform:translateY(-50%) rotate(-7deg)}.tape.t2{transform:translateY(-50%) rotate(6deg)}.trk{font-size:18px;gap:18px;padding-right:18px}.trk svg{width:14px;height:14px}}
 /* barra fixa no topo ao rolar */
 body.bar-on{padding-top:var(--tbh,37px)}
 body.bar-on .topbar{position:fixed;top:0;left:0;right:0}
@@ -412,6 +423,12 @@ body.bar-on header.nav .logo img{height:38px}
       <div class="stat"><b>+12 mil</b><span>Alunos formados</span></div>
     </div>
   </div>
+</div>
+
+<!-- tirinhas Black November -->
+<div class="tapes" aria-hidden="true">
+  <div class="tape t2"><div class="trk"><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg></div></div>
+  <div class="tape t1"><div class="trk"><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg><span>Black November ITH</span><svg><use href="#tw"/></svg></div></div>
 </div>
 
 <!-- ============ POR QUE AGORA ============ -->
