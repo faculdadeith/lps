@@ -15,7 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="aluna-hd.webp">
+<link rel="preload" as="image" href="bg-hero.webp" media="(min-width:900px)">
+<link rel="preload" as="image" href="bg-hero-mobile.webp" media="(max-width:899px)">
 
 <!-- ===== GOOGLE ADS ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16842015422"></script>
@@ -106,8 +107,8 @@ header.nav .logo img{height:52px;width:auto}
 .cta-micro svg{width:15px;height:15px;color:var(--ice)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;min-height:min(860px,100svh);padding:130px 0 70px;background:radial-gradient(42% 58% at 74% 46%,rgba(0,98,255,.42),transparent 70%),radial-gradient(30% 40% at 74% 30%,rgba(0,190,255,.16),transparent 70%),radial-gradient(45% 45% at 8% 100%,rgba(0,70,220,.14),transparent 70%),#000;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 120px);-webkit-mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);pointer-events:none}
+.hero{position:relative;min-height:min(860px,100svh);padding:130px 0 70px;background:#000 url(bg-hero.webp) right center/cover no-repeat;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.82) 32%,rgba(0,0,0,.25) 52%,transparent 66%);pointer-events:none;z-index:1}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--ink));z-index:2;pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:center;gap:20px;min-height:600px}
 .hero-txt{position:relative;z-index:4;padding-top:10px}
@@ -125,9 +126,6 @@ h1 em{display:block;font-style:italic;font-weight:800;color:#fff;letter-spacing:
 h1 em .c{color:var(--sky);font-weight:300;font-style:normal}
 .hero-sub{margin:16px 0 26px;max-width:520px;color:#d5def5;font-size:17px;text-shadow:0 1px 12px rgba(0,0,0,.35)}
 .hero-img{position:relative;align-self:stretch;min-height:560px;z-index:1}
-.duo{position:absolute;inset:-40px -60px -70px 0}
-.duo img{position:absolute;bottom:0;height:auto;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 99%);mask-image:linear-gradient(180deg,#000 72%,transparent 99%)}
-.duo .woman{left:50%;transform:translateX(-46%);width:80%;max-width:540px;z-index:2}
 .hero .vert.l{left:22px;top:150px}
 .hero .vert.r{right:22px;bottom:110px}
 .fade-in{opacity:0;transform:translateY(18px);animation:fin .8s cubic-bezier(.2,.7,.2,1) forwards}
@@ -301,11 +299,10 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   .form-grid{grid-template-columns:1fr}
 }
 @media (max-width:899px){
-  .hero{background:radial-gradient(80% 45% at 50% 26%,rgba(0,98,255,.42),transparent 70%),#000;padding:96px 0 60px;min-height:0}
+  .hero{background:#000 url(bg-hero-mobile.webp) center top/100% auto no-repeat;padding:96px 0 60px;min-height:0}
+  .hero::before{background:linear-gradient(180deg,rgba(0,0,0,.35) 0,transparent 30vw,transparent 70vw,#000 112vw)}
   .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0;gap:0}
   .hero-img{order:-1;min-height:0;height:min(112vw,560px);margin:0 -16px}
-  .duo{inset:0}
-  .duo .woman{width:68%;max-width:340px}
   .hero-txt{margin-top:-90px;text-align:center}
   .sb{margin:0 auto 10px}
   .kicker{justify-content:center}
@@ -393,9 +390,6 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
       </div>
     </div>
     <div class="hero-img" aria-hidden="true">
-      <div class="duo">
-        <img class="woman" src="aluna-hd.webp" alt="" width="1277" height="1882" fetchpriority="high">
-      </div>
     </div>
   </div>
 </section>
