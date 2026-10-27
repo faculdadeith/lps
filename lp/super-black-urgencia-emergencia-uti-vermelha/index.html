@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="bg-hero.webp" media="(min-width:900px)">
-<link rel="preload" as="image" href="bg-hero-mobile.webp" media="(max-width:899px)">
+<link rel="preload" as="image" href="bg-hero-samu.webp" media="(min-width:900px)">
+<link rel="preload" as="image" href="bg-hero-samu-mobile.webp" media="(max-width:899px)">
 
 <!-- ===== GOOGLE ADS ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16842015422"></script>
@@ -108,7 +108,7 @@ header.nav .logo img{height:52px;width:auto}
 .cta-micro svg{width:15px;height:15px;color:var(--ice)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;min-height:min(860px,100svh);padding:130px 0 70px;background:#000 url(bg-hero.webp) right top/auto 100% no-repeat;overflow:hidden}
+.hero{position:relative;min-height:min(860px,100svh);padding:130px 0 70px;background:#000 url(bg-hero-samu.webp) right top/auto 100% no-repeat;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.82) 32%,rgba(0,0,0,.25) 52%,transparent 66%);pointer-events:none;z-index:1}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--ink));z-index:2;pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:center;gap:20px;min-height:600px}
@@ -296,7 +296,7 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   .form-grid{grid-template-columns:1fr}
 }
 @media (max-width:899px){
-  .hero{background:#000 url(bg-hero-mobile.webp) center top/100% auto no-repeat;padding:96px 0 60px;min-height:0}
+  .hero{background:#000 url(bg-hero-samu-mobile.webp) center top/100% auto no-repeat;padding:96px 0 60px;min-height:0}
   .hero::before{background:linear-gradient(180deg,rgba(0,0,0,.35) 0,transparent 30vw,transparent 92vw,#000 118vw)}
   .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0;gap:0}
   .hero-img{order:-1;min-height:0;height:min(112vw,560px);margin:0 -16px}
