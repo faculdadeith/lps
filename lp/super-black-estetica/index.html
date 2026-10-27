@@ -706,7 +706,7 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   })();
 
   // ===== Captura de lead =====
-  var LEAD_WEBHOOK = ''; // cole aqui a URL do webhook (Make → Eduq) quando for configurar
+  var LEAD_WEBHOOK = 'https://hook.us1.make.com/2odk5dnns4j9oi5rj87lex76wm3vafgy'; // cole aqui a URL do webhook (Make → Eduq) quando for configurar
   var WA_URL = 'https://wa.me/5562982445664?text=' + encodeURIComponent('Olá! Quero a condição Super Black da Pós em Saúde Estética Avançada.');
   document.querySelectorAll('.js-wa').forEach(function(a){ a.href=WA_URL; a.addEventListener('click',function(){ try{ gtag('event','whatsapp_click',{}); }catch(e){} try{ fbq('track','Contact'); }catch(e){} }); });
   (function(){
