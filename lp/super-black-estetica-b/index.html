@@ -340,6 +340,14 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv,.fade-in{opacity:1;transform:none}
 }
+/* barra fixa no topo ao rolar */
+body.bar-on{padding-top:var(--tbh,37px)}
+body.bar-on .topbar{position:fixed;top:0;left:0;right:0}
+body.bar-on header.nav{position:fixed;top:var(--tbh,37px);background:rgba(0,0,0,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);animation:barIn .3s ease-out}
+body.bar-on header.nav .wrap{padding:10px 0}
+body.bar-on header.nav .logo img{height:38px}
+@keyframes barIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+@media (max-width:899px){body.bar-on header.nav .wrap{padding:8px 0}body.bar-on header.nav .logo img{height:30px}}
 </style>
 </head>
 <body>
@@ -748,6 +756,12 @@ footer .reg{font-size:12px;line-height:1.6;opacity:.85}
     m.addEventListener('click', function(e){ if(e.target===m) close(); });
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
   })();
+</script>
+<script>
+(function(){var tb=document.getElementById('topbar')||document.querySelector('.topbar'),nav=document.querySelector('header.nav');if(!tb||!nav)return;
+function h(){document.documentElement.style.setProperty('--tbh',tb.offsetHeight+'px')}
+function f(){h();document.body.classList.toggle('bar-on',window.scrollY>tb.offsetHeight+nav.offsetHeight)}
+window.addEventListener('scroll',f,{passive:true});window.addEventListener('resize',f);f()})();
 </script>
 </body>
 </html>
