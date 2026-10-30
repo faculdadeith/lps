@@ -159,6 +159,15 @@ h2 .g{font-style:italic;background:var(--grad-blue);-webkit-background-clip:text
 
 /* por que agora */
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+/* vídeo Super Black na seção "Por que agora" */
+.vid{position:relative;max-width:960px;margin:40px auto 0;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 30px 80px -30px rgba(0,87,255,.55)}
+.vid video{display:block;width:100%;height:100%;object-fit:cover}
+.vid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:0;background:linear-gradient(180deg,rgba(3,11,46,0) 40%,rgba(3,11,46,.55));cursor:pointer}
+.vid .play span{width:88px;height:88px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(0,87,255,.25),0 0 50px rgba(0,166,255,.6);transition:transform .2s}
+.vid .play:hover span{transform:scale(1.08)}
+.vid .play svg{width:30px;height:30px;margin-left:5px;fill:#fff}
+.vid.on .play{display:none}
+@media (max-width:640px){.vid{margin-top:28px}.vid .play span{width:68px;height:68px}.vid .play svg{width:24px;height:24px}}
 .card{position:relative;padding:30px 26px;border-radius:var(--r);border:1px solid var(--line);background:var(--card);overflow:hidden}
 .card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(160deg,rgba(0,150,255,.6),transparent 40%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .card .n{font-family:Archivo;font-style:italic;font-weight:900;font-size:15px;color:var(--ice);letter-spacing:.06em}
@@ -444,6 +453,10 @@ body.bar-on header.nav .logo img{height:38px}
       <span class="eyebrow"><span class="spark"><svg><use href="#tw"/></svg></span>Por que agora</span>
       <h2>A Black é a sua chance de entrar na estética avançada <span class="g">pagando menos</span></h2>
       <p class="lead">Quem já atua na estética sabe: o paciente premium procura quem domina injetáveis e tecnologias. A Super Black encurta o caminho até lá.</p>
+    </div>
+    <div class="vid rv" id="vid-sb">
+      <video src="video-super-black.mp4" poster="video-super-black-capa.jpg" preload="none" playsinline></video>
+      <button class="play" type="button" aria-label="Assistir ao vídeo da Super Black"><span><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></span></button>
     </div>
     <div class="why" style="text-align:left">
       <div class="card rv"><span class="n">01</span><h3>Condição com data para acabar</h3><p>A Super Black vale só para matrículas até 30/11. Depois disso, a matrícula volta à tabela normal.</p></div>
@@ -785,6 +798,10 @@ body.bar-on header.nav .logo img{height:38px}
 function h(){document.documentElement.style.setProperty('--tbh',tb.offsetHeight+'px')}
 function f(){h();document.body.classList.toggle('bar-on',window.scrollY>tb.offsetHeight+nav.offsetHeight)}
 window.addEventListener('scroll',f,{passive:true});window.addEventListener('resize',f);f()})();
+</script>
+<script>
+(function(){var b=document.getElementById('vid-sb');if(!b)return;var v=b.querySelector('video');
+b.querySelector('.play').addEventListener('click',function(){b.classList.add('on');v.controls=true;v.play();});})();
 </script>
 </body>
 </html>
