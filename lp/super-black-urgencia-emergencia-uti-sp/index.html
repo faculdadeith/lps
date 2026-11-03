@@ -690,6 +690,7 @@ body.bar-on header.nav .logo img{height:38px}
         btn.disabled=true;
         try{ localStorage.setItem(KEY, JSON.stringify({nome:data.nome,celular:data.celular,email:data.email,formacao:data.formacao,turma:data.turma})); }catch(e){}
         try{ gtag('event','generate_lead',{method:'form',form_id:idx}); }catch(e){}
+        if(hook.indexOf('http')===0){ try{ gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); }catch(e){} }
         
         try{ if(window.fbq) fbq('track','Lead',{content_name:curso}); }catch(e){}
         var done=function(){ form.hidden=true; ok.hidden=false; if(idx!=='9') ok.scrollIntoView({behavior:'smooth',block:'center'}); };
