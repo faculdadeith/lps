@@ -2892,8 +2892,19 @@
 
                 // Máscara de telefone (BR)
                 const tel = leadForm.telefone;
-                tel.addEventListener('input', () => {
-                    let v = tel.value.replace(/\D/g, '').slice(0, 11);
+                function normalizarCelular(valor,digitando){
+                  var v=String(valor||'').replace(/\D/g,'');
+                  if(v.length>11&&v.indexOf('55')===0) v=v.slice(2); // tira o +55
+                  if(v.length>11&&v.charAt(0)==='0') v=v.slice(1); // tira o 0 de discagem
+                  if(!digitando&&v.length===10&&/[6-9]/.test(v.charAt(2))) v=v.slice(0,2)+'9'+v.slice(2); // celular sem o 9; só depois de terminar de digitar
+                  return v.slice(0,11);
+                }
+                function celularValido(valor){
+                  var c=normalizarCelular(valor);
+                  return (c.length===11||c.length===10)&&!/^[01]/.test(c);
+                }
+                var aplicarCelular=function(e){
+                    var v=normalizarCelular(tel.value,e.type==='input');
                     if (v.length > 10)
                         v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
                     else if (v.length > 6)
@@ -2903,8 +2914,8 @@
                     else if (v.length > 0)
                         v = v.replace(/(\d{0,2})/, '($1');
                     tel.value = v;
-                }
-                );
+                };
+                ['input','change','blur'].forEach(function(ev){ tel.addEventListener(ev,aplicarCelular); });
 
                 leadForm.addEventListener('input', e => e.target.classList.remove('invalid'));
 
@@ -2914,7 +2925,7 @@
                     const emailOk = v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
                     ['nome', 'telefone', 'email', 'formacao', 'regiao'].forEach(n => {
                         const f = leadForm[n];
-                        const bad = !f.value.trim() || (n === 'email' && !emailOk(f.value)) || (n === 'telefone' && f.value.replace(/\D/g, '').length < 10);
+                        const bad = !f.value.trim() || (n === 'email' && !emailOk(f.value)) || (n === 'telefone' && !celularValido(f.value));
                         f.classList.toggle('invalid', bad);
                         if (bad)
                             ok = false;
@@ -2928,7 +2939,7 @@
                     const utm = new URLSearchParams(location.search);
                     const data = {
                         nome: leadForm.nome.value.trim(),
-                        celular: leadForm.telefone.value.trim(),
+                        celular:normalizarCelular(leadForm.telefone.value),
                         email: leadForm.email.value.trim(),
                         formacao: leadForm.formacao.value,
                         regiao: leadForm.regiao.value,

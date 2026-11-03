@@ -759,24 +759,37 @@
     document.querySelectorAll('.js-wform').forEach(function(form){
       var err=form.querySelector('.fld-err'), btn=form.querySelector('button[type=submit]');
       var tel=form.querySelector('[name=celular]');
-      tel.addEventListener('input', function(){
-        var v=tel.value.replace(/\D/g,'').slice(0,11);
+      function normalizarCelular(valor,digitando){
+        var v=String(valor||'').replace(/\D/g,'');
+        if(v.length>11&&v.indexOf('55')===0) v=v.slice(2); // tira o +55
+        if(v.length>11&&v.charAt(0)==='0') v=v.slice(1); // tira o 0 de discagem
+        if(!digitando&&v.length===10&&/[6-9]/.test(v.charAt(2))) v=v.slice(0,2)+'9'+v.slice(2); // celular sem o 9; só depois de terminar de digitar
+        return v.slice(0,11);
+      }
+      function celularValido(valor){
+        var c=normalizarCelular(valor);
+        return (c.length===11||c.length===10)&&!/^[01]/.test(c);
+      }
+      var aplicarCelular=function(e){
+        var v=normalizarCelular(tel.value,e.type==='input');
         if(v.length>6) v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
         else if(v.length>2) v='('+v.slice(0,2)+') '+v.slice(2);
         tel.value=v;
-      });
+      };
+      ['input','change','blur'].forEach(function(ev){ tel.addEventListener(ev,aplicarCelular); });
       try{ var saved=JSON.parse(localStorage.getItem('ith_lead_webinar')||'null'); if(saved){ ['nome','celular','email','formacao'].forEach(function(k){ if(saved[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
+      if(tel.value) aplicarCelular({type:'change'});
       form.addEventListener('submit', function(e){
         e.preventDefault();
         var ok=true;
         ['nome','celular','email','formacao'].forEach(function(k){
           var el=form.elements[k], wrap=el.closest('.fld'), valid=el.checkValidity();
-          if(k==='celular') valid = el.value.replace(/\D/g,'').length>=10;
+          if(k==='celular') valid = celularValido(el.value);
           wrap.classList.toggle('bad',!valid); if(!valid) ok=false;
         });
         err.hidden=ok; if(!ok) return;
         var data={
-          nome:form.elements.nome.value.trim(), celular:form.elements.celular.value.trim(), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value,
+          nome:form.elements.nome.value.trim(), celular:normalizarCelular(form.elements.celular.value), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value,
           curso:'Webinário: '+WEBINAR.titulo, webinario:WEBINAR.titulo, data_webinario:DATA_WEBINAR||'A definir',
           origem:window.location.href.split('?')[0], pagina:'LP Webinário SCIRAS',
           utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'), fbclid:utm('fbclid'),
