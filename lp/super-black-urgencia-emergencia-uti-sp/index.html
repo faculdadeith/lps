@@ -688,7 +688,7 @@ body.bar-on header.nav .logo img{height:38px}
         FIELDS.forEach(function(k){
           var el=form.elements[k], wrap=el.closest('.fld'), v=el.checkValidity();
           if(k==='celular') v = celularValido(el.value);
-          wrap.classList.toggle('bad',!v); if(!v) valid=false;
+          if(wrap) wrap.classList.toggle('bad',!v); if(!v) valid=false;
         });
         
         err.hidden=valid; if(!valid) return;
