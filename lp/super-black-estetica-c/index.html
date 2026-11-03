@@ -772,7 +772,13 @@ body.bar-on header.nav .logo img{height:38px}
         try{ localStorage.setItem('ith_lead_super_black_estetica', JSON.stringify(data)); }catch(e){}
         try{ gtag('event','generate_lead',{method:'form',form_id:idx}); }catch(e){}
         if(LEAD_WEBHOOK.indexOf('http')===0){ try{ gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); }catch(e){} }
-        try{ if(window.fbq) fbq('track','Lead',{content_name:data.curso}); }catch(e){}
+        var eid='lp-'+(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2));
+        function ck(n){ try{ var m=document.cookie.match('(^|;)\\s*'+n+'=([^;]+)'); return m?decodeURIComponent(m[2]):''; }catch(err){ return ''; } }
+        var fbp=ck('_fbp'), fbc=ck('_fbc');
+        if(!fbc){ var fid=new URLSearchParams(location.search).get('fbclid'); if(fid) fbc='fb.1.'+Date.now()+'.'+fid; }
+        data.event_id=eid; data.fbp=fbp; data.fbc=fbc;
+        try{ fetch('https://hook.us1.make.com/yabxmw8lthi8t4a8atupji6ex8mnc0f4',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_id:eid,email:data.email,celular:data.celular,fbp:fbp,fbc:fbc,user_agent:navigator.userAgent,url:location.href.split('?')[0],curso:data.curso})}).catch(function(){}); }catch(err){}
+        try{ if(window.fbq) fbq('track','Lead',{content_name:data.curso},{eventID:eid}); }catch(e){}
         var done=function(){ form.hidden=true; ok.hidden=false; if(idx!=='9') ok.scrollIntoView({behavior:'smooth',block:'center'}); };
         try{
           if(LEAD_WEBHOOK.indexOf('http')===0){ fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(done,done); }

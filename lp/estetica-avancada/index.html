@@ -1388,7 +1388,13 @@
       btn.disabled=true; btn.firstChild.textContent='Enviando... ';
       try{ localStorage.setItem('ith_lead_estetica', JSON.stringify(data)); }catch(e){}
       try{ gtag('event','generate_lead',{method:'checkout_modal',value:13439.72,currency:'BRL'}); gtag('event','begin_checkout',item); }catch(e){}
-      try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso}); fbq('track','InitiateCheckout',{value:13439.72,currency:'BRL'}); } }catch(e){}
+      var eid='lp-'+(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2));
+      function ck(n){ try{ var m=document.cookie.match('(^|;)\\s*'+n+'=([^;]+)'); return m?decodeURIComponent(m[2]):''; }catch(err){ return ''; } }
+      var fbp=ck('_fbp'), fbc=ck('_fbc');
+      if(!fbc){ var fid=new URLSearchParams(location.search).get('fbclid'); if(fid) fbc='fb.1.'+Date.now()+'.'+fid; }
+      data.event_id=eid; data.fbp=fbp; data.fbc=fbc;
+      try{ fetch('https://hook.us1.make.com/yabxmw8lthi8t4a8atupji6ex8mnc0f4',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_id:eid,email:data.email,celular:data.celular,fbp:fbp,fbc:fbc,user_agent:navigator.userAgent,url:location.href.split('?')[0],curso:data.curso})}).catch(function(){}); }catch(err){}
+      try{ if(window.fbq){ fbq('track','Lead',{content_name:data.curso},{eventID:eid}); fbq('track','InitiateCheckout',{value:13439.72,currency:'BRL'}); } }catch(e){}
       var go=function(){ window.location.href=checkoutHref(); };
       var done=false, finish=function(){ if(!done){ done=true; go(); } };
       setTimeout(finish, 2500); // não deixa o lead esperando se o webhook demorar
