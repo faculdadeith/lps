@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light only">
+<title>Disparos Super Black ITH</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,800;1,800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Tema claro fixo. Plano de envio: calendário primeiro, depois públicos, depois o texto de cada disparo em balão de WhatsApp. */
+:root { color-scheme: light; --bg:#f4f6fb; --ink:#0b1533; --mut:#57617c; --line:#d9dfec; --blue:#0539d9; --card:#fff; --wa:#e7f6df; --warn:#9a5b00; --warnbg:#fff1d6; --disp:'Archivo',Arial,sans-serif; --txt:'Inter',Arial,sans-serif; }
+body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 var(--txt); }
+.w { max-width:1080px; margin:0 auto; padding-block:32px 64px; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); display:flex; flex-direction:column; gap:36px; }
+h1 { font:italic 800 clamp(30px,5vw,46px)/1.05 var(--disp); margin:0; text-wrap:balance; } h1 em { color:var(--blue); font-style:inherit; }
+h2 { font:800 22px/1.2 var(--disp); margin:0 0 4px; } h3 { font:800 18px/1.2 var(--disp); margin:0; }
+p { margin:0; max-width:70ch; } .why { color:var(--mut); font-size:13px; }
+.nums { display:flex; flex-wrap:wrap; gap:14px 40px; margin-top:16px; } .nums b { display:block; font:800 28px var(--disp); font-variant-numeric:tabular-nums; } .nums span { color:var(--mut); font-size:13px; }
+.tb { overflow-x:auto; background:var(--card); border:1px solid var(--line); border-radius:8px; margin-top:12px; }
+table { border-collapse:collapse; width:100%; font-size:14px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; } tr:last-child td { border-bottom:0; }
+th { font-size:12px; color:var(--mut); font-weight:600; white-space:nowrap; } .r { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; } .id { font:800 15px var(--disp); color:var(--blue); white-space:nowrap; }
+.two { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:28px; } .two>* { min-width:0; }
+.pill { display:inline-block; font-size:12px; font-weight:500; padding:1px 8px; border-radius:99px; background:#e4eaff; color:var(--blue); white-space:nowrap; } .pill.warn { background:var(--warnbg); color:var(--warn); }
+.dis { border-top:2px solid var(--ink); padding-top:16px; display:flex; flex-direction:column; gap:14px; } .dh { display:flex; gap:14px; align-items:flex-start; } .dh>div { min-width:0; } .big { font:italic 800 34px/1 var(--disp); color:var(--blue); }
+code { font:12px ui-monospace,Menlo,monospace; overflow-wrap:anywhere; }
+.tpls { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),420px)); gap:20px; }
+.tpl { display:flex; flex-direction:column; gap:8px; min-width:0; } .tpl header { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.wa { background:var(--wa); border-radius:10px; padding:10px; display:flex; flex-direction:column; gap:8px; font-size:14px; } .wa small { color:var(--mut); }
+.img { background:#0b1533; color:#c9d4ff; border-radius:6px; padding:30px 10px; text-align:center; font-size:12px; } .ht { font-weight:600; }
+.var { font-style:normal; background:#fff; border:1px solid #b9dca9; border-radius:4px; padding:0 4px; font-size:12px; white-space:nowrap; }
+.bt { background:#fff; color:#0a7cff; text-align:center; border-radius:6px; padding:7px; font-weight:500; }
+.acts { display:flex; flex-wrap:wrap; gap:8px; } button { font:500 13px var(--txt); padding:6px 12px; border:1px solid var(--blue); background:var(--card); color:var(--blue); border-radius:6px; cursor:pointer; } button:hover { background:#e4eaff; } button:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+ol,ul { margin:8px 0 0; padding-left:20px; display:flex; flex-direction:column; gap:8px; max-width:75ch; }
+pre { background:#0b1533; color:#e6ecff; padding:12px; border-radius:8px; overflow-x:auto; font:12px ui-monospace,Menlo,monospace; margin:8px 0 0; }
+</style>
+</head>
+<body>
+<div class="w">
+<header>
+<h1>Disparos <em>Super Black</em> ITH</h1>
+<p style="margin-top:12px">Sete disparos de WhatsApp API de 05 a 30/11, por curso, para quem já está na base. Lead recebe a condição de lead e aluno recebe a condição de aluno, como manda o plano da Black. As listas saíram do CRM de 27/10 e precisam ser refeitas antes de cada envio.</p>
+<div class="nums"><div><b>9.014</b><span>pessoas nas listas</span></div><div><b>33.948</b><span>envios nos 7 disparos</span></div><div><b>R$ 10,5 a 12,9 mil</b><span>custo estimado, se tudo for entregue*</span></div></div>
+<p class="why" style="margin-top:10px">*Estimativa com R$ 0,31 a R$ 0,38 por mensagem de marketing, valor de um blog de fornecedor. Confirme a tarifa do Brasil no Gerenciador do WhatsApp antes de aprovar a verba.</p>
+</header>
+
+<section><h2>Calendário</h2><p class="why">Os horários ficam dentro do expediente do comercial. Nenhum envio sai depois das 18h de sexta, quando a mídia para e ninguém responde.</p>
+<div class="tb"><table><thead><tr><th></th><th>Quando</th><th>Disparo</th><th>Público</th><th class="r">Envios</th><th>Por quê</th></tr></thead><tbody><tr><td class="id">D1</td><td>Qui 05/11, 10h</td><td>Abertura</td><td>A, B, C</td><td class="r">4.561</td><td class="why">Anuncia a Super Black para quem já pediu informação.</td></tr><tr><td class="id">D2</td><td>Ter 10/11, 10h</td><td>Condição de aluno</td><td>Alunos</td><td class="r">1.064</td><td class="why">Só alunos e ex-alunos, com percentual. Sai em dia útil cheio para o consultor responder.</td></tr><tr><td class="id">D3</td><td>Qui 12/11, 10h</td><td>Convite da live de 17/11 <span class="pill warn">falta a live</span></td><td>A, B</td><td class="r">2.867</td><td class="why">Forma a lista da primeira live, cinco dias antes.</td></tr><tr><td class="id">D4</td><td>Sex 20/11, 9h</td><td>Reta final</td><td>A, B, C, D</td><td class="r">7.950</td><td class="why">Abre a reta final no feriado, com a escala do comercial. Primeiro envio para a base mais antiga.</td></tr><tr><td class="id">D5</td><td>Ter 24/11, 9h</td><td>2026 contra 2027</td><td>A, B</td><td class="r">2.867</td><td class="why">Argumento de preço travado, no dia da live 2.</td></tr><tr><td class="id">D6</td><td>Sex 27/11, 9h</td><td>Black Friday</td><td>A, B, C, D, Alunos</td><td class="r">9.014</td><td class="why">Maior envio. Sai cedo porque a mídia e o comercial podem parar às 18h.</td></tr><tr><td class="id">D7</td><td>Seg 30/11, 9h</td><td>Último dia</td><td>A, B, C, Alunos</td><td class="r">5.625</td><td class="why">Cyber Monday, dia da live 3. A oferta acaba às 23h59.</td></tr></tbody></table></div></section>
+
+<div class="two">
+<section><h2>Quem recebe</h2><p class="why">Quanto mais perto de comprar, mais mensagens. A base antiga recebe só as duas datas mais fortes, para proteger a nota do número.</p>
+<div class="tb"><table><thead><tr><th></th><th>Grupo</th><th class="r">Pessoas</th><th class="r">Msgs</th></tr></thead><tbody><tr><td class="id">A</td><td><b>Negociou e não fechou</b><br><span class="why">Chegou à negociação ou aguardando pagamento, nos últimos 12 meses.</span></td><td class="r">1.382</td><td class="r">6</td></tr><tr><td class="id">B</td><td><b>Quase lá</b><br><span class="why">Passou por SQL ou perdeu por preço ou interesse futuro, nos últimos 12 meses.</span></td><td class="r">1.485</td><td class="r">6</td></tr><tr><td class="id">C</td><td><b>Sumiu há pouco</b><br><span class="why">Sem resposta ou parou de responder, nos últimos 6 meses.</span></td><td class="r">1.694</td><td class="r">4</td></tr><tr><td class="id">D</td><td><b>Base antiga</b><br><span class="why">Contato de até 18 meses que não entra nos grupos acima.</span></td><td class="r">3.389</td><td class="r">2</td></tr><tr><td class="id">Alunos</td><td><b>Alunos e ex-alunos</b><br><span class="why">Pós e MBA, adimplentes, sem matrícula nos últimos 60 dias.</span></td><td class="r">1.064</td><td class="r">3</td></tr></tbody></table></div></section>
+<section><h2>Quem ficou de fora</h2><p class="why">Contatos da base geral que não entram em nenhuma lista de lead. Os 362 em andamento estão em um arquivo à parte, para os consultores.</p>
+<div class="tb"><table><thead><tr><th>Motivo</th><th class="r">Contatos</th></tr></thead><tbody><tr><td>perda: perfil, sem interesse, dados, indisponível, concorrente</td><td class="r">11.456</td></tr><tr><td>sem curso da Black (técnico, graduação, extensão, indefinido)</td><td class="r">10.946</td></tr><tr><td>último contato há mais de 18 meses</td><td class="r">5.199</td></tr><tr><td>já comprou (vai para a lista de alunos)</td><td class="r">3.118</td></tr><tr><td>híbrida fora de GO e DF</td><td class="r">978</td></tr><tr><td>opt-out ou bloqueio</td><td class="r">927</td></tr><tr><td>em andamento com consultor</td><td class="r">362</td></tr><tr><td>Fisio: LP sem webhook</td><td class="r">15</td></tr></tbody></table></div></section>
+</div>
+
+<section><h2>Leads por curso</h2><p class="why">Cada pessoa entra no curso da oportunidade mais recente. Híbridas só com GO e DF. Estética é a maior lista, e o plano da Black já aponta trava no fim do funil desse curso: acompanhe a resposta do comercial logo no D1.</p>
+<div class="tb"><table><thead><tr><th>Curso e página</th><th class="r">A</th><th class="r">B</th><th class="r">C</th><th class="r">D</th><th class="r">Total</th></tr></thead><tbody><tr><td>Saúde Estética Avançada<br><span class="why">/lp/super-black-estetica/</span></td><td class="r">461</td><td class="r">490</td><td class="r">510</td><td class="r">372</td><td class="r"><b>1.833</b></td></tr><tr><td>Urgência e Emergência + UTI<br><span class="why">/lp/super-black-urgencia-emergencia-uti/</span></td><td class="r">300</td><td class="r">257</td><td class="r">381</td><td class="r">376</td><td class="r"><b>1.314</b></td></tr><tr><td>Outras pós EAD (página geral)<br><span class="why">/lp/super-black/</span></td><td class="r">34</td><td class="r">88</td><td class="r">40</td><td class="r">814</td><td class="r"><b>976</b></td></tr><tr><td>Enfermagem Obstétrica<br><span class="why">/lp/super-black-enfermagem-obstetrica/</span></td><td class="r">205</td><td class="r">220</td><td class="r">244</td><td class="r">185</td><td class="r"><b>854</b></td></tr><tr><td>Segurança do Paciente (EAD)<br><span class="why">/lp/super-black-seguranca-paciente/</span></td><td class="r">88</td><td class="r">94</td><td class="r">140</td><td class="r">403</td><td class="r"><b>725</b></td></tr><tr><td>UTI Neonatal e Pediátrica<br><span class="why">/lp/super-black-uti-neonatal-pediatrica/</span></td><td class="r">141</td><td class="r">142</td><td class="r">218</td><td class="r">97</td><td class="r"><b>598</b></td></tr><tr><td>Auditoria (EAD)<br><span class="why">/lp/super-black-auditoria/</span></td><td class="r">53</td><td class="r">59</td><td class="r">44</td><td class="r">201</td><td class="r"><b>357</b></td></tr><tr><td>MBA Gestão Hospitalar (EAD)<br><span class="why">/lp/super-black-mba-gestao-hospitalar/</span></td><td class="r">32</td><td class="r">48</td><td class="r">36</td><td class="r">223</td><td class="r"><b>339</b></td></tr><tr><td>MBA Qualidade (EAD)<br><span class="why">/lp/super-black-mba-qualidade/</span></td><td class="r">26</td><td class="r">28</td><td class="r">39</td><td class="r">242</td><td class="r"><b>335</b></td></tr><tr><td>MBA SCIRAS (EAD)<br><span class="why">/lp/super-black-mba-sciras/</span></td><td class="r">23</td><td class="r">39</td><td class="r">24</td><td class="r">240</td><td class="r"><b>326</b></td></tr><tr><td>Farmácia Clínica (EAD)<br><span class="why">/lp/super-black-farmacia-clinica/</span></td><td class="r">19</td><td class="r">20</td><td class="r">18</td><td class="r">236</td><td class="r"><b>293</b></td></tr></tbody></table></div></section>
+
+<section><h2>As mensagens</h2><p class="why">São 11 templates de marketing em pt_BR. O botão de lead abre a LP do curso com utm_source=whatsapp, para a venda aparecer por origem no Eduq. Lead não vê percentual. Aluno vê, como validado pela Ana em 20/10.</p></section>
+<section class="dis" id="d1"><div class="dh"><span class="big">D1</span><div><h3>Abertura</h3><p class="why">Qui 05/11, 10h · A, B, C · 4.561 envios · <code>listas/D1_2026-11-05_abertura_4561.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_01_abertura</code></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! A Super Black da ITH começou.<br><br>Você pediu informações sobre <i class="var">{{2}} area</i>. Na Super Black, a matrícula sai com a melhor condição do ano.<br><br>A condição vale até 30/11, às 23h59. Depois, volta a tabela normal.<br><br>Deixe seus dados na página e o consultor envia a simulação da parcela pelo WhatsApp.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! A Super Black da ITH começou.
+
+Você pediu informações sobre {{2}}. Na Super Black, a matrícula sai com a melhor condição do ano.
+
+A condição vale até 30/11, às 23h59. Depois, volta a tabela normal.
+
+Deixe seus dados na página e o consultor envia a simulação da parcela pelo WhatsApp.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_01_abertura&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! A Super Black da ITH começou.\n\nVocê pediu informações sobre {{2}}. Na Super Black, a matrícula sai com a melhor condição do ano.\n\nA condição vale até 30/11, às 23h59. Depois, volta a tabela normal.\n\nDeixe seus dados na página e o consultor envia a simulação da parcela pelo WhatsApp.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section><section class="dis" id="d2"><div class="dh"><span class="big">D2</span><div><h3>Condição de aluno</h3><p class="why">Ter 10/11, 10h · Alunos · 1.064 envios · <code>listas/D2_2026-11-10_alunos_1064.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_02_alunos</code></header>
+<div class="wa"><div class="ht">Condição exclusiva para alunos ITH</div><p>Oi, <i class="var">{{1}} nome</i>! Quem já estudou na ITH tem a melhor condição da Super Black.<br><br>São 30% nos cursos presenciais e híbridos, inclusive Premium e Master, e 40% nos cursos EAD. Esses percentuais são só para alunos e ex-alunos.<br><br>Os 40% do EAD e os bônus da Black valem até 30/11.<br><br>Fale com um consultor e receba a simulação da parcela pelo WhatsApp.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Falar com consultor</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Quem já estudou na ITH tem a melhor condição da Super Black.
+
+São 30% nos cursos presenciais e híbridos, inclusive Premium e Master, e 40% nos cursos EAD. Esses percentuais são só para alunos e ex-alunos.
+
+Os 40% do EAD e os bônus da Black valem até 30/11.
+
+Fale com um consultor e receba a simulação da parcela pelo WhatsApp.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_02_alunos&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;TEXT&quot;,
+      &quot;text&quot;: &quot;Condição exclusiva para alunos ITH&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Quem já estudou na ITH tem a melhor condição da Super Black.\n\nSão 30% nos cursos presenciais e híbridos, inclusive Premium e Master, e 40% nos cursos EAD. Esses percentuais são só para alunos e ex-alunos.\n\nOs 40% do EAD e os bônus da Black valem até 30/11.\n\nFale com um consultor e receba a simulação da parcela pelo WhatsApp.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Falar com consultor&quot;,
+          &quot;url&quot;: &quot;https://wa.me/5562982445664?text=Quero%20a%20condi%C3%A7%C3%A3o%20Super%20Black%20de%20aluno%20ITH&quot;
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section><section class="dis" id="d3"><div class="dh"><span class="big">D3</span><div><h3>Convite da live de 17/11</h3><p class="why">Qui 12/11, 10h · A, B · 2.867 envios · <code>listas/D3_2026-11-12_convite-live_2867.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_03_live</code><span class="pill warn">preencher horário, tema e link</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Na terça, 17/11, às <i class="var">{{2}} hora</i>, a ITH faz uma live sobre <i class="var">{{3}} tema</i>.<br><br>Quem participa recebe, além da condição Super Black, os bônus escolhidos para a live.<br><br>Faça sua inscrição pelo botão. Se não puder assistir ao vivo, você recebe o replay no dia seguinte.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero me inscrever</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Na terça, 17/11, às {{2}}, a ITH faz uma live sobre {{3}}.
+
+Quem participa recebe, além da condição Super Black, os bônus escolhidos para a live.
+
+Faça sua inscrição pelo botão. Se não puder assistir ao vivo, você recebe o replay no dia seguinte.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_03_live&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Na terça, 17/11, às {{2}}, a ITH faz uma live sobre {{3}}.\n\nQuem participa recebe, além da condição Super Black, os bônus escolhidos para a live.\n\nFaça sua inscrição pelo botão. Se não puder assistir ao vivo, você recebe o replay no dia seguinte.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;20h&quot;,
+            &quot;urgência e emergência&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero me inscrever&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section><section class="dis" id="d4"><div class="dh"><span class="big">D4</span><div><h3>Reta final</h3><p class="why">Sex 20/11, 9h · A, B, C, D · 7.950 envios · <code>listas/D4_2026-11-20_reta-final_7950.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_04_reta_final_hib</code><span class="pill">Pós híbridas</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Começou a reta final da Super Black: faltam 10 dias.<br><br>Até 30/11, <i class="var">{{2}} area</i> segue com a melhor condição do ano, enquanto houver vaga na turma. São turmas em Goiânia e Brasília, com número fechado de alunos e vivências clínicas em simulação realística.<br><br>Deixe seus dados e receba a simulação da parcela pelo WhatsApp.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Começou a reta final da Super Black: faltam 10 dias.
+
+Até 30/11, {{2}} segue com a melhor condição do ano, enquanto houver vaga na turma. São turmas em Goiânia e Brasília, com número fechado de alunos e vivências clínicas em simulação realística.
+
+Deixe seus dados e receba a simulação da parcela pelo WhatsApp.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_04_reta_final_hib&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Começou a reta final da Super Black: faltam 10 dias.\n\nAté 30/11, {{2}} segue com a melhor condição do ano, enquanto houver vaga na turma. São turmas em Goiânia e Brasília, com número fechado de alunos e vivências clínicas em simulação realística.\n\nDeixe seus dados e receba a simulação da parcela pelo WhatsApp.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article><article class="tpl"><header><code>ith_sb_04_reta_final_ead</code><span class="pill">Pós e MBAs EAD</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Começou a reta final da Super Black: faltam 10 dias.<br><br>Até 30/11, <i class="var">{{2}} area</i> segue com a melhor condição do ano. O curso é 100% online, com certificado digital reconhecido pelo MEC.<br><br>Deixe seus dados e receba a simulação da parcela pelo WhatsApp.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Começou a reta final da Super Black: faltam 10 dias.
+
+Até 30/11, {{2}} segue com a melhor condição do ano. O curso é 100% online, com certificado digital reconhecido pelo MEC.
+
+Deixe seus dados e receba a simulação da parcela pelo WhatsApp.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_04_reta_final_ead&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Começou a reta final da Super Black: faltam 10 dias.\n\nAté 30/11, {{2}} segue com a melhor condição do ano. O curso é 100% online, com certificado digital reconhecido pelo MEC.\n\nDeixe seus dados e receba a simulação da parcela pelo WhatsApp.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section><section class="dis" id="d5"><div class="dh"><span class="big">D5</span><div><h3>2026 contra 2027</h3><p class="why">Ter 24/11, 9h · A, B · 2.867 envios · <code>listas/D5_2026-11-24_2026x2027_2867.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_05_2026x2027_hib</code><span class="pill">Pós híbridas</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Se você pensa em fazer <i class="var">{{2}} area</i>, compare antes de decidir.<br><br>Quem entra na Super Black garante o preço de 2026. Quem deixa para o ano que vem paga a tabela de 2027, e as vagas são limitadas por turma.<br><br>A ITH tem Nota 5 no MEC, mais de 12 mil alunos formados e 95% de satisfação.<br><br>Peça a simulação da parcela até 30/11.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Se você pensa em fazer {{2}}, compare antes de decidir.
+
+Quem entra na Super Black garante o preço de 2026. Quem deixa para o ano que vem paga a tabela de 2027, e as vagas são limitadas por turma.
+
+A ITH tem Nota 5 no MEC, mais de 12 mil alunos formados e 95% de satisfação.
+
+Peça a simulação da parcela até 30/11.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_05_2026x2027_hib&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Se você pensa em fazer {{2}}, compare antes de decidir.\n\nQuem entra na Super Black garante o preço de 2026. Quem deixa para o ano que vem paga a tabela de 2027, e as vagas são limitadas por turma.\n\nA ITH tem Nota 5 no MEC, mais de 12 mil alunos formados e 95% de satisfação.\n\nPeça a simulação da parcela até 30/11.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article><article class="tpl"><header><code>ith_sb_05_2026x2027_ead</code><span class="pill">Pós e MBAs EAD</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Se você pensa em fazer <i class="var">{{2}} area</i>, compare antes de decidir.<br><br>Quem entra na Super Black garante o preço de 2026. Quem deixa para o ano que vem paga a tabela de 2027.<br><br>A ITH tem Nota 5 no MEC, mais de 12 mil alunos formados e 95% de satisfação.<br><br>Peça a simulação da parcela até 30/11.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Se você pensa em fazer {{2}}, compare antes de decidir.
+
+Quem entra na Super Black garante o preço de 2026. Quem deixa para o ano que vem paga a tabela de 2027.
+
+A ITH tem Nota 5 no MEC, mais de 12 mil alunos formados e 95% de satisfação.
+
+Peça a simulação da parcela até 30/11.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_05_2026x2027_ead&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Se você pensa em fazer {{2}}, compare antes de decidir.\n\nQuem entra na Super Black garante o preço de 2026. Quem deixa para o ano que vem paga a tabela de 2027.\n\nA ITH tem Nota 5 no MEC, mais de 12 mil alunos formados e 95% de satisfação.\n\nPeça a simulação da parcela até 30/11.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section><section class="dis" id="d6"><div class="dh"><span class="big">D6</span><div><h3>Black Friday</h3><p class="why">Sex 27/11, 9h · A, B, C, D, Alunos · 9.014 envios · <code>listas/D6_2026-11-27_black-friday_9014.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_06_black_friday</code><span class="pill">Leads</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Hoje é Black Friday na ITH.<br><br>A Super Black termina na segunda, 30/11, às 23h59. Se você ainda pensa em fazer <i class="var">{{2}} area</i>, hoje é um bom dia para ver quanto fica a parcela.<br><br>Deixe seus dados e o consultor envia a simulação pelo WhatsApp.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Hoje é Black Friday na ITH.
+
+A Super Black termina na segunda, 30/11, às 23h59. Se você ainda pensa em fazer {{2}}, hoje é um bom dia para ver quanto fica a parcela.
+
+Deixe seus dados e o consultor envia a simulação pelo WhatsApp.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_06_black_friday&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Hoje é Black Friday na ITH.\n\nA Super Black termina na segunda, 30/11, às 23h59. Se você ainda pensa em fazer {{2}}, hoje é um bom dia para ver quanto fica a parcela.\n\nDeixe seus dados e o consultor envia a simulação pelo WhatsApp.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article><article class="tpl"><header><code>ith_sb_06_alunos</code><span class="pill">Alunos</span></header>
+<div class="wa"><div class="ht">Black Friday para alunos ITH</div><p>Oi, <i class="var">{{1}} nome</i>! Hoje é Black Friday na ITH, e a sua condição de aluno segue melhor que a do público.<br><br>São 30% nos cursos presenciais e híbridos e 40% nos cursos EAD. Os 40% do EAD e os bônus da Black valem até segunda, 30/11.<br><br>Fale com um consultor e receba a simulação da parcela pelo WhatsApp.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Falar com consultor</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Hoje é Black Friday na ITH, e a sua condição de aluno segue melhor que a do público.
+
+São 30% nos cursos presenciais e híbridos e 40% nos cursos EAD. Os 40% do EAD e os bônus da Black valem até segunda, 30/11.
+
+Fale com um consultor e receba a simulação da parcela pelo WhatsApp.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_06_alunos&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;TEXT&quot;,
+      &quot;text&quot;: &quot;Black Friday para alunos ITH&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Hoje é Black Friday na ITH, e a sua condição de aluno segue melhor que a do público.\n\nSão 30% nos cursos presenciais e híbridos e 40% nos cursos EAD. Os 40% do EAD e os bônus da Black valem até segunda, 30/11.\n\nFale com um consultor e receba a simulação da parcela pelo WhatsApp.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Falar com consultor&quot;,
+          &quot;url&quot;: &quot;https://wa.me/5562982445664?text=Quero%20a%20condi%C3%A7%C3%A3o%20Super%20Black%20de%20aluno%20ITH&quot;
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section><section class="dis" id="d7"><div class="dh"><span class="big">D7</span><div><h3>Último dia</h3><p class="why">Seg 30/11, 9h · A, B, C, Alunos · 5.625 envios · <code>listas/D7_2026-11-30_ultimo-dia_5625.csv</code></p></div></div><div class="tpls"><article class="tpl"><header><code>ith_sb_07_ultimo_dia</code><span class="pill">Leads</span></header>
+<div class="wa"><div class="img">imagem do curso (og.jpg da LP)</div><p>Oi, <i class="var">{{1}} nome</i>! Hoje é o último dia da Super Black.<br><br>A condição para fazer <i class="var">{{2}} area</i> vale até 23h59. Depois, volta a tabela normal.<br><br>Deixe seus dados agora para o consultor enviar a simulação da parcela ainda hoje.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Quero a condição</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Hoje é o último dia da Super Black.
+
+A condição para fazer {{2}} vale até 23h59. Depois, volta a tabela normal.
+
+Deixe seus dados agora para o consultor enviar a simulação da parcela ainda hoje.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_07_ultimo_dia&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;IMAGE&quot;,
+      &quot;example&quot;: {
+        &quot;header_handle&quot;: [
+          &quot;&lt;subir og.jpg da LP e colar o handle&gt;&quot;
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Hoje é o último dia da Super Black.\n\nA condição para fazer {{2}} vale até 23h59. Depois, volta a tabela normal.\n\nDeixe seus dados agora para o consultor enviar a simulação da parcela ainda hoje.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;,
+            &quot;a pós em Saúde Estética Avançada&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Quero a condição&quot;,
+          &quot;url&quot;: &quot;https://mkt.faculdadeith.com.br/lp/{{1}}&quot;,
+          &quot;example&quot;: [
+            &quot;https://mkt.faculdadeith.com.br/lp/super-black-estetica/?utm_source=whatsapp&amp;utm_medium=api&amp;utm_campaign=super-black-2026&amp;utm_content=d1&quot;
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article><article class="tpl"><header><code>ith_sb_07_alunos</code><span class="pill">Alunos</span></header>
+<div class="wa"><div class="ht">Último dia para alunos ITH</div><p>Oi, <i class="var">{{1}} nome</i>! Hoje é o último dia da Super Black.<br><br>Os 40% nos cursos EAD e os bônus da Black valem até 23h59. A partir de amanhã, o EAD de aluno fica em 35% e os bônus saem.<br><br>Fale com um consultor e feche hoje a sua próxima formação.</p><small>Não cumulativa com outras ofertas. Nota 5 no MEC.</small><div class="bt">Falar com consultor</div><div class="bt">Não quero receber</div></div>
+<div class="acts"><button type="button" data-copy="Oi, {{1}}! Hoje é o último dia da Super Black.
+
+Os 40% nos cursos EAD e os bônus da Black valem até 23h59. A partir de amanhã, o EAD de aluno fica em 35% e os bônus saem.
+
+Fale com um consultor e feche hoje a sua próxima formação.">Copiar texto</button><button type="button" data-copy="{
+  &quot;name&quot;: &quot;ith_sb_07_alunos&quot;,
+  &quot;language&quot;: &quot;pt_BR&quot;,
+  &quot;category&quot;: &quot;MARKETING&quot;,
+  &quot;components&quot;: [
+    {
+      &quot;type&quot;: &quot;HEADER&quot;,
+      &quot;format&quot;: &quot;TEXT&quot;,
+      &quot;text&quot;: &quot;Último dia para alunos ITH&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BODY&quot;,
+      &quot;text&quot;: &quot;Oi, {{1}}! Hoje é o último dia da Super Black.\n\nOs 40% nos cursos EAD e os bônus da Black valem até 23h59. A partir de amanhã, o EAD de aluno fica em 35% e os bônus saem.\n\nFale com um consultor e feche hoje a sua próxima formação.&quot;,
+      &quot;example&quot;: {
+        &quot;body_text&quot;: [
+          [
+            &quot;Ana&quot;
+          ]
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;FOOTER&quot;,
+      &quot;text&quot;: &quot;Não cumulativa com outras ofertas. Nota 5 no MEC.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;BUTTONS&quot;,
+      &quot;buttons&quot;: [
+        {
+          &quot;type&quot;: &quot;URL&quot;,
+          &quot;text&quot;: &quot;Falar com consultor&quot;,
+          &quot;url&quot;: &quot;https://wa.me/5562982445664?text=Quero%20a%20condi%C3%A7%C3%A3o%20Super%20Black%20de%20aluno%20ITH&quot;
+        },
+        {
+          &quot;type&quot;: &quot;QUICK_REPLY&quot;,
+          &quot;text&quot;: &quot;Não quero receber&quot;
+        }
+      ]
+    }
+  ]
+}">Copiar JSON da API</button></div></article></div></section>
+
+<div class="two">
+<section><h2>Antes do primeiro envio</h2><ol>
+<li><b>Aprovar os templates até 04/11.</b> O arquivo <code>templates.json</code> traz os 11 prontos para a API. O D1 sai em 05/11, e a Meta pode levar até um dia para revisar.</li>
+<li><b>Escolher o número.</b> A ITH tem várias contas de WhatsApp. A que tem YCloud no nome ainda não tem template nenhum. Confira também o limite diário do número: o D6 passa de 9 mil envios.</li>
+<li><b>Tratar o botão "Não quero receber".</b> Quem tocar precisa sair das listas seguintes e ser marcado no CRM.</li>
+<li><b>Validar o texto com a Ana.</b> O plano exige validação escrita de peça com condição comercial. Os textos usam só frases do manual e os percentuais de 20/10.</li>
+<li><b>Mandar em lotes no D1.</b> Comece pelo grupo A, olhe entrega e bloqueios, e só então solte B e C.</li>
+</ol></section>
+<section><h2>Decisões em aberto</h2><ul>
+<li><b>Live 1 (D3).</b> Faltam horário, tema por curso e página de inscrição, com prazo em 06/11. Sem isso o D3 não sai. O convite das lives 2 e 3 fica com os lembretes da própria live.</li>
+<li><b>EAD na Black.</b> A pergunta do foco ainda está em aberto no plano, e nenhuma campanha EAD está ativa hoje na Meta. Se o foco for só a pós, tire os templates _ead e os 3.351 leads EAD das listas.</li>
+<li><b>"Volta a tabela normal" em dezembro.</b> O plano mantém 30% e 35% para a base em dezembro. Se lead perdido também entrar nessa fase, a frase do D7 precisa de revisão.</li>
+<li><b>Fisioterapia.</b> As duas LPs de Fisio estão sem webhook. Os 15 leads ficaram fora para não se perderem no formulário.</li>
+<li><b>Webhook compartilhado.</b> Estética e UTI Neonatal usam o mesmo webhook do Make. Confirme que o cenário separa os dois cursos.</li>
+</ul></section>
+</div>
+
+<section><h2>Refazer as listas antes de cada envio</h2><p class="why">Exporte a base geral do CRM e os compradores do dia, e rode o comando abaixo na pasta ITH. Quem comprou, entrou em negociação ou pediu para sair desaparece das listas seguintes.</p>
+<pre>python3 -I Disparos-Black-API/build_listas.py "EXPORT_CRM.csv" "COMPRADORES.csv"</pre></section>
+</div>
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function(b){
+  var label=b.textContent;
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent=label},1400)};
+    var t=b.getAttribute('data-copy');
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(function(){fallback(t);done()})}else{fallback(t);done()}
+  });
+});
+function fallback(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+</script>
+</body>
+</html>
