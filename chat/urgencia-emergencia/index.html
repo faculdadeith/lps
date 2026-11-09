@@ -635,10 +635,13 @@
 
       // Meta Pixel — evento de Lead (usuário concluiu o preenchimento)
       if (window.fbq) {
-        fbq('track', 'CompleteRegistration', {
+        (fbq('track', 'Lead', {
           content_name: 'Pós-Graduação em Urgência, Emergência e UTI',
           content_category: data.perfil
-        });
+        }), fbq('track', 'CompleteRegistration', {
+          content_name: 'Pós-Graduação em Urgência, Emergência e UTI',
+          content_category: data.perfil
+        }));
       }
 
       await sendLead();

@@ -229,7 +229,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     var fbp=ck('_fbp'), fbc=ck('_fbc');
     if(!fbc){ var fid=new URLSearchParams(location.search).get('fbclid'); if(fid) fbc='fb.1.'+Date.now()+'.'+fid; }
     data.event_id=eid; data.fbp=fbp; data.fbc=fbc;
-    try{ if(window.fbq) fbq('track','CompleteRegistration',{content_name:data.isca},{eventID:eid}); }catch(e){}
+    try{ if(window.fbq) (fbq('track','Lead',{content_name:data.isca},{eventID:eid}), fbq('track','CompleteRegistration',{content_name:data.isca},{eventID:eid})); }catch(e){}
     try{
       if(LEAD_WEBHOOK.indexOf('http')===0){ fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(liberar,liberar); setTimeout(liberar, 2500); }
       else { liberar(); }

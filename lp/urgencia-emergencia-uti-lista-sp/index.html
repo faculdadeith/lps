@@ -487,7 +487,7 @@
         if(!fbc){ var fid=new URLSearchParams(location.search).get('fbclid'); if(fid) fbc='fb.1.'+Date.now()+'.'+fid; }
         data.event_id=eid; data.fbp=fbp; data.fbc=fbc;
         try{ fetch('https://hook.us1.make.com/yabxmw8lthi8t4a8atupji6ex8mnc0f4',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_id:eid,email:data.email,celular:data.celular,fbp:fbp,fbc:fbc,user_agent:navigator.userAgent,url:location.href.split('?')[0],curso:data.curso})}).catch(function(){}); }catch(err){}
-        try{ if(window.fbq) fbq('track','CompleteRegistration',{content_name:data.curso},{eventID:eid}); }catch(e){}
+        try{ if(window.fbq) (fbq('track','Lead',{content_name:data.curso},{eventID:eid}), fbq('track','CompleteRegistration',{content_name:data.curso},{eventID:eid})); }catch(e){}
         var done=function(){ form.hidden=true; ok.hidden=false; ok.scrollIntoView({behavior:'smooth',block:'center'}); };
         try{
           if(LEAD_WEBHOOK.indexOf('http')===0){ fetch(LEAD_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(done,done); }

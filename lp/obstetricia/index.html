@@ -2982,10 +2982,13 @@
                             event: 'lead_submit'
                         });
                     if (window.fbq)
-                        fbq('track', 'CompleteRegistration', {
+                        (fbq('track', 'Lead', {
                             content_name: 'Pós-Graduação em Enfermagem Obstétrica',
                             content_category: data.formacao
-                        }, { eventID: eid });
+                        }, { eventID: eid }), fbq('track', 'CompleteRegistration', {
+                            content_name: 'Pós-Graduação em Enfermagem Obstétrica',
+                            content_category: data.formacao
+                        }, { eventID: eid }));
                     leadForm.hidden = true;
                     document.querySelector('#leadSuccess').hidden = false;
                 }

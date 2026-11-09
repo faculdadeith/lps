@@ -916,7 +916,7 @@
       try{ if(LEAD_ENDPOINT){ await fetch(LEAD_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)}); } }catch(err){}
       try{ const arr = JSON.parse(localStorage.getItem('ith_urg_leads')||'[]'); arr.push({...data, ts:Date.now()}); localStorage.setItem('ith_urg_leads', JSON.stringify(arr)); }catch(err){}
       if(window.dataLayer) window.dataLayer.push({event:'lead_submit'});
-      if(window.fbq) fbq('track','CompleteRegistration',{content_name:'Capacitação Urgência e Emergência SP', value:297, currency:'BRL'}, { eventID: eid });
+      if(window.fbq) (fbq('track','Lead',{content_name:'Capacitação Urgência e Emergência SP', value:297, currency:'BRL'}, { eventID: eid }), fbq('track','CompleteRegistration',{content_name:'Capacitação Urgência e Emergência SP', value:297, currency:'BRL'}, { eventID: eid }));
       leadForm.hidden = true; document.querySelector('#leadSuccess').hidden = false;
     });
   }

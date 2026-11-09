@@ -674,10 +674,13 @@
         '→', new Date().toLocaleTimeString()
       );
       if (window.fbq) {
-        fbq('track', 'CompleteRegistration', {
+        (fbq('track', 'Lead', {
           content_name: 'Pós-Graduação em Estética Avançada',
           content_category: data.perfil
-        });
+        }), fbq('track', 'CompleteRegistration', {
+          content_name: 'Pós-Graduação em Estética Avançada',
+          content_category: data.perfil
+        }));
       }
 
       await sendLead();
