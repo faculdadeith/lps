@@ -662,7 +662,7 @@ body.bar-on header.nav .logo img{height:38px}
 
   // ===== Captura de lead =====
   var LEAD_WEBHOOK = ''; // Make → Eduq/planilha (vazio = não envia)
-  var COURSES={"urgencia-emergencia-uti": {"curso": "Pós-Graduação em Urgência e Emergência + UTI - Híbrido", "hook": "https://hook.us1.make.com/x9fckmioiupn2b17iwde65hgy7nafqn7", "tipo": "hib", "nome": "Urgência e Emergência + UTI"}, "uti-neonatal-pediatrica": {"curso": "Pós-Graduação em UTI Neonatal e Pediátrica - Híbrido", "hook": "https://hook.us1.make.com/2odk5dnns4j9oi5rj87lex76wm3vafgy", "tipo": "hib", "nome": "UTI Neonatal e Pediátrica"}, "estetica": {"curso": "Pós em Saúde Estética Avançada - Híbrido", "hook": "https://hook.us1.make.com/2odk5dnns4j9oi5rj87lex76wm3vafgy", "tipo": "hib", "nome": "Saúde Estética Avançada"}, "enfermagem-obstetrica": {"curso": "Pós-Graduação em Enfermagem Obstétrica - Híbrido", "hook": "https://hook.us1.make.com/sig9cq4yuvmk1zuwrg4khvqno07gtgw5", "tipo": "hib", "nome": "Enfermagem Obstétrica"}};
+  var COURSES={"urgencia-emergencia-uti": {"curso": "Pós-Graduação em Urgência e Emergência + UTI - Híbrido", "hook": "https://hook.us1.make.com/x9fckmioiupn2b17iwde65hgy7nafqn7", "tipo": "hib", "nome": "Urgência e Emergência + UTI", "aw": "UvezCK6asoMcEL6F894-"}, "uti-neonatal-pediatrica": {"curso": "Pós-Graduação em UTI Neonatal e Pediátrica - Híbrido", "hook": "https://hook.us1.make.com/2odk5dnns4j9oi5rj87lex76wm3vafgy", "tipo": "hib", "nome": "UTI Neonatal e Pediátrica", "aw": "Zz2ECOKq2fMbEL6F894-"}, "estetica": {"curso": "Pós em Saúde Estética Avançada - Híbrido", "hook": "https://hook.us1.make.com/2odk5dnns4j9oi5rj87lex76wm3vafgy", "tipo": "hib", "nome": "Saúde Estética Avançada", "aw": "Q5T7CNrPluwbEL6F894-"}, "enfermagem-obstetrica": {"curso": "Pós-Graduação em Enfermagem Obstétrica - Híbrido", "hook": "https://hook.us1.make.com/sig9cq4yuvmk1zuwrg4khvqno07gtgw5", "tipo": "hib", "nome": "Enfermagem Obstétrica", "aw": "DYFoCNe5-OsbEL6F894-"}};
   var WA_URL = 'https://wa.me/5562982445664?text=' + encodeURIComponent('Olá! Quero a condição Super Black da pós-graduação na ITH.');
   document.querySelectorAll('.js-wa').forEach(function(a){ a.href=WA_URL; a.addEventListener('click',function(){ try{ gtag('event','whatsapp_click',{}); }catch(e){} try{ fbq('track','Contact'); }catch(e){} }); });
   (function(){
@@ -714,7 +714,7 @@ body.bar-on header.nav .logo img{height:38px}
         btn.disabled=true;
         try{ localStorage.setItem(KEY, JSON.stringify({nome:data.nome,celular:data.celular,email:data.email,formacao:data.formacao,turma:data.turma})); }catch(e){}
         try{ gtag('event','generate_lead',{method:'form',form_id:idx}); }catch(e){}
-        if(hook.indexOf('http')===0){ try{ gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); }catch(e){} }
+        if(hook.indexOf('http')===0){ try{ gtag('event','conversion',{send_to:'AW-16842015422/QcqSCIrLvr8aEL6F894-',value:2639.78,currency:'BRL',transport_type:'beacon'}); if(sel.aw&&hook.indexOf('http')===0){ gtag('event','conversion',{send_to:'AW-16842015422/'+sel.aw,value:2639.78,currency:'BRL',transport_type:'beacon'}); } }catch(e){} }
         var eid='lp-'+(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2));
         function ck(n){ try{ var m=document.cookie.match('(^|;)\\s*'+n+'=([^;]+)'); return m?decodeURIComponent(m[2]):''; }catch(err){ return ''; } }
         var fbp=ck('_fbp'), fbc=ck('_fbc');
