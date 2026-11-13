@@ -619,7 +619,7 @@ body.bar-on header.nav .logo img{height:38px}
         <div class="fld"><label for="cel1">WhatsApp com DDD</label><input id="cel1" name="celular" required inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999"></div>
         <div class="fld"><label for="em1">E-mail</label><input id="em1" name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></div>
         <div class="row2">
-          <div class="fld"><label for="fo1">Sua formação</label><select id="fo1" name="formacao" required><option value="">Selecione</option><option>Biomédico</option><option>Farmacêutico</option><option>Biólogo</option><option>Esteticista e cosmetólogo</option><option>Enfermeiro</option><option>Fisioterapeuta</option><option>Graduando (1º ao 6º período)</option><option>Graduando (7º ao 10º período)</option></select></div><div class="fld fld-grad" hidden><label for="gr1">Qual graduação você está cursando?</label><input id="gr1" name="graduacao" autocomplete="off" placeholder="Ex.: Biomedicina"></div>
+          <div class="fld"><label for="fo1">Sua formação</label><select id="fo1" name="formacao" required><option value="">Selecione</option><option>Biomédico</option><option>Farmacêutico</option><option>Biólogo</option><option>Esteticista e cosmetólogo</option><option>Enfermeiro</option><option>Fisioterapeuta</option><option>Graduando (informe o curso e o período)</option></select></div>
           <div class="fld"><label for="tu1">Turma</label><select id="tu1" name="turma" required><option value="">Selecione</option><option>Goiânia · GO</option><option>Brasília · DF</option><option>Ainda não sei</option></select></div>
         </div>
         <p class="fld-err" hidden>Confira os campos destacados.</p>
@@ -690,7 +690,7 @@ body.bar-on header.nav .logo img{height:38px}
       <div class="fld"><label for="cel9">WhatsApp com DDD</label><input id="cel9" name="celular" required inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999"></div>
       <div class="fld"><label for="em9">E-mail</label><input id="em9" name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></div>
       <div class="row2">
-        <div class="fld"><label for="fo9">Sua formação</label><select id="fo9" name="formacao" required><option value="">Selecione</option><option>Biomédico</option><option>Farmacêutico</option><option>Biólogo</option><option>Esteticista e cosmetólogo</option><option>Enfermeiro</option><option>Fisioterapeuta</option><option>Graduando (1º ao 6º período)</option><option>Graduando (7º ao 10º período)</option></select></div><div class="fld fld-grad" hidden><label for="gr9">Qual graduação você está cursando?</label><input id="gr9" name="graduacao" autocomplete="off" placeholder="Ex.: Biomedicina"></div>
+        <div class="fld"><label for="fo9">Sua formação</label><select id="fo9" name="formacao" required><option value="">Selecione</option><option>Biomédico</option><option>Farmacêutico</option><option>Biólogo</option><option>Esteticista e cosmetólogo</option><option>Enfermeiro</option><option>Fisioterapeuta</option><option>Graduando (informe o curso e o período)</option></select></div>
         <div class="fld"><label for="tu9">Turma</label><select id="tu9" name="turma" required><option value="">Selecione</option><option>Goiânia · GO</option><option>Brasília · DF</option><option>Ainda não sei</option></select></div>
       </div>
       <p class="fld-err" hidden>Confira os campos destacados.</p>
@@ -777,9 +777,8 @@ body.bar-on header.nav .logo img{height:38px}
           if(k==='celular') v = celularValido(el.value);
           wrap.classList.toggle('bad',!v); if(!v) valid=false;
         });
-        if(window.ithGradOk&&!ithGradOk(form)) valid=false;
         err.hidden=valid; if(!valid) return;
-        var data={ nome:form.elements.nome.value.trim(), celular:normalizarCelular(form.elements.celular.value), email:form.elements.email.value.trim(), formacao:(window.ithFormacao?ithFormacao(form):form.elements.formacao.value), turma:form.elements.turma.value,
+        var data={ nome:form.elements.nome.value.trim(), celular:normalizarCelular(form.elements.celular.value), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value, turma:form.elements.turma.value,
           curso:'Pós em Saúde Estética Avançada - Híbrido', pagina:'LP Super Black Estética', campanha:'Black Friday 2026', origem:window.location.href.split('?')[0],
           utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'), fbclid:utm('fbclid'),
           dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop', data:new Date().toISOString() };
@@ -824,6 +823,5 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
 (function(){var b=document.getElementById('vid-sb');if(!b)return;var v=b.querySelector('video');
 b.querySelector('.play').addEventListener('click',function(){b.classList.add('on');v.controls=true;v.play();});})();
 </script>
-<script>/*formacao-graduacao*/(function(){var G=["Graduando (1º ao 6º período)", "Graduando (7º ao 10º período)"];function sync(f){var s=f.elements.formacao,w=f.querySelector(".fld-grad");if(!s||!w)return;var on=G.indexOf(s.value)>-1;w.hidden=!on;if(!on){w.classList.remove("bad");w.querySelector("input").value="";}}window.ithFormacao=function(f){var s=f.elements.formacao.value,i=f.elements.graduacao,c=i&&!i.closest(".fld").hidden?i.value.trim():"";return c?s+" · "+c:s;};window.ithGradOk=function(f){var i=f.elements.graduacao;if(!i)return true;var w=i.closest(".fld");if(w.hidden)return true;var ok=i.value.trim().length>1;w.classList.toggle("bad",!ok);return ok;};document.addEventListener("change",function(e){if(e.target.name==="formacao"||e.target.name==="curso_sel")sync(e.target.form);});document.querySelectorAll("form.lead-form").forEach(sync);})();</script>
 </body>
 </html>
