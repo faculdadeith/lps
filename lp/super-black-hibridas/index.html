@@ -703,6 +703,7 @@ body.bar-on header.nav .logo img{height:38px}
         });
         if(!form.elements.curso_sel.value){ form.elements.curso_sel.closest('.fld').classList.add('bad'); valid=false; } else form.elements.curso_sel.closest('.fld').classList.remove('bad'); var tsel=COURSES[form.elements.curso_sel.value]; if(tsel&&tsel.tipo==='hib'){ var t=form.elements.turma, tv=!!t.value; t.closest('.fld').classList.toggle('bad',!tv); if(!tv) valid=false; }
         err.hidden=valid; if(!valid) return;
+        var fmc=(form.elements.formacao&&form.elements.formacao.value)||''; if(/^T[ée]cnico de Enfermagem$|1º ao 6º/i.test(fmc)){ form.hidden=true; ok.hidden=false; if(idx!=='9') ok.scrollIntoView({behavior:'smooth',block:'center'}); return; } // desqualificado (Técnico / 1º ao 6º): mostra sucesso e não envia nada
         var sel=COURSES[form.elements.curso_sel.value]||{}; var curso=sel.curso||''; var hook=sel.hook||''; var nomeCurso=sel.nome||'';
         var data={ nome:form.elements.nome.value.trim(), celular:normalizarCelular(form.elements.celular.value), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value, turma:(form.elements.turma?form.elements.turma.value:''),
           curso:curso, pagina:'LP Super Black - Hub Híbridas', campanha:'Black Friday 2026', origem:window.location.href.split('?')[0],
