@@ -768,7 +768,7 @@
       }
       function celularValido(valor){
         var c=normalizarCelular(valor);
-        return (c.length===11||c.length===10)&&!/^[01]/.test(c);
+        return (c.length===11||c.length===10)&&/^[1-9][1-9]/.test(c);
       }
       var aplicarCelular=function(e){
         var v=normalizarCelular(tel.value,e.type==='input');
