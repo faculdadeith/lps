@@ -458,7 +458,7 @@
   .figura3{ position:relative; justify-self:center; width:min(100%,520px); aspect-ratio:900/1180 }
   .figura3::before{ content:""; position:absolute; inset:6% -6% 10%; border-radius:50%; background:radial-gradient(closest-side,rgba(30,52,150,.55),rgba(30,52,150,0)); }
   .marca{ position:absolute; left:50%; top:47%; width:136%; height:auto; transform:translate(-50%,-50%); overflow:visible }
-  .marca .pc{ transform-box:fill-box; transform-origin:center; will-change:transform }
+  .marca .pc{ will-change:transform,opacity }
   .marca path{ fill:rgba(205,176,131,0); stroke:#CDB083; stroke-width:1.4; vector-effect:non-scaling-stroke; transition:fill 1.2s, stroke .8s }
   .figura3.pronta .marca path{ fill:rgba(205,176,131,.07); stroke:#EBD9B4 }
   .figura3 .prof{ position:absolute; left:50%; bottom:0; width:100%; height:auto; max-width:none; transform:translateX(-50%); -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); -webkit-mask-composite:source-in; mask-composite:intersect; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45)) }
@@ -617,7 +617,7 @@
         <p class="nota">Práticas em paciente modelo</p>
       </div>
       <div class="figura3">
-        <svg class="marca" viewBox="-40 -60 2000 2040" aria-hidden="true"><g class="pc" data-dx="-900" data-dy="-700" data-rot="-70"><path d="M540 74 Q540 10 604 10 L1091 10 Q1155 10 1155 74 L1155 326 Q1155 390 1091 390 L844 390 Q780 390 780 454 L780 716 Q780 780 716 780 L454 780 Q390 780 390 844 L390 1091 Q390 1155 326 1155 L74 1155 Q10 1155 10 1091 L10 529 Q10 465 74 465 L476 465 Q540 465 540 401 Z"/></g><g class="pc" data-dx="1000" data-dy="-800" data-rot="120"><path d="M1155 454 Q1155 390 1219 390 L1466 390 Q1530 390 1530 454 L1530 701 Q1530 765 1466 765 L1219 765 Q1155 765 1155 701 Z"/></g><g class="pc" data-dx="900" data-dy="700" data-rot="-70"><path d="M1390 1846 Q1390 1910 1326 1910 L839 1910 Q775 1910 775 1846 L775 1594 Q775 1530 839 1530 L1086 1530 Q1150 1530 1150 1466 L1150 1204 Q1150 1140 1214 1140 L1476 1140 Q1540 1140 1540 1076 L1540 829 Q1540 765 1604 765 L1856 765 Q1920 765 1920 829 L1920 1391 Q1920 1455 1856 1455 L1454 1455 Q1390 1455 1390 1519 Z"/></g><g class="pc" data-dx="-1000" data-dy="800" data-rot="120"><path d="M400 1219 Q400 1155 464 1155 L711 1155 Q775 1155 775 1219 L775 1466 Q775 1530 711 1530 L464 1530 Q400 1530 400 1466 Z"/></g></svg>
+        <svg class="marca" viewBox="-40 -60 2000 2040" aria-hidden="true"><g class="pc" data-lado="-1" data-at="0.0"><path d="M540 74 Q540 10 604 10 L1091 10 Q1155 10 1155 74 L1155 326 Q1155 390 1091 390 L844 390 Q780 390 780 454 L780 716 Q780 780 716 780 L454 780 Q390 780 390 844 L390 1091 Q390 1155 326 1155 L74 1155 Q10 1155 10 1091 L10 529 Q10 465 74 465 L476 465 Q540 465 540 401 Z"/></g><g class="pc" data-lado="-1" data-at="0.14"><path d="M1155 454 Q1155 390 1219 390 L1466 390 Q1530 390 1530 454 L1530 701 Q1530 765 1466 765 L1219 765 Q1155 765 1155 701 Z"/></g><g class="pc" data-lado="1" data-at="0.26"><path d="M1390 1846 Q1390 1910 1326 1910 L839 1910 Q775 1910 775 1846 L775 1594 Q775 1530 839 1530 L1086 1530 Q1150 1530 1150 1466 L1150 1204 Q1150 1140 1214 1140 L1476 1140 Q1540 1140 1540 1076 L1540 829 Q1540 765 1604 765 L1856 765 Q1920 765 1920 829 L1920 1391 Q1920 1455 1856 1455 L1454 1455 Q1390 1455 1390 1519 Z"/></g><g class="pc" data-lado="1" data-at="0.4"><path d="M400 1219 Q400 1155 464 1155 L711 1155 Q775 1155 775 1219 L775 1466 Q775 1530 711 1530 L464 1530 Q400 1530 400 1466 Z"/></g></svg>
         <img class="prof" src="assets/rec_profissional.png" alt="Profissional de estética com jaleco da ITH atendendo uma paciente" width="900" height="1349">
       </div>
     </div>
@@ -740,13 +740,22 @@
   var ps=[].slice.call(document.querySelectorAll('[data-par]')), tick=false;
   function par(){ tick=false; var vh=innerHeight; ps.forEach(function(el){ var r=el.parentNode.getBoundingClientRect(); if(r.bottom<-200||r.top>vh+200) return;
     var d=(r.top+r.height/2-vh/2)*parseFloat(el.dataset.par); el.style.translate='0 '+d.toFixed(1)+'px' }) }
-  // logo em contorno: as peças se juntam ao descer e se soltam ao subir
+  // logo em contorno: peças de cima deslizam da esquerda, as de baixo da direita, com fade.
+  // O scroll só define o alvo; o valor mostrado persegue o alvo com inércia e passa por uma curva Bézier contínua,
+  // então o movimento não trava nem dá tranco, e ao subir a página ele volta pelo mesmo caminho.
   var fig=document.querySelector('.figura3'), pcs=[].slice.call(document.querySelectorAll('.marca .pc'));
-  function monta(){ if(!fig) return; var r=fig.getBoundingClientRect(), vh=innerHeight;
-    var p=1-((r.top+r.height*.5)-vh*.5)/(vh*.6); p=Math.max(0,Math.min(1,p)); var e=p*p*(3-2*p), k=1-e;
-    pcs.forEach(function(g){ g.style.transform='translate('+(g.dataset.dx*k).toFixed(1)+'px,'+(g.dataset.dy*k).toFixed(1)+'px) rotate('+(g.dataset.rot*k).toFixed(2)+'deg)'; g.style.opacity=(.15+.85*e).toFixed(3) });
-    fig.classList.toggle('pronta', p>=1) }
-  if(fig && !red){ addEventListener('scroll',function(){ requestAnimationFrame(monta) },{passive:true}); addEventListener('resize',monta); monta() }
+  function bezier(x1,y1,x2,y2){ var cx=3*x1,bx=3*(x2-x1)-cx,ax=1-cx-bx,cy=3*y1,by=3*(y2-y1)-cy,ay=1-cy-by;
+    return function(x){ if(x<=0) return 0; if(x>=1) return 1; var t=x,i,d;
+      for(i=0;i<8;i++){ d=((ax*t+bx)*t+cx)*t-x; if(Math.abs(d)<1e-5) break; t-=d/((3*ax*t+2*bx)*t+cx) }
+      return ((ay*t+by)*t+cy)*t } }
+  var curva=bezier(.45,0,.15,1), alvo=0, atual=0, rodando=false, DIST=980, JANELA=.6;
+  function mede(){ var r=fig.getBoundingClientRect(), vh=innerHeight; alvo=Math.max(0,Math.min(1,1-((r.top+r.height*.5)-vh*.5)/(vh*.72))) }
+  function desenha(){ pcs.forEach(function(g){ var l=(atual-(+g.dataset.at))/JANELA, e=curva(Math.max(0,Math.min(1,l)));
+      g.style.transform='translate3d('+((+g.dataset.lado)*DIST*(1-e)).toFixed(1)+'px,0,0)'; g.style.opacity=e.toFixed(3) });
+    fig.classList.toggle('pronta', atual>.985) }
+  function quadro(){ atual+=(alvo-atual)*.075; if(Math.abs(alvo-atual)<.0006){ atual=alvo; rodando=false } desenha(); if(rodando) requestAnimationFrame(quadro) }
+  function acorda(){ mede(); if(!rodando){ rodando=true; requestAnimationFrame(quadro) } }
+  if(fig && !red){ addEventListener('scroll',acorda,{passive:true}); addEventListener('resize',acorda); mede(); atual=alvo; desenha() }
   if(!red && ps.length){ addEventListener('scroll',function(){ if(!tick){ tick=true; requestAnimationFrame(par) } },{passive:true}); par() }
 })();
 </script>
