@@ -1231,18 +1231,19 @@
       <p>Leva 20 segundos. Em seguida você vai direto para o pagamento seguro, com a condição de <strong>28x de R$ 479,99</strong>.</p>
     </div>
     <form id="leadForm" novalidate>
-      <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Como está no seu documento" required minlength="3"></label>
+      <label class="fld"><span>Nome completo</span><input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required minlength="3"></label>
       <label class="fld"><span>WhatsApp com DDD</span><input type="tel" name="celular" inputmode="tel" autocomplete="tel" placeholder="(62) 99999-9999" required></label>
-      <label class="fld"><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required></label>
+      <label class="fld"><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="voce@email.com" required></label>
       <label class="fld"><span>Sua formação</span>
         <select name="formacao" required>
           <option value="" disabled selected>Selecione</option>
-          <option>Enfermagem</option>
-          <option>Farmácia</option>
-          <option>Biomedicina</option>
-          <option>Fisioterapia</option>
-          <option>Estética e Cosmética</option>
-          <option>Outra graduação na saúde</option>
+              <option>Biomédico</option><option>Farmacêutico</option><option>Biólogo</option><option>Esteticista e cosmetólogo</option><option>Enfermeiro</option><option>Fisioterapeuta</option><option>Graduando (informe o curso e o período)</option>
+        </select>
+      </label>
+      <label class="fld"><span>Turma</span>
+        <select name="turma" required>
+          <option value="" disabled selected>Selecione</option>
+          <option>Goiânia · GO</option><option>Brasília · DF</option><option>Ainda não sei</option>
         </select>
       </label>
       <p class="fld-err" id="leadErr" hidden>Confira os campos destacados.</p>
@@ -1368,19 +1369,19 @@
     };
     ['input','change','blur'].forEach(function(ev){ tel.addEventListener(ev,aplicarCelular); });
     // prefill se já preencheu antes
-    try{ var saved=JSON.parse(localStorage.getItem('ith_lead_estetica')||'null'); if(saved){ ['nome','celular','email','formacao'].forEach(function(k){ if(saved[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
+    try{ var saved=JSON.parse(localStorage.getItem('ith_lead_estetica')||'null'); if(saved){ ['nome','celular','email','formacao','turma'].forEach(function(k){ if(saved[k]) form.elements[k].value=saved[k]; }); } }catch(e){}
     if(tel.value) aplicarCelular({type:'change'});
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var ok=true;
-      ['nome','celular','email','formacao'].forEach(function(k){
+      ['nome','celular','email','formacao','turma'].forEach(function(k){
         var el=form.elements[k], wrap=el.closest('.fld'), valid=el.checkValidity();
         if(k==='celular') valid = celularValido(el.value);
         wrap.classList.toggle('bad',!valid); if(!valid) ok=false;
       });
       err.hidden=ok; if(!ok) return;
       var data={
-        nome:form.elements.nome.value.trim(), celular:normalizarCelular(form.elements.celular.value), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value,
+        nome:form.elements.nome.value.trim(), celular:normalizarCelular(form.elements.celular.value), email:form.elements.email.value.trim(), formacao:form.elements.formacao.value, turma:form.elements.turma.value,
         curso:(CHECKOUT_URL.indexOf('52794')>-1?'Pós Premium: Estética Avançada + MBA':'Pós em Saúde Estética Avançada - Híbrido'), origem:window.location.href.split('?')[0], pagina:'LP Estética Avançada',
         utm_source:utm('utm_source'), utm_medium:utm('utm_medium'), utm_campaign:utm('utm_campaign'), utm_content:utm('utm_content'), utm_term:utm('utm_term'), gclid:utm('gclid')||utm('gbraid')||utm('wbraid'),
         dispositivo:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop', data:new Date().toISOString()
