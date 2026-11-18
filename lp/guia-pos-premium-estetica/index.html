@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://mkt.faculdadeith.com.br/lp/guia-pos-premium-estetica/assets/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" href="assets/Vogue.woff" as="font" type="font/woff" crossorigin>
 <style>
   @font-face{ font-family:"Vogue"; src:url(assets/Vogue.woff) format("woff"), url(assets/Vogue.ttf) format("truetype"); font-display:swap }
@@ -209,6 +209,124 @@
   .fecho .pre{ color:var(--gold) }
   .soc{ color:#E4EAFF }
 
+  /* ---------- seletor de variações (provisório, para escolha) ---------- */
+  .vars{ position:fixed; z-index:30; left:50%; bottom:16px; transform:translateX(-50%); display:flex; align-items:center; gap:6px; padding:7px 8px 7px 18px; background:rgba(2,9,38,.86); border:1px solid rgba(216,181,118,.45); border-radius:999px; font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#fff; white-space:nowrap }
+  .vars a{ width:32px; height:32px; display:grid; place-items:center; border-radius:50%; letter-spacing:0; font-size:13px }
+  .vars a.at{ background:var(--pink); color:var(--navy) }
+
+  /* ---------- variação 2 · foto recortada na cruz da ITH ---------- */
+  .limpo{ background:none !important; padding:0; margin:0 } .limpo::before{ display:none }
+  .v2 .palco{ grid-template-columns:minmax(0,1fr) minmax(0,.92fr); gap:clamp(20px,4vw,60px) }
+  .cruz{ position:relative; justify-self:end; width:min(100%,570px) }
+  .cruz svg{ display:block; width:100%; height:auto; overflow:visible }
+  .lat{ position:absolute; font-size:10px; font-weight:600; letter-spacing:.5em; line-height:2; text-transform:uppercase; color:var(--gold) }
+  .lat.e{ left:0; bottom:9% } .lat.d{ right:0; top:9%; text-align:right }
+
+  /* ---------- variação 3 · close em tela cheia ---------- */
+  .v3 .capa{ background:linear-gradient(180deg,rgba(2,9,38,.78) 0%,rgba(4,15,58,.8) 50%,#020926 100%), url(assets/hero.jpg) 72% 38%/cover no-repeat }
+  .v3 .capa .ring{ display:none }
+  .v3 .palco{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding-bottom:20px }
+  .v3 .bloco h1{ font-size:clamp(58px,10.5vw,168px) }
+  .v3 .bloco .sub{ max-width:none; margin-left:auto; margin-right:auto }
+  .pills{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:28px }
+  .pills span{ border:1px solid rgba(255,255,255,.42); border-radius:999px; padding:11px 24px; font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#fff; background:rgba(2,9,38,.45) }
+  .v3 .btn{ border-radius:999px }
+  .circ{ display:flex; justify-content:center; gap:clamp(26px,5vw,70px); margin-top:clamp(34px,4vw,56px) }
+  .circ figure{ display:grid; justify-items:center; gap:14px; font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--gold-2) }
+  .circ i{ display:block; width:clamp(104px,11vw,150px); aspect-ratio:1; border-radius:50%; border:1px solid var(--gold); padding:6px; background-clip:content-box; background-size:150%; background-position:50% 12%; background-repeat:no-repeat; background-origin:content-box }
+
+  /* ---------- variação 4 · painéis em camadas ---------- */
+  .v4 .palco{ display:block; position:relative; padding:clamp(20px,3vw,40px) 0 70px }
+  .painel{ position:absolute; right:0; top:0; bottom:40px; width:66%; overflow:hidden }
+  .painel img{ width:100%; height:100%; object-fit:cover; object-position:70% 42% }
+  .painel::after{ content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(4,15,58,.55) 0%,rgba(4,15,58,0) 45%) }
+  .v4 .bloco{ width:56%; margin:clamp(40px,6vw,90px) 0 0; z-index:3 } .v4 .bloco::before{ display:none }
+  .mini{ position:absolute; z-index:4; right:5%; bottom:0; width:clamp(150px,17vw,230px); aspect-ratio:4/5; padding:8px; border:1px solid var(--gold); background:var(--navy) }
+  .mini img{ width:100%; height:100%; object-fit:cover; object-position:70% 50% }
+  .selo{ position:absolute; z-index:4; left:48%; bottom:6px; background:var(--pink); color:#2B2F5C; padding:20px 30px 18px; font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase }
+  .selo b{ display:block; font-size:clamp(40px,4.4vw,62px); color:var(--navy); letter-spacing:.01em; margin-bottom:6px }
+  .vert{ position:absolute; z-index:4; right:-30px; top:42%; writing-mode:vertical-rl; font-size:10px; font-weight:600; letter-spacing:.5em; text-transform:uppercase; color:var(--gold) }
+
+  @media (max-width:860px){
+    .vars{ bottom:10px; font-size:10px; padding-left:14px }
+    .v2 .palco{ gap:26px } .cruz{ order:-1; justify-self:center; width:84%; margin-top:6px } .lat{ display:none }
+    .v2 .bloco{ margin:0; padding:0 }
+    .v3 .bloco,.v4 .bloco{ margin:0; padding:20px 0 0 }
+    .v3 .palco{ padding-top:30px }
+    .painel{ position:relative; width:auto; bottom:auto; aspect-ratio:4/3; margin:0 calc(var(--pad) * -1) }
+    .v4 .palco{ padding:0 0 10px } .v4 .bloco{ width:auto; margin:-46px 0 0; padding:34px 24px 36px }
+    .mini,.vert{ display:none } .selo{ position:static; display:inline-block; margin-top:14px }
+  }
+
+  /* ================= refinamento de luxo (camada final) ================= */
+  :root{ --navy:#060C2B; --navy-2:#0B1647; --navy-3:#04081F; --royal:#0E1C5A; --gold:#CDB083; --gold-2:#E8D5AE; --pink:#E7BFD2; --pink-2:#F3DCE7; --text:#B7BFDD; --line:rgba(205,176,131,.24) }
+  body{ font-weight:300; background:var(--navy-3) }
+  body::after{ content:""; position:fixed; inset:0; z-index:40; pointer-events:none; opacity:.09; mix-blend-mode:overlay; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E") }
+  strong{ font-weight:500 }
+  .it,.bloco .sub,.fecho .cta{ font-family:"Cormorant Garamond","Times New Roman",serif; font-style:italic; font-weight:400; letter-spacing:.01em }
+  .kicker,.rot,.bloco .pre,.fecho .pre,.grp,.leg,.pres,.nota{ font-weight:500; letter-spacing:.44em; font-size:10.5px }
+  .gold,.nums b,.lista li > b,.dn,.enc figcaption b,.frase,.prog b,.casa b,.enc.fim b,.selo b{ background:linear-gradient(100deg,#EBD9B4 0%,#BF9D69 48%,#EEDFBD 100%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent }
+  h2.v{ font-size:clamp(36px,5.3vw,80px); letter-spacing:.02em }
+  .lead{ font-size:clamp(16px,1.3vw,18px); line-height:1.8 }
+  .ring{ border-color:rgba(205,176,131,.2) }
+
+  /* capa */
+  .capa{ background:radial-gradient(80% 75% at 78% 38%,#111F60 0%,var(--navy) 55%,var(--navy-3) 100%) }
+  .nav nav{ font-size:10.5px; font-weight:400; letter-spacing:.32em; color:#D9DEF2 }
+  .nav .tag{ align-self:center; background:none; border:1px solid rgba(205,176,131,.55); color:var(--gold-2); padding:13px 22px; font-size:10px; font-weight:500; letter-spacing:.36em }
+  .bloco{ background:none; padding:0; margin-right:0 } .bloco::before{ display:none }
+  .bloco h1{ letter-spacing:.02em }
+  .bloco .sub{ font-size:clamp(21px,2vw,29px); line-height:1.25; color:var(--pink-2); margin-top:26px }
+  .bloco .fatos{ display:inline-flex; margin-top:32px; padding-top:24px; border-top:1px solid var(--line); font-size:10.5px; font-weight:500; letter-spacing:.36em; color:#D9DEF2 }
+  .bloco .fatos span + span::before{ width:4px; height:4px; background:var(--gold) }
+  .btn{ display:flex; width:max-content; background:none; border:1px solid var(--gold); color:#fff; padding:17px 30px; font-size:10.5px; font-weight:500; letter-spacing:.36em }
+  .btn:hover{ background:var(--gold); color:var(--navy); transform:none }
+  .retrato{ width:min(86%,430px); margin-right:18px; overflow:visible; box-shadow:none; outline:1px solid rgba(205,176,131,.6); outline-offset:16px; background:var(--navy-2) url(assets/t_fullface.jpg) 50% 50%/138% auto no-repeat }
+  .retrato::after{ content:""; position:absolute; inset:0; border-radius:inherit; background:linear-gradient(180deg,rgba(6,12,43,0) 52%,rgba(6,12,43,.8) 100%) }
+
+  /* fotos clínicas viram duotone azul: tira a cara de banco de imagem */
+  .moldura{ background:#13226E; isolation:isolate } .moldura img,.arco .ph img,.painel img{ mix-blend-mode:luminosity; opacity:.8; filter:contrast(1.08) }
+  .moldura::before{ background:none; border:1px solid rgba(205,176,131,.55); inset:7% -6% -6% 12%; z-index:-1 }
+  .arco .ph,.painel{ background:#13226E; isolation:isolate }
+  .painel{ background:#0F1D63 } .painel img{ opacity:.72 }
+  .selo{ bottom:52px; left:50% } .v4 .palco{ padding-bottom:96px } .painel{ bottom:66px } .mini{ bottom:20px }
+  .arco::before{ border-color:rgba(205,176,131,.55) }
+  .enc img{ filter:saturate(.86) }
+
+  .sobre{ background:linear-gradient(165deg,#0D1A55 0%,#070E33 60%,var(--navy-3) 100%); color:var(--text) }
+  .dom{ font-size:clamp(22px,2.7vw,40px) }
+  .casa{ background:none; border:1px solid rgba(205,176,131,.45); color:var(--text) } .casa span{ color:var(--gold-2); letter-spacing:.3em; font-weight:500; font-size:10.5px } .casa strong{ color:#fff }
+  .casa b{ color:transparent }
+  .enc.fim{ background:none; border:1px solid rgba(205,176,131,.45); color:var(--gold-2) } .enc.fim b{ color:transparent } .enc.fim span{ font-weight:500; letter-spacing:.3em; font-size:10.5px }
+  .pres{ color:var(--pink) } .nota{ color:var(--gold-2) }
+  .fecho .cta{ font-size:clamp(22px,2.2vw,30px); color:var(--pink-2) }
+  .soc{ font-weight:400; letter-spacing:.2em; font-size:11px }
+  .vars{ font-weight:500; background:rgba(4,8,31,.9); border-color:rgba(205,176,131,.35) } .vars a.at{ background:var(--gold); color:var(--navy) }
+
+  /* variação 2 */
+  .cruz{ width:min(100%,540px) }
+  /* variação 3 */
+  .v3 .capa{ background:linear-gradient(180deg,rgba(4,8,31,.78) 0%,rgba(6,12,43,.72) 45%,var(--navy-3) 100%), url(assets/hero.jpg) 72% 38%/cover no-repeat, #1B2E86; background-blend-mode:normal,luminosity,normal }
+  .v3 .bloco .fatos{ display:none }
+  .v3 .btn{ margin-left:auto; margin-right:auto }
+  .pills span{ border-color:rgba(205,176,131,.5); background:rgba(4,8,31,.4); font-size:10.5px; font-weight:500; letter-spacing:.34em; padding:12px 24px }
+  .circ i{ border-color:rgba(205,176,131,.7) }
+  /* variação 4 */
+  .painel::after{ background:linear-gradient(90deg,rgba(6,12,43,.75) 0%,rgba(6,12,43,.1) 55%) }
+  .v4 .bloco{ background:rgba(6,12,43,.84); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border:1px solid rgba(205,176,131,.4); padding:clamp(34px,4.4vw,66px) clamp(28px,4.4vw,66px); width:54% }
+  .selo{ background:var(--navy-3); border:1px solid rgba(205,176,131,.5); color:var(--gold-2); font-weight:500; letter-spacing:.3em; font-size:10.5px } .selo b{ color:transparent }
+  .mini{ background:var(--navy-3) } .mini i{ display:block; width:100%; height:100%; background:url(assets/t_rino.jpg) 40% 40%/175% auto no-repeat }
+
+  @media (max-width:860px){
+    .nav .tag{ padding:11px 14px; font-size:9px; letter-spacing:.28em }
+    .capa .palco{ padding-top:22px }
+    .retrato{ order:-1; justify-self:center; width:64%; max-width:280px; margin:0 0 46px }
+    .bloco,.v2 .bloco,.v3 .bloco{ margin:0; padding:0 }
+    .bloco .fatos{ display:flex; gap:10px 18px } .bloco .fatos span + span::before{ margin-right:18px }
+    .v4 .bloco{ width:auto; margin:-46px 0 0; padding:32px 24px 36px }
+    .moldura{ width:84% }
+  }
+
   /* contador de páginas (desktop) */
   .cont{ position:fixed; z-index:20; right:22px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; align-items:center; gap:12px; font-size:11px; font-weight:600; letter-spacing:.16em; color:var(--brown); mix-blend-mode:normal; transition:color .4s }
   .cont i{ width:1px; height:74px; background:currentColor; opacity:.3; position:relative }
@@ -248,7 +366,7 @@
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="v1">
 
 <!-- 1 · CAPA -->
 <section class="capa" id="capa" data-n="01">
@@ -266,7 +384,7 @@
       <div class="fatos"><span>960 horas</span><span>Híbrido</span><span>Goiânia e Brasília</span></div>
       <a class="btn" href="#grade">Ver a grade <i></i></a>
     </div>
-    <div class="retrato"><img src="assets/hero.jpg" alt="Procedimento de estética facial"></div>
+    <div class="retrato" role="img" aria-label="Rosto de mulher com as mãos sob o queixo"></div>
   </div>
 </section>
 
@@ -432,6 +550,7 @@
   </div>
 </section>
 
+<nav class="vars">Variação <a href="index.html" title="Blocos e arco" class="at">1</a><a href="v2.html" title="Foto na cruz da ITH">2</a><a href="v3.html" title="Close em tela cheia">3</a><a href="v4.html" title="Painéis em camadas">4</a></nav>
 <div class="cont" aria-hidden="true"><span id="cn">01</span><i id="cb"></i><span>08</span></div>
 
 <script>
