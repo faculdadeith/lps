@@ -402,7 +402,6 @@
   .quadro{ position:relative }
   .quadro .foto{ position:relative; aspect-ratio:4/5; background:#13226E; overflow:hidden; isolation:isolate }
   .quadro .foto img{ width:100%; height:100%; object-fit:cover; mix-blend-mode:luminosity; opacity:.82; filter:contrast(1.08) }
-  .js .quadro.rv .foto{ clip-path:inset(0 0 100% 0); transition:clip-path 1.5s cubic-bezier(.2,.7,.2,1) .15s } .js .quadro.rv.on .foto{ clip-path:inset(0) }
   .quadro::before{ content:""; position:absolute; inset:7% -6% -6% 12%; border:1px solid rgba(205,176,131,.55); z-index:-1 }
   .quadro .cartao{ position:absolute; left:-9%; bottom:9%; padding:22px 28px 20px; font-size:10.5px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-2) }
   .quadro .cartao b{ display:block; font-size:clamp(44px,4.6vw,66px); margin-bottom:6px }
@@ -411,6 +410,11 @@
 
   /* sobre */
   .v5 .sobre .ondas{ top:8%; opacity:.3 }
+  .v5 .sobre .topo{ grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); align-items:center; gap:clamp(20px,3vw,48px) }
+  .tracado{ position:relative; margin:-4% calc(var(--pad) * -.55) -4% 0 }
+  .tracado video{ display:block; width:100%; height:auto; -webkit-mask-image:radial-gradient(ellipse 56% 60% at 50% 50%,#000 42%,transparent 100%); mask-image:radial-gradient(ellipse 56% 60% at 50% 50%,#000 42%,transparent 100%) }
+  .tracado figcaption{ position:absolute; left:8%; bottom:6%; display:flex; align-items:center; gap:14px; font-size:10.5px; font-weight:500; letter-spacing:.44em; text-transform:uppercase; color:var(--gold-2) }
+  .tracado figcaption::before{ content:""; width:38px; height:1px; background:currentColor }
   .faixas{ margin:26px calc(var(--pad) * -1) 0; display:grid; gap:6px; -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent); mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent) }
   .faixa{ overflow:hidden } .faixa div{ display:flex; width:max-content; animation:corre 60s linear infinite }
   .faixa.r div{ animation-direction:reverse; animation-duration:72s }
@@ -464,6 +468,7 @@
     .lado.e,.lado.d{ grid-row:auto; grid-column:1; padding:26px 0 0; text-align:left } .lado.d{ justify-self:stretch; padding-bottom:44px }
     .lado .sub{ max-width:none } .lado .btn{ margin-left:0 }
     .v5 .mercado .duo,.cartoes{ grid-template-columns:1fr }
+    .v5 .sobre .topo{ grid-template-columns:1fr } .tracado{ margin:6px calc(var(--pad) * -1) 0 } .tracado figcaption{ left:var(--pad); bottom:2% }
     .quadro{ width:84%; margin-bottom:26px } .quadro .cartao{ left:auto; right:-18%; bottom:7% } .quadro .selo-gira{ display:none }
     .dgrid{ grid-template-columns:1fr } .dgrid article,.dgrid article:nth-child(1),.dgrid article:nth-child(2){ grid-column:auto; min-height:190px }
     .figura2{ order:-1; width:74%; max-width:310px; margin:50px auto 18px }
@@ -535,8 +540,12 @@
       <div class="rv">
         <div class="kicker">Sobre a pós-graduação</div>
         <h2 class="v">Duas formações em uma jornada</h2>
+        <p class="lead" style="margin-top:28px">A Pós Premium ITH une a <strong>Pós em Estética Avançada</strong> e o <strong>Master em Injetáveis e Contorno Facial</strong>: estética facial e corporal completa, com aprofundamento nos procedimentos que exigem precisão e olhar apurado.</p>
       </div>
-      <p class="lead rv">A Pós Premium ITH une a <strong>Pós em Estética Avançada</strong> e o <strong>Master em Injetáveis e Contorno Facial</strong>: estética facial e corporal completa, com aprofundamento nos procedimentos que exigem precisão e olhar apurado.</p>
+      <figure class="tracado rv">
+        <video autoplay loop muted playsinline preload="metadata" poster="assets/rosto_tracado.jpg" aria-label="Rosto sendo traçado com as proporções da face"><source src="assets/rosto_tracado.mp4" type="video/mp4"></video>
+        <figcaption>Precisão e olhar apurado</figcaption>
+      </figure>
     </div>
     <div class="rot rv">O que você vai dominar</div>
     <div class="faixas" aria-label="Avaliação e regeneração da pele, Microagulhamento, PEIM, Intradermoterapia, Tricologia, Toxina botulínica, Preenchedores, Fios de PDO, Bioestimuladores, Ultraformer MPT, Criolipólise, Laser CO2, Hakon, Farmacologia, Primeiros socorros"><div class="faixa "><div><span>Avaliação e regeneração da pele</span><span>Microagulhamento</span><span>PEIM</span><span>Intradermoterapia</span><span>Tricologia</span><span>Toxina botulínica</span><span>Preenchedores</span><span>Fios de PDO</span><span>Avaliação e regeneração da pele</span><span>Microagulhamento</span><span>PEIM</span><span>Intradermoterapia</span><span>Tricologia</span><span>Toxina botulínica</span><span>Preenchedores</span><span>Fios de PDO</span></div></div><div class="faixa r"><div><span>Bioestimuladores</span><span>Ultraformer MPT</span><span>Criolipólise</span><span>Laser CO2</span><span>Hakon</span><span>Farmacologia</span><span>Primeiros socorros</span><span>Avaliação e regeneração da pele</span><span>Microagulhamento</span><span>Bioestimuladores</span><span>Ultraformer MPT</span><span>Criolipólise</span><span>Laser CO2</span><span>Hakon</span><span>Farmacologia</span><span>Primeiros socorros</span><span>Avaliação e regeneração da pele</span><span>Microagulhamento</span></div></div></div>
