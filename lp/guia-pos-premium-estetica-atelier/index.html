@@ -446,6 +446,13 @@
   .figura2 svg.arc path.fio{ fill:none; stroke:#CDB083; stroke-width:1; vector-effect:non-scaling-stroke }
   .figura2 .rec{ position:absolute; left:-8%; right:-10%; top:-15%; bottom:0; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 20%); mask-image:linear-gradient(90deg,transparent 0,#000 20%) }
   .figura2 .rec img{ position:absolute; right:-2%; bottom:0; height:100%; width:auto; max-width:none; will-change:transform }
+  .figura3{ position:relative; justify-self:center; width:min(100%,520px); aspect-ratio:900/1180 }
+  .figura3::before{ content:""; position:absolute; inset:6% -6% 10%; border-radius:50%; background:radial-gradient(closest-side,rgba(30,52,150,.55),rgba(30,52,150,0)); }
+  .marca{ position:absolute; left:50%; top:47%; width:136%; height:auto; transform:translate(-50%,-50%); overflow:visible }
+  .marca .pc{ transform-box:fill-box; transform-origin:center; will-change:transform }
+  .marca path{ fill:rgba(205,176,131,0); stroke:#CDB083; stroke-width:1.4; vector-effect:non-scaling-stroke; transition:fill 1.2s, stroke .8s }
+  .figura3.pronta .marca path{ fill:rgba(205,176,131,.07); stroke:#EBD9B4 }
+  .figura3 .prof{ position:absolute; left:50%; bottom:0; width:100%; height:auto; max-width:none; transform:translateX(-50%); -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); -webkit-mask-composite:source-in; mask-composite:intersect; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45)) }
   .chips5{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px }
   .chips5 li{ border:1px solid rgba(231,191,210,.55); border-radius:999px; padding:10px 22px; font-family:"Vogue",serif; text-transform:uppercase; font-size:clamp(18px,1.7vw,24px); color:var(--pink-2); transition:background .4s,color .4s }
   .chips5 li:hover{ background:var(--pink); color:var(--navy) }
@@ -472,6 +479,7 @@
     .quadro{ width:84%; margin-bottom:26px } .quadro .cartao{ left:auto; right:-18%; bottom:7% } .quadro .selo-gira{ display:none }
     .dgrid{ grid-template-columns:1fr } .dgrid article,.dgrid article:nth-child(1),.dgrid article:nth-child(2){ grid-column:auto; min-height:190px }
     .figura2{ order:-1; width:74%; max-width:310px; margin:50px auto 18px }
+    .figura3{ order:-1; width:86%; max-width:360px; margin:30px auto 10px } .marca{ width:124% }
     .v5 .disc:hover{ padding-left:0; padding-right:0; background:none }
     .ondas{ display:block; width:220%; left:-60% }
   }
@@ -593,9 +601,9 @@
         </div>
         <p class="nota">Práticas em paciente modelo</p>
       </div>
-      <div class="figura2 rv">
-        <svg class="arc" viewBox="0 0 100 130" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A2C80"/><stop offset="1" stop-color="#060C2B" stop-opacity="0"/></linearGradient></defs><path d="M5 130 V50 A45 45 0 0 1 95 50 V130 Z" fill="url(#gB)"/><path class="fio" d="M0 130 V50 A50 50 0 0 1 100 50 V130"/><path class="fio" d="M5 130 V50 A45 45 0 0 1 95 50 V130"/></svg>
-        <div class="rec"><img src="assets/rec_atendimento.png" alt="Profissional sorrindo durante atendimento de estética" loading="lazy" data-par="-0.03"></div>
+      <div class="figura3">
+        <svg class="marca" viewBox="-40 -60 2000 2040" aria-hidden="true"><g class="pc" data-dx="-900" data-dy="-700" data-rot="-70"><path d="M540 74 Q540 10 604 10 L1091 10 Q1155 10 1155 74 L1155 326 Q1155 390 1091 390 L844 390 Q780 390 780 454 L780 716 Q780 780 716 780 L454 780 Q390 780 390 844 L390 1091 Q390 1155 326 1155 L74 1155 Q10 1155 10 1091 L10 529 Q10 465 74 465 L476 465 Q540 465 540 401 Z"/></g><g class="pc" data-dx="1000" data-dy="-800" data-rot="120"><path d="M1155 454 Q1155 390 1219 390 L1466 390 Q1530 390 1530 454 L1530 701 Q1530 765 1466 765 L1219 765 Q1155 765 1155 701 Z"/></g><g class="pc" data-dx="900" data-dy="700" data-rot="-70"><path d="M1390 1846 Q1390 1910 1326 1910 L839 1910 Q775 1910 775 1846 L775 1594 Q775 1530 839 1530 L1086 1530 Q1150 1530 1150 1466 L1150 1204 Q1150 1140 1214 1140 L1476 1140 Q1540 1140 1540 1076 L1540 829 Q1540 765 1604 765 L1856 765 Q1920 765 1920 829 L1920 1391 Q1920 1455 1856 1455 L1454 1455 Q1390 1455 1390 1519 Z"/></g><g class="pc" data-dx="-1000" data-dy="800" data-rot="120"><path d="M400 1219 Q400 1155 464 1155 L711 1155 Q775 1155 775 1219 L775 1466 Q775 1530 711 1530 L464 1530 Q400 1530 400 1466 Z"/></g></svg>
+        <img class="prof" src="assets/rec_profissional.png" alt="Profissional de estética com jaleco da ITH atendendo uma paciente" width="900" height="1349">
       </div>
     </div>
   </div>
@@ -717,6 +725,13 @@
   var ps=[].slice.call(document.querySelectorAll('[data-par]')), tick=false;
   function par(){ tick=false; var vh=innerHeight; ps.forEach(function(el){ var r=el.parentNode.getBoundingClientRect(); if(r.bottom<-200||r.top>vh+200) return;
     var d=(r.top+r.height/2-vh/2)*parseFloat(el.dataset.par); el.style.translate='0 '+d.toFixed(1)+'px' }) }
+  // logo em contorno: as peças se juntam ao descer e se soltam ao subir
+  var fig=document.querySelector('.figura3'), pcs=[].slice.call(document.querySelectorAll('.marca .pc'));
+  function monta(){ if(!fig) return; var r=fig.getBoundingClientRect(), vh=innerHeight;
+    var p=1-((r.top+r.height*.5)-vh*.5)/(vh*.6); p=Math.max(0,Math.min(1,p)); var e=p*p*(3-2*p), k=1-e;
+    pcs.forEach(function(g){ g.style.transform='translate('+(g.dataset.dx*k).toFixed(1)+'px,'+(g.dataset.dy*k).toFixed(1)+'px) rotate('+(g.dataset.rot*k).toFixed(2)+'deg)'; g.style.opacity=(.15+.85*e).toFixed(3) });
+    fig.classList.toggle('pronta', p>=1) }
+  if(fig && !red){ addEventListener('scroll',function(){ requestAnimationFrame(monta) },{passive:true}); addEventListener('resize',monta); monta() }
   if(!red && ps.length){ addEventListener('scroll',function(){ if(!tick){ tick=true; requestAnimationFrame(par) } },{passive:true}); par() }
 })();
 </script>
