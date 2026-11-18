@@ -35,6 +35,9 @@
   ul{ list-style:none }
   .v{ font-family:"Vogue","Times New Roman",serif; font-weight:400; text-transform:uppercase; line-height:.98; letter-spacing:.012em }
   strong{ font-weight:600; color:var(--brown) }
+  /* "h" de horas em minúscula: a Vogue só tem maiúsculas, então ele entra na fonte de apoio */
+  .hh{ font-family:"Montserrat",system-ui,sans-serif; text-transform:none; font-weight:400; font-size:.56em; letter-spacing:0; margin-left:.05em }
+  .nums b .hh{ display:inline; margin:0 0 0 .05em; font-size:.5em; line-height:1; color:inherit }
 
   section{ position:relative; padding:clamp(72px,10vw,150px) var(--pad); overflow:hidden }
   .wrap{ max-width:1240px; margin:0 auto; position:relative; z-index:2 }
@@ -546,7 +549,7 @@
     <div class="duo">
       <div class="quadro rv">
         <div class="foto"><img src="assets/intro.jpg" alt="Profissional de estética em atendimento" loading="lazy"></div>
-        <div class="cartao vidro"><b class="v gold">960H</b>de carga horária total</div>
+        <div class="cartao vidro"><b class="v gold">960<span class="hh">h</span></b>de carga horária total</div>
         <div class="selo-gira"><svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="cg" d="M66 66 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0"/></defs><text><textPath href="#cg">Pós Premium · Estética Avançada · ITH ·</textPath></text></svg><b class="v">ITH</b></div>
       </div>
       <div class="rv">
@@ -557,7 +560,7 @@
       </div>
     </div>
     <div class="nums rv">
-      <div><b class="v"><data data-cnt="960">960</data>H</b><span>de carga horária total</span></div>
+      <div><b class="v"><data data-cnt="960">960</data><span class="hh">h</span></b><span>de carga horária total</span></div>
       <div><b class="v"><data data-cnt="12">12</data></b><span>módulos de prática supervisionada</span></div>
       <div><b class="v"><data data-cnt="100">100</data><em>%</em></b><span>do material de prática incluso</span></div>
     </div>
@@ -600,7 +603,7 @@
       <div class="kicker">Diferenciais</div>
       <h2 class="v">O que vem com a sua formação</h2>
     </div>
-    <div class="dgrid"><article class="vidro rv"><b class="v gold">01</b><h3 class="v">Dupla certificação · 960h</h3><p>Pós em Estética Avançada + Master em Injetáveis.</p></article><article class="vidro rv"><b class="v gold">02</b><h3 class="v">Certificação por módulo</h3><p>Cada módulo concluído já conta no seu currículo.</p></article><article class="vidro rv"><b class="v gold">03</b><h3 class="v">Prática supervisionada</h3><p>Atendimento em pacientes modelo, com material incluso.</p></article><article class="vidro rv"><b class="v gold">04</b><h3 class="v">Jaleco ITH</h3><p>Um marco da sua especialização.</p></article><article class="vidro rv"><b class="v gold">05</b><h3 class="v">Corpo docente renomado</h3><p>Professores que são referência no mercado da estética.</p></article></div>
+    <div class="dgrid"><article class="vidro rv"><b class="v gold">01</b><h3 class="v">Dupla certificação · 960<span class="hh">h</span></h3><p>Pós em Estética Avançada + Master em Injetáveis.</p></article><article class="vidro rv"><b class="v gold">02</b><h3 class="v">Certificação por módulo</h3><p>Cada módulo concluído já conta no seu currículo.</p></article><article class="vidro rv"><b class="v gold">03</b><h3 class="v">Prática supervisionada</h3><p>Atendimento em pacientes modelo, com material incluso.</p></article><article class="vidro rv"><b class="v gold">04</b><h3 class="v">Jaleco ITH</h3><p>Um marco da sua especialização.</p></article><article class="vidro rv"><b class="v gold">05</b><h3 class="v">Corpo docente renomado</h3><p>Professores que são referência no mercado da estética.</p></article></div>
     <div class="casa vidro rv">
       <div><b class="v">+11 mil</b><span>alunos formados</span></div>
       <div><b class="v">+6</b><span>países com alunos ITH</span></div>

@@ -34,6 +34,9 @@
   ul{ list-style:none }
   .v{ font-family:"Vogue","Times New Roman",serif; font-weight:400; text-transform:uppercase; line-height:.98; letter-spacing:.012em }
   strong{ font-weight:600; color:var(--brown) }
+  /* "h" de horas em minúscula: a Vogue só tem maiúsculas, então ele entra na fonte de apoio */
+  .hh{ font-family:"Montserrat",system-ui,sans-serif; text-transform:none; font-weight:400; font-size:.56em; letter-spacing:0; margin-left:.05em }
+  .nums b .hh{ display:inline; margin:0 0 0 .05em; font-size:.5em; line-height:1; color:inherit }
 
   section{ position:relative; padding:clamp(72px,10vw,150px) var(--pad); overflow:hidden }
   .wrap{ max-width:1240px; margin:0 auto; position:relative; z-index:2 }
@@ -385,7 +388,7 @@
       <div class="fatos"><span>960 horas</span><span>Híbrido</span><span>Goiânia e Brasília</span></div>
       <a class="btn" href="#grade">Ver a grade <i></i></a>
     </div>
-    <div class="selo"><b class="v">960H</b>de carga horária</div>
+    <div class="selo"><b class="v">960<span class="hh">h</span></b>de carga horária</div>
     <div class="mini"><i role="img" aria-label="Rosto em close"></i></div>
     <span class="vert">Guia do curso</span>
   </div>
@@ -404,7 +407,7 @@
       </div>
     </div>
     <div class="nums rv">
-      <div><b class="v">960H</b><span>de carga horária total</span></div>
+      <div><b class="v">960<span class="hh">h</span></b><span>de carga horária total</span></div>
       <div><b class="v">12</b><span>módulos de prática supervisionada</span></div>
       <div><b class="v">100<em>%</em></b><span>do material de prática incluso</span></div>
     </div>
@@ -443,7 +446,7 @@
         <h2 class="v">O que vem com a sua formação</h2>
       </div>
     </div>
-    <ul class="lista"><li class="rv"><b class="v">01</b><div><h3 class="v">Dupla certificação · 960h</h3><p>Pós em Estética Avançada + Master em Injetáveis.</p></div></li><li class="rv"><b class="v">02</b><div><h3 class="v">Certificação por módulo</h3><p>Cada módulo concluído já conta no seu currículo.</p></div></li><li class="rv"><b class="v">03</b><div><h3 class="v">Prática supervisionada</h3><p>Atendimento em pacientes modelo, com material incluso.</p></div></li><li class="rv"><b class="v">04</b><div><h3 class="v">Jaleco ITH</h3><p>Um marco da sua especialização.</p></div></li><li class="rv"><b class="v">05</b><div><h3 class="v">Corpo docente renomado</h3><p>Professores que são referência no mercado da estética.</p></div></li></ul>
+    <ul class="lista"><li class="rv"><b class="v">01</b><div><h3 class="v">Dupla certificação · 960<span class="hh">h</span></h3><p>Pós em Estética Avançada + Master em Injetáveis.</p></div></li><li class="rv"><b class="v">02</b><div><h3 class="v">Certificação por módulo</h3><p>Cada módulo concluído já conta no seu currículo.</p></div></li><li class="rv"><b class="v">03</b><div><h3 class="v">Prática supervisionada</h3><p>Atendimento em pacientes modelo, com material incluso.</p></div></li><li class="rv"><b class="v">04</b><div><h3 class="v">Jaleco ITH</h3><p>Um marco da sua especialização.</p></div></li><li class="rv"><b class="v">05</b><div><h3 class="v">Corpo docente renomado</h3><p>Professores que são referência no mercado da estética.</p></div></li></ul>
     <div class="casa rv">
       <div><b class="v">+11 mil</b><span>alunos formados</span></div>
       <div><b class="v">+6</b><span>países com alunos ITH</span></div>
