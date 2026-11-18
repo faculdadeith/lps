@@ -397,6 +397,15 @@
   .lado li{ padding-bottom:12px; border-bottom:1px solid var(--line) }
   .lado .btn{ margin-top:26px; margin-left:auto }
 
+  /* capa da versão traçado (v6) */
+  .v6 .capa{ background:radial-gradient(70% 80% at 72% 50%,#0D184E 0%,#0D184E 30%,var(--navy) 68%,var(--navy-3) 100%) }
+  .capa6{ position:relative; z-index:2; flex:1; width:100%; max-width:1240px; margin:0 auto; display:grid; grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr); align-items:center; padding:10px 0 50px }
+  .capa6 .bloco{ position:relative; z-index:2 }
+  .capa6 .bloco h1{ font-size:clamp(50px,7.6vw,116px); white-space:nowrap }
+  .capa6 h1 .l2 .ch{ background:linear-gradient(100deg,#EBD9B4 0%,#BF9D69 48%,#EEDFBD 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent }
+  .tracado6{ position:relative; z-index:1; margin:0 calc(var(--pad) * -1) 0 -14% }
+  .tracado6 video{ display:block; width:100%; height:auto; -webkit-mask-image:radial-gradient(ellipse 54% 58% at 52% 50%,#000 46%,transparent 100%); mask-image:radial-gradient(ellipse 54% 58% at 52% 50%,#000 46%,transparent 100%) }
+
   /* mercado */
   .v5 .mercado .duo{ grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) }
   .quadro{ position:relative }
@@ -470,6 +479,12 @@
 
   @media (max-width:860px){
     .capa5{ grid-template-columns:1fr; padding-top:14px }
+    /* capa traçado no celular: o perfil ocupa a largura toda, bem maior, e o texto sobe encostado nele */
+    .v6 .capa{ min-height:0; background:radial-gradient(130% 52% at 50% 30%,#0D184E 0%,#0D184E 46%,var(--navy) 82%,var(--navy-3) 100%) }
+    .capa6{ grid-template-columns:1fr; align-content:start; flex:none; padding:0 0 44px }
+    .tracado6{ order:-1; overflow:hidden; margin:-18px calc(var(--pad) * -1) -30px }
+    .tracado6 video{ width:205%; max-width:none; margin-left:-57%; -webkit-mask-image:radial-gradient(ellipse 34% 56% at 52% 50%,#000 52%,transparent 100%); mask-image:radial-gradient(ellipse 34% 56% at 52% 50%,#000 52%,transparent 100%) }
+    .capa6 .bloco h1{ font-size:clamp(50px,15vw,96px) }
     .palavra{ font-size:clamp(60px,19vw,120px) } .palavra2{ font-size:clamp(50px,15.4vw,100px) }
     .figura{ grid-column:1; width:92%; justify-self:center; margin-top:15vw }
     .lado.e,.lado.d{ grid-row:auto; grid-column:1; padding:26px 0 0; text-align:left } .lado.d{ justify-self:stretch; padding-bottom:44px }
