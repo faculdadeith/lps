@@ -496,6 +496,18 @@
     .figura2{ order:-1; width:74%; max-width:310px; margin:50px auto 18px }
     .figura3{ order:-1; width:86%; max-width:360px; margin:30px auto 10px } .marca{ width:124% }
     .v5 .disc:hover{ padding-left:0; padding-right:0; background:none }
+    /* harmonia no celular: capa toda no eixo central; foto da seção 2 em largura cheia com o cartão centrado */
+    .v5:not(.v6) .lado.e,.v5:not(.v6) .lado.d{ text-align:center; padding-top:22px }
+    .v5:not(.v6) .lado.d{ padding-bottom:52px }
+    .v5:not(.v6) .lado .sub{ margin:12px auto 0; font-size:24px }
+    .v5:not(.v6) .lado ul{ display:flex; justify-content:center; gap:0; padding-top:20px; border-top:1px solid var(--line); font-size:9.5px; letter-spacing:.24em }
+    .v5:not(.v6) .lado li{ padding:0 12px; border-bottom:0; white-space:nowrap } .v5:not(.v6) .lado li + li{ border-left:1px solid var(--line) }
+    .v5:not(.v6) .lado .btn{ margin:28px auto 0; width:100%; justify-content:center }
+    .v5 .quadro{ width:100%; margin-bottom:64px } .v5 .quadro::before{ inset:14px -8px -14px 8px }
+    .v5 .quadro .cartao{ left:50%; right:auto; bottom:-38px; transform:translateX(-50%); text-align:center; white-space:nowrap; background:#0B1647; -webkit-backdrop-filter:none; backdrop-filter:none }
+    .v5 .nums{ text-align:center } .v5 .nums div{ padding:22px 6px 0 } .v5 .nums div + div{ padding-left:6px }
+    .v5 .casa{ text-align:center } .v5 .frase{ text-align:center } .v5 .nota{ text-align:center }
+    .v5 .prog{ text-align:center } .v5 .prog div,.v5 .prog div + div{ padding-left:8px; padding-right:8px }
     /* áreas no celular: grade 2 x 3 com pílulas da mesma largura */
     .chips5{ display:grid; grid-template-columns:1fr 1fr; gap:10px } .chips5 li{ text-align:center; padding:13px 8px; font-size:19px; letter-spacing:.03em }
     .ondas{ display:block; width:220%; left:-60% }
