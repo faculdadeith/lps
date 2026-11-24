@@ -317,10 +317,12 @@
   .mercado .duo{ grid-template-columns:minmax(0,1.18fr) minmax(0,1fr) !important }
   .filme{ position:relative; aspect-ratio:16/9; background:#04081F; overflow:hidden }
   .filme video{ display:block; width:100%; height:100%; object-fit:cover }
-  .filme .toca{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:0; padding:0 0 22px; border:0; cursor:pointer; color:#fff; font:500 10.5px/1 "Montserrat",system-ui,sans-serif; letter-spacing:.3em; text-transform:uppercase; background:linear-gradient(180deg,rgba(4,8,31,0) 45%,rgba(4,8,31,.72) 100%) }
-  .filme .toca i{ position:absolute; left:50%; top:50%; translate:-50% -50%; width:clamp(58px,6vw,84px); aspect-ratio:1; border-radius:50%; border:1px solid rgba(232,213,174,.9); background:rgba(4,8,31,.45); transition:background .3s, scale .3s }
-  .filme .toca i::after{ content:""; position:absolute; left:54%; top:50%; translate:-50% -50%; border-style:solid; border-width:9px 0 9px 15px; border-color:transparent transparent transparent #E8D5AE }
-  .filme .toca:hover i{ background:rgba(205,176,131,.28); scale:1.06 }
+  .filme .toca{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; border:0; cursor:pointer; color:#fff; background:linear-gradient(180deg,rgba(4,8,31,.12),rgba(4,8,31,.5)) }
+  .filme .toca i{ position:relative; width:clamp(68px,7vw,96px); aspect-ratio:1; border-radius:50%; display:grid; place-items:center; background:radial-gradient(120% 140% at 50% 0%,#F6E7C2 0%,#CDB083 55%,#A9864F 100%); box-shadow:0 0 0 12px rgba(205,176,131,.22),0 0 60px rgba(205,176,131,.6); transition:scale .2s; animation:pulsa 2s ease-in-out infinite }
+  .filme .toca i::before{ content:""; margin-left:8%; border-left:clamp(20px,2.1vw,30px) solid #060C2B; border-top:clamp(12px,1.25vw,18px) solid transparent; border-bottom:clamp(12px,1.25vw,18px) solid transparent }
+  .filme .toca span{ font:700 clamp(12px,1.05vw,15px)/1 "Montserrat",system-ui,sans-serif; letter-spacing:.14em; text-transform:uppercase; background:rgba(4,8,31,.72); padding:11px 20px; border-radius:999px; border:1px solid rgba(232,213,174,.5) }
+  .filme .toca:hover i{ scale:1.07 }
+  @keyframes pulsa{ 0%,100%{ box-shadow:0 0 0 12px rgba(205,176,131,.22),0 0 60px rgba(205,176,131,.6) } 50%{ box-shadow:0 0 0 22px rgba(205,176,131,.08),0 0 80px rgba(205,176,131,.8) } }
   @media (max-width:900px){
     .mercado .duo{ grid-template-columns:1fr !important }
     .filme{ margin:0 calc(var(--pad) * -1) 8px }
@@ -425,7 +427,7 @@
 <section class="mercado" id="mercado" data-n="02">
   <div class="wrap">
     <div class="duo">
-      <div class="filme rv"><video playsinline preload="none" poster="assets/apresentacao.webp" aria-label="Vídeo de apresentação da Pós Premium em Estética Avançada"><source src="assets/apresentacao.mp4?v=2414" type="video/mp4"></video><button type="button" class="toca" aria-label="Assistir à apresentação do curso" onclick="var v=this.previousElementSibling;this.remove();v.controls=true;v.play()"><i></i><span>Assista à apresentação · 1 min</span></button></div>
+      <div class="filme rv"><video muted loop autoplay playsinline preload="metadata" poster="assets/apresentacao.webp" src="assets/apresentacao-previa.mp4?v=2415" data-full="assets/apresentacao.mp4?v=2415" aria-label="Vídeo de apresentação da Pós Premium em Estética Avançada"></video><button type="button" class="toca" aria-label="Assistir à apresentação do curso com som" onclick="var v=this.previousElementSibling;this.remove();v.loop=false;v.muted=false;v.src=v.dataset.full;v.controls=true;v.play()"><i></i><span>Assistir com som</span></button></div>
       <div class="rv">
         <div class="kicker">Por que fazer esta pós</div>
         <h2 class="v">O mercado que mais cresce também é o mais exigente</h2>
@@ -552,18 +554,18 @@
       <p class="lead rv">Em cada encontro você pratica em <strong>pacientes modelo</strong>, com supervisão e todo o material incluso.</p>
     </div>
     <div class="encs">
-<figure class="enc rv"><div class="ph"><img src="assets/t_bioestimuladores.jpg?v=2414" alt="Bioestimuladores de colágeno facial e corporal e fios absorvíveis" loading="lazy"></div><figcaption><b class="v">01</b><span>Bioestimuladores de colágeno facial e corporal e fios absorvíveis</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_microagulhamento.jpg?v=2414" alt="Microagulhamento, peeling químico, microdermoabrasão e PEIM" loading="lazy"></div><figcaption><b class="v">02</b><span>Microagulhamento, peeling químico, microdermoabrasão e PEIM</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_intradermo.jpg?v=2414" alt="Intradermoterapia estética e tricologia" loading="lazy"></div><figcaption><b class="v">03</b><span>Intradermoterapia estética e tricologia</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_tecnologias.jpg?v=2414" alt="Habilitação em tecnologias de alta performance" loading="lazy"></div><figcaption><b class="v">04</b><span>Habilitação em tecnologias de alta performance</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_toxpre.jpg?v=2414" alt="Toxina botulínica e preenchimento" loading="lazy"></div><figcaption><b class="v">05</b><span>Toxina botulínica e preenchimento</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_avaliacao.jpg?v=2414" alt="Avaliação e regeneração da pele" loading="lazy"></div><figcaption><b class="v">06</b><span>Avaliação e regeneração da pele</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_toxina.jpg?v=2414" alt="Toxina botulínica avançada" loading="lazy"></div><figcaption><b class="v">07</b><span>Toxina botulínica avançada</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_protocolos.jpg?v=2414" alt="Protocolos PRO: ortomolecular, ozônio e terapias integrativas" loading="lazy"></div><figcaption><b class="v">08</b><span>Protocolos PRO: ortomolecular, ozônio e terapias integrativas</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_fullface.jpg?v=2414" alt="Preenchimento full face" loading="lazy"></div><figcaption><b class="v">09</b><span>Preenchimento full face</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_rino.jpg?v=2414" alt="Rinomodelação" loading="lazy"></div><figcaption><b class="v">10</b><span>Rinomodelação</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_lips.jpg?v=2414" alt="Lips: preenchimento labial avançado" loading="lazy"></div><figcaption><b class="v">11</b><span>Lips: preenchimento labial avançado</span></figcaption></figure>
-<figure class="enc rv"><div class="ph"><img src="assets/t_intercorrencias.jpg?v=2414" alt="Intercorrências na estética" loading="lazy"></div><figcaption><b class="v">12</b><span>Intercorrências na estética</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_bioestimuladores.jpg?v=2415" alt="Bioestimuladores de colágeno facial e corporal e fios absorvíveis" loading="lazy"></div><figcaption><b class="v">01</b><span>Bioestimuladores de colágeno facial e corporal e fios absorvíveis</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_microagulhamento.jpg?v=2415" alt="Microagulhamento, peeling químico, microdermoabrasão e PEIM" loading="lazy"></div><figcaption><b class="v">02</b><span>Microagulhamento, peeling químico, microdermoabrasão e PEIM</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_intradermo.jpg?v=2415" alt="Intradermoterapia estética e tricologia" loading="lazy"></div><figcaption><b class="v">03</b><span>Intradermoterapia estética e tricologia</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_tecnologias.jpg?v=2415" alt="Habilitação em tecnologias de alta performance" loading="lazy"></div><figcaption><b class="v">04</b><span>Habilitação em tecnologias de alta performance</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_toxpre.jpg?v=2415" alt="Toxina botulínica e preenchimento" loading="lazy"></div><figcaption><b class="v">05</b><span>Toxina botulínica e preenchimento</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_avaliacao.jpg?v=2415" alt="Avaliação e regeneração da pele" loading="lazy"></div><figcaption><b class="v">06</b><span>Avaliação e regeneração da pele</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_toxina.jpg?v=2415" alt="Toxina botulínica avançada" loading="lazy"></div><figcaption><b class="v">07</b><span>Toxina botulínica avançada</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_protocolos.jpg?v=2415" alt="Protocolos PRO: ortomolecular, ozônio e terapias integrativas" loading="lazy"></div><figcaption><b class="v">08</b><span>Protocolos PRO: ortomolecular, ozônio e terapias integrativas</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_fullface.jpg?v=2415" alt="Preenchimento full face" loading="lazy"></div><figcaption><b class="v">09</b><span>Preenchimento full face</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_rino.jpg?v=2415" alt="Rinomodelação" loading="lazy"></div><figcaption><b class="v">10</b><span>Rinomodelação</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_lips.jpg?v=2415" alt="Lips: preenchimento labial avançado" loading="lazy"></div><figcaption><b class="v">11</b><span>Lips: preenchimento labial avançado</span></figcaption></figure>
+<figure class="enc rv"><div class="ph"><img src="assets/t_intercorrencias.jpg?v=2415" alt="Intercorrências na estética" loading="lazy"></div><figcaption><b class="v">12</b><span>Intercorrências na estética</span></figcaption></figure>
 <div class="enc fim rv"><b class="v">12</b><span>encontros de prática com material incluso</span></div>
     </div>
   </div>
