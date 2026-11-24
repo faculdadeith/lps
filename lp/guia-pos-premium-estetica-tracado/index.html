@@ -475,6 +475,16 @@
   .quem .cena canvas{ display:block; width:60%; height:100%; margin-left:40%; object-fit:cover; background:url("assets/jaleco/f000.jpg") center/cover no-repeat }
   .quem .vaga{ min-height:min(74vh,700px) }
   .figura3 .prof{ position:absolute; left:50%; bottom:0; width:100%; height:auto; max-width:none; transform:translateX(-50%); -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); -webkit-mask-composite:source-in; mask-composite:intersect; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45)) }
+  /* mural de fotos das aulas */
+  .alunos{ background:linear-gradient(180deg,#06164F 0%,var(--navy-3) 100%) }
+  .v5 .alunos{ background:linear-gradient(180deg,#0A1340 0%,var(--navy-3) 100%) }
+  .alunos .cab{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.7fr); gap:clamp(24px,5vw,80px); align-items:end }
+  .alunos h2.v{ color:#fff }
+  .mural{ display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:clamp(10px,1.2vw,18px); margin-top:clamp(40px,5vw,70px); padding-bottom:36px }
+  .mural figure{ margin:0; aspect-ratio:3/4; overflow:hidden; border:1px solid rgba(205,176,131,.28); background:var(--navy-2) }
+  .mural figure:nth-child(even){ translate:0 36px }
+  .mural img{ display:block; width:100%; height:100%; object-fit:cover; transition:transform 1.2s cubic-bezier(.2,.7,.2,1) }
+  .mural figure:hover img{ transform:scale(1.06) }
   .chips5{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px }
   .chips5 li{ border:1px solid rgba(231,191,210,.55); border-radius:999px; padding:10px 22px; font-family:"Vogue",serif; text-transform:uppercase; font-size:clamp(18px,1.7vw,24px); color:var(--pink-2); transition:background .4s,color .4s }
   .chips5 li:hover{ background:var(--pink); color:var(--navy) }
@@ -510,6 +520,10 @@
     .figura3{ order:-1; width:86%; max-width:360px; margin:30px auto 10px } .marca{ width:124% }
     .quem .cena{ position:relative; width:auto; height:min(128vw,600px); margin:calc(clamp(72px,10vw,150px) * -1) calc(var(--pad) * -1) 34px;
       -webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.5) 6%,#000 14%,#000 60%,rgba(0,0,0,.5) 82%,transparent 100%); mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.5) 6%,#000 14%,#000 60%,rgba(0,0,0,.5) 82%,transparent 100%); -webkit-mask-composite:source-over; mask-composite:add }
+    .alunos .cab{ grid-template-columns:1fr }
+    .mural{ display:flex; gap:12px; margin:34px calc(var(--pad) * -1) 0; padding:0 var(--pad) 6px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none }
+    .mural::-webkit-scrollbar{ display:none }
+    .mural figure{ flex:0 0 66%; scroll-snap-align:center } .mural figure:nth-child(even){ translate:none }
     .quem .vaga{ display:none } .quem .cena canvas{ width:100%; margin-left:0 }
     .v5 .disc:hover{ padding-left:0; padding-right:0; background:none }
     /* harmonia no celular: capa toda no eixo central; foto da seção 2 em largura cheia com o cartão centrado */
@@ -681,6 +695,20 @@
 <article class="disc rv"><div class="dn v">19</div><div><h3 class="v">Microdermoabrasão e PEIM</h3><p>Esfoliação mecânica para textura, manchas e poros, e PEIM (Procedimento Estético Injetável para Microvasos) para tratar vasinhos com segurança.</p></div></article>
 <article class="disc rv"><div class="dn v">20</div><div><div class="grp">Saúde ITH 4.0</div><h3 class="v">Prática e negócio</h3><p>Como estruturar e gerir seu negócio na estética: organização, finanças, análise de mercado e concorrência e estratégias de vendas.</p></div></article>
     </div>
+  </div>
+</section>
+
+<!-- 6b · ALUNOS -->
+<section class="alunos" id="alunos">
+  <div class="wrap">
+    <div class="cab">
+      <div class="rv">
+        <div class="kicker">Por dentro das aulas</div>
+        <h2 class="v">Nossos alunos na prática</h2>
+      </div>
+      <p class="lead rv">Registros dos encontros presenciais: alunos atendendo <strong>pacientes modelo</strong>, com o professor ao lado.</p>
+    </div>
+    <div class="mural"><figure class="rv"><img src="assets/alunos/a01.webp" alt="Professora explicando a técnica durante a aula prática" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a02.webp" alt="Aluna aplicando no couro cabeludo de um paciente modelo" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a03.webp" alt="Aplicação na face de uma paciente modelo" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a04.webp" alt="Professora orientando a turma antes do procedimento" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a05.webp" alt="Detalhe de aplicação na linha do cabelo" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a06.webp" alt="Alunas em atendimento com equipamento de tricologia" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a07.webp" alt="Aluna avaliando o couro cabeludo de um paciente modelo" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a08.webp" alt="Aplicação corporal em paciente modelo" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a09.webp" alt="Aluna em aplicação capilar durante a aula" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a10.webp" alt="Turma reunida durante a aula prática" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a11.webp" alt="Aluna preparando a pele do paciente modelo" width="720" height="960" loading="lazy" decoding="async"></figure><figure class="rv"><img src="assets/alunos/a12.webp" alt="Detalhe de aplicação capilar" width="720" height="960" loading="lazy" decoding="async"></figure></div>
   </div>
 </section>
 
