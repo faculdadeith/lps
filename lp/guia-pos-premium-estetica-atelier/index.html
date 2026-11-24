@@ -445,13 +445,13 @@
 
   /* diferenciais */
   .v5 .difer .ondas{ bottom:0; opacity:.34 }
-  .dgrid{ display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:clamp(14px,1.6vw,22px); margin-top:clamp(40px,5vw,70px) }
-  .dgrid article{ grid-column:span 2; position:relative; padding:clamp(26px,2.8vw,40px); min-height:240px; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1), border-color .4s }
-  .dgrid article:nth-child(1),.dgrid article:nth-child(2){ grid-column:span 3; min-height:280px }
+  /* lista: um bloco abaixo do outro (pedido de 24/11) */
+  .dgrid{ display:grid; grid-template-columns:1fr; gap:clamp(12px,1.3vw,18px); margin-top:clamp(40px,5vw,70px) }
+  .dgrid article{ position:relative; padding:clamp(24px,2.6vw,36px) clamp(120px,13vw,190px) clamp(24px,2.6vw,36px) clamp(26px,2.8vw,40px); min-height:0; display:flex; flex-direction:column; justify-content:center; overflow:hidden; transition:transform .6s cubic-bezier(.2,.7,.2,1), border-color .4s }
   .dgrid article:hover{ transform:translateY(-6px); border-color:rgba(232,213,174,.8) }
-  .dgrid article > b{ position:absolute; right:22px; top:10px; font-size:clamp(64px,6.4vw,96px); line-height:1; opacity:.3 }
+  .dgrid article > b{ position:absolute; right:clamp(18px,2.4vw,34px); top:50%; margin-top:-.5em; font-size:clamp(64px,6.4vw,96px); line-height:1; opacity:.3 }
   .dgrid h3{ font-size:clamp(23px,2.3vw,34px); color:#fff; line-height:1.04 }
-  .dgrid p{ font-size:15px; line-height:1.65; margin-top:12px; max-width:34ch }
+  .dgrid p{ font-size:15px; line-height:1.65; margin-top:10px; max-width:none }
   .dgrid article::after{ content:""; position:absolute; left:0; bottom:0; height:1px; width:100%; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .8s cubic-bezier(.2,.7,.2,1) }
   .dgrid article:hover::after{ transform:scaleX(1) }
   .v5 .casa{ position:relative; overflow:hidden }
@@ -499,7 +499,7 @@
     .v5 .mercado .duo,.cartoes{ grid-template-columns:1fr }
     .v5 .sobre .topo{ grid-template-columns:1fr } .tracado{ margin:6px calc(var(--pad) * -1) 0 } .tracado figcaption{ left:var(--pad); bottom:2% }
     .quadro{ width:84%; margin-bottom:26px } .quadro .cartao{ left:auto; right:-18%; bottom:7% } .quadro .selo-gira{ display:none }
-    .dgrid{ grid-template-columns:1fr } .dgrid article,.dgrid article:nth-child(1),.dgrid article:nth-child(2){ grid-column:auto; min-height:190px }
+    .dgrid article{ padding-right:96px } .dgrid article > b{ font-size:60px }
     .figura2{ order:-1; width:74%; max-width:310px; margin:50px auto 18px }
     .figura3{ order:-1; width:86%; max-width:360px; margin:30px auto 10px } .marca{ width:124% }
     .v5 .disc:hover{ padding-left:0; padding-right:0; background:none }
