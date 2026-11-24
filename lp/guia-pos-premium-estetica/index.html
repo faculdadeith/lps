@@ -304,10 +304,28 @@
   .enc.fim span{ margin-top:0 }
   .prog b.vivo{ font-size:clamp(14px,1.3vw,19px) !important; line-height:1.25; white-space:nowrap; min-height:0; letter-spacing:0 }
   .prog div{ min-width:0 }
-  /* Ao vivo + Presencial: rótulo "Presencial" sobre GO e DF e um "+" na divisa dos dois blocos */
+  /* 24/11: blocos em 2 x 2 (Presencial em fonte grande precisa de largura) e um "+" na divisa de Ao vivo e Presencial */
+  .prog{ grid-template-columns:1fr 1fr }
+  .prog div{ padding-bottom:22px } .prog div:nth-child(3){ border-left:0; padding-left:0 } .prog div:nth-child(n+3){ border-top:1px solid var(--line) }
+  .prog b{ font-size:clamp(25px,2.7vw,40px); white-space:nowrap }
   .prog .presl{ position:relative }
-  .prog .presl i{ position:absolute; top:6px; left:clamp(12px,1.6vw,22px); right:0; font-style:normal; font-size:9.5px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--clay-2); white-space:nowrap }
-  .prog .presl::before{ content:"+"; position:absolute; left:0; top:calc(22px + clamp(14px,1.55vw,23px)); translate:-50% -50%; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:15px; font-weight:400; line-height:1; color:var(--clay-2); background:var(--navy-3); border:1px solid var(--line) }
+  .prog .presl::before{ content:"+"; position:absolute; left:0; top:calc(22px + clamp(12px,1.35vw,20px)); translate:-50% -50%; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:15px; font-weight:400; line-height:1; color:var(--clay-2); background:var(--navy-3); border:1px solid var(--line) }
+  /* números da seção 2: quatro colunas com a dupla certificação */
+  .nums{ grid-template-columns:repeat(4,1fr) }
+  .nums b{ font-size:clamp(40px,4.9vw,76px); white-space:nowrap }
+  /* vídeo de apresentação na seção 2 */
+  .mercado .duo{ grid-template-columns:minmax(0,1.18fr) minmax(0,1fr) !important }
+  .filme{ position:relative; aspect-ratio:16/9; background:#04081F; overflow:hidden }
+  .filme video{ display:block; width:100%; height:100%; object-fit:cover }
+  .filme .toca{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:0; padding:0 0 22px; border:0; cursor:pointer; color:#fff; font:500 10.5px/1 "Montserrat",system-ui,sans-serif; letter-spacing:.3em; text-transform:uppercase; background:linear-gradient(180deg,rgba(4,8,31,0) 45%,rgba(4,8,31,.72) 100%) }
+  .filme .toca i{ position:absolute; left:50%; top:50%; translate:-50% -50%; width:clamp(58px,6vw,84px); aspect-ratio:1; border-radius:50%; border:1px solid rgba(232,213,174,.9); background:rgba(4,8,31,.45); transition:background .3s, scale .3s }
+  .filme .toca i::after{ content:""; position:absolute; left:54%; top:50%; translate:-50% -50%; border-style:solid; border-width:9px 0 9px 15px; border-color:transparent transparent transparent #E8D5AE }
+  .filme .toca:hover i{ background:rgba(205,176,131,.28); scale:1.06 }
+  @media (max-width:900px){
+    .mercado .duo{ grid-template-columns:1fr !important }
+    .filme{ margin:0 calc(var(--pad) * -1) 8px }
+    .nums{ grid-template-columns:1fr 1fr } .nums div:nth-child(3){ border-left:0; padding-left:0 } .nums div:nth-child(n+3){ border-top:1px solid var(--line); margin-top:22px }
+  }
   .pres.vivo::before{ background:none !important; border:1px solid currentColor }
   .enc.fim{ background:none; border:1px solid rgba(205,176,131,.45); color:var(--gold-2) } .enc.fim b{ color:transparent } .enc.fim span{ font-weight:500; letter-spacing:.3em; font-size:10.5px }
   .pres{ color:var(--pink) } .nota{ color:var(--gold-2) }
@@ -404,7 +422,7 @@
 <section class="mercado" id="mercado" data-n="02">
   <div class="wrap">
     <div class="duo">
-      <div class="moldura rv"><img src="assets/intro.jpg" alt="Profissional de estética em atendimento" loading="lazy"></div>
+      <div class="filme rv"><video playsinline preload="none" poster="assets/apresentacao.webp" aria-label="Vídeo de apresentação da Pós Premium em Estética Avançada"><source src="assets/apresentacao.mp4" type="video/mp4"></video><button type="button" class="toca" aria-label="Assistir à apresentação do curso" onclick="var v=this.previousElementSibling;this.remove();v.controls=true;v.play()"><i></i><span>Assista à apresentação · 1 min</span></button></div>
       <div class="rv">
         <div class="kicker">Por que fazer esta pós</div>
         <h2 class="v">O mercado que mais cresce também é o mais exigente</h2>
@@ -416,6 +434,7 @@
       <div><b class="v">960<span class="hh">h</span></b><span>de carga horária total</span></div>
       <div><b class="v">12</b><span>módulos de prática supervisionada</span></div>
       <div><b class="v">100<em>%</em></b><span>do material de prática incluso</span></div>
+      <div><b class="v">Dupla</b><span>certificação: Pós + Master em Injetáveis</span></div>
     </div>
   </div>
 </section>
@@ -474,7 +493,7 @@
           <div><b class="v">960</b>horas</div>
           <div><b class="v">20</b>módulos</div>
           <div><b class="v">Ao vivo</b>aulas com foco na prática</div>
-          <div class="presl"><i>Presencial</i><b class="v">GO e DF</b>Goiânia e Brasília</div>
+          <div class="presl"><b class="v">Presencial</b>Goiânia e Brasília</div>
         </div>
         <p class="nota">Práticas em paciente modelo</p>
       </div>
