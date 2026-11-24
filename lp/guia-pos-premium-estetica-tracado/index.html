@@ -468,6 +468,9 @@
   .marca .pc{ will-change:transform,opacity }
   .marca path{ fill:rgba(205,176,131,0); stroke:#CDB083; stroke-width:1.4; vector-effect:non-scaling-stroke; transition:fill 1.2s, stroke .8s }
   .figura3.pronta .marca path{ fill:rgba(205,176,131,.07); stroke:#EBD9B4 }
+  /* vídeo do jaleco (quadros presos ao scroll) no lugar da foto recortada */
+  .figura3.cine .tela{ position:absolute; left:50%; top:3%; bottom:0; aspect-ratio:9/16; transform:translateX(-50%); border-radius:999px 999px 0 0; overflow:hidden; border:1px solid rgba(205,176,131,.55); background:#050B2E url("assets/jaleco/f000.jpg") center/cover no-repeat; box-shadow:0 30px 70px -30px rgba(0,0,0,.7) }
+  .figura3.cine .tela canvas{ display:block; width:100%; height:100% }
   .figura3 .prof{ position:absolute; left:50%; bottom:0; width:100%; height:auto; max-width:none; transform:translateX(-50%); -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); mask-image:linear-gradient(180deg,#000 70%,transparent 99%),linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent 100%); -webkit-mask-composite:source-in; mask-composite:intersect; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45)) }
   .chips5{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px }
   .chips5 li{ border:1px solid rgba(231,191,210,.55); border-radius:999px; padding:10px 22px; font-family:"Vogue",serif; text-transform:uppercase; font-size:clamp(18px,1.7vw,24px); color:var(--pink-2); transition:background .4s,color .4s }
@@ -632,9 +635,9 @@
         </div>
         <p class="nota">Práticas em paciente modelo</p>
       </div>
-      <div class="figura3">
+      <div class="figura3 cine">
         <svg class="marca" viewBox="-40 -60 2000 2040" aria-hidden="true"><g class="pc" data-lado="-1" data-at="0.0"><path d="M540 74 Q540 10 604 10 L1091 10 Q1155 10 1155 74 L1155 326 Q1155 390 1091 390 L844 390 Q780 390 780 454 L780 716 Q780 780 716 780 L454 780 Q390 780 390 844 L390 1091 Q390 1155 326 1155 L74 1155 Q10 1155 10 1091 L10 529 Q10 465 74 465 L476 465 Q540 465 540 401 Z"/></g><g class="pc" data-lado="-1" data-at="0.14"><path d="M1155 454 Q1155 390 1219 390 L1466 390 Q1530 390 1530 454 L1530 701 Q1530 765 1466 765 L1219 765 Q1155 765 1155 701 Z"/></g><g class="pc" data-lado="1" data-at="0.26"><path d="M1390 1846 Q1390 1910 1326 1910 L839 1910 Q775 1910 775 1846 L775 1594 Q775 1530 839 1530 L1086 1530 Q1150 1530 1150 1466 L1150 1204 Q1150 1140 1214 1140 L1476 1140 Q1540 1140 1540 1076 L1540 829 Q1540 765 1604 765 L1856 765 Q1920 765 1920 829 L1920 1391 Q1920 1455 1856 1455 L1454 1455 Q1390 1455 1390 1519 Z"/></g><g class="pc" data-lado="1" data-at="0.4"><path d="M400 1219 Q400 1155 464 1155 L711 1155 Q775 1155 775 1219 L775 1466 Q775 1530 711 1530 L464 1530 Q400 1530 400 1466 Z"/></g></svg>
-        <img class="prof" src="assets/rec_profissional.webp" alt="Profissional de estética com jaleco da ITH atendendo uma paciente" width="900" height="1349">
+        <div class="tela"><canvas class="rolo" width="540" height="960" data-n="120" data-src="assets/jaleco/f" role="img" aria-label="Jaleco branco da ITH com a marca bordada no peito"></canvas></div>
       </div>
     </div>
   </div>
@@ -772,6 +775,17 @@
   function acorda(){ mede(); if(!rodando){ rodando=true; requestAnimationFrame(quadro) } }
   window.__logo=function(v){ if(!fig) return; if(red){ atual=v; desenha(); return } alvo=v; if(!rodando){ rodando=true; requestAnimationFrame(quadro) } };
   if(fig && !red){ if(DECK){ atual=0; desenha() } else { addEventListener('scroll',acorda,{passive:true}); addEventListener('resize',acorda); mede(); atual=alvo; desenha() } }
+  // vídeo do jaleco preso ao scroll: descer a página avança os quadros, subir volta (com uma inércia curta para não dar tranco)
+  var rolo=document.querySelector('canvas.rolo');
+  if(rolo && rolo.getContext){ var RN=+rolo.dataset.n, rb=rolo.dataset.src, rc=rolo.getContext('2d'), rim=[], rok=[], ra=0, rt=0, rr=false, rult=-1, rini=false;
+    function rpinta(f){ var j=Math.round(ra*(RN-1)); while(j>0&&!rok[j]) j--; if(!rok[j]||(j===rult&&!f)) return; rult=j; rc.drawImage(rim[j],0,0,rolo.width,rolo.height) }
+    function rcarrega(){ if(rini) return; rini=true; for(var k=0;k<RN;k++)(function(k){ var i=new Image(); i.onload=function(){ rok[k]=1; rpinta() }; i.src=rb+('00'+k).slice(-3)+'.jpg'; rim[k]=i })(k) }
+    function rmede(){ var r=rolo.getBoundingClientRect(), vh=innerHeight; rt=Math.max(0,Math.min(1,(vh*.92-r.top)/(vh*.84+r.height))) }
+    function rquadro(){ ra+=(rt-ra)*(red?1:.16); if(Math.abs(rt-ra)<.0008){ ra=rt; rr=false } rpinta(); if(rr) requestAnimationFrame(rquadro) }
+    function racorda(){ rmede(); if(!rr){ rr=true; requestAnimationFrame(rquadro) } }
+    if(DECK){ rcarrega() }
+    else { if('IntersectionObserver' in window){ var ro=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ ro.disconnect(); rcarrega() } },{rootMargin:'150% 0px'}); ro.observe(rolo) } else rcarrega();
+      addEventListener('scroll',racorda,{passive:true}); addEventListener('resize',racorda); rmede(); ra=rt } }
   if(!DECK && !red && ps.length){ addEventListener('scroll',function(){ if(!tick){ tick=true; requestAnimationFrame(par) } },{passive:true}); par() }
 })();
 </script>
