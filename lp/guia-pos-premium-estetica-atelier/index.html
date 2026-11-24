@@ -532,10 +532,12 @@
   /* grade e encontros */
   .v5 .disc{ transition:background .4s, padding .4s } .v5 .disc:hover{ background:rgba(205,176,131,.06); padding-left:14px; padding-right:14px }
   /* entrada das disciplinas: desliza de fora para dentro com fade (coluna da esquerda vem da esquerda, a da direita vem da direita) */
-  .js .v5 .disc.rv{ opacity:0; transform:translateX(-64px); transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .95s cubic-bezier(.2,.7,.2,1), background .4s, padding .4s }
-  .js .v5 .disc.rv:nth-child(even){ transform:translateX(64px); transition-delay:.1s, .1s, 0s, 0s }
+  .js .v5 .disc.rv{ transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .95s cubic-bezier(.2,.7,.2,1), background .4s, padding .4s }
+  .js .v5 .disc.rv:not(.on){ opacity:0; transform:translateX(-64px) }
+  .js .v5 .disc.rv:nth-child(even):not(.on){ transform:translateX(64px) }
+  .js .v5 .disc.rv:nth-child(even){ transition-delay:.1s, .1s, 0s, 0s }
   .js .v5 .disc.rv.on{ opacity:1; transform:none }
-  @media (prefers-reduced-motion:reduce){ .js .v5 .disc.rv{ opacity:1; transform:none; transition:none } }
+  @media (prefers-reduced-motion:reduce){ .js .v5 .disc.rv:not(.on),.js .v5 .disc.rv:nth-child(even):not(.on){ opacity:1; transform:none } .js .v5 .disc.rv{ transition:none } }
   /* vídeos que tocam sozinhos (contornos, perfil, prévia): nunca mostram o botão de play do sistema */
   video[autoplay]::-webkit-media-controls-start-playback-button,video[autoplay]::-webkit-media-controls-overlay-play-button{ display:none !important; -webkit-appearance:none; opacity:0 }
   video[autoplay]::-webkit-media-controls{ display:none !important }
@@ -571,7 +573,7 @@
     .alunos .cab{ grid-template-columns:1fr }
     .mural{ display:flex; gap:12px; margin:34px calc(var(--pad) * -1) 0; padding:0 var(--pad) 6px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none }
     .mural::-webkit-scrollbar{ display:none }
-    .js .v5 .disc.rv,.js .v5 .disc.rv:nth-child(even){ transform:translateX(-44px); transition-delay:0s }
+    .js .v5 .disc.rv:not(.on),.js .v5 .disc.rv:nth-child(even):not(.on){ transform:translateX(-44px) } .js .v5 .disc.rv:nth-child(even){ transition-delay:0s }
     .mural figure{ flex:0 0 66%; scroll-snap-align:center } .mural figcaption{ font-size:14px; padding:44px 16px 14px } .mural figcaption i{ font-size:9.5px } .mural figure:nth-child(even){ translate:none }
     .quem .vaga{ display:none } .quem .cena canvas{ position:static; translate:none; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; -webkit-mask-image:none; mask-image:none }
     .v5 .disc:hover{ padding-left:0; padding-right:0; background:none }
