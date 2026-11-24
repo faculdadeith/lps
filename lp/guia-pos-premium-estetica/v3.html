@@ -304,6 +304,11 @@
   .enc.fim span{ margin-top:0 }
   .prog b.vivo{ font-size:clamp(14px,1.3vw,19px) !important; line-height:1.25; white-space:nowrap; min-height:0; letter-spacing:0 }
   .prog div{ min-width:0 }
+  /* Ao vivo + Presencial: rótulo "Presencial" sobre GO e DF e um "+" na divisa dos dois blocos */
+  .prog .presl{ position:relative }
+  .prog .presl i{ position:absolute; top:6px; left:clamp(12px,1.6vw,22px); right:0; font-style:normal; font-size:9.5px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--clay-2); white-space:nowrap }
+  .prog .presl::before{ content:"+"; position:absolute; left:0; top:calc(22px + clamp(14px,1.55vw,23px)); translate:-50% -50%; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:15px; font-weight:400; line-height:1; color:var(--clay-2); background:var(--navy-3); border:1px solid var(--line) }
+  .pres.vivo::before{ background:none !important; border:1px solid currentColor }
   .enc.fim{ background:none; border:1px solid rgba(205,176,131,.45); color:var(--gold-2) } .enc.fim b{ color:transparent } .enc.fim span{ font-weight:500; letter-spacing:.3em; font-size:10.5px }
   .pres{ color:var(--pink) } .nota{ color:var(--gold-2) }
   .fecho .cta{ font-size:clamp(22px,2.2vw,30px); color:var(--pink-2) }
@@ -471,8 +476,8 @@
         <div class="prog">
           <div><b class="v">960</b>horas</div>
           <div><b class="v">20</b>módulos</div>
-          <div><b class="v vivo">Ao vivo<br>+ presencial</b>aulas com foco na prática</div>
-          <div><b class="v">GO e DF</b>Goiânia e Brasília</div>
+          <div><b class="v">Ao vivo</b>aulas com foco na prática</div>
+          <div class="presl"><i>Presencial</i><b class="v">GO e DF</b>Goiânia e Brasília</div>
         </div>
         <p class="nota">Práticas em paciente modelo</p>
       </div>
@@ -509,7 +514,7 @@
 <article class="disc rv"><div class="dn v">14</div><div><h3 class="v">Preenchimento full face</h3><p>Planejamento e aplicação de preenchedores no rosto inteiro, de forma harmônica, para repor volume e redefinir contornos com naturalidade.</p><span class="pres">Encontro presencial</span></div></article>
 <article class="disc rv"><div class="dn v">15</div><div><h3 class="v">Rinomodelação</h3><p>Correção e harmonização do nariz com preenchedores, sem cirurgia, com foco em anatomia, segurança e prevenção de complicações.</p><span class="pres">Encontro presencial</span></div></article>
 <article class="disc rv"><div class="dn v">16</div><div><div class="grp">Lips</div><h3 class="v">Preenchimento labial avançado</h3><p>Técnicas avançadas para volume, contorno e hidratação dos lábios, respeitando as proporções de cada rosto.</p><span class="pres">Encontro presencial</span></div></article>
-<article class="disc rv"><div class="dn v">17</div><div><h3 class="v">Intercorrências na estética</h3><p>Como prevenir, identificar e tratar complicações e efeitos adversos dos procedimentos, de hematomas a intercorrências vasculares.</p><span class="pres">Encontro presencial</span></div></article>
+<article class="disc rv"><div class="dn v">17</div><div><h3 class="v">Intercorrências na estética</h3><p>Como prevenir, identificar e tratar complicações e efeitos adversos dos procedimentos, de hematomas a intercorrências vasculares.</p><span class="pres vivo">Encontro ao vivo</span></div></article>
 <article class="disc rv"><div class="dn v">18</div><div><h3 class="v">Comunicação e oratória</h3><p>Comunicação clara e segura na consulta, ao apresentar tratamentos e preços, nas redes e em público, para transmitir autoridade.</p></div></article>
 <article class="disc rv"><div class="dn v">19</div><div><h3 class="v">Microdermoabrasão e PEIM</h3><p>Esfoliação mecânica para textura, manchas e poros, e PEIM (Procedimento Estético Injetável para Microvasos) para tratar vasinhos com segurança.</p></div></article>
 <article class="disc rv"><div class="dn v">20</div><div><div class="grp">Saúde ITH 4.0</div><h3 class="v">Prática e negócio</h3><p>Como estruturar e gerir seu negócio na estética: organização, finanças, análise de mercado e concorrência e estratégias de vendas.</p></div></article>
